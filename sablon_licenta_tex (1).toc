@@ -1,0 +1,31 @@
+\babel@toc {romanian}{}\relax 
+\contentsline {chapter}{Listă de figuri}{ii}{}%
+\contentsline {chapter}{Starea de art\u a}{iv}{}%
+\contentsline {chapter}{\numberline {1}Introducere}{1}{}%
+\contentsline {section}{\numberline {1.1}Motivație și scop}{1}{}%
+\contentsline {section}{\numberline {1.2}Contextul lucrării}{2}{}%
+\contentsline {subsection}{\numberline {1.2.1}Web 1.0}{2}{}%
+\contentsline {subsection}{\numberline {1.2.2}Web 2.0}{4}{}%
+\contentsline {subsection}{\numberline {1.2.3}Web 3.0}{5}{}%
+\contentsline {subsection}{\numberline {1.2.4}Paradigmele actuale de randare}{7}{}%
+\contentsline {subsection}{\numberline {1.2.5}Consecințele evoluției web}{12}{}%
+\contentsline {section}{\numberline {1.3}Evolu\c tia tehnologiilor}{13}{}%
+\contentsline {section}{\numberline {1.4}De ce compar\u am server side rendering cu client side rendering?}{14}{}%
+\contentsline {subsection}{\numberline {1.4.1}Lipsa literaturii}{14}{}%
+\contentsline {subsection}{\numberline {1.4.2}Dificultate pentru utilizatori}{15}{}%
+\contentsline {chapter}{\numberline {2}Tehnologii de randare}{16}{}%
+\contentsline {section}{\numberline {2.1}Server-side rendering}{16}{}%
+\contentsline {section}{\numberline {2.2}Static rendering}{17}{}%
+\contentsline {section}{\numberline {2.3}Client-side rendering}{18}{}%
+\contentsline {section}{\numberline {2.4}Rehydratation}{19}{}%
+\contentsline {chapter}{\numberline {3}Aplicația practică}{21}{}%
+\contentsline {section}{\numberline {3.1}Metricile de performanță}{21}{}%
+\contentsline {section}{\numberline {3.2}Plugin-uri, extensii și aplicații pentru măsurarea performanței}{24}{}%
+\contentsline {section}{\numberline {3.3}Aplicația practică}{25}{}%
+\contentsline {subsection}{\numberline {3.3.1}Metodologie}{25}{}%
+\contentsline {subsection}{\numberline {3.3.2}Vanilla JavaScript}{26}{}%
+\contentsline {subsection}{\numberline {3.3.3}React framework}{27}{}%
+\contentsline {section}{\numberline {3.4}Analiza performanței}{27}{}%
+\contentsline {chapter}{Bibliography}{27}{}%
+\contentsline {chapter}{\numberline {A}Glosar}{29}{}%
+\contentsline {section}{\numberline {A.1}Acronime}{29}{}%

@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 10px;
+}
+
+body {
+    background-color: #575757;
+    font-size: 10px;
+    background-image: url('https://picsum.photos/1920/1080?grayscale');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: auto;
+    margin: 0;
+}
+
+h1{
+    font-size: 32px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 16px;
+    padding-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.heading{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    margin-bottom: 2rem;
+}
+
+.go-back{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    top: 0;
+    background: #000;
+    border-radius: 10px 0 20px 0px;
+    transform: translateY(-1px) translateX(-1px);
+}
+
+svg {
+    fill: #8356ff5c;
+    color: #8356ff5c;
+}
+
+.name{
+    font-size: 50px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 2rem;
+}
+
+.username, .email, .phone, .company {
+    font-size: 16px;
+    margin-top: 1rem;
+}
+.glass-wrapper {
+    margin: 4rem;
+    padding: 2rem 4rem;
+    width: 350px;
+    height: 100%;
+    max-height: fit-content;
+    position: relative;
+    min-height: 500px;
+    /* glass */
+    background: rgba(131, 86, 255, 0.36);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(216, 216, 216, 0.3);
+}
+
