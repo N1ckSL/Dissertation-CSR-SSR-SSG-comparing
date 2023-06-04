@@ -660,9 +660,159 @@ Pentru a implementa funcționalitatea de afișare a posturilor asociate unui uti
 \end{lstlisting}
 \subsection{React framework}
 
+Cu ajutorul comenzii \emph{npx create-react-app 02-react} se generează un proiect React, cu numele 02-react, care va conține fișierele configurate și folderele necesare pentru aplicația React, inclusiv structura de bază a proiectului, fișierele de configurare implicite și dependențele inițiale.
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.4\textwidth]{react_file_structure.png}
+	\caption{Strctura unei aplicații React}
+	\label{fig:react-structure}
+\end{figure}
+
+Directorul "src" dintr-un proiect conține fișierele de cod sursă pentru aplicația React. Aici sunt scrise și organizate componentele, stilurile și alte fișiere relevante ale aplicației.
+
+Aplicația construită cu React are câteva avantaje față de o aplicație construită cu plain JavaScript:
+
+\begin{enumerate}
+	\item \textbf{Eficiență și Performanță}: utilizarea Virtual DOM și a algoritmi eficienți de reconciliere pentru a actualiza și afișa doar componentele care s-au schimbat în loc de rerandarea întregullui DOM. Acest lucru duce la o performanță mai bună și la o aplicație mai eficientă, în special în cazul aplicațiilor cu interfețe complexe și cu multe date.
+	\item \textbf{Abordare declarativă}: React utilizează o abordare în care se definește starea dorită a interfeței utilizator și React se ocupă de actualizarea și afișarea acesteia în mod automat. Aceasta face codul mai ușor de înțeles și de gestionat, și reduce riscul de erori.
+	\item \textbf{React hooks}:  funcții speciale furnizate de React, care permit componentelor funcționale să acceseze funcționalități specifice și să gestioneze logica acestora.
+\end{enumerate}
+
+Pentru a reține anumite date, precum utilizatorul curent, masivul de postări sau valoarea curentă a input-ului putem utiliza hook-ul \emph{useState}, ce permite gestionarea și actualizarea stării interne a unei componente, iar pentru a obține listele de utilizatori și postrări într-un mod efectiv, utilizăm hook-ul \emph{useEffect} pentru a ne asigura că acestea sunt executate la momentele potrivite în timpul ciclului de viață al componentei.
+
+\begin{lstlisting}
+	useEffect(() => {
+    async function fetchData() {
+    	const usersRes = await fetch("https://jsonplaceholder.typicode.com/users");
+    	const postsRes = await fetch("https://jsonplaceholder.typicode.com/posts");
+      
+		const usersData = await usersRes.json();
+    	const postsData = await postsRes.json();
+
+    	allUsers.current = usersData;
+    	allPosts.current = postsData;
+    	setUsers(usersData);
+    	setPosts(postsData);
+    }
+    fetchData();
+  }, []);
+\end{lstlisting}
 
 \section{Analiza performanței}
+
+Am dezvoltat aceeași aplicație folosind Vanilla JavaScript și React și am testat performanța ambelor versiuni utilizând extensia Web Vitals, Lighthouse Chrome tool și PageSpeed Insights. Rezultatele obținute oferă informații detaliate despre performanța aplicațiilor, inclusiv timpul de încărcare a paginii, interactivitatea și stabilitatea vizuală. Aceste metrici permit să evaluăm și să comparăm performanța aplicațiilor într-un mod obiectiv. Aplicațiile au fost testate atât în mediul local (\emph{localhost}), cât și după ce au fost încărcate pe același web hosting.
+
+\subsection{Web Vitals}
+
+În urma măsurărilor repetate am obținut următoarele rezultate, pe mediul local:
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.45\textwidth]{01_desktop.png}
+	\includegraphics[width=0.45\textwidth]{01_mobile.png}
+	\caption{Aplicația vanilla JavaScript, desktop și mobile}
+	\label{fig:01-local}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.45\textwidth]{02_desktop.png}
+	\includegraphics[width=0.45\textwidth]{02_mobile.png}
+	\caption{Aplicația React, desktop și mobile}
+	\label{fig:02-local}
+\end{figure}
+
+După deploy-ul aplicațiilor pe web hosting, am efectuat repetat procesul de evaluare a performanței cu ajutorul extensiei și am obținut următoarele rezultate:
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.45\textwidth]{01_desktop_deployed.png}
+	\includegraphics[width=0.45\textwidth]{01_mobile_deployed.png}
+	\caption{Aplicația vanilla JavaScript, desktop și mobile}
+	\label{fig:01-deployed}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.45\textwidth]{02_desktop_deployed.png}
+	\includegraphics[width=0.45\textwidth]{02_mobile_deployed.png}
+	\caption{Aplicația React, desktop și mobile}
+	\label{fig:02-deployed}
+\end{figure}
+
+Procesul optimizat de randare al React-ului, arhitectura bazată pe componente și gestionarea eficientă a stărilor contribuie la îmbunătățirea metricilor de performanță. React utilizează un DOM virtual, care este o reprezentare în memorie a DOM-ului real. Acest lucru permite React-ului să actualizeze și să randeze eficient doar componentele necesare atunci când există modificări în starea aplicației.
+
+Gestionarea eficientă a stărilor în React contribuie, de asemenea, la îmbunătățirea performanței. React folosește un flux unidirecțional al datelor și un concept numit "reconciliere" pentru a actualiza eficient interfața în funcție de modificările în starea aplicației.
+\subsection{Lighthouse}
+
+Cu ajutorul acestui tool, care este prezent în browserul Google Chrome, am generat rapoartele pentru ambele aplicații, atât în mediul local
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.45\textwidth]{01_desktop_lighthouse.png}
+	\includegraphics[width=0.45\textwidth]{01_mobile_lighthouse.png}
+	\caption{Aplicația vanilla JavaScript, desktop și mobile}
+	\label{fig:01-local-lighthouse}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.45\textwidth]{02_desktop_lighthouse.png}
+	\includegraphics[width=0.45\textwidth]{02_mobile_lighthouse.png}
+	\caption{Aplicația React, desktop și mobile}
+	\label{fig:02-local-lighthouse}
+\end{figure}
+
+cât și după deploy-ul pe hosting
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.45\textwidth]{01_desktop_deployed_lighthouse.png}
+	\includegraphics[width=0.45\textwidth]{01_mobile_deployed_lighthouse.png}
+	\caption{Aplicația vanilla JavaScript, desktop și mobile}
+	\label{fig:01-deployed-lighthouse}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.45\textwidth]{02_desktop_deployed_lighthouse.png}
+	\includegraphics[width=0.45\textwidth]{02_mobile_deployed_lighthouse.png}
+	\caption{Aplicația React, desktop și mobile}
+	\label{fig:02-deployed-lighthouse}
+\end{figure}
+
+\subsection{PageSpeed Insights}
+
+PageSpeed evaluează pagina atât pe dispozitive mobile, cât și pe desktop, atribuie un scor în funcție de performanța paginii și se oferă recomandări pentru îmbunătățire. Acest tool ia în considerare mai mulți factori care pot afecta performanța unei pagini, cum ar fi timpul de răspuns al serverului, cache-ul resurselor, optimizarea imaginilor, minificarea JavaScript și CSS și altele. De asemenea, acesta ia în considerare utilizarea celor mai bune practici și a ghidurilor de performanță web, cum ar fi reducerea resurselor care blochează randarea, optimizarea căii critice de randare și folosirea cache-ului browserului.
+
+Rezultatele obținute pentru ambele aplicații sunt:
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.45\textwidth]{01_desktop_pagespeed.png}
+	\includegraphics[width=0.45\textwidth]{01_mobile_pagespeed.png}
+	\caption{Aplicația vanilla JavaScript, desktop și mobile}
+	\label{fig:01-deployed-pagespeed}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.45\textwidth]{02_desktop_pagespeed.png}
+	\includegraphics[width=0.45\textwidth]{02_mobile_pagespeed.png}
+	\caption{Aplicația React, desktop și mobile}
+	\label{fig:02-deployed-pagespeed}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
 
 \renewcommand{\bibname}{Bibliografie}
 

@@ -1,6 +1,6 @@
 \babel@toc {romanian}{}\relax 
 \contentsline {chapter}{Listă de figuri}{ii}{}%
-\contentsline {chapter}{Starea de art\u a}{iv}{}%
+\contentsline {chapter}{Starea de art\u a}{v}{}%
 \contentsline {chapter}{\numberline {1}Introducere}{1}{}%
 \contentsline {section}{\numberline {1.1}Motivație și scop}{1}{}%
 \contentsline {section}{\numberline {1.2}Contextul lucrării}{2}{}%
@@ -25,7 +25,10 @@
 \contentsline {subsection}{\numberline {3.3.1}Metodologie}{25}{}%
 \contentsline {subsection}{\numberline {3.3.2}Vanilla JavaScript}{26}{}%
 \contentsline {subsection}{\numberline {3.3.3}React framework}{27}{}%
-\contentsline {section}{\numberline {3.4}Analiza performanței}{27}{}%
-\contentsline {chapter}{Bibliography}{27}{}%
-\contentsline {chapter}{\numberline {A}Glosar}{29}{}%
-\contentsline {section}{\numberline {A.1}Acronime}{29}{}%
+\contentsline {section}{\numberline {3.4}Analiza performanței}{29}{}%
+\contentsline {subsection}{\numberline {3.4.1}Web Vitals}{29}{}%
+\contentsline {subsection}{\numberline {3.4.2}Lighthouse}{31}{}%
+\contentsline {subsection}{\numberline {3.4.3}PageSpeed Insights}{33}{}%
+\contentsline {chapter}{Bibliography}{33}{}%
+\contentsline {chapter}{\numberline {A}Glosar}{35}{}%
+\contentsline {section}{\numberline {A.1}Acronime}{35}{}%

@@ -11,29 +11,36 @@ function App() {
   const [currentUser, setCurrentUser] = useState("");
 
   useEffect(() => {
-    async function fetchUsers() {
-      const res = await fetch("https://jsonplaceholder.typicode.com/users");
-      allUsers.current = await res.json();
-      setUsers(allUsers.current);
+    async function fetchData() {
+      const usersRes = await fetch(
+        "https://jsonplaceholder.typicode.com/users"
+      );
+      const postsRes = await fetch(
+        "https://jsonplaceholder.typicode.com/posts"
+      );
+
+      const usersData = await usersRes.json();
+      const postsData = await postsRes.json();
+
+      allUsers.current = usersData;
+      allPosts.current = postsData;
+
+      setUsers(usersData);
+      setPosts(postsData);
     }
-    fetchUsers();
+
+    fetchData();
   }, []);
 
   useEffect(() => {
-    async function fetchUsers() {
-      const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-      allPosts.current = await res.json();
-      setPosts(allPosts.current);
-    }
-    fetchUsers();
-  }, []);
-
-  useEffect(() => {
-    setUsers(
-      allUsers.current.filter((u) =>
+    function filterUsers() {
+      const filteredUsers = allUsers.current.filter((u) =>
         u.name.toLowerCase().includes(input.toLowerCase())
-      )
-    );
+      );
+      setUsers(filteredUsers);
+    }
+
+    filterUsers();
   }, [input]);
 
   return (
