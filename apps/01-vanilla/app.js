@@ -58,13 +58,13 @@ function renderUsers(data) {
     .join("");
   ul.innerHTML = html;
 
-  const saveButtons = document.querySelectorAll(".save-button");
-  saveButtons.forEach((button) => {
+  const saveButtons = ul.getElementsByClassName("save-button");
+  Array.from(saveButtons).forEach((button) => {
     button.addEventListener("click", handleSaveButtonClick);
   });
 
-  const viewDataButtons = document.querySelectorAll(".view-data-button");
-  viewDataButtons.forEach((button) => {
+  const viewDataButtons = ul.getElementsByClassName("view-data-button");
+  Array.from(viewDataButtons).forEach((button) => {
     button.addEventListener("click", handleViewDataButtonClick);
   });
 }
@@ -114,9 +114,9 @@ function renderComments(postId) {
     .map(
       (comment) =>
         `<li class="list-item-comment">
-          <h3>${comment.name}</h3>
+          <p class="comment-email">${comment.email}</p>
+          <p class="comment-title">${comment.name}</p>
           <p>${comment.body}</p>
-          <p>Email: ${comment.email}</p>
         </li>`
     )
     .join("");

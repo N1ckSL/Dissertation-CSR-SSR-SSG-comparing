@@ -144,6 +144,30 @@ input:focus-visible {
 
 .list-item-post{
     margin-bottom: 16px;
+    border-bottom: 1px solid #000;
+    animation: rainbow-border-bottom 5s linear infinite;
+}
+
+.list-item-comment{
+    border: 1px solid rebeccapurple;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    animation: rainbow-border-thin 5s linear infinite;
+}
+
+.comment-email {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.comment-title {
+font-size: 1rem;
+font-weight: 600;
+margin-bottom: 0.5rem;
+text-transform: capitalize;
+
 }
 
 .text-center{
@@ -205,4 +229,24 @@ input:focus-visible {
     66.7% { border: 2px solid blue; }
     83.3% { border: 2px solid indigo; }
     100% { border: 2px solid violet; }
+  }
+
+@keyframes rainbow-border-thin {
+    0% { border: 1px solid red; }
+    16.7% { border: 1px solid orange; }
+    33.3% { border: 1px solid yellow; }
+    50% { border: 1px solid green; }
+    66.7% { border: 1px solid blue; }
+    83.3% { border: 1px solid indigo; }
+    100% { border: 1px solid violet; }
+  }
+
+@keyframes rainbow-border-bottom {
+    0% { border-bottom: 2px solid red; }
+    16.7% { border-bottom: 2px solid orange; }
+    33.3% { border-bottom: 2px solid yellow; }
+    50% { border-bottom: 2px solid green; }
+    66.7% { border-bottom: 2px solid blue; }
+    83.3% { border-bottom: 2px solid indigo; }
+    100% { border-bottom: 2px solid violet; }
   }
