@@ -7,17 +7,14 @@ function App() {
   const [users, setUsers] = useState([]);
   const [posts, setPosts] = useState([]);
   const [input, setInput] = useState("");
-
   const [currentUser, setCurrentUser] = useState("");
 
   useEffect(() => {
     async function fetchData() {
-      const usersRes = await fetch(
-        "https://jsonplaceholder.typicode.com/users"
-      );
-      const postsRes = await fetch(
-        "https://jsonplaceholder.typicode.com/posts"
-      );
+      const [usersRes, postsRes] = await Promise.all([
+        fetch("https://jsonplaceholder.typicode.com/users"),
+        fetch("https://jsonplaceholder.typicode.com/posts"),
+      ]);
 
       const usersData = await usersRes.json();
       const postsData = await postsRes.json();
@@ -34,8 +31,8 @@ function App() {
 
   useEffect(() => {
     function filterUsers() {
-      const filteredUsers = allUsers.current.filter((u) =>
-        u.name.toLowerCase().includes(input.toLowerCase())
+      const filteredUsers = allUsers.current.filter((user) =>
+        user.name.toLowerCase().includes(input.toLowerCase())
       );
       setUsers(filteredUsers);
     }
@@ -43,8 +40,12 @@ function App() {
     filterUsers();
   }, [input]);
 
+  const handleUserClick = (userId) => {
+    setCurrentUser(userId);
+  };
+
   return (
-    <div className="m-0 p-0 bg-[url('https://picsum.photos/1920/1080?grayscale')]">
+    <div className="m-0 p-0 bg-[url('https://picsum.photos/1920/1080?grayscale')] bg-cover">
       <div className="p-10 flex justify-between">
         <div className="p-16 m-16 w-[480px] h-full max-h-[700px] min-h-[500px] bg-[rgba(216, 216, 216, 0.36)] rounded-xl border border-solid border-[#d8d8d84d] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 bg-gray-50">
           <input
@@ -54,7 +55,7 @@ function App() {
             onChange={(e) => setInput(e.target.value)}
           />
 
-          <ul className="">
+          <ul>
             {users.map((user) => (
               <li
                 className="mb-4 flex items-center justify-between"
@@ -62,7 +63,10 @@ function App() {
               >
                 {user.name}
                 <div className="flex gap-2 items-center">
-                  <button className="text-[#0092E4] border border-solid rounded-md border-[#0092E4] px-5 text-sm py-2.5 uppercase font-medium leading-4 transition-all hover:text-white hover:bg-[#0092E4]">
+                  <button
+                    className="text-[#0092E4] border border-solid rounded-md border-[#0092E4] px-5 text-sm py-2.5 uppercase font-medium leading-4 transition-all hover:text-white hover:bg-[#0092E4]"
+                    onClick={() => handleUserClick(user.id)}
+                  >
                     View all data
                   </button>
 
@@ -79,27 +83,25 @@ function App() {
         <div className="px-6 py-4 m-16 w-[480px] h-full  min-h-[500px] bg-[rgba(216, 216, 216, 0.36)] rounded-xl border border-solid border-[#d8d8d84d] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 bg-gray-50">
           {currentUser.length === 0 ? (
             <p className="text-center">
-              Select a user to view his posts (plus icon)
+              Select a user to view their posts (plus icon)
             </p>
           ) : (
             <p className="text-center mb-2">
               Posts for user with ID: {currentUser}
             </p>
           )}
-          {console.log(currentUser.length)}
+
           <ul>
-            {posts.map((post) => (
-              <li className="mb-4 " key={post.id}>
-                {currentUser === post.userId ? (
-                  <>
-                    <h2 className="font-bold text-lg w-full uppercase">
-                      {post.title}
-                    </h2>
-                    <p>{post.body}</p>
-                  </>
-                ) : null}
-              </li>
-            ))}
+            {posts
+              .filter((post) => currentUser === post.userId)
+              .map((post) => (
+                <li className="mb-4 " key={post.id}>
+                  <h2 className="font-bold text-lg w-full uppercase">
+                    {post.title}
+                  </h2>
+                  <p>{post.body}</p>
+                </li>
+              ))}
           </ul>
         </div>
       </div>
