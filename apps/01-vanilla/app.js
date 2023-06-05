@@ -5,16 +5,19 @@ const button = document.getElementById("myButton");
 
 let ALL_USERS;
 let ALL_POSTS;
+let ALL_COMMENTS;
 
 // Fetch data and initialize the application
 async function start() {
-  const [usersRes, postsRes] = await Promise.all([
+  const [usersRes, postsRes, commentsRes] = await Promise.all([
     fetch("https://jsonplaceholder.typicode.com/users"),
     fetch("https://jsonplaceholder.typicode.com/posts"),
+    fetch("https://jsonplaceholder.typicode.com/comments"),
   ]);
 
   ALL_USERS = await usersRes.json();
   ALL_POSTS = await postsRes.json();
+  ALL_COMMENTS = await commentsRes.json();
 
   // Attach event listeners
   input.addEventListener("input", handleInputChange);
@@ -80,13 +83,44 @@ function renderPosts(data) {
       .map(
         (post) =>
           `<li class="list-item-post">
+          <div class="flex"> 
             <h2 class="post-header">${post.title}</h2>
+            <button id="comments-btn-${post.id}" class="button-comments">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus"><path fill="#0092E4" d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z"></path></svg> 
+            </button>
+          </div>
             <p>${post.body}</p>
           </li>`
       )
       .join("");
     postsUl.innerHTML += html;
   }
+
+  // Attach event listeners to the comment buttons
+  data.forEach((post) => {
+    const commentsBtn = document.getElementById(`comments-btn-${post.id}`);
+    commentsBtn.addEventListener("click", () => renderComments(post.id));
+  });
+}
+
+function renderComments(postId) {
+  const postComments = ALL_COMMENTS.filter(
+    (comment) => comment.postId === postId
+  );
+
+  const commentsUl = document.getElementById("comments");
+  commentsUl.innerHTML = `<p class="text-center">Comments for post with ID: ${postId}</p>`;
+  const html = postComments
+    .map(
+      (comment) =>
+        `<li class="list-item-comment">
+          <h3>${comment.name}</h3>
+          <p>${comment.body}</p>
+          <p>Email: ${comment.email}</p>
+        </li>`
+    )
+    .join("");
+  commentsUl.innerHTML += html;
 }
 
 // Handle save button click

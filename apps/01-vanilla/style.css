@@ -39,7 +39,14 @@ input:focus-visible {
 
 .wrap {
     display: flex;
+    justify-content: space-evenly;
+}
+
+.flex{
+    display: flex;
+    gap: 0.5rem;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .input {
@@ -78,6 +85,28 @@ input:focus-visible {
 
 .button:active {
     background-color: #3e8e41;
+}
+
+.button-comments{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    /* Add custom styles */
+    padding: 2px 5px;
+    background: #2b2b2b;
+    border-radius: 5px;
+    /* color: #0092E4; */
+    min-height: 2.2rem;
+    min-width: 2.2rem;
+    /* font-weight: bold; */
+    /* text-transform: uppercase; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .save-button {
@@ -147,7 +176,7 @@ input:focus-visible {
 }
 
 
-.glass-post {
+.glass-post, .glass-comments {
     margin: 4rem;
     padding: 2rem;
     width: 350px;
