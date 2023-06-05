@@ -1,3 +1,4 @@
+// Use const instead of let for variables that won't be reassigned
 const input = document.querySelector("input");
 const ul = document.querySelector("ul");
 const button = document.getElementById("myButton");
@@ -5,17 +6,18 @@ const button = document.getElementById("myButton");
 let ALL_USERS;
 let ALL_POSTS;
 
+// Fetch data and initialize the application
 async function start() {
-  const usersRes = await fetch("https://jsonplaceholder.typicode.com/users");
-  const postsRes = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const [usersRes, postsRes] = await Promise.all([
+    fetch("https://jsonplaceholder.typicode.com/users"),
+    fetch("https://jsonplaceholder.typicode.com/posts"),
+  ]);
 
   ALL_USERS = await usersRes.json();
   ALL_POSTS = await postsRes.json();
 
-  const saveButtons = document.querySelectorAll(".save-button");
-  saveButtons.forEach((button) => {
-    button.addEventListener("click", handleSaveButtonClick);
-  });
+  // Attach event listeners
+  input.addEventListener("input", handleInputChange);
 
   renderUsers(ALL_USERS);
 
@@ -29,23 +31,25 @@ async function start() {
   );
 }
 
-input.addEventListener("input", () => {
-  renderUsers(
-    ALL_USERS.filter((i) =>
-      i.name.toLowerCase().includes(input.value.toLowerCase())
-    )
+// Handle input change event
+function handleInputChange() {
+  const filteredUsers = ALL_USERS.filter((user) =>
+    user.name.toLowerCase().includes(input.value.toLowerCase())
   );
-});
+  renderUsers(filteredUsers);
+}
 
+// Render user list
 function renderUsers(data) {
   const html = data
     .map(
-      (i) =>
-        `<li class="list-item">  ${i.name} 
-        <a href="pages/user-data.html">
-        <button id="view-data" class="button" data-name="${i.name}">View all data</button>
-        </a> 
-        <button class="save-button" data-name="${i.name}"> <span class="save-icon" /></button>
+      (user) =>
+        `<li class="list-item">
+          ${user.name}
+          <a href="pages/user-data.html">
+            <button class="button view-data-button" data-name="${user.name}">View all data</button>
+          </a>
+          <button class="save-button" data-name="${user.name}"><span class="save-icon"></span></button>
         </li>`
     )
     .join("");
@@ -56,13 +60,14 @@ function renderUsers(data) {
     button.addEventListener("click", handleSaveButtonClick);
   });
 
-  const viewDataButtons = document.querySelectorAll("#view-data");
+  const viewDataButtons = document.querySelectorAll(".view-data-button");
   viewDataButtons.forEach((button) => {
     button.addEventListener("click", handleViewDataButtonClick);
   });
 }
 
-async function renderPosts(data) {
+// Render posts for the selected user
+function renderPosts(data) {
   const postsUl = document.getElementById("posts");
   const selectedName = localStorage.getItem("selectedName");
   const selectedUser = ALL_USERS.find((user) => user.name === selectedName);
@@ -74,16 +79,17 @@ async function renderPosts(data) {
     const html = data
       .map(
         (post) =>
-          `<li class="list-item-post"> 
-            <h2 class='post-header'> ${post.title} </h2>
-            <p> ${post.body} </p>
+          `<li class="list-item-post">
+            <h2 class="post-header">${post.title}</h2>
+            <p>${post.body}</p>
           </li>`
       )
       .join("");
-    postsUl.innerHTML += html; // Append the rendered posts after the message
+    postsUl.innerHTML += html;
   }
 }
 
+// Handle save button click
 function handleSaveButtonClick(event) {
   const name = event.target.dataset.name;
   const user = ALL_USERS.find((u) => u.name === name);
@@ -91,18 +97,18 @@ function handleSaveButtonClick(event) {
   if (user) {
     const userPosts = ALL_POSTS.filter((post) => post.userId === user.id);
 
-    // Update selectedUser with the updated user object
-    const selectedUser = ALL_USERS.find((user) => user.name === name);
     localStorage.setItem("selectedName", name);
-    localStorage.setItem("selectedUser", JSON.stringify(selectedUser));
+    localStorage.setItem("selectedUser", JSON.stringify(user));
 
     renderPosts(userPosts);
   }
 }
 
+// Handle view data button click
 function handleViewDataButtonClick(event) {
   const name = event.target.dataset.name;
   localStorage.setItem("selectedName", name);
 }
 
+// Start the application
 start();
