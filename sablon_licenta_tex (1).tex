@@ -209,19 +209,19 @@ Evolu\c tia tehnologiei web \c si a cerin\c telor utilizatorilor continu\u a, ia
 
 React, dezvoltat de Facebook, a devenit una dintre tehnologiile cele mai populare pentru construirea de aplica\c tii web, datorit\u a abilit\u a\c tii sale de a oferi o experien\c t\u a de randare eficient\u a \c si de \^ inalt\u a performan\c t\u a. Vue.js, dezvoltat de comunitate, se concentreaz\u a pe simplitate \c si u\c surin\c t\u a de utilizare, fiind o alegere popular\u a pentru proiecte mai mici sau pentru dezvoltatorii care \^ incearc\u a s\u a \^ inve\c te tehnologii moderne de randare a informa\c tiilor.
 
-Exist\u a mai multe tipuri de randare a con\c tinutului, cele mai populare fiind randarea \emph{server-side}, randarea \emph{client-side} \c si randarea \emph{hibrid\u a}: \cite{clientsidevssercerside}
+Exist\u a mai multe tipuri de randare a con\c tinutului, cele mai populare fiind randarea \emph{server-side}, \emph{client-side} \c si  \emph{static server generation}: \cite{clientsidevssercerside}
 \begin{enumerate}
-	\item \textbf{Randarea server-side:} Procesarea datelor \c si generarea HTML se realizeaz\u a pe server. Server-ul returneaz\u a apoi HTML-ul generat c\u atre browser, care \^il afi\c seaz\u a utilizatorului. Aceast\u a metod\u a de randare este utilizat\u a \^in mod traditional \^in aplica\c tiile web vechi. Avantajul acestei metode este c\u a se poate efectua o procesare mai puternic\u a a datelor pe server \c si se poate oferi o experien\c t\u a utilizator consistent\u a chiar \c si \^in condi\c tii de conexiune lent\u a la internet.
-	\item \textbf{Randarea client-side:} Browser-ul prime\c ste date brute \c si le proceseaz\u a prin intermediul unui script (cum ar fi JavaScript) pentru a genera HTML. Aceast\u a metod\u a de randare permite o flexibilitate mai mare \^in prezentarea con\c tinutului \c si ofer\u a posibilitatea de a construi interac\c tiuni complexe cu utilizatorul, cum ar fi formulare dinamice \c si componente grafice interactive. Dezavantajul acestei metode este c\u a necesit\u a mai mult\u a putere de procesare a clientului \c si poate fi mai pu\c tin performant\u a \^in condi\c tii de conexiune lent\u a la internet.
-	\item \textbf{Randarea hibrid\u a:} Aceast\u a metod\u a combin\u a avantajele rand\u arii server-side \c si client-side. Datele sunt procesate ini\c tial pe server \c si se returneaz\u a un HTML minim c\u atre browser. Ulterior, browser-ul folose\c ste script-uri pentru a ad\u auga interac\c tiuni dinamice \c si a actualiza con\c tinutul f\u ar\u a a fi necesar\u a o re\^inc\u arcare complet\u a a paginii.
+	\item \textbf{Server-side rendering:} Procesarea datelor \c si generarea HTML se realizeaz\u a pe server. Server-ul returneaz\u a apoi HTML-ul generat c\u atre browser, care \^il afi\c seaz\u a utilizatorului. Aceast\u a metod\u a de randare este utilizat\u a \^in mod traditional \^in aplica\c tiile web vechi. Avantajul acestei metode este c\u a se poate efectua o procesare a datelor pe server \c si se poate oferi o experien\c t\u a utilizator consistent\u a chiar \c si \^in condi\c tii de conexiune lent\u a la internet. Afișarea inițială a paginii poate fi rapidă deoarece clientul nu trebuie să aștepte încărcarea sau executarea JavaScript-ului înainte de afișarea conținutului.
+	\item \textbf{Client-side rendering:} Browser-ul prime\c ste date brute \c si le proceseaz\u a prin intermediul unui script (cum ar fi JavaScript) pentru a genera HTML. Aceast\u a metod\u a de randare permite o flexibilitate mai mare \^in prezentarea con\c tinutului \c si ofer\u a posibilitatea de a construi interac\c tiuni complexe cu utilizatorul, cum ar fi formulare dinamice \c si componente grafice interactive. Dezavantajul acestei metode este c\u a necesit\u a mai mult\u a putere de procesare a clientului \c si poate fi mai pu\c tin performant\u a \^in condi\c tii de conexiune lent\u a la internet, deoarece clientul trebuie să aștepte descărcarea scripturilor și a datelor necesare înainte de a randa pagina.
+	\item \textbf{Static server generation:} Paginile web sunt pregenerate și randate în timpul procesului de build al aplicației, rezultând în fișiere HTML statice care pot fi furnizate către client fără a fi necesară procesarea la nivelul serverului. Cu SSG, conținutul rămâne static până la următorul build al aplicației.
 \end{enumerate}
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.78\textwidth]{rendering.png}
-	% \includegraphics[width=0.48\textwidth]{admin.jpg}
-	\caption{Compararea \^intre mai multe tipuri de randare a informa\c tiilor. \cite{webdev}}
-\end{figure}
+% \begin{figure}[htbp]
+% 	\centering
+% 	\includegraphics[width=0.78\textwidth]{rendering.png}
+% 	% \includegraphics[width=0.48\textwidth]{admin.jpg}
+% 	\caption{Compararea \^intre mai multe tipuri de randare a informa\c tiilor. \cite{webdev}}
+% \end{figure}
 
 \^ In ceea ce prive\c ste performan\c ta, tehnologiile moderne de randare a informa\c tiilor au avansat mult \^ in optimizarea vitezei de randare \c si a eficien\c tei resurselor. Una dintre abord\u arile moderne de optimizare a performan\c tei este utilizarea \emph{"virtual DOM"} (Document Object Model), care se caracterizează printr-o rerandare eficientă doar a componentelor ce au suferit modificări.
 \^ In plus, tehnologiile de randare moderne pot delimita componentele dinamice, care necesită rerandare constantă, de cele statice, care nu necesit\u a recalculare, cresc\^ and astfel performan\c ta aplica\c tiei. De asemenea, tehnologiile de randare permit utilizarea de tehnici de lazy loading, care \^ incarc\u a con\c tinutul doar atunci c\^ and este necesar, \^ imbun\u at\u a\c tind astfel performan\c ta aplica\c tiei \c si experiența utilizatorului.
@@ -235,9 +235,9 @@ Alegerea metodei potrivite de randare depinde de cerin\c tele specifice ale proi
 
 \section{Motivație și scop}
 
-Obiectivul acestei lucrări este de a analiza tehnologiile de randare utilizate în aplicațiile web moderne, pentru a identifica metode de dezvoltare optime, din punct de vedere al performanței, experienței utilizatorului și SEO. Aceste rezultate vor fi obținute prin compararea mai multor framework-uri front-end după un anumit set de criterii, prestabilit. În urma comparării acestora, în intermediu dezvoltării unei aplicații simple, cât și în intermediul unei aplicații relativ complexe, se vor identifica cele mai efective pattern-uri de dezvoltare.
+Obiectivul acestei lucrări este de a analiza tehnologiile de randare utilizate în aplicațiile web moderne, pentru a identifica metode de dezvoltare optime, din punct de vedere al performanței, experienței utilizatorului și SEO. Aceste rezultate vor fi obținute prin compararea mai multor framework-uri front-end după un anumit set de criterii, prestabilit. În urma comparării acestora, prin intermediu dezvoltării unei aplicații, se vor identifica cele mai eficiente șabloane de dezvoltare.
 
-Motivația alegerii acestei teme de disertație derivă din mai mulți factori. În primul rând, progresele tehnologice rapide în dezvoltarea web a dus la apariția mai multor paradigme de dezvoltare, iar ținerea pasului cu acestea a devenit o provocare pentru toți dezvoltatorii web. În al doilea rând, odată cu crearea unor aplicații din ce în ce mai complexe, necesitatea de a cunoaște procesele interne precum tehnologiile și metodele de randare a devenit o componentă esențială a dezvoltării. Prin urmare, înțelegerea modului în care funcționează aceste tehnologii și a modului în care acestea pot fi optimizate poate ajuta la dezvoltarea unei aplicații care ar oferi un user experience mai bun și o performanță sporită.
+Motivația alegerii acestei teme de disertație derivă din mai mulți factori. În primul rând, progresul tehnologic rapid a dus la apariția mai multor paradigme de dezvoltare a aplicațiilor web, iar ținerea pasului cu acestea a devenit o provocare. În al doilea rând, odată cu crearea unor aplicații din ce în ce mai complexe, necesitatea de a cunoaște procesele interne precum tehnologiile și metodele de randare a devenit o componentă esențială a dezvoltării. Prin urmare, înțelegerea modului în care funcționează aceste tehnologii și a modului în care acestea pot fi optimizate poate ajuta la dezvoltarea unei aplicații care ar oferi o experiență de utilizare și o performanță sporită.
 
 În cele din urmă, această lucrare de disertație își propune să ofere informații despe tehnologiile de randare utilizate în aplicațiile web moderne și despre impactul acestora asupra performanței, pentru a identifica cele mai eficiente framework-uri pentru a dezvolta o aplicație web ce poate fi scalată, bine optimizată și cu un user experience de nivel înalt.
 
@@ -245,7 +245,7 @@ Motivația alegerii acestei teme de disertație derivă din mai mulți factori. 
 \section{Contextul lucrării}
 
 
-World Wide Web nu este un sinonim al internetului, dar este cea mai proeminentă parte a acestuia, care poate fi definită ca un sistem tehno-social cu care interacționează oamenii prin intermediul rețelelor tehnologice. Noțiunea de sistem tehno-social se referă la un sistem care îmbunătățește percepția umană, comunicarea și cooperarea. Percepția este condiția prealabilă necesară pentru a comunica și condiția prealabilă pentru a coopera. \cite{theoreticalfundationsoftheweb}
+World Wide Web nu este un sinonim al internetului, dar este cea mai proeminentă parte a acestuia, care poate fi definită ca un sistem tehno-social cu care interacționează oamenii prin intermediul rețelelor tehnologice. Noțiunea de sistem tehno-social se referă la un sistem care îmbunătățește percepția umană, comunicarea și cooperarea. Percepția este condiția prealabilă necesară pentru a comunica și coopera. \cite{theoreticalfundationsoftheweb}
 
 Pe 12 Martie 1989, Tim Berners-Lee, informatician de origine britanică și un fost angajat CERN au scris o propunere pentru ceea ce va deveni ulterior World Wide Web. Acea propunere avea drept scop crearea unui sistem de comunicații mai eficient în cadrul CERN, însă Berners-Lee a realizat în cele din urmă că conceptul ar putea fi implementat la scară globală. Împreună cu informaticianul belgian Robert Cailliau au propus în 1990 să folosesacă hypertext pentru a lega și accesa diverse tipuri de informații dintr-o rețea de noduri în care utilizatorul poate naviga către rezultatele dorite.
 
@@ -271,7 +271,7 @@ Browserele erau foarte rudimentare \c si site-urile web erau mici. De aceea era 
 	</html>
 \end{lstlisting}
 
-Mai t\^ arziu, c\^ and browser-ele au dezvoltat capacit \u a \c ti vizuale, a aparut necesitatea de stilizare. Håkon W Lie a propus o prima versiune a CSS (Cascading Style Sheet), care este folosit \c si p\^ an\u a \^ in prezent. Un style sheet arat\u a astfel:
+Mai t\^ arziu, c\^ and browser-ele au dezvoltat capacit\u a\c ti vizuale, a aparut necesitatea de stilizare. Håkon W Lie a propus o prima versiune a CSS (Cascading Style Sheet), care este folosit \c si \^ in prezent. Un style sheet arat\u a astfel:
 \begin{lstlisting}
 	body {
 		background-color: black;
@@ -291,7 +291,7 @@ Mai t\^ arziu, c\^ and browser-ele au dezvoltat capacit \u a \c ti vizuale, a ap
 \end{itemize}
 
 
-\textbf{Limitații:}
+\textbf{Limitări:}
 \begin{itemize}
 	\item Paginile puteau fi înțelese doar de oameni și nu aveau conținut compatibil pentru motoare de căutare
 	\item Utilizatorii erau responsabili pentru responsabili pentru actualizarea și gestionarea conținutului
@@ -319,7 +319,7 @@ C\^ and func\c tiile client-side au devenit \c si mai importante, au fost concep
 \end{itemize}
 
 
-\textbf{Limitații:}
+\textbf{Limitări:}
 \begin{itemize}
 	\item Ciclu constant de iterații a schimbarilor și actualizărilor serviciilor
 	\item Probleme etice privind construirea și utilizarea web 2.0
@@ -328,13 +328,11 @@ C\^ and func\c tiile client-side au devenit \c si mai importante, au fost concep
 
 \subsection{Web 3.0}
 
-Web 3.0 este unul dintre subiectele moderne și evolutive asociate cu următoarele inițiative ale web 2.0. A fost pentru prima dată definit de John mark de la New York Times, în 2006. Versiunea 3.0 poate fi numită drept web semantic. Ideea ce se află la bază este de a defini structurile de date și de a le lega pentru o automatizare, intregare și reutilizare mai eficientă în diverse aplicații. Web 3.0 este capabil să îmbunătățească gestionarea datelor, să susțină accesibilitatea internetului mobil, să stimuleze creativitatea și inovația, să încurajeze fenomenul de globalizare, să sporească user experience și să ajute la organizarea colaborării în rețelele sociale.
+Cunoscut și sub numele de web semantic sau Web decentralizat, este următoarea generație a World Wide Web, care își propune să ofere o experiență mai inteligentă, interconectată și decentralizată. Reprezintă o viziune pentru viitorul web în care datele, aplicațiile și serviciile sunt interconectate în mod fluid, permițând mașinilor și oamenilor să înțeleagă și să interacționeze mai eficient cu informațiile.
 
-În 3.0 conceptul de site web și pagină web dispare, datele nu sunt deținute, ci partajate, iar serviciile afișează diferite vederi, pe baza datelor. Aceste servicii pot fi aplicații și trebuie să se concentreze pe context și personalizare, ce vor fi atinse prin utilizarea căutarilor verticale. Web 3.0 acceptă baze de date masive, la nivel mondial și arhitectură orientată web, care anterior era descrisă ca o rețea de documente.
+Ideea ce se află la bază este de a defini structurile de date și de a le lega pentru o automatizare, intregare și reutilizare mai eficientă în diverse aplicații. Web 3.0 este capabil să îmbunătățească gestionarea datelor, să susțină accesibilitatea internetului mobil, să stimuleze creativitatea și inovația, să încurajeze fenomenul de globalizare, să sporească experiența utilizatorilor și să ajute la organizarea colaborării în rețelele sociale.
 
-Versiunea 3.0 este cunoscută sub numele de web semantic. Acesta a fost conceput de Tim Berners-Lee și reprezintă o mișcare colaboraționistă condusă de consorțiumul World Wide Web. Conform W3C [??] "Web-ul semantic oferă un framework comun care permite partajarea și reutilizarea datelor în limitele aplicațiilor, întreprinderilor și comunităților".
-
-Tim Berners-lee a definit web-ul semantic ca o simbioză a tuturor paginilor web și informațiilor ce le conțin, într-o carte ce ar reprezenta o bază de date globală. Pentru aceasta el a propus o arhitectură stratificată pentru web semantic
+În 3.0 conceptul de site web și pagină web dispare, datele nu sunt deținute, ci partajate, iar serviciile afișează diferite vederi, pe baza datelor. Aceste servicii pot fi aplicații și trebuie să se concentreze pe context și personalizare, ce vor fi atinse prin utilizarea căutarilor verticale. Web 3.0 facilitează dezvoltarea de aplicații care utilizează inteligența artificială, învățarea automată și procesarea limbajului natural. Aceste tehnologii permit analiza avansată a datelor, automatizarea și capacitatea de luare a deciziilor, rezultând în servicii mai inteligente și personalizate pentru utilizatori.
 
 Urm\u atorul pas \^ in dezvoltarea web-ului este crearea aplica\c tiilor web autonome, care pot fi, de asemenea, utilizate f\u ar\u a conexiune la internet. Acestea sunt numite Aplica\c tii Web Progressive (PWA). Crearea acestor aplica\c tii nu este posibil\u a f\u ar\u a a avea control complet la nivelul clientului. Renderizarea pe partea de server nu este posibil\u a \c si se folosesc framework-uri complete pentru front-end pentru a construi acest fel de aplica\c tii. Comunicarea se gestioneaz\u a prin intermediul API-urilor.\cite{pwa}
 
@@ -359,20 +357,21 @@ Urm\u atorul pas \^ in dezvoltarea web-ului este crearea aplica\c tiilor web aut
 
 \textbf{Provocări:}
 \begin{itemize}
-	\item \emph{Vastitate} - conține miliarde de pagini, ce duce la redundanță și dublicate în date
+	\item \emph{Vastitate} - conține miliarde de pagini, ce duce la redundanța datelor
 	\item \emph{Vaguitatea} - interogările inprecise de către utilizatori, precum și modul în care furnizorii de conținut reprezintă conceptele pot face dificilă potrivirea termenilor de interogare cu termenii relevanți ai furnizorului. Acest lucru poate fi și mai agravat atunci când se încearcă integrarea mai multor baze de cunoștințe, care pot deține concepte similare, dar nu identice, ce poate rezulta în ambiguitate și incertitudine
 	\item \emph{Incoerența} - contradicții logice ce vor apărea inevitabil
-	\item \emph{Inconsistența} - contradicții logice ce vor apărea inevitabil în timpul dezvoltării datorită diferențelor în interpretare a datelor
 	\item \emph{Înșelăciune} - momentul în care sursa de informații induce în eroare intenționat consumatorul de informații
 \end{itemize}
 
 
 
+% mby delete this?
+
 \subsection{Paradigmele actuale de randare}
 
-Rendering-ul este procesul de transformare a datelor \c si a codului \^ in HTML care poate fi v\u azut de c\u atre utilizatorul final. Acest proces poate fi realizat pe server sau \^ in browser \c si poate fi realizat integral sau par\c tial, iar toate acestea au compromisuri \^ in ceea ce prive\c ste experien\c ta utilizatorului, performan\c ta \c si experien\c ta dezvoltatorului. Paradigma de randare original\u a \c si cea mai de baz\u a este un site web static: \^ in aceast\u a paradigm\u a de randare, toate paginile web sunt compuse \^ in avans, apoi \^ inc\u arcate ca fi\c siere statice \^ intr-un recipient de stocare undeva \^ in cloud \c si sunt legate de un nume de domeniu.
+Rendering-ul este procesul de transformare a datelor \c si a codului \^ in HTML care poate fi v\u azut de c\u atre utilizatorul final. Acest proces poate fi realizat pe server sau \^ in browser \c si poate fi realizat integral sau par\c tial, iar toate acestea au compromisuri \^ in ceea ce prive\c ste experien\c ta utilizatorului, performan\c ta \c si complexitatea realizării. Prima paradigma de randare presupunea crearea unui site web static: \^ in aceast\u a paradigm\u a de randare, toate paginile web sunt create \^ in avans, apoi \^ inc\u arcate ca fi\c siere statice \^ intr-un recipient de stocare \^ pe server \c si sunt legate de un nume de domeniu.
 
-Acest lucru func\c tioneaz\u a foarte bine chiar \c si \^ in lumea de ast\u azi \c si exist\u a cadre precum Hugo, 11t \c si Jekyll care v\u a pot ajuta s\u a le construi\c ti \^ in mod programatic. Dezavantajul este c\u a nu sunt foarte bune pentru site-urile web \^ in care datele se schimb\u a des, a\c sa c\u a sunt potrivite doar pentru site-urile foarte simple care nu necesit\u a o ton\u a de interactivitate sau date dinamice. \^ in cele din urm\u a, site-urile web trebuiau s\u a fie mai dinamice, ceea ce ne-a adus aplica\c tii multi-pagin\u a \^ in care HTML-ul \c si datele sunt puse \^ impreun\u a \^ in mod dinamic pe un server de fiecare dat\u a c\^ and vine o cerere de la un browser. Acest lucru \^ inseamn\u a c\u a aspectul site-ului web se poate schimba ori de c\^ ate ori se schimb\u a datele de baz\u a. \cite{benefitsserverrendering}
+Dezavantajul acestei paradigme este c\u a nu este la fel de efectivă pentru site-urile web \^ in care datele se schimb\u a des, ci doar pentru site-urile care nu necesit\u a interactivitate complexă sau date dinamice. \cite{benefitsserverrendering}
 
 \begin{figure}[htbp]
 	\centering
@@ -381,7 +380,7 @@ Acest lucru func\c tioneaz\u a foarte bine chiar \c si \^ in lumea de ast\u azi 
 	\label{fig:server rendering}
 \end{figure}
 
-Multe dintre cele mai mari aplica\c tii web din ziua de azi \^ inc\u a folosesc aceast\u a abordare, cum ar fi, de exemplu, amazon.com: de fiecare dat\u a c\^ and face\c ti clic pe un link, ob\c tine\c ti o nou\u a pagin\u a generat\u a dinamic de pe serverele lor. \^ in plus, exist\u a multe cadre populare pentru crearea de aplica\c tii multi-pagin\u a, cum ar fi Ruby on Rails, Django \c si Laravel, precum \c si sisteme de gestionare a con\c tinutului, cum ar fi WordPress. Aceast\u a abordare a func\c tionat foarte bine p\^ an\u a la apari\c tia iPhone. Atunci, oamenii au \^ inceput s\u a realizeze c\u a re\^ inc\u arcarea \^ intregii pagini la fiecare URL pare cam greoaie \^ in compara\c tie cu aplica\c tiile super fluide de pe iPhone. De aceea, aproximativ \^ in 2010, am asistat la apari\c tia aplica\c tiilor cu o singur\u a pagin\u a, cu ajutorul unor framework-uri precum AngularJs \c si React. C\^ a\c tiva ani mai t\^ arziu, \^ in paradigma SPA, toat\u a randarea interfe\c tei se face \^ in browser - \^ incepe\c ti cu o pagin\u a HTML ca un shell, apoi executa\c ti JavaScript pentru a reda interfa\c ta \c si pentru a prelua orice date necesare cu o cerere HTTP suplimentar\u a.
+Multe dintre cele mai mari aplica\c tii web din ziua de azi \^ inc\u a folosesc aceast\u a abordare, cum ar fi, de exemplu, amazon.com: de fiecare dat\u a c\^ and face\c ti click pe un link, ob\c tine\c ti o nou\u a pagin\u a generat\u a dinamic de pe serverele lor. \^ in plus, exist\u a multe cadre populare pentru crearea de aplica\c tii multi-pagin\u a, cum ar fi Ruby on Rails, Django \c si Laravel, precum \c si sisteme de gestionare a con\c tinutului, cum ar fi WordPress. Aceast\u a abordare a func\c tionat foarte bine p\^ an\u a la apari\c tia iPhone. Atunci, oamenii au \^ inceput s\u a realizeze c\u a re\^ inc\u arcarea \^ intregii pagini la fiecare URL este un proces costisitor \^ in compara\c tie cu aplica\c tiile fluide de pe iPhone. De aceea, aproximativ \^ in 2010, am asistat la apari\c tia aplica\c tiilor cu o singur\u a pagin\u a, cu ajutorul unor framework-uri precum AngularJs \c si React. C\^ a\c tiva ani mai t\^ arziu, \^ in paradigma SPA, toat\u a randarea interfe\c tei se face \^ in browser - \^ incepe\c ti cu o pagin\u a HTML ca un shell, apoi executa\c ti JavaScript pentru a reda interfa\c ta \c si pentru a prelua orice date necesare cu o cerere HTTP suplimentar\u a.
 
 \begin{figure}[htbp]
 	\centering

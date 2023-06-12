@@ -447,11 +447,6 @@ INPUT ./sablon_licenta_tex (1).lof
 INPUT sablon_licenta_tex (1).lof
 INPUT sablon_licenta_tex (1).lof
 OUTPUT sablon_licenta_tex (1).lof
-INPUT ./rendering.png
-INPUT ./rendering.png
-INPUT rendering.png
-INPUT ./rendering.png
-INPUT ./rendering.png
 INPUT d:/TexLive/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT d:/TexLive/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT d:/TexLive/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
