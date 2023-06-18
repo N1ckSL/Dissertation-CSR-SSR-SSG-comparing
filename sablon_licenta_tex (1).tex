@@ -369,72 +369,90 @@ Urm\u atorul pas \^ in dezvoltarea web-ului este crearea aplica\c tiilor web aut
 
 \subsection{Paradigmele actuale de randare}
 
-Rendering-ul este procesul de transformare a datelor \c si a codului \^ in HTML care poate fi v\u azut de c\u atre utilizatorul final. Acest proces poate fi realizat pe server sau \^ in browser \c si poate fi realizat integral sau par\c tial, iar toate acestea au compromisuri \^ in ceea ce prive\c ste experien\c ta utilizatorului, performan\c ta \c si complexitatea realizării. Prima paradigma de randare presupunea crearea unui site web static: \^ in aceast\u a paradigm\u a de randare, toate paginile web sunt create \^ in avans, apoi \^ inc\u arcate ca fi\c siere statice \^ intr-un recipient de stocare \^ pe server \c si sunt legate de un nume de domeniu.
+Rendering-ul este procesul de transformare a datelor \c si a codului \^ in HTML care poate fi v\u azut de c\u atre utilizatorul final. Acest proces poate fi realizat pe server sau direct \^ in browser, integral sau par\c tial, iar toate acestea au compromisuri \^ in ceea ce prive\c ste experien\c ta utilizatorului, performan\c ta \c si complexitatea aplicație. Prima paradigma de randare presupunea crearea unui site web static: \^ in aceast\u a paradigm\u a de randare, toate paginile web sunt create \^ in avans, apoi \^ inc\u arcate ca fi\c siere statice pe un server \c si sunt legate de un nume de domeniu.
 
 Dezavantajul acestei paradigme este c\u a nu este la fel de efectivă pentru site-urile web \^ in care datele se schimb\u a des, ci doar pentru site-urile care nu necesit\u a interactivitate complexă sau date dinamice. \cite{benefitsserverrendering}
 
+
+Multe dintre cele mai mari aplica\c tii web din ziua de azi \^ inc\u a folosesc aceast\u a abordare, cum ar fi, de exemplu, amazon.com: de fiecare dat\u a c\^ and face\c ti click pe un link, ob\c tine\c ti o nou\u a pagin\u a generat\u a dinamic de pe serverele lor. \^ In plus, exist\u a multe framework-uri pentru crearea  aplica\c tiilor multi-page, cum ar fi Ruby on Rails, Django \c si Laravel, precum \c si sisteme de gestionare a con\c tinutului, cum ar fi WordPress. Re\^ inc\u arcarea \^ intregii pagini la fiecare schimbare de URL este un proces costisitor, de aceea pentru a reduce necesitatea de a regenera con\c tinutul au ap\u arut solu\c tii precum React \c si Angular - framework-uri JavaScript, ce permit modificarea componentelor f\u ar\u a a cauza o re\^ inc\u arcare a paginii. Aceast\u a arhitectur\u a se nume\c ste SPA (\textit{Single Page Application}).
+
+
+Într-un SPA, resursele HTML, CSS și JavaScript inițiale sunt încărcate atunci când aplicația este accesată pentru prima dată. Interacțiunile ulterioare și modificările stării aplicației sunt gestionate prin efectuarea de cereri asincrone către server pentru a obține date, care sunt apoi randate pe partea de client (\textit{client-side rendering}). Aceasta rezultă \^intr-o experiență mai receptivă și interactivă, deoarece aplicația poate actualiza componente sau secțiuni specifice ale paginii fără a comunica cu serverul.
+
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.63\textwidth]{37.png}
+	\includegraphics[width=0.9\textwidth]{csr-diagram.png}
+	\caption{Client side rendering}
+	\label{fig:csr-diagram}
+\end{figure}
+
+Cu toate acestea, pot exista provocări în ceea ce privește optimizarea pentru motoarele de căutare (SEO), deoarece toate resursele aplicației sunt \^inc\u arcate la prima accesare, crawler-ii web tradiționali pot întâmpina dificultăți în parcurgerea și indexarea conținutului, iar volumul mare de scripturi ce sunt descărcate, bibliotecile externe \c si dependințele pot rezulta \^intr-un timp de încărcare inițial mai mare.
+
+O nou\u a abordare, ce avea scopul de a rezolva problemele aplicatiilor single page este server-side rendering (SSR).
+
+SSR este o tehnică în dezvoltarea aplicațiilor web care implică generarea de HTML pe server și trimiterea acestuia către client. Spre deosebire de CSR, procesul de randare se execut\u a pe server, ce reprezintă un avantaj semnificativ, datorită timpului mai rapid de încărcare inițială a paginilor. \cite{benefitsserverrendering}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{ssr-diagram.png}
 	\caption{Server side rendering}
-	\label{fig:server rendering}
+	\label{fig:ssr-diagram}
 \end{figure}
 
-Multe dintre cele mai mari aplica\c tii web din ziua de azi \^ inc\u a folosesc aceast\u a abordare, cum ar fi, de exemplu, amazon.com: de fiecare dat\u a c\^ and face\c ti click pe un link, ob\c tine\c ti o nou\u a pagin\u a generat\u a dinamic de pe serverele lor. \^ in plus, exist\u a multe cadre populare pentru crearea de aplica\c tii multi-pagin\u a, cum ar fi Ruby on Rails, Django \c si Laravel, precum \c si sisteme de gestionare a con\c tinutului, cum ar fi WordPress. Aceast\u a abordare a func\c tionat foarte bine p\^ an\u a la apari\c tia iPhone. Atunci, oamenii au \^ inceput s\u a realizeze c\u a re\^ inc\u arcarea \^ intregii pagini la fiecare URL este un proces costisitor \^ in compara\c tie cu aplica\c tiile fluide de pe iPhone. De aceea, aproximativ \^ in 2010, am asistat la apari\c tia aplica\c tiilor cu o singur\u a pagin\u a, cu ajutorul unor framework-uri precum AngularJs \c si React. C\^ a\c tiva ani mai t\^ arziu, \^ in paradigma SPA, toat\u a randarea interfe\c tei se face \^ in browser - \^ incepe\c ti cu o pagin\u a HTML ca un shell, apoi executa\c ti JavaScript pentru a reda interfa\c ta \c si pentru a prelua orice date necesare cu o cerere HTTP suplimentar\u a.
+Un alt avantaj al SSR este îmbunătățirea optimizării pentru motoarele de căutare (SEO). Deoarece crawler-ii motoarelor de căutare se bazează în mod tipic pe conținutul HTML, serve-side rendering furnizează pagini complet randate motoarelor de căutare, care pot fi indexate ușor. Aceasta îmbunătățește vizibilitatea și accesibilitatea site-ului în rezultatele motoarelor de căutare.
+
+SSR aduce beneficii și utilizatorilor cu conexiuni lente la internet sau dispozitive mai vechi. Prin pre-randarea HTML-ului pe server, SSR asigură utilizatorii cu conținut chiar și în cazul în care dispozitivele lor au putere de procesare limitată sau capacități de rețea reduse. Aceasta îmbunătățește accesibilitatea și experiența utilizatorului pentru o gamă mai largă de utilizatori.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{38.png}
-	\caption{Client side rendering. Paradigma SPA}
-	\label{fig:spa}
-\end{figure}
-
-Acum, chiar dac\u a este doar o singur\u a pagin\u a, aceasta poate avea mai multe rute. Aceste rute nu indic\u a un server, ci sunt doar actualizate de JavaScript \^ in browser. Acest lucru are avantajul imens de a fi instantaneu pentru utilizatorul final, spre deosebire de o aplica\c tie cu mai multe pagini care ar putea dura cel pu\c tin c\^ ateva sute de milisecunde sau mai mult pentru a reda pagina, dar exist\u a c\^ ateva dezavantaje mari: unul este c\u a necesit\u a un pachet mare de JavaScript, ceea ce poate face ca \^ inc\u arcarea ini\c tial\u a a paginii s\u a fie destul de lent\u a \c si doi - deoarece red\u a doar o 'coaj\u a', motoarele de c\u autare, chiar \c si \^ in prezent, au dificult\u a\c ti \^ in a \^ in\c telege orice con\c tinut de pe rutele dinamice, ceea ce nu este un lucru bun dac\u a ave\c ti nevoie de o SEO bun\u a sau dac\u a dori\c ti ca oamenii s\u a v\u a partajeze con\c tinutul pe re\c telele sociale. C\^ a\c tiva ani mai t\^ arziu a venit timpul pentru un nou tip de framework, ceva care s\u a poat\u a reda HTML \c si date pe server sau la \^ inc\u arcarea ini\c tial\u a a paginii, apoi s\u a se hidrateze la JavaScript pe partea clientului dup\u a aceea. Ast\u azi numim acest lucru SSR (server side rendering), dar ideea general\u a este c\u a cererea ini\c tial\u a merge la un server \c si red\u a totul \^ in mod dinamic, apoi, dup\u a \^ inc\u arcarea ini\c tial\u a a paginii, JavaScript preia controlul pentru a v\u a oferi o experien\c t\u a asem\u an\u atoare cu cea a unei aplica\c tii cu o singur\u a pagin\u a.
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.48\textwidth]{39.png}
-	\includegraphics[width=0.42\textwidth]{40.png}
-	\caption{Client side rendering. Paradigma SPA}
-	\label{fig:server rendering with hydration}
-\end{figure}
-
-Aceast\u a abordare best-of-both-worlds este utilizat\u a de cadre precum Next JS, Nux, Svelt Kit \c si a\c sa mai departe, care sunt adesea denumite meta Frameworks. Aceasta este probabil cea mai popular\u a strategie de randare la ora actual\u a, dar exist\u a \^ inc\u a unele dezavantaje: un dezavantaj este c\u a ave\c ti nevoie de un server real, iar serverele cost\u a bani. O u\c soar\u a varia\c tie a SSR este SSG sau generarea de site-uri statice. \^ in aceast\u a Paradigm\u a, v\u a reda\c ti \^ in avans tot HTML-ul, apoi \^ il \^ inc\u arca\c ti pe o gazd\u a static\u a, cum ar fi un bucket de stocare, dar, la fel ca SSR, se va hidrata \^ in JavaScript dup\u a \^ inc\u arcarea ini\c tial\u a a paginii. Site-urile web de acest tip sunt adesea numite Jam stack sites \c si sunt construite de obicei de acelea\c si meta Frameworks precum Nexjs \c si Swelt Kit, care ob\c tin simplitatea \c si g\u azduirea cu costuri reduse a unui site static cu experien\c ta de tip aplica\c tie a unui SPA. Singurul lucru r\u au este c\u a trebuie s\u a redistribui\c ti site-ul ori de c\^ ate ori se schimb\u a datele \c si de aceea au inventat ISR sau regenerarea static\u a incremental\u a.
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.5\textwidth]{41.png}
-	\caption{Static site generation}
+	\includegraphics[width=0.8\textwidth]{ssg-diagram.png}
+	\caption{Static server generation}
 	\label{fig:ssg}
 \end{figure}
 
-Ideea ce st\u a la baz\u a este de a implemena un site static, cu reconstruc\c tia paginilor individuale din mers. Pe server, c\^ and cache-ul este invalidat \^ in mod normal, cu un site static po\c ti doar s\u a pui totul \^ in cache permanent pe un CDN, ceea ce \^ il face extrem de rapid. Cu ISR, memoria cache poate fi invalidat\u a pe baza anumitor reguli, cum ar fi o anumit\u a perioad\u a de timp, iar atunci c\^ and se \^ int\^ ampl\u a acest lucru, paginile vor fi reconstruite, ceea ce v\u a permite s\u a gestiona\c ti date dinamice f\u ar\u a a fi nevoie de o desf\u a\c surare efectiv\u a a serverului, a\c sa cum ar fi \^ in cazul SSR. Ob\c tine\c ti ce este mai bun din ambele lumi \^ intre SSG \c si SSR, dar dezavantajul este c\u a este mai complex de configurat pe cont propriu, ceea ce \^ inseamn\u a c\u a probabil va trebui s\u a g\u asi\c ti o gazd\u a precum Vercel care s\u a o suporte din start. Acum, o alt\u a problem\u a despre care nu am vorbit cu nici un cadru care folose\c ste hidratarea este c\u a la \^ inc\u arcarea ini\c tial\u a a paginii, aplica\c tia ar putea p\u area c\u a este \^ inghe\c tat\u a \^ in timp ce JavaScript \^ inc\u a se execut\u a pentru a prelua procesul de randare. Pentru a rezolva aceast\u a problem\u a avem hidratarea par\c tial\u a. \cite{fireship}
+Server-side rendering are c\^ateva dezavantaje asociate. Deoarece fiecare solicitare necesită o nouă randare pe server, aceasta poate duce la o încărcare mai mare a serverului și la un timp de răspuns mai lent. De asemenea, este mai dificil de implementat și de întreținut, deoarece necesită o infrastructură de servere mai complexă. SSR creează o dependență de server, deoarece clientul primește pagini complet redată de la server. În cazul în care serverul întâmpină probleme sau este indisponibil, utilizatorii nu pot accesa sau utiliza aplicația.
+Gestionarea stării clientului poate deveni și mai complexă cu SSR. Sincronizarea și actualizarea stării între client și server pentru a menține coerența aplicației necesită o implementare bine gândită și poate fi dificil de gestionat.
 
-Pe un site web de mari dimensiuni, JavaScript poate avea multe de f\u acut pentru lucruri care nici m\u acar nu sunt vizibile pentru utilizatorul final, cum ar fi, de exemplu, poate c\u a ave\c ti cel mai grozav \c si foarte interactiv subsol din lume, dar care umfl\u a stiva de apeluri JavaScript. Cu o hidratare par\c tial\u a, a\c ti putea reda mai \^ int\^ ai componentele din partea de sus a paginii \c si apoi s\u a a\c stepta\c ti p\^ an\u a c\^ and utilizatorul deruleaz\u a \^ in jos \^ inainte de a face acea component\u a interactiv\u a.
+Static site generation (SSG) este un paradigma alternativă în dezvoltarea web care îmbină beneficiile SSR și CSR. Spre deosebire de server-side rendering, unde HTML-ul este generat dinamic la fiecare cerere, SSG generează fișiere HTML statice în timpul procesului de build, care sunt apoi servite către client.
+Unul dintre avantajele majore ale SSG este performanța îmbunătățită și scalabilitatea. Deoarece HTML-ul este pre-randat, serverul poate servi fișiere statice direct, fără a necesita prelucrări suplimentare. Aceasta duce la încărcarea mai rapidă a paginilor și reducerea încărcării serverului, făcându-l potrivit pentru site-urile cu trafic intens. 
+SSG oferă și capacități excelente de caching. Odată ce fișierele statice sunt generate, acestea pot fi păstrate în cache pe server sau pe CDN, permițând servirea instantanee a cererilor ulterioare fără a necesita regenerarea lor. Aceasta minimizează încărcarea serverului și îmbunătățește scalabilitatea generală, în special în scenarii în care actualizările de conținut sunt rare.
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.5\textwidth]{42.png}
-	\caption{Hidratarea par\c tial\u a}
-	\label{fig:partial hydration}
-\end{figure}
+Cu toate acestea are și câteva limitări. SSG nu este potrivit pentru aplicații ce necesită actualizări în timp real sau conținut dinamic, deoarece fișierele statice pre-randate nu se modifică până la următorul proces de build. Acest lucru poate introduce întârzieri în disponibilitatea conținutului și creșterea complexității gestionării actualizărilor de conținut.
 
-\^ in prezent, multe instrumente suport\u a divizarea codului pentru a v\u a \^ imp\u ar\c ti aplica\c tiile \^ in buc\u a\c ti mai mici pentru a facilita modelele de lazy load de acest tip, dar ar putea fi posibil\u a o randare \c si mai eficient\u a cu arhitectura insulelor. \^ in mod normal, atunci c\^ and se hidrateaz\u a, JavaScript preia \^ intreaga pagin\u a, dar acest lucru nu este foarte eficient, deoarece multe componente sunt doar statice \c si neinteractive. Cu Islands se \^ incepe cu HTML static, apoi se folose\c ste JavaScript doar pentru a hidrata componentele interactive. Acest lucru v\u a ofer\u a insule de interactivitate. Cadre precum Astro faciliteaz\u a acest model.
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.5\textwidth]{43.png}
-	\caption{Arhitectura pe insule}
-	\label{fig:island architecture}
-\end{figure}
 
-Un aspect pozitiv este c\u a pute\c ti avea o pagin\u a care nu este deloc interactiv\u a, caz \^ in care nu se trimite niciun JavaScript c\u atre client, chiar dac\u a a\c ti construit interfa\c ta cu un cadru JavaScript precum React. Acum, \^ inc\u a o alt\u a modalitate de a aborda hidratarea ineficient\u a este o paradigm\u a numit\u a streaming SSR, care este sus\c tinut\u a \^ in cadre precum Next js 13. Cu directorul de aplica\c tii, datorit\u a unor blocuri de construc\c tie precum componentele serverului React, practic v\u a permite s\u a reda\c ti con\c tinutul de pe partea serverului \^ in mod simultan \^ in mai multe buc\u a\c ti \^ in loc de toate deodat\u a. \^ in cele din urm\u a, acest lucru \^ inseamn\u a c\u a interfa\c ta de utilizator devine interactiv\u a mai rapid \c si se simte mai performant pentru utilizatorul final, dar dac\u a exist\u a o modalitate de a sc\u apa de hidratare cu totul, deoarece pare a fi sursa multor probleme. Ei bine, aici intervine rezumabilitatea, care este o nou\u a paradigm\u a de randare ini\c tiat\u a de quick framework.
+% Aceast\u a abordare best-of-both-worlds este utilizat\u a de cadre precum Next JS, Nux, Svelt Kit \c si a\c sa mai departe, care sunt adesea denumite meta Frameworks. Aceasta este probabil cea mai popular\u a strategie de randare la ora actual\u a, dar exist\u a \^ inc\u a unele dezavantaje: un dezavantaj este c\u a ave\c ti nevoie de un server real, iar serverele cost\u a bani. O u\c soar\u a varia\c tie a SSR este SSG sau generarea de site-uri statice. \^ in aceast\u a Paradigm\u a, v\u a reda\c ti \^ in avans tot HTML-ul, apoi \^ il \^ inc\u arca\c ti pe o gazd\u a static\u a, cum ar fi un bucket de stocare, dar, la fel ca SSR, se va hidrata \^ in JavaScript dup\u a \^ inc\u arcarea ini\c tial\u a a paginii. Site-urile web de acest tip sunt adesea numite Jam stack sites \c si sunt construite de obicei de acelea\c si meta Frameworks precum Nexjs \c si Swelt Kit, care ob\c tin simplitatea \c si g\u azduirea cu costuri reduse a unui site static cu experien\c ta de tip aplica\c tie a unui SPA. Singurul lucru r\u au este c\u a trebuie s\u a redistribui\c ti site-ul ori de c\^ ate ori se schimb\u a datele \c si de aceea au inventat ISR sau regenerarea static\u a incremental\u a.
 
-Aceasta are o abordare interesant\u a, \^ in care un site web \c si toate datele sale, chiar \c si lucruri cum ar fi ascult\u atorii de evenimente JavaScript, sunt serializate \^ in HTML, apoi codul JavaScript real este \^ imp\u ar\c tit \^ in tone de buc\u a\c ti mici. Asta \^ inseamn\u a c\u a \^ inc\u arcarea ini\c tial\u a a paginii este \^ intotdeauna HTML static, nu este nevoie de hidratare, orice JavaScript necesar pentru interactivitate este lazy loaded \^ in fundal.
+% Ideea ce st\u a la baz\u a este de a implemena un site static, cu reconstruc\c tia paginilor individuale din mers. Pe server, c\^ and cache-ul este invalidat \^ in mod normal, cu un site static po\c ti doar s\u a pui totul \^ in cache permanent pe un CDN, ceea ce \^ il face extrem de rapid. Cu ISR, memoria cache poate fi invalidat\u a pe baza anumitor reguli, cum ar fi o anumit\u a perioad\u a de timp, iar atunci c\^ and se \^ int\^ ampl\u a acest lucru, paginile vor fi reconstruite, ceea ce v\u a permite s\u a gestiona\c ti date dinamice f\u ar\u a a fi nevoie de o desf\u a\c surare efectiv\u a a serverului, a\c sa cum ar fi \^ in cazul SSR. Ob\c tine\c ti ce este mai bun din ambele lumi \^ intre SSG \c si SSR, dar dezavantajul este c\u a este mai complex de configurat pe cont propriu, ceea ce \^ inseamn\u a c\u a probabil va trebui s\u a g\u asi\c ti o gazd\u a precum Vercel care s\u a o suporte din start. Acum, o alt\u a problem\u a despre care nu am vorbit cu nici un cadru care folose\c ste hidratarea este c\u a la \^ inc\u arcarea ini\c tial\u a a paginii, aplica\c tia ar putea p\u area c\u a este \^ inghe\c tat\u a \^ in timp ce JavaScript \^ inc\u a se execut\u a pentru a prelua procesul de randare. Pentru a rezolva aceast\u a problem\u a avem hidratarea par\c tial\u a. \cite{fireship}
+
+% Pe un site web de mari dimensiuni, JavaScript poate avea multe de f\u acut pentru lucruri care nici m\u acar nu sunt vizibile pentru utilizatorul final, cum ar fi, de exemplu, poate c\u a ave\c ti cel mai grozav \c si foarte interactiv subsol din lume, dar care umfl\u a stiva de apeluri JavaScript. Cu o hidratare par\c tial\u a, a\c ti putea reda mai \^ int\^ ai componentele din partea de sus a paginii \c si apoi s\u a a\c stepta\c ti p\^ an\u a c\^ and utilizatorul deruleaz\u a \^ in jos \^ inainte de a face acea component\u a interactiv\u a.
+
+% \begin{figure}[htbp]
+% 	\centering
+% 	\includegraphics[width=0.5\textwidth]{42.png}
+% 	\caption{Hidratarea par\c tial\u a}
+% 	\label{fig:partial hydration}
+% \end{figure}
+
+% \^ in prezent, multe instrumente suport\u a divizarea codului pentru a v\u a \^ imp\u ar\c ti aplica\c tiile \^ in buc\u a\c ti mai mici pentru a facilita modelele de lazy load de acest tip, dar ar putea fi posibil\u a o randare \c si mai eficient\u a cu arhitectura insulelor. \^ in mod normal, atunci c\^ and se hidrateaz\u a, JavaScript preia \^ intreaga pagin\u a, dar acest lucru nu este foarte eficient, deoarece multe componente sunt doar statice \c si neinteractive. Cu Islands se \^ incepe cu HTML static, apoi se folose\c ste JavaScript doar pentru a hidrata componentele interactive. Acest lucru v\u a ofer\u a insule de interactivitate. Cadre precum Astro faciliteaz\u a acest model.
+
+% \begin{figure}[htbp]
+% 	\centering
+% 	\includegraphics[width=0.5\textwidth]{43.png}
+% 	\caption{Arhitectura pe insule}
+% 	\label{fig:island architecture}
+% \end{figure}
+
+% Un aspect pozitiv este c\u a pute\c ti avea o pagin\u a care nu este deloc interactiv\u a, caz \^ in care nu se trimite niciun JavaScript c\u atre client, chiar dac\u a a\c ti construit interfa\c ta cu un cadru JavaScript precum React. Acum, \^ inc\u a o alt\u a modalitate de a aborda hidratarea ineficient\u a este o paradigm\u a numit\u a streaming SSR, care este sus\c tinut\u a \^ in cadre precum Next js 13. Cu directorul de aplica\c tii, datorit\u a unor blocuri de construc\c tie precum componentele serverului React, practic v\u a permite s\u a reda\c ti con\c tinutul de pe partea serverului \^ in mod simultan \^ in mai multe buc\u a\c ti \^ in loc de toate deodat\u a. \^ in cele din urm\u a, acest lucru \^ inseamn\u a c\u a interfa\c ta de utilizator devine interactiv\u a mai rapid \c si se simte mai performant pentru utilizatorul final, dar dac\u a exist\u a o modalitate de a sc\u apa de hidratare cu totul, deoarece pare a fi sursa multor probleme. Ei bine, aici intervine rezumabilitatea, care este o nou\u a paradigm\u a de randare ini\c tiat\u a de quick framework.
+
+% Aceasta are o abordare interesant\u a, \^ in care un site web \c si toate datele sale, chiar \c si lucruri cum ar fi ascult\u atorii de evenimente JavaScript, sunt serializate \^ in HTML, apoi codul JavaScript real este \^ imp\u ar\c tit \^ in tone de buc\u a\c ti mici. Asta \^ inseamn\u a c\u a \^ inc\u arcarea ini\c tial\u a a paginii este \^ intotdeauna HTML static, nu este nevoie de hidratare, orice JavaScript necesar pentru interactivitate este lazy loaded \^ in fundal.
+
+
 
 
 
 \subsection{Consecințele evoluției web}
+
 Evolutia web a avut un impact semnificativ asupra dezvoltării aplicațiilor web moderne. Creșterea vitezei de conectare la internet și a performanței dispozitivelor a permis dezvoltarea aplicațiilor web complexe, cu funcții avansate și user experience sporit. Utilizarea extinsa a standardelor web deschise, cum ar fi HTML, CSS și JavaScript, a dus la o mai mare interoperabilitate între diferite platforme și la o mai mare eficiență în dezvoltarea aplicațiilor.
 
 Apariția și popularizarea API-urilor și a arhitecturilor RESTful au făcut posibilă integrarea mai ușoară a aplicatiilor web cu alte aplicații și servicii. Cloud computing-ul și serviciile web, cum ar fi Amazon Web Services și Microsoft Azure, au făcut posibilă scalabilitatea și distribuirea aplicațiilor web cu usurință, indiferent de locația utilizatorilor.
@@ -458,8 +476,6 @@ Pe măsură ce dezvoltarea aplicațiilor evolua, la fel au evoluat și tehnologi
 Pe lângă framework-urile front-end, au evoluat și tehnologiile back-end, în mod semnificativ. PHP, Ruby on Rails, Node.js au facilitat crearea aplicațiilor web moderne scalabile, care pot gestiona cantități mari de trafic în timp real și sarcini complexe de procesare a datelor.
 
 Evoluția tehnologiilor web a fost determinată de necesitatea de a crea aplicații mai complexe, cu funcționalități avansate. De la HTML "curat" la framework-uri pentru front-end și back-end, tehnologiile web continuă să evolueze într-un ritm rapid, fapt ce impune dezvoltatorii să fie la curent cu ultimele tehnologii și constant să-și actualizeze metodele de dezvoltare utilizate, pentru a deveni mai efectivi în dezvoltarea aplicațiilor moderne, care răspund nevoilor sporite ale utilizatorilor.
-
-
 
 \section{De ce compar\u am server side rendering cu client side rendering?}
 
@@ -534,7 +550,7 @@ Această abordare încearcă să negocieze compromisurile dintre randarea pe par
 
 Principalul dezavantaj rehidratării este că poate avea un impact negativ semnificativ asupra TBT și INP, chiar dacă îmbunătățește FCP. Paginile randate de pe server pot părea înșelător a fi încărcate și interactive, dar nu pot fi utilizate efectiv până când scripturile de pe partea clientului pentru componente nu sunt executate și manipulatorii de evenimente au fost atașați. Acest lucru poate dura secunde sau chiar minute pe dispozitive mobile.
 
-Problemele de rehidratare pot fi adesea mai grave decât interactivitatea întârziată din cauza JavaScript. Pentru ca client-side JavaScript să poată „relua” cu acuratețe de unde a rămas serverul, fără a fi nevoie să solicite din nou toate datele pe care serverul le-a folosit pentru a randa HTML-ul, soluțiile actuale de SSR serializează în general răspunsul de la dependențele de date ale unei interfețe de utilizator în document ca etichete de script. Documentul HTML rezultat conține un nivel ridicat de duplicare:
+Problemele de rehidratare pot fi adesea mai grave decât interactivitatea întârziată din cauza JavaScript. Pentru ca client-side JavaScript să poată „relua” cu acuratețe de unde a rămas serverul, fără a fi nevoie să solicite din nou toate datele pe care serverul le-a folosit pentru a randa HTML-ul, soluțiile actuale de SSR serializează în general răspunsul de la dependințele de date ale unei interfețe de utilizator în document ca etichete de script. Documentul HTML rezultat conține un nivel ridicat de duplicare:
 
 \begin{figure}[htbp]
 	\centering
@@ -659,7 +675,7 @@ Pentru a implementa funcționalitatea de afișare a posturilor asociate unui uti
 \end{lstlisting}
 \subsection{React framework}
 
-Cu ajutorul comenzii \emph{npx create-react-app 02-react} se generează un proiect React, cu numele 02-react, care va conține fișierele configurate și folderele necesare pentru aplicația React, inclusiv structura de bază a proiectului, fișierele de configurare implicite și dependențele inițiale.
+Cu ajutorul comenzii \emph{npx create-react-app 02-react} se generează un proiect React, cu numele 02-react, care va conține fișierele configurate și folderele necesare pentru aplicația React, inclusiv structura de bază a proiectului, fișierele de configurare implicite și dependințele inițiale.
 
 \begin{figure}[htbp]
 	\centering
