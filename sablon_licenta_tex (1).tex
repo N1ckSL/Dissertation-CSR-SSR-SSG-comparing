@@ -399,14 +399,27 @@ Literatura despre aceste consecin\c te se g\u ase\c ste \^ in principal \^ in po
 
 Pe de alt\u a parte, organiza\c tiile se confrunt\u a cu dificult\u a\c ti pentru a decide care strategie de randare s\u a aleag\u a pentru aplica\c tiile lor specifice. De exemplu, Twitter a folosit ini\c tial randarea pe partea server \c si apoi a trecut la randarea pe partea client \^ in 2010. Apoi, au trecut din nou la randarea pe partea server \^ in 2012. Acest lucru sugereaz\u a c\u a ar fi util\u a o compara\c tie pentru a ajuta la luarea unei decizii obiective privind alegerea uneia dintre cele dou\u a paradigme.
 
-
-
 \chapter{Paradigmele actuale de randare}
 Rendering-ul este procesul de conversie a datelor într-o reprezentare vizuală și joacă un rol esențial în aplicațiile web, permițând furnizarea de conținut dinamic și interactiv către utilizatori.În stadiile incipiente ale dezvoltării web-ului, randarea a fost realizată în principal pe server. Site-urile web erau construite folosind tehnologii precum PHP sau Java, unde serverul genera conținutul HTML în mod dinamic, pe baza solicitărilor utilizatorilor. Această abordare are Time to first byte (TTFB) rapid, deoarece serverul poate genera HTML ce poate fi livrat rapid clientului. Dezavantajul acestei paradigme este c\u a nu este la fel de efectivă pentru site-urile web \^ in care datele se schimb\u a des, ci doar pentru site-urile care nu necesit\u a interactivitate complexă sau date dinamice. \cite{benefitsserverrendering}
 
-Multe dintre cele mai mari aplica\c tii web din ziua de azi \^ inc\u a folosesc aceast\u a abordare, cum ar fi, de exemplu, amazon.com: de fiecare dat\u a c\^ and face\c ti click pe un link, ob\c tine\c ti o nou\u a pagin\u a generat\u a dinamic de pe serverele lor. \^ In plus, exist\u a multe framework-uri pentru crearea  aplica\c tiilor multi-page, cum ar fi Ruby on Rails, Django \c si Laravel, precum \c si sisteme de gestionare a con\c tinutului, cum ar fi WordPress. Re\^ inc\u arcarea \^ intregii pagini la fiecare schimbare de URL este un proces costisitor, de aceea pentru a reduce necesitatea de a regenera con\c tinutul au ap\u arut solu\c tii precum React \c si Angular - framework-uri JavaScript, ce permit modificarea componentelor f\u ar\u a a cauza o re\^ inc\u arcare a paginii. Aceast\u a arhitectur\u a se nume\c ste SPA (\textit{Single Page Application}).
+Multe dintre cele mai mari aplica\c tii web din ziua de azi \^ inc\u a folosesc aceast\u a abordare, cum ar fi, de exemplu, amazon.com: de fiecare dat\u a c\^ and face\c ti click pe un link, ob\c tine\c ti o nou\u a pagin\u a generat\u a dinamic de pe serverele lor. \^ In plus, exist\u a multe framework-uri pentru crearea  aplica\c tiilor multi-page, cum ar fi Ruby on Rails, Django \c si Laravel, precum \c si sisteme de gestionare a con\c tinutului, cum ar fi WordPress. 
+
+\section{Client side rendering}
+
+Re\^ inc\u arcarea \^ intregii pagini la fiecare schimbare de URL este un proces costisitor, de aceea pentru a reduce necesitatea de a regenera con\c tinutul au ap\u arut solu\c tii precum React \c si Angular - framework-uri JavaScript, ce permit modificarea componentelor f\u ar\u a a cauza o re\^ inc\u arcare a paginii. Aceast\u a arhitectur\u a se nume\c ste SPA (\textit{Single Page Application}).
 
 Într-un SPA, resursele HTML, CSS și JavaScript inițiale sunt încărcate atunci când aplicația este accesată pentru prima dată. Interacțiunile ulterioare și modificările stării aplicației sunt gestionate prin efectuarea de cereri asincrone către server pentru a obține date, care sunt apoi randate pe partea de client (\textit{client-side rendering}). Aceasta rezultă \^intr-o experiență mai receptivă și interactivă, deoarece aplicația poate actualiza componente sau secțiuni specifice ale paginii fără a comunica cu serverul.
+
+O aplica\c tie ce utilizeaz\u a CSR este caracterizat\u a prin urm\u atoarele aspecte:
+\begin{enumerate}
+	\item \textbf{Cererea HTTP a clientului} - când utilizatorul introduce URL-ul în bara de adrese a browserului, se stabilește o conexiune HTTP cu serverul.
+	\item \textbf{Răspunsul HTTP al serverului} - Serverul trimite înapoi fișierul HTML inițial, care conține referințe către fișiere JavaScript și CSS.
+	\item \textbf{Încărcarea paginii} - browserul clientului primește fișierul HTML inițial și începe randarea structurii de bază a paginii, inclusiv orice conținut static.
+	\item \textbf{Încărcarea fișierelor JavaScript} - browserul descarcă fișierele JavaScript referen\c tiate în fișierul HTML inițial.
+	\item \textbf{Preluarea datelor} - codul JavaScript executat de browserul clientului face cereri către server sau API-uri, pentru a prelua datele necesare pentru a randa conținutul dinamic.
+	\item \textbf{Randarea \c si actualizarea} - odată ce datele sunt preluate, codul JavaScript procesează datele și generează dinamic structura HTML necesară. Browserul actualizează pagina randat\u a cu conținutul HTML generat dinamic, care poate include liste, tabele, formulare sau alte componente
+	\item \textbf{Interactivitatea} - ascultătorii de evenimente și interacțiunile utilizatorului, cum ar fi click-urile sau introducerile de date, declanșează execuția de cod JavaScript ulterioară, care poate actualiza conținutul randat, fără a necesita o reîncărcare completă a paginii.
+\end{enumerate}
 
 \begin{figure}[htbp]
 	\centering
@@ -415,12 +428,15 @@ Multe dintre cele mai mari aplica\c tii web din ziua de azi \^ inc\u a folosesc 
 	\label{fig:csr-diagram}
 \end{figure}
 
+Deoarece browserul trebuie să descarce și să ruleze întregul cod al aplicației înainte ca conținutul să apară pe ecran, încărcarea inițială a paginii este de obicei lentă. Ca rezultat, utilizatorii văd o pagină goală sau un indicator de încărcare pentru o perioadă relativ lungă de timp. Aceasta duce la o experiență mai puțin plăcută pentru utilizatori și la o rată mai mare de abandon\u ari a paginii (\textit{bounce rate}). \cite{google-bouncing-rate}
+
 Cu toate acestea, pot exista provocări în ceea ce privește optimizarea pentru motoarele de căutare (SEO), deoarece toate resursele aplicației sunt \^inc\u arcate la prima accesare, crawler-ii web tradiționali pot întâmpina dificultăți în parcurgerea și indexarea conținutului, iar volumul mare de scripturi ce sunt descărcate, bibliotecile externe \c si dependințele pot rezulta \^intr-un timp de încărcare inițial mai mare.
+
+\section{Server side rendering}
 
 O nou\u a abordare, ce avea scopul de a rezolva problemele aplicatiilor single page este server-side rendering (SSR).
 
 SSR este o tehnică în dezvoltarea aplicațiilor web care implică generarea de HTML pe server și trimiterea acestuia către client. Spre deosebire de CSR, procesul de randare se execut\u a pe server, ce reprezintă un avantaj semnificativ, datorită timpului mai rapid de încărcare inițială a paginilor. \cite{benefitsserverrendering}
-
 
 \begin{figure}[htbp]
 	\centering
@@ -433,6 +449,24 @@ Un alt avantaj al SSR este îmbunătățirea optimizării pentru motoarele de c�
 
 SSR aduce beneficii și utilizatorilor cu conexiuni lente la internet sau dispozitive mai vechi. Prin pre-randarea HTML-ului pe server, SSR asigură utilizatorii cu conținut chiar și în cazul în care dispozitivele lor au putere de procesare limitată sau capacități de rețea reduse. Aceasta îmbunătățește accesibilitatea și experiența utilizatorului pentru o gamă mai largă de utilizatori.
 
+Server-side rendering are c\^ateva dezavantaje asociate. Deoarece fiecare solicitare necesită o nouă randare pe server, aceasta poate duce la o încărcare mai mare a serverului și la un timp de răspuns mai lent. De asemenea, este mai dificil de implementat și de întreținut, deoarece necesită o infrastructură de servere mai complexă. SSR creează o dependență de server, deoarece clientul primește pagini complet redată de la server. În cazul în care serverul întâmpină probleme sau este indisponibil, utilizatorii nu pot accesa sau utiliza aplicația.
+Gestionarea stării clientului poate deveni și mai complexă cu SSR. Sincronizarea și actualizarea stării între client și server pentru a menține coerența aplicației necesită o implementare bine gândită și poate fi dificil de gestionat.
+
+O aplicație ce utilizează SSR este caracterizat\u a prin următoarele aspecte:
+
+\begin{enumerate}
+	\item \textbf{Cererea HTTP din partea clientului} - c\^and utlizitorul introduce URL-ul \^in broswer, se stabile\c ste o conexiune HTTP cu serverul \c si apoi se trimite serverului o cerere pentru a ob\c tine documentul HTML.
+	\item \textbf{Preluarea datelor} - serverul preia datele necesare din baza de date sau API-uri.
+	\item \textbf{Pre-randarea pe partea de server} - serverul compileaz\u a componentele JavaScript \^in HTML static.
+	\item \textbf{Răspunsul HTTP al serverului} - serverul trimite documentul compilat c\u atre client.
+	\item \textbf{Încărcarea și afișarea paginii} - clientul descarc\u a fi\c sierul HTML \c si afi\c seaz\u a componentele statice pe pagină.
+	\item \textbf{Hidratarea} - clientul descarcă fișierul sau fișierele JavaScript încorporate în HTML, procesează codul și atașează ascultători de evenimente componentelor.
+\end{enumerate} \cite{improve-ssr-speed}
+
+\section{Static server generation}
+
+SSG este o paradigma alternativă în dezvoltarea web care îmbină beneficiile SSR și CSR. Spre deosebire de server-side rendering, unde HTML-ul este generat dinamic la fiecare cerere, SSG generează fișiere HTML statice în timpul procesului de build, care sunt apoi servite către client.
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{ssg-diagram.png}
@@ -440,15 +474,24 @@ SSR aduce beneficii și utilizatorilor cu conexiuni lente la internet sau dispoz
 	\label{fig:ssg}
 \end{figure}
 
-Server-side rendering are c\^ateva dezavantaje asociate. Deoarece fiecare solicitare necesită o nouă randare pe server, aceasta poate duce la o încărcare mai mare a serverului și la un timp de răspuns mai lent. De asemenea, este mai dificil de implementat și de întreținut, deoarece necesită o infrastructură de servere mai complexă. SSR creează o dependență de server, deoarece clientul primește pagini complet redată de la server. În cazul în care serverul întâmpină probleme sau este indisponibil, utilizatorii nu pot accesa sau utiliza aplicația.
-Gestionarea stării clientului poate deveni și mai complexă cu SSR. Sincronizarea și actualizarea stării între client și server pentru a menține coerența aplicației necesită o implementare bine gândită și poate fi dificil de gestionat.
-
-Static site generation (SSG) este un paradigma alternativă în dezvoltarea web care îmbină beneficiile SSR și CSR. Spre deosebire de server-side rendering, unde HTML-ul este generat dinamic la fiecare cerere, SSG generează fișiere HTML statice în timpul procesului de build, care sunt apoi servite către client.
 Unul dintre avantajele majore ale SSG este performanța îmbunătățită și scalabilitatea. Deoarece HTML-ul este pre-randat, serverul poate servi fișiere statice direct, fără a necesita prelucrări suplimentare. Aceasta duce la încărcarea mai rapidă a paginilor și reducerea încărcării serverului, făcându-l potrivit pentru site-urile cu trafic intens. 
-SSG oferă și capacități excelente de caching. Odată ce fișierele statice sunt generate, acestea pot fi păstrate în cache pe server sau pe CDN, permițând servirea instantanee a cererilor ulterioare fără a necesita regenerarea lor. Aceasta minimizează încărcarea serverului și îmbunătățește scalabilitatea generală, în special în scenarii în care actualizările de conținut sunt rare.
+
+O aplicație ce utilizează SSR este caracterizat\u a prin următoarele aspecte:
+\begin{enumerate}
+	\item \textbf{Procesul de build} - \^in timpul acestui proces codul sursă și fișierele de conținut ale site-ului web sunt analizate.
+	\item \textbf{Compilarea conținutului} - con\c tinutul fi\c sierelor este procesat \c si convertit din formatul sursă (Markdown sau YAML) în formatul HTML.
+	\item \textbf{Modelarea} - sunt aplicate \c sabloane pe fi\c sierele compilate, permițând un aspect și o structură coerent\u a.
+	\item \textbf{Integrarea datelor} - sunt preluate date din diverse surse (baze de date, API-uri) \c si sunt integrate în paginile generate anterior.
+	\item \textbf{Generarea HTML-ului static} - fi\c sierele HTML sunt generate pe baza con\c tinutului compilat, a \c sabloanelor \c si a datelor integrate.
+	\item \textbf{Optimizarea resurselor} - \^in timpul procesului de build, resursele precum CSS, JavaScript și imaginile se optimizeaz\u a, reducând dimensiunile fișierelor și îmbunătățind performanța.
+	\item \textbf{Implementarea} -  odată ce fișierele statice sunt generate, acestea pot fi păstrate în cache pe server sau pe CDN, permițând servirea instantanee a cererilor ulterioare fără a necesita regenerarea lor (\textit{minimizează încărcarea serverului și îmbunătățește scalabilitatea generală, în special în scenarii în care actualizările de conținut sunt rare}).
+	\item \textbf{Cererea clientului} -  când un utilizator vizitează o pagină, serverul web sau CDN-ul servește direct fișierul HTML static pre-generat.
+	\item \textbf{Afișarea paginii} - browserul clientului primește fișierul HTML static și afișează conținutul pe pagină.
+	\item \textbf{Interactivitatea} - Dacă există elemente interactive sau funcționalități dinamice pe pagină, codul JavaScript poate fi utilizat pentru a îmbunătăți experiența utilizatorului, de obicei prin preluarea de date suplimentare din API-uri sau prin gestionarea interacțiunilor utilizatorului.
+\end{enumerate}
 
 Cu toate acestea are și câteva limitări. SSG nu este potrivit pentru aplicații ce necesită actualizări în timp real sau conținut dinamic, deoarece fișierele statice pre-randate nu se modifică până la următorul proces de build. Acest lucru poate introduce întârzieri în disponibilitatea conținutului și creșterea complexității gestionării actualizărilor de conținut.
-
+Unul dintre cele mai mari dezavantaje ale acestui abordări este timpul de build. Dacă site-ul cons\u a dintr-un num\u ar mare de pagini, procesul de build al acestora va dura mult timp.
 % \section{Analiza performan\c tei tehnologiilor de randare} 
 
 
@@ -798,6 +841,10 @@ Rezultatele obținute pentru ambele aplicații sunt:
 
 	\bibitem{webdev} Jason Miller, Addy Osmani. Rendering on the Web - https://web.dev/rendering-on-the-web/, 2019
 
+	\bibitem{improve-ssr-speed} Anna Monus. What Is Server-side Rendering And How Does It Improve Site Speed?
+	- https://www.debugbear.com/blog/server-side-rendering, 2019
+
+	\bibitem{google-bouncing-rate} Google/SOASTA Research - https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks-load-time-vs-bounce/, 2017
 
 \end{thebibliography}
 
