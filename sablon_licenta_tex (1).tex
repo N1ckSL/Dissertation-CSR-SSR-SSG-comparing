@@ -363,92 +363,7 @@ Urm\u atorul pas \^ in dezvoltarea web-ului este crearea aplica\c tiilor web aut
 	\item \emph{Înșelăciune} - momentul în care sursa de informații induce în eroare intenționat consumatorul de informații
 \end{itemize}
 
-
-
-% mby delete this?
-
-\subsection{Paradigmele actuale de randare}
-
-Rendering-ul este procesul de transformare a datelor \c si a codului \^ in HTML care poate fi v\u azut de c\u atre utilizatorul final. Acest proces poate fi realizat pe server sau \^ in browser \c si poate fi realizat integral sau par\c tial, iar toate acestea au compromisuri \^ in ceea ce prive\c ste experien\c ta utilizatorului, performan\c ta \c si complexitatea realizării. Prima paradigma de randare presupunea crearea unui site web static: \^ in aceast\u a paradigm\u a de randare, toate paginile web sunt create \^ in avans, apoi \^ inc\u arcate ca fi\c siere statice \^ intr-un recipient de stocare \^ pe server \c si sunt legate de un nume de domeniu.
-
-Dezavantajul acestei paradigme este c\u a nu este la fel de efectivă pentru site-urile web \^ in care datele se schimb\u a des, ci doar pentru site-urile care nu necesit\u a interactivitate complexă sau date dinamice. \cite{benefitsserverrendering}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.63\textwidth]{37.png}
-	\caption{Server side rendering}
-	\label{fig:server rendering}
-\end{figure}
-
-Multe dintre cele mai mari aplica\c tii web din ziua de azi \^ inc\u a folosesc aceast\u a abordare, cum ar fi, de exemplu, amazon.com: de fiecare dat\u a c\^ and face\c ti click pe un link, ob\c tine\c ti o nou\u a pagin\u a generat\u a dinamic de pe serverele lor. \^ in plus, exist\u a multe cadre populare pentru crearea de aplica\c tii multi-pagin\u a, cum ar fi Ruby on Rails, Django \c si Laravel, precum \c si sisteme de gestionare a con\c tinutului, cum ar fi WordPress. Aceast\u a abordare a func\c tionat foarte bine p\^ an\u a la apari\c tia iPhone. Atunci, oamenii au \^ inceput s\u a realizeze c\u a re\^ inc\u arcarea \^ intregii pagini la fiecare URL este un proces costisitor \^ in compara\c tie cu aplica\c tiile fluide de pe iPhone. De aceea, aproximativ \^ in 2010, am asistat la apari\c tia aplica\c tiilor cu o singur\u a pagin\u a, cu ajutorul unor framework-uri precum AngularJs \c si React. C\^ a\c tiva ani mai t\^ arziu, \^ in paradigma SPA, toat\u a randarea interfe\c tei se face \^ in browser - \^ incepe\c ti cu o pagin\u a HTML ca un shell, apoi executa\c ti JavaScript pentru a reda interfa\c ta \c si pentru a prelua orice date necesare cu o cerere HTTP suplimentar\u a.
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.8\textwidth]{38.png}
-	\caption{Client side rendering. Paradigma SPA}
-	\label{fig:spa}
-\end{figure}
-
-Acum, chiar dac\u a este doar o singur\u a pagin\u a, aceasta poate avea mai multe rute. Aceste rute nu indic\u a un server, ci sunt doar actualizate de JavaScript \^ in browser. Acest lucru are avantajul imens de a fi instantaneu pentru utilizatorul final, spre deosebire de o aplica\c tie cu mai multe pagini care ar putea dura cel pu\c tin c\^ ateva sute de milisecunde sau mai mult pentru a reda pagina, dar exist\u a c\^ ateva dezavantaje mari: unul este c\u a necesit\u a un pachet mare de JavaScript, ceea ce poate face ca \^ inc\u arcarea ini\c tial\u a a paginii s\u a fie destul de lent\u a \c si doi - deoarece red\u a doar o 'coaj\u a', motoarele de c\u autare, chiar \c si \^ in prezent, au dificult\u a\c ti \^ in a \^ in\c telege orice con\c tinut de pe rutele dinamice, ceea ce nu este un lucru bun dac\u a ave\c ti nevoie de o SEO bun\u a sau dac\u a dori\c ti ca oamenii s\u a v\u a partajeze con\c tinutul pe re\c telele sociale. C\^ a\c tiva ani mai t\^ arziu a venit timpul pentru un nou tip de framework, ceva care s\u a poat\u a reda HTML \c si date pe server sau la \^ inc\u arcarea ini\c tial\u a a paginii, apoi s\u a se hidrateze la JavaScript pe partea clientului dup\u a aceea. Ast\u azi numim acest lucru SSR (server side rendering), dar ideea general\u a este c\u a cererea ini\c tial\u a merge la un server \c si red\u a totul \^ in mod dinamic, apoi, dup\u a \^ inc\u arcarea ini\c tial\u a a paginii, JavaScript preia controlul pentru a v\u a oferi o experien\c t\u a asem\u an\u atoare cu cea a unei aplica\c tii cu o singur\u a pagin\u a.
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.48\textwidth]{39.png}
-	\includegraphics[width=0.42\textwidth]{40.png}
-	\caption{Client side rendering. Paradigma SPA}
-	\label{fig:server rendering with hydration}
-\end{figure}
-
-Aceast\u a abordare best-of-both-worlds este utilizat\u a de cadre precum Next JS, Nux, Svelt Kit \c si a\c sa mai departe, care sunt adesea denumite meta Frameworks. Aceasta este probabil cea mai popular\u a strategie de randare la ora actual\u a, dar exist\u a \^ inc\u a unele dezavantaje: un dezavantaj este c\u a ave\c ti nevoie de un server real, iar serverele cost\u a bani. O u\c soar\u a varia\c tie a SSR este SSG sau generarea de site-uri statice. \^ in aceast\u a Paradigm\u a, v\u a reda\c ti \^ in avans tot HTML-ul, apoi \^ il \^ inc\u arca\c ti pe o gazd\u a static\u a, cum ar fi un bucket de stocare, dar, la fel ca SSR, se va hidrata \^ in JavaScript dup\u a \^ inc\u arcarea ini\c tial\u a a paginii. Site-urile web de acest tip sunt adesea numite Jam stack sites \c si sunt construite de obicei de acelea\c si meta Frameworks precum Nexjs \c si Swelt Kit, care ob\c tin simplitatea \c si g\u azduirea cu costuri reduse a unui site static cu experien\c ta de tip aplica\c tie a unui SPA. Singurul lucru r\u au este c\u a trebuie s\u a redistribui\c ti site-ul ori de c\^ ate ori se schimb\u a datele \c si de aceea au inventat ISR sau regenerarea static\u a incremental\u a.
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.5\textwidth]{41.png}
-	\caption{Static site generation}
-	\label{fig:ssg}
-\end{figure}
-
-Ideea ce st\u a la baz\u a este de a implemena un site static, cu reconstruc\c tia paginilor individuale din mers. Pe server, c\^ and cache-ul este invalidat \^ in mod normal, cu un site static po\c ti doar s\u a pui totul \^ in cache permanent pe un CDN, ceea ce \^ il face extrem de rapid. Cu ISR, memoria cache poate fi invalidat\u a pe baza anumitor reguli, cum ar fi o anumit\u a perioad\u a de timp, iar atunci c\^ and se \^ int\^ ampl\u a acest lucru, paginile vor fi reconstruite, ceea ce v\u a permite s\u a gestiona\c ti date dinamice f\u ar\u a a fi nevoie de o desf\u a\c surare efectiv\u a a serverului, a\c sa cum ar fi \^ in cazul SSR. Ob\c tine\c ti ce este mai bun din ambele lumi \^ intre SSG \c si SSR, dar dezavantajul este c\u a este mai complex de configurat pe cont propriu, ceea ce \^ inseamn\u a c\u a probabil va trebui s\u a g\u asi\c ti o gazd\u a precum Vercel care s\u a o suporte din start. Acum, o alt\u a problem\u a despre care nu am vorbit cu nici un cadru care folose\c ste hidratarea este c\u a la \^ inc\u arcarea ini\c tial\u a a paginii, aplica\c tia ar putea p\u area c\u a este \^ inghe\c tat\u a \^ in timp ce JavaScript \^ inc\u a se execut\u a pentru a prelua procesul de randare. Pentru a rezolva aceast\u a problem\u a avem hidratarea par\c tial\u a. \cite{fireship}
-
-Pe un site web de mari dimensiuni, JavaScript poate avea multe de f\u acut pentru lucruri care nici m\u acar nu sunt vizibile pentru utilizatorul final, cum ar fi, de exemplu, poate c\u a ave\c ti cel mai grozav \c si foarte interactiv subsol din lume, dar care umfl\u a stiva de apeluri JavaScript. Cu o hidratare par\c tial\u a, a\c ti putea reda mai \^ int\^ ai componentele din partea de sus a paginii \c si apoi s\u a a\c stepta\c ti p\^ an\u a c\^ and utilizatorul deruleaz\u a \^ in jos \^ inainte de a face acea component\u a interactiv\u a.
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.5\textwidth]{42.png}
-	\caption{Hidratarea par\c tial\u a}
-	\label{fig:partial hydration}
-\end{figure}
-
-\^ in prezent, multe instrumente suport\u a divizarea codului pentru a v\u a \^ imp\u ar\c ti aplica\c tiile \^ in buc\u a\c ti mai mici pentru a facilita modelele de lazy load de acest tip, dar ar putea fi posibil\u a o randare \c si mai eficient\u a cu arhitectura insulelor. \^ in mod normal, atunci c\^ and se hidrateaz\u a, JavaScript preia \^ intreaga pagin\u a, dar acest lucru nu este foarte eficient, deoarece multe componente sunt doar statice \c si neinteractive. Cu Islands se \^ incepe cu HTML static, apoi se folose\c ste JavaScript doar pentru a hidrata componentele interactive. Acest lucru v\u a ofer\u a insule de interactivitate. Cadre precum Astro faciliteaz\u a acest model.
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.5\textwidth]{43.png}
-	\caption{Arhitectura pe insule}
-	\label{fig:island architecture}
-\end{figure}
-
-Un aspect pozitiv este c\u a pute\c ti avea o pagin\u a care nu este deloc interactiv\u a, caz \^ in care nu se trimite niciun JavaScript c\u atre client, chiar dac\u a a\c ti construit interfa\c ta cu un cadru JavaScript precum React. Acum, \^ inc\u a o alt\u a modalitate de a aborda hidratarea ineficient\u a este o paradigm\u a numit\u a streaming SSR, care este sus\c tinut\u a \^ in cadre precum Next js 13. Cu directorul de aplica\c tii, datorit\u a unor blocuri de construc\c tie precum componentele serverului React, practic v\u a permite s\u a reda\c ti con\c tinutul de pe partea serverului \^ in mod simultan \^ in mai multe buc\u a\c ti \^ in loc de toate deodat\u a. \^ in cele din urm\u a, acest lucru \^ inseamn\u a c\u a interfa\c ta de utilizator devine interactiv\u a mai rapid \c si se simte mai performant pentru utilizatorul final, dar dac\u a exist\u a o modalitate de a sc\u apa de hidratare cu totul, deoarece pare a fi sursa multor probleme. Ei bine, aici intervine rezumabilitatea, care este o nou\u a paradigm\u a de randare ini\c tiat\u a de quick framework.
-
-Aceasta are o abordare interesant\u a, \^ in care un site web \c si toate datele sale, chiar \c si lucruri cum ar fi ascult\u atorii de evenimente JavaScript, sunt serializate \^ in HTML, apoi codul JavaScript real este \^ imp\u ar\c tit \^ in tone de buc\u a\c ti mici. Asta \^ inseamn\u a c\u a \^ inc\u arcarea ini\c tial\u a a paginii este \^ intotdeauna HTML static, nu este nevoie de hidratare, orice JavaScript necesar pentru interactivitate este lazy loaded \^ in fundal.
-
-
-
-\subsection{Consecințele evoluției web}
-Evolutia web a avut un impact semnificativ asupra dezvoltării aplicațiilor web moderne. Creșterea vitezei de conectare la internet și a performanței dispozitivelor a permis dezvoltarea aplicațiilor web complexe, cu funcții avansate și user experience sporit. Utilizarea extinsa a standardelor web deschise, cum ar fi HTML, CSS și JavaScript, a dus la o mai mare interoperabilitate între diferite platforme și la o mai mare eficiență în dezvoltarea aplicațiilor.
-
-Apariția și popularizarea API-urilor și a arhitecturilor RESTful au făcut posibilă integrarea mai ușoară a aplicatiilor web cu alte aplicații și servicii. Cloud computing-ul și serviciile web, cum ar fi Amazon Web Services și Microsoft Azure, au făcut posibilă scalabilitatea și distribuirea aplicațiilor web cu usurință, indiferent de locația utilizatorilor.
-
-Creșterea numarului de utilizatori și a numarului de dispozitive conectate a dus la o creștere semnificativă a cerințelor de securitate și a necesității de a dezvolta aplicații web sigure.
-
-Dezvoltarea și popularizarea framework-urilor și bibliotecilor de cod, cum ar fi Angular, React și Vue, a simplificat dezvoltarea aplicațiilor web și a îmbunatățit productivitatea dezvoltatorilor.
-
-Aplicațiile web moderne sunt mult mai complexe și pot include o varietate de componente, cum ar fi front-end, back-end, baze de date, servicii web, API-uri și multe altele. În plus, aplicațiile web trebuie să functioneze pe o varietate de platforme și dispozitive, ceea ce adaugă o altă dimensiune a complexității.
-
-Pe masură ce aplicațiile web devin mai complexe, devin mai dificil de dezvoltat și de întreținut. Developerii trebuie să se concentreze nu numai pe funcționalitatea aplicației, ci și pe asigurarea securității și performanței acesteia. În plus, este necesar să se mențină un echilibru între user experience, securitate și scalabilitatea aplicației.
-
-Pentru a face față acestei complexități, dezvoltatorii utilizează framework-uri și biblioteci care simplifică procesul de dezvoltare și permite o gestionare mai bună a complexității aplicațiilor.
-
+% \newpage
 \section{Evolu\c tia tehnologiilor}
 
 Pe măsură ce dezvoltarea aplicațiilor evolua, la fel au evoluat și tehnologiile utilizate în crearea aplicațiilor. De-a lungul anilor au apărut multe tehnologii care au revoluționat modul în care sunt dezvoltate aplicațiile. Pe măsură ce acestea deveneau mai complexe, necesitatea în tehnologii mai performante a devenit evidentă. La mijlocul anilor 2000 a fost introdus AJAX (\emph{Asynchronus JavaScript and XML}), care a permis aplicațiilor web să comunice cu serverele, fără a reîncărca întreaga pagină. Acest lucru a rezultat în aplicații web mai rapide și receptive.
@@ -459,91 +374,176 @@ Pe lângă framework-urile front-end, au evoluat și tehnologiile back-end, în 
 
 Evoluția tehnologiilor web a fost determinată de necesitatea de a crea aplicații mai complexe, cu funcționalități avansate. De la HTML "curat" la framework-uri pentru front-end și back-end, tehnologiile web continuă să evolueze într-un ritm rapid, fapt ce impune dezvoltatorii să fie la curent cu ultimele tehnologii și constant să-și actualizeze metodele de dezvoltare utilizate, pentru a deveni mai efectivi în dezvoltarea aplicațiilor moderne, care răspund nevoilor sporite ale utilizatorilor.
 
+\subsection{Consecințele evoluției web}
+
+Evolutia web a avut un impact semnificativ asupra dezvoltării aplicațiilor web moderne. Creșterea vitezei de conectare la internet și a performanței dispozitivelor a permis dezvoltarea aplicațiilor web complexe, cu funcții avansate și user experience sporit. Utilizarea extinsa a standardelor web deschise, cum ar fi HTML, CSS și JavaScript, a dus la o mai mare interoperabilitate între diferite platforme și la o mai mare eficiență în dezvoltarea aplicațiilor.
+
+Apariția și popularizarea API-urilor și a arhitecturilor RESTful au făcut posibilă integrarea mai ușoară a aplicatiilor web cu alte aplicații și servicii. Cloud computing-ul și serviciile web, cum ar fi Amazon Web Services și Microsoft Azure, au făcut posibilă scalabilitatea și distribuirea aplicațiilor web cu usurință, indiferent de locația utilizatorilor.
+
+Creșterea numarului de utilizatori și a numarului de dispozitive conectate a dus la o creștere semnificativă a cerințelor de securitate și a necesității de a dezvolta aplicații web sigure.
+
+Dezvoltarea și popularizarea framework-urilor și bibliotecilor de cod, cum ar fi Angular, React și Vue, a simplificat dezvoltarea aplicațiilor web și a îmbunatățit productivitatea dezvoltatorilor.
+
+Aplicațiile web moderne sunt mult mai complexe și pot include o varietate de componente, cum ar fi front-end, back-end, baze de date, API-uri și multe altele. În plus, aplicațiile web trebuie să functioneze pe o varietate de platforme și dispozitive, ceea ce adaugă o altă dimensiune a complexității.
+
+Pe masură ce aplicațiile web devin mai complexe, devin mai dificil de dezvoltat și de întreținut. Dezvolatorii trebuie să se concentreze nu numai pe funcționalitatea aplicației, ci și pe asigurarea securității și performanței acesteia. În plus, este necesar să se mențină un echilibru între user experience, securitate și scalabilitatea aplicației.
+
+Pentru a face față acestei complexități, dezvoltatorii utilizează framework-uri și biblioteci care simplifică procesul de dezvoltare și permite o gestionare mai bună a complexității aplicațiilor.
 
 
 \section{De ce compar\u am server side rendering cu client side rendering?}
 
 Alegerea unei paradigme \^ in detrimentul alteia are numeroase consecin\c te. De exemplu, preferin\c ta unei paradigme poate avea implica\c tii asupra timpului de \^ inc\u arcare a paginii, a costurilor de dezvoltare \c si \^ intre\c tinere. Timpii crescu\c ti de \^ inc\u arcare a paginii pot duce la abandonul clien\c tilor. De asemenea, optimizarea pentru motoarele de c\u autare \c si compatibilitatea cu browserul sunt, de asemenea, afectate de alegerea f\u acut\u a.
 
-\subsection{Lipsa literaturii}
 Literatura despre aceste consecin\c te se g\u ase\c ste \^ in principal \^ in post\u ari pe bloguri, \^ in care se propune experien\c ta personal\u a \c si opinia unui developer sau a unei echipe. De\c si exist\u a literatur\u a despre tehnologiile moderne, inclusiv aplica\c tiile cu o singur\u a pagin\u a \c si randarea pe partea client, c\u autarea pentru literatur\u a academic\u a pe acest subiect nu d\u a rezultate.
 
-\subsection{Dificultate pentru utilizatori}
 Pe de alt\u a parte, organiza\c tiile se confrunt\u a cu dificult\u a\c ti pentru a decide care strategie de randare s\u a aleag\u a pentru aplica\c tiile lor specifice. De exemplu, Twitter a folosit ini\c tial randarea pe partea server \c si apoi a trecut la randarea pe partea client \^ in 2010. Apoi, au trecut din nou la randarea pe partea server \^ in 2012. Acest lucru sugereaz\u a c\u a ar fi util\u a o compara\c tie pentru a ajuta la luarea unei decizii obiective privind alegerea uneia dintre cele dou\u a paradigme.
 
+\chapter{Paradigmele actuale de randare}
+Rendering-ul este procesul de conversie a datelor într-o reprezentare vizuală și joacă un rol esențial în aplicațiile web, permițând furnizarea de conținut dinamic și interactiv către utilizatori.În stadiile incipiente ale dezvoltării web-ului, randarea a fost realizată în principal pe server. Site-urile web erau construite folosind tehnologii precum PHP sau Java, unde serverul genera conținutul HTML în mod dinamic, pe baza solicitărilor utilizatorilor. Această abordare are Time to first byte (TTFB) rapid, deoarece serverul poate genera HTML ce poate fi livrat rapid clientului. Dezavantajul acestei paradigme este c\u a nu este la fel de efectivă pentru site-urile web \^ in care datele se schimb\u a des, ci doar pentru site-urile care nu necesit\u a interactivitate complexă sau date dinamice. \cite{benefitsserverrendering}
 
-\chapter{Tehnologii de randare}
+Multe dintre cele mai mari aplica\c tii web din ziua de azi \^ inc\u a folosesc aceast\u a abordare, cum ar fi, de exemplu, amazon.com: de fiecare dat\u a c\^ and face\c ti click pe un link, ob\c tine\c ti o nou\u a pagin\u a generat\u a dinamic de pe serverele lor. \^ In plus, exist\u a multe framework-uri pentru crearea  aplica\c tiilor multi-page, cum ar fi Ruby on Rails, Django \c si Laravel, precum \c si sisteme de gestionare a con\c tinutului, cum ar fi WordPress. 
 
-Rendering-ul este procesul de conversie a datelor într-o reprezentare vizuală și joacă un rol esențial în aplicațiile web moderne, permițând furnizarea de conținut dinamic și interactiv către utilizatori. De-a lungul anilor, tehnologiile de randare au evoluat semnificativ, determinate de progresele în dezvoltarea web și de cererea tot mai mare pentru aplicații de înaltă performanță.
+\section{Client side rendering}
 
-Inițial a fost realizată în primul rând prin randarea directă a paginilor HTML. Serverul genera fișiere HTML statice, care erau transmise browserului clientului.
+Re\^ inc\u arcarea \^ intregii pagini la fiecare schimbare de URL este un proces costisitor, de aceea pentru a reduce necesitatea de a regenera con\c tinutul au ap\u arut solu\c tii precum React \c si Angular - framework-uri JavaScript, ce permit modificarea componentelor f\u ar\u a a cauza o re\^ inc\u arcare a paginii. Aceast\u a arhitectur\u a se nume\c ste SPA (\textit{Single Page Application}).
 
-Odată cu apariția JavaScript, au apărut tehnicile de randare dinamică. Efectele și animațiile bazate pe JavaScript au contribuit semnificativ la evoluția experienței utilizatorului, acestea fiind randate pe partea clientului (utilizatorului).
+Într-un SPA, resursele HTML, CSS și JavaScript inițiale sunt încărcate atunci când aplicația este accesată pentru prima dată. Interacțiunile ulterioare și modificările stării aplicației sunt gestionate prin efectuarea de cereri asincrone către server pentru a obține date, care sunt apoi randate pe partea de client (\textit{client-side rendering}). Aceasta rezultă \^intr-o experiență mai receptivă și interactivă, deoarece aplicația poate actualiza componente sau secțiuni specifice ale paginii fără a comunica cu serverul.
 
-\section{Server-side rendering}
-
-SSR generează HTML complet pentru o pagină de pe server ca răspuns la navigare. Acest lucru evită navigarea dus-întors suplimentare pentru preluarea datelor și modelarea pe client, deoarece acestea sunt gestionate înainte ca browserul să primească un răspuns.
-
-Server-side rendering produce, în general, un FCP rapid. Rularea logicii paginii și randarea pe server fac posibilă evitarea trimiterii unui JavaScript masiv către client. Acest lucru ajută la reducerea TBT-ului unei pagini, ceea ce poate duce și la un INP mai mic, deoarece thread-ul principal nu este blocat la fel de des în timpul încărcării paginii. Când thread-ul principal este blocat mai rar, interacțiunile utilizatorilor vor avea mai multe oportunități rulate mai devreme. Acest lucru are sens, deoarece cu randarea pe partea serverului, textul și link-urile se trimit către browserul utilizatorului. Această abordare poate funcționa bine pentru un spectru larg de condiții de dispozitiv și de rețea și permite optimizarea prin intermediul analizării documentelor în flux.
-
-Datorila la SSR, este mai puțin probabil ca utilizatorii să aștepte execuția JavaScript legat de CPU înainte de a putea folosi site-ul. Cu toate acestea, există un compromis potențial cu această abordare: generarea de pagini pe server necesită timp, ceea ce poate duce la un TTFB mai mare.
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.6\textwidth]{ssr.png}
-	\caption{Server-side rendering}
-	\label{fig:ssr}
-\end{figure}
-
-\section{Static rendering}
-Randarea statică are loc în timpul build-ului aplicației. Această abordare oferă un FCP rapid și, de asemenea, un TBT și un INP mai scăzut - presupunând că cantitatea de JS la nivelul clientului este limitată. Spre deosebire de randarea pe server, reușește, de asemenea, să obțină un TTFB constant rapid, deoarece HTML pentru o pagină nu trebuie să fie generat dinamic pe server. În general, randarea statică înseamnă producerea unui fișier HTML separat pentru fiecare adresă URL în avans. Cu răspunsurile HTML generate în avans, randările statice pot fi implementate în mai multe CDN-uri pentru a profita de edge caching.
-
-Unul dintre dezavantajele randării statice este că fișiere HTML individuale trebuie generate pentru fiecare URL posibil. Acest lucru poate fi dificil sau chiar imposibil atunci când nu puteți prezice din timp care vor fi acele adrese URL sau pentru site-uri cu un număr mare de pagini unice.
+O aplica\c tie ce utilizeaz\u a CSR este caracterizat\u a prin urm\u atoarele aspecte:
+\begin{enumerate}
+	\item \textbf{Cererea HTTP a clientului} - când utilizatorul introduce URL-ul în bara de adrese a browserului, se stabilește o conexiune HTTP cu serverul.
+	\item \textbf{Răspunsul HTTP al serverului} - Serverul trimite înapoi fișierul HTML inițial, care conține referințe către fișiere JavaScript și CSS.
+	\item \textbf{Încărcarea paginii} - browserul clientului primește fișierul HTML inițial și începe randarea structurii de bază a paginii, inclusiv orice conținut static.
+	\item \textbf{Încărcarea fișierelor JavaScript} - browserul descarcă fișierele JavaScript referen\c tiate în fișierul HTML inițial.
+	\item \textbf{Preluarea datelor} - codul JavaScript executat de browserul clientului face cereri către server sau API-uri, pentru a prelua datele necesare pentru a randa conținutul dinamic.
+	\item \textbf{Randarea \c si actualizarea} - odată ce datele sunt preluate, codul JavaScript procesează datele și generează dinamic structura HTML necesară. Browserul actualizează pagina randat\u a cu conținutul HTML generat dinamic, care poate include liste, tabele, formulare sau alte componente
+	\item \textbf{Interactivitatea} - ascultătorii de evenimente și interacțiunile utilizatorului, cum ar fi click-urile sau introducerile de date, declanșează execuția de cod JavaScript ulterioară, care poate actualiza conținutul randat, fără a necesita o reîncărcare completă a paginii.
+\end{enumerate}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.6\textwidth]{static-rendering.png}
-	\caption{Static rendering}
-	\label{fig:sr}
+	\includegraphics[width=0.9\textwidth]{csr-diagram.png}
+	\caption{Client side rendering}
+	\label{fig:csr-diagram}
 \end{figure}
 
-\section{Client-side rendering}
-CSR reprezintă randarea paginilor direct în browser cu ajutorul la JavaScript. Toată logica, preluarea datelor, șablonarea și rutarea sunt gestionate preponderent de client.
+Deoarece browserul trebuie să descarce și să ruleze întregul cod al aplicației înainte ca conținutul să apară pe ecran, încărcarea inițială a paginii este de obicei lentă. Ca rezultat, utilizatorii văd o pagină goală sau un indicator de încărcare pentru o perioadă relativ lungă de timp. Aceasta duce la o experiență mai puțin plăcută pentru utilizatori și la o rată mai mare de abandon\u ari a paginii (\textit{bounce rate}). \cite{google-bouncing-rate}
 
-Client-side rendering poate fi dificil de obținut și păstrat rapid pentru dispozitivele mobile. Randarea pe partea de client se poate apropia de performanța randării pe partea de serverului, păstrând un bundle JavaScript restrâns și oferind valoare în cât mai puține călătorii dus-întors. Scripturile și datele esențiale pot fi livrate mai devreme folosind \emph{<link rel=preload>}, ceea ce face ca analizatorul să funcționeze mai repede pentru dvs. Modele precum PRPL merită, de asemenea, evaluate pentru a se asigura că navigațiile inițiale și ulterioare sunt instantanee.
+Cu toate acestea, pot exista provocări în ceea ce privește optimizarea pentru motoarele de căutare (SEO), deoarece toate resursele aplicației sunt \^inc\u arcate la prima accesare, crawler-ii web tradiționali pot întâmpina dificultăți în parcurgerea și indexarea conținutului, iar volumul mare de scripturi ce sunt descărcate, bibliotecile externe \c si dependințele pot rezulta \^intr-un timp de încărcare inițial mai mare.
+
+\section{Server side rendering}
+
+O nou\u a abordare, ce avea scopul de a rezolva problemele aplicatiilor single page este server-side rendering (SSR).
+
+SSR este o tehnică în dezvoltarea aplicațiilor web care implică generarea de HTML pe server și trimiterea acestuia către client. Spre deosebire de CSR, procesul de randare se execut\u a pe server, ce reprezintă un avantaj semnificativ, datorită timpului mai rapid de încărcare inițială a paginilor. \cite{benefitsserverrendering}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{csr.png}
-	\caption{Client-side rendering}
-	\label{fig:csr}
+	\includegraphics[width=0.9\textwidth]{ssr-diagram.png}
+	\caption{Server side rendering}
+	\label{fig:ssr-diagram}
 \end{figure}
 
-Principalul dezavantaj al CSR este că, cantitatea de JavaScript necesară tinde să crească pe măsură ce o aplicație crește, ceea ce poate avea efecte negative asupra INP-ului unei pagini. Acest lucru devine deosebit de dificil odată cu adăugarea de noi biblioteci JavaScript, polyfill-uri și cod third-party, care concurează pentru puterea de procesare și trebuie adesea procesate înainte ca conținutul unei pagini să poată fi randat.
+Un alt avantaj al SSR este îmbunătățirea optimizării pentru motoarele de căutare (SEO). Deoarece crawler-ii motoarelor de căutare se bazează în mod tipic pe conținutul HTML, serve-side rendering furnizează pagini complet randate motoarelor de căutare, care pot fi indexate ușor. Aceasta îmbunătățește vizibilitatea și accesibilitatea site-ului în rezultatele motoarelor de căutare.
 
-\section{Rehydratation}
+SSR aduce beneficii și utilizatorilor cu conexiuni lente la internet sau dispozitive mai vechi. Prin pre-randarea HTML-ului pe server, SSR asigură utilizatorii cu conținut chiar și în cazul în care dispozitivele lor au putere de procesare limitată sau capacități de rețea reduse. Aceasta îmbunătățește accesibilitatea și experiența utilizatorului pentru o gamă mai largă de utilizatori.
 
-Această abordare încearcă să negocieze compromisurile dintre randarea pe partea client și redarea pe partea serverului, făcând ambele. Solicitările de navigare, cum ar fi încărcările întregii pagini sau reîncărcările, sunt gestionate de un server care randrează pagina HTML, apoi JavaScript și datele utilizate pentru randare sunt încorporate în documentul rezultat. Acest lucru rezultă într-un FCP rapid la fel ca randarea pe partea serverului, apoi urmează rerandarea pe client, folosind o tehnică numită \emph{(re)hidratare}. Aceasta este o soluție eficientă, dar poate veni cu dezavantaje considerabile de performanță.
+Server-side rendering are c\^ateva dezavantaje asociate. Deoarece fiecare solicitare necesită o nouă randare pe server, aceasta poate duce la o încărcare mai mare a serverului și la un timp de răspuns mai lent. De asemenea, este mai dificil de implementat și de întreținut, deoarece necesită o infrastructură de servere mai complexă. SSR creează o dependență de server, deoarece clientul primește pagini complet redată de la server. În cazul în care serverul întâmpină probleme sau este indisponibil, utilizatorii nu pot accesa sau utiliza aplicația.
+Gestionarea stării clientului poate deveni și mai complexă cu SSR. Sincronizarea și actualizarea stării între client și server pentru a menține coerența aplicației necesită o implementare bine gândită și poate fi dificil de gestionat.
+
+O aplicație ce utilizează SSR este caracterizat\u a prin următoarele aspecte:
+
+\begin{enumerate}
+	\item \textbf{Cererea HTTP din partea clientului} - c\^and utlizitorul introduce URL-ul \^in broswer, se stabile\c ste o conexiune HTTP cu serverul \c si apoi se trimite serverului o cerere pentru a ob\c tine documentul HTML.
+	\item \textbf{Preluarea datelor} - serverul preia datele necesare din baza de date sau API-uri.
+	\item \textbf{Pre-randarea pe partea de server} - serverul compileaz\u a componentele JavaScript \^in HTML static.
+	\item \textbf{Răspunsul HTTP al serverului} - serverul trimite documentul compilat c\u atre client.
+	\item \textbf{Încărcarea și afișarea paginii} - clientul descarc\u a fi\c sierul HTML \c si afi\c seaz\u a componentele statice pe pagină.
+	\item \textbf{Hidratarea} - clientul descarcă fișierul sau fișierele JavaScript încorporate în HTML, procesează codul și atașează ascultători de evenimente componentelor.
+\end{enumerate} \cite{improve-ssr-speed}
+
+\section{Static server generation}
+
+SSG este o paradigma alternativă în dezvoltarea web care îmbină beneficiile SSR și CSR. Spre deosebire de server-side rendering, unde HTML-ul este generat dinamic la fiecare cerere, SSG generează fișiere HTML statice în timpul procesului de build, care sunt apoi servite către client.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{hydratation.png}
-	\caption{Tehnologia de hidratare}
-	\label{fig:hydratation}
+	\includegraphics[width=0.8\textwidth]{ssg-diagram.png}
+	\caption{Static server generation}
+	\label{fig:ssg}
 \end{figure}
 
-Principalul dezavantaj rehidratării este că poate avea un impact negativ semnificativ asupra TBT și INP, chiar dacă îmbunătățește FCP. Paginile randate de pe server pot părea înșelător a fi încărcate și interactive, dar nu pot fi utilizate efectiv până când scripturile de pe partea clientului pentru componente nu sunt executate și manipulatorii de evenimente au fost atașați. Acest lucru poate dura secunde sau chiar minute pe dispozitive mobile.
+Unul dintre avantajele majore ale SSG este performanța îmbunătățită și scalabilitatea. Deoarece HTML-ul este pre-randat, serverul poate servi fișiere statice direct, fără a necesita prelucrări suplimentare. Aceasta duce la încărcarea mai rapidă a paginilor și reducerea încărcării serverului, făcându-l potrivit pentru site-urile cu trafic intens. 
 
-Problemele de rehidratare pot fi adesea mai grave decât interactivitatea întârziată din cauza JavaScript. Pentru ca client-side JavaScript să poată „relua” cu acuratețe de unde a rămas serverul, fără a fi nevoie să solicite din nou toate datele pe care serverul le-a folosit pentru a randa HTML-ul, soluțiile actuale de SSR serializează în general răspunsul de la dependențele de date ale unei interfețe de utilizator în document ca etichete de script. Documentul HTML rezultat conține un nivel ridicat de duplicare:
+O aplicație ce utilizează SSR este caracterizat\u a prin următoarele aspecte:
+\begin{enumerate}
+	\item \textbf{Procesul de build} - \^in timpul acestui proces codul sursă și fișierele de conținut ale site-ului web sunt analizate.
+	\item \textbf{Compilarea conținutului} - con\c tinutul fi\c sierelor este procesat \c si convertit din formatul sursă (Markdown sau YAML) în formatul HTML.
+	\item \textbf{Modelarea} - sunt aplicate \c sabloane pe fi\c sierele compilate, permițând un aspect și o structură coerent\u a.
+	\item \textbf{Integrarea datelor} - sunt preluate date din diverse surse (baze de date, API-uri) \c si sunt integrate în paginile generate anterior.
+	\item \textbf{Generarea HTML-ului static} - fi\c sierele HTML sunt generate pe baza con\c tinutului compilat, a \c sabloanelor \c si a datelor integrate.
+	\item \textbf{Optimizarea resurselor} - \^in timpul procesului de build, resursele precum CSS, JavaScript și imaginile se optimizeaz\u a, reducând dimensiunile fișierelor și îmbunătățind performanța.
+	\item \textbf{Implementarea} -  odată ce fișierele statice sunt generate, acestea pot fi păstrate în cache pe server sau pe CDN, permițând servirea instantanee a cererilor ulterioare fără a necesita regenerarea lor (\textit{minimizează încărcarea serverului și îmbunătățește scalabilitatea generală, în special în scenarii în care actualizările de conținut sunt rare}).
+	\item \textbf{Cererea clientului} -  când un utilizator vizitează o pagină, serverul web sau CDN-ul servește direct fișierul HTML static pre-generat.
+	\item \textbf{Afișarea paginii} - browserul clientului primește fișierul HTML static și afișează conținutul pe pagină.
+	\item \textbf{Interactivitatea} - Dacă există elemente interactive sau funcționalități dinamice pe pagină, codul JavaScript poate fi utilizat pentru a îmbunătăți experiența utilizatorului, de obicei prin preluarea de date suplimentare din API-uri sau prin gestionarea interacțiunilor utilizatorului.
+\end{enumerate}
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{hydratation-duplication.png}
-	\caption{Dublicarea de cod la hidratare}
-	\label{fig:hydratation-dublication}
-\end{figure}
+Cu toate acestea are și câteva limitări. SSG nu este potrivit pentru aplicații ce necesită actualizări în timp real sau conținut dinamic, deoarece fișierele statice pre-randate nu se modifică până la următorul proces de build. Acest lucru poate introduce întârzieri în disponibilitatea conținutului și creșterea complexității gestionării actualizărilor de conținut.
+Unul dintre cele mai mari dezavantaje ale acestui abordări este timpul de build. Dacă site-ul cons\u a dintr-un num\u ar mare de pagini, procesul de build al acestora va dura mult timp.
+% \section{Analiza performan\c tei tehnologiilor de randare} 
 
-Totuși există o modaliate de a optimiza randarea pe server cu rehidratare. Utilizarea randării pe partea de server pentru conținut cu un grad ridicat de stocare în cache poate reduce TTFB, producând rezultate similare cu randarea preliminară. Rehidratarea progresivă sau parțială poate fi cheia pentru a face această tehnică mai viabilă în viitor.
+
+% \subsection{Static rendering}
+% Randarea statică are loc în timpul build-ului aplicației. Această abordare oferă un FCP rapid și, de asemenea, un TBT și un INP mai scăzut - presupunând că cantitatea de JS la nivelul clientului este limitată. Spre deosebire de randarea pe server, reușește, de asemenea, să obțină un TTFB constant rapid, deoarece HTML pentru o pagină nu trebuie să fie generat dinamic pe server. În general, randarea statică înseamnă producerea unui fișier HTML separat pentru fiecare adresă URL în avans. Cu răspunsurile HTML generate în avans, randările statice pot fi implementate în mai multe CDN-uri pentru a profita de edge caching.
+
+% Unul dintre dezavantajele randării statice este că fișiere HTML individuale trebuie generate pentru fiecare URL posibil. Acest lucru poate fi dificil sau chiar imposibil atunci când nu puteți prezice din timp care vor fi acele adrese URL sau pentru site-uri cu un număr mare de pagini unice.
+
+% \begin{figure}[htbp]
+% 	\centering
+% 	\includegraphics[width=0.6\textwidth]{static-rendering.png}
+% 	\caption{Static rendering}
+% 	\label{fig:sr}
+% \end{figure}
+
+% \subsection{Client-side rendering}
+% CSR reprezintă randarea paginilor direct în browser cu ajutorul la JavaScript. Toată logica, preluarea datelor, șablonarea și rutarea sunt gestionate preponderent de client.
+
+% Client-side rendering poate fi dificil de obținut și păstrat rapid pentru dispozitivele mobile. Randarea pe partea de client se poate apropia de performanța randării pe partea de serverului, păstrând un bundle JavaScript restrâns și oferind valoare în cât mai puține călătorii dus-întors. Scripturile și datele esențiale pot fi livrate mai devreme folosind \emph{<link rel=preload>}, ceea ce face ca analizatorul să funcționeze mai repede pentru dvs. Modele precum PRPL merită, de asemenea, evaluate pentru a se asigura că navigațiile inițiale și ulterioare sunt instantanee.
+
+% \begin{figure}[htbp]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{csr.png}
+% 	\caption{Client-side rendering}
+% 	\label{fig:csr}
+% \end{figure}
+
+% Principalul dezavantaj al CSR este că, cantitatea de JavaScript necesară tinde să crească pe măsură ce o aplicație crește, ceea ce poate avea efecte negative asupra INP-ului unei pagini. Acest lucru devine deosebit de dificil odată cu adăugarea de noi biblioteci JavaScript, polyfill-uri și cod third-party, care concurează pentru puterea de procesare și trebuie adesea procesate înainte ca conținutul unei pagini să poată fi randat.
+
+% \subsection{Rehydratation}
+
+% Această abordare încearcă să negocieze compromisurile dintre randarea pe partea client și redarea pe partea serverului, făcând ambele. Solicitările de navigare, cum ar fi încărcările întregii pagini sau reîncărcările, sunt gestionate de un server care randrează pagina HTML, apoi JavaScript și datele utilizate pentru randare sunt încorporate în documentul rezultat. Acest lucru rezultă într-un FCP rapid la fel ca randarea pe partea serverului, apoi urmează rerandarea pe client, folosind o tehnică numită \emph{(re)hidratare}. Aceasta este o soluție eficientă, dar poate veni cu dezavantaje considerabile de performanță.
+
+% \begin{figure}[htbp]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{hydratation.png}
+% 	\caption{Tehnologia de hidratare}
+% 	\label{fig:hydratation}
+% \end{figure}
+
+% Principalul dezavantaj rehidratării este că poate avea un impact negativ semnificativ asupra TBT și INP, chiar dacă îmbunătățește FCP. Paginile randate de pe server pot părea înșelător a fi încărcate și interactive, dar nu pot fi utilizate efectiv până când scripturile de pe partea clientului pentru componente nu sunt executate și manipulatorii de evenimente au fost atașați. Acest lucru poate dura secunde sau chiar minute pe dispozitive mobile.
+
+% Problemele de rehidratare pot fi adesea mai grave decât interactivitatea întârziată din cauza JavaScript. Pentru ca client-side JavaScript să poată „relua” cu acuratețe de unde a rămas serverul, fără a fi nevoie să solicite din nou toate datele pe care serverul le-a folosit pentru a randa HTML-ul, soluțiile actuale de SSR serializează în general răspunsul de la dependințele de date ale unei interfețe de utilizator în document ca etichete de script. Documentul HTML rezultat conține un nivel ridicat de duplicare:
+
+% \begin{figure}[htbp]
+% 	\centering
+% 	\includegraphics[width=0.9\textwidth]{hydratation-duplication.png}
+% 	\caption{Redundanța la hidratare}
+% 	\label{fig:hydratation-dublication}
+% \end{figure}
+
+% Totuși există o modaliate de a optimiza randarea pe server cu rehidratare. Utilizarea randării pe partea de server pentru conținut cu un grad ridicat de stocare în cache poate reduce TTFB, producând rezultate similare cu randarea preliminară. Rehidratarea progresivă sau parțială poate fi cheia pentru a face această tehnică mai viabilă în viitor.
 
 
 
@@ -659,7 +659,7 @@ Pentru a implementa funcționalitatea de afișare a posturilor asociate unui uti
 \end{lstlisting}
 \subsection{React framework}
 
-Cu ajutorul comenzii \emph{npx create-react-app 02-react} se generează un proiect React, cu numele 02-react, care va conține fișierele configurate și folderele necesare pentru aplicația React, inclusiv structura de bază a proiectului, fișierele de configurare implicite și dependențele inițiale.
+Cu ajutorul comenzii \emph{npx create-react-app 02-react} se generează un proiect React, cu numele 02-react, care va conține fișierele configurate și folderele necesare pentru aplicația React, inclusiv structura de bază a proiectului, fișierele de configurare implicite și dependințele inițiale.
 
 \begin{figure}[htbp]
 	\centering
@@ -841,6 +841,10 @@ Rezultatele obținute pentru ambele aplicații sunt:
 
 	\bibitem{webdev} Jason Miller, Addy Osmani. Rendering on the Web - https://web.dev/rendering-on-the-web/, 2019
 
+	\bibitem{improve-ssr-speed} Anna Monus. What Is Server-side Rendering And How Does It Improve Site Speed?
+	- https://www.debugbear.com/blog/server-side-rendering, 2019
+
+	\bibitem{google-bouncing-rate} Google/SOASTA Research - https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks-load-time-vs-bounce/, 2017
 
 \end{thebibliography}
 
