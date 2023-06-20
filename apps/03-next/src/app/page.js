@@ -1,22 +1,91 @@
-import React from "react";
+"use client";
+import * as React from "react";
 
-function Home({ users, posts, postComments }) {
+function App() {
+  const allUsers = React.useRef([]);
+  const allPosts = React.useRef([]);
+  const allComments = React.useRef([]);
+
   const [input, setInput] = React.useState("");
   const [currentUser, setCurrentUser] = React.useState("");
   const [selectedPostId, setSelectedPostId] = React.useState(null);
 
+  const [data, setData] = React.useState({
+    users: [],
+    posts: [],
+    comments: [],
+    postComments: [],
+  });
+
+  React.useEffect(() => {
+    async function fetchData() {
+      const [usersRes, postsRes, commentsRes] = await Promise.all([
+        fetch("https://jsonplaceholder.typicode.com/users"),
+        fetch("https://jsonplaceholder.typicode.com/posts"),
+        fetch("https://jsonplaceholder.typicode.com/comments"),
+      ]);
+
+      const usersData = await usersRes.json();
+      const postsData = await postsRes.json();
+      const commentsData = await commentsRes.json();
+
+      allUsers.current = usersData;
+      allPosts.current = postsData;
+      allComments.current = commentsData;
+
+      setData({
+        users: usersData,
+        posts: postsData,
+        comments: commentsData,
+        postComments: data.postComments,
+      });
+    }
+
+    fetchData();
+  }, [data.postComments]);
+
+  React.useEffect(() => {
+    function filterUsers() {
+      const filteredUsers = allUsers.current.filter((user) =>
+        user.name.toLowerCase().includes(input.toLowerCase())
+      );
+
+      setData((prevData) => ({
+        ...prevData,
+        users: filteredUsers,
+      }));
+    }
+
+    const debounceTimer = setTimeout(filterUsers, 300);
+
+    return () => clearTimeout(debounceTimer);
+  }, [input]);
+
   const handleUserClick = (userId) => {
     setCurrentUser(userId);
     setSelectedPostId(null);
-  };
 
-  if (!users || !posts || !postComments) {
-    return <div>Loading...</div>;
-  }
+    setData((prevData) => ({
+      ...prevData,
+      postComments: [],
+    }));
+  };
 
   const handlePostClick = async (postId) => {
     setSelectedPostId(postId);
+
+    const commentsRes = await fetch(
+      `https://jsonplaceholder.typicode.com/comments?postId=${postId}`
+    );
+    const commentsData = await commentsRes.json();
+
+    setData((prevData) => ({
+      ...prevData,
+      postComments: commentsData,
+    }));
   };
+
+  const { users, posts, postComments } = data;
 
   return (
     <div className="m-0 p-0 bg-[url('https://picsum.photos/1920/1080?grayscale')] bg-cover">
@@ -29,7 +98,7 @@ function Home({ users, posts, postComments }) {
             placeholder="Search by name"
             onChange={(e) => setInput(e.target.value)}
           />
-          {console.log(users)}
+
           <ul>
             {users.map((user) => (
               <li
@@ -130,24 +199,4 @@ function Home({ users, posts, postComments }) {
   );
 }
 
-export async function getServerSideProps() {
-  const [usersRes, postsRes, commentsRes] = await Promise.all([
-    fetch("https://jsonplaceholder.typicode.com/users"),
-    fetch("https://jsonplaceholder.typicode.com/posts"),
-    fetch("https://jsonplaceholder.typicode.com/comments"),
-  ]);
-
-  const usersData = await usersRes.json();
-  const postsData = await postsRes.json();
-  const commentsData = await commentsRes.json();
-
-  return {
-    props: {
-      users: usersData,
-      posts: postsData,
-      postComments: commentsData,
-    },
-  };
-}
-
-export default Home;
+export default App;
