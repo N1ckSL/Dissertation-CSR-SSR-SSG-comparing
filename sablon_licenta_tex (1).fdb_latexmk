@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1687367976 "/Users/nicu/Desktop/disertatie/Disertatie_v2/sablon_licenta_tex (1).tex" "sablon_licenta_tex (1).pdf" "sablon_licenta_tex (1)" 1687367978 0
-  "/Users/nicu/Desktop/disertatie/Disertatie_v2/sablon_licenta_tex (1).tex" 1687367975 68946 c1c5ef357298872c7b84a6b32808dc3a ""
+["pdflatex"] 1687370567 "/Users/nicu/Desktop/disertatie/Disertatie_v2/sablon_licenta_tex (1).tex" "sablon_licenta_tex (1).pdf" "sablon_licenta_tex (1)" 1687370569 0
+  "/Users/nicu/Desktop/disertatie/Disertatie_v2/sablon_licenta_tex (1).tex" 1687370566 69739 470ba5ce494feb330600d0b390e2600f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -117,10 +117,10 @@
   "csr-diagram.png" 1687091887 80768 558e489e6e532852199f7cdacd550136 ""
   "layered_architecture.png" 1687091028 102141 2296b9d2dd59637aa4e9d7f4597fca3e ""
   "react_file_structure.png" 1687091028 7029 3b478e8b43ee875f64dde733db10004a ""
-  "sablon_licenta_tex (1).aux" 1687367978 7380 600ffb2a96210df25d6829eb44abacf1 "pdflatex"
-  "sablon_licenta_tex (1).lof" 1687367978 1846 c70630c51e8255ec0c414fca05484b84 "pdflatex"
-  "sablon_licenta_tex (1).tex" 1687367975 68946 c1c5ef357298872c7b84a6b32808dc3a ""
-  "sablon_licenta_tex (1).toc" 1687367978 1930 b0e1c6fc111b28a5b054e3d72da2dbbf "pdflatex"
+  "sablon_licenta_tex (1).aux" 1687370569 7380 b1b825afa1d16d4d1480551ed013b389 "pdflatex"
+  "sablon_licenta_tex (1).lof" 1687370569 1846 70ee6e3d15aa2a488810f87b0f32387e "pdflatex"
+  "sablon_licenta_tex (1).tex" 1687370566 69739 470ba5ce494feb330600d0b390e2600f ""
+  "sablon_licenta_tex (1).toc" 1687370569 1930 6f11fded1c4835bb05fd0583fc826df6 "pdflatex"
   "ssg-diagram.png" 1687091887 79357 4ac666e15a7826597aa141a6eb03edcd ""
   "ssr-diagram.png" 1687091887 79512 25a2c291876db07c1657c31d5bdfa5f6 ""
   "web-evolution.png" 1687365051 22794 6012ac4194a5ae3a3398c08a896afbc1 ""

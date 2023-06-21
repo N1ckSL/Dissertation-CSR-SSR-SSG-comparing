@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.18)  21 JUN 2023 20:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.18)  21 JUN 2023 21:02
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -846,173 +846,169 @@ Capitolul 3.
 [18
 
 ] [19] [20]
-Overfull \hbox (13.1717pt too wide) in paragraph at lines 549--550
+Overfull \hbox (13.1717pt too wide) in paragraph at lines 551--552
 \OT1/cmr/m/n/12 Aceste in-stru-mente pot ajuta dezvol-ta-to-rii s^^Ua mo-ni-to-ri-zeze []i s^^Ua ^^^Pmbun^^Uat^^Ua[]easc^^Ua performan[]a
  []
 
-
-Overfull \hbox (12.01617pt too wide) in paragraph at lines 560--561
+[21]
+Overfull \hbox (12.01617pt too wide) in paragraph at lines 562--563
 \OT1/cmr/m/n/12 dezvol-tat^^Ua de Go-o-gle, care ajut^^Ua la m^^Uasurarea []i ^^^Pmbun^^Uat^^Ua[]irea ca-lit^^Ua[]ii []i performan[]ei
  []
 
-[21] [22]
+[22]
 <01_desktop_preview.png, id=121, 1378.39969pt x 624.83438pt>
 File: 01_desktop_preview.png Graphic file (type png)
 <use 01_desktop_preview.png>
-Package pdftex.def Info: 01_desktop_preview.png  used on input line 585.
+Package pdftex.def Info: 01_desktop_preview.png  used on input line 587.
 (pdftex.def)             Requested size: 407.66833pt x 184.79172pt.
-
-Overfull \hbox (3.47769pt too wide) in paragraph at lines 605--607
+ [23 <./01_desktop_preview.png>]
+Overfull \hbox (3.47769pt too wide) in paragraph at lines 607--609
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[23 <./01_desktop_preview.png>]
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 609.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmtt.fd
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 611.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-Overfull \hbox (6.71344pt too wide) in paragraph at lines 619--620
+Overfull \hbox (6.71344pt too wide) in paragraph at lines 621--622
 \OT1/cmr/m/n/12 act, in-clu-siv struc-tura de baz^^Ua a pro-iec-tu-lui, fi[]ierele de con-fi-gu-rare im-pli-cite []i dependin[]ele
  []
 
 <react_file_structure.png, id=127, 198.7425pt x 182.93344pt>
 File: react_file_structure.png Graphic file (type png)
 <use react_file_structure.png>
-Package pdftex.def Info: react_file_structure.png  used on input line 623.
+Package pdftex.def Info: react_file_structure.png  used on input line 625.
 (pdftex.def)             Requested size: 181.18439pt x 166.77672pt.
-[24 <./react_file_structure.png>]
-Overfull \hbox (9.22638pt too wide) in paragraph at lines 643--644
+[24]
+Overfull \hbox (9.22638pt too wide) in paragraph at lines 645--646
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (9.22638pt too wide) in paragraph at lines 644--646
+Overfull \hbox (9.22638pt too wide) in paragraph at lines 646--648
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (5.26486pt too wide) in paragraph at lines 660--661
+[25 <./react_file_structure.png>]
+Overfull \hbox (5.26486pt too wide) in paragraph at lines 662--663
 \OT1/cmr/m/n/12 Am dezvol-tat aceea[]i aplica[]ie fo-lo-sind Va-ni-lla Ja-vaS-cript []i Re-act []i am tes-tat performan[]a
  []
 
-[25]
 <01_desktop.png, id=136, 421.575pt x 326.72063pt>
 File: 01_desktop.png Graphic file (type png)
 <use 01_desktop.png>
-Package pdftex.def Info: 01_desktop.png  used on input line 668.
+Package pdftex.def Info: 01_desktop.png  used on input line 670.
 (pdftex.def)             Requested size: 203.83417pt x 157.97572pt.
 <01_mobile.png, id=137, 421.575pt x 327.47343pt>
 File: 01_mobile.png Graphic file (type png)
 <use 01_mobile.png>
-Package pdftex.def Info: 01_mobile.png  used on input line 669.
+Package pdftex.def Info: 01_mobile.png  used on input line 671.
 (pdftex.def)             Requested size: 203.83417pt x 158.33974pt.
 <02_desktop.png, id=138, 421.14482pt x 325.215pt>
 File: 02_desktop.png Graphic file (type png)
 <use 02_desktop.png>
-Package pdftex.def Info: 02_desktop.png  used on input line 676.
+Package pdftex.def Info: 02_desktop.png  used on input line 678.
 (pdftex.def)             Requested size: 203.83417pt x 157.40157pt.
 <02_mobile.png, id=139, 733.23938pt x 569.87906pt>
 File: 02_mobile.png Graphic file (type png)
 <use 02_mobile.png>
-Package pdftex.def Info: 02_mobile.png  used on input line 677.
+Package pdftex.def Info: 02_mobile.png  used on input line 679.
 (pdftex.def)             Requested size: 203.83417pt x 158.41722pt.
- [26 <./01_desktop.png> <./01_mobile.png> <./02_desktop.png> <./02_mobile.png>]
-<01_desktop_deployed.png, id=147, 420.82219pt x 328.22626pt>
+<01_desktop_deployed.png, id=140, 420.82219pt x 328.22626pt>
 File: 01_desktop_deployed.png Graphic file (type png)
 <use 01_desktop_deployed.png>
-Package pdftex.def Info: 01_desktop_deployed.png  used on input line 686.
+Package pdftex.def Info: 01_desktop_deployed.png  used on input line 688.
 (pdftex.def)             Requested size: 203.83417pt x 158.98419pt.
-<01_mobile_deployed.png, id=148, 418.56375pt x 325.96782pt>
+<01_mobile_deployed.png, id=141, 418.56375pt x 325.96782pt>
 File: 01_mobile_deployed.png Graphic file (type png)
 <use 01_mobile_deployed.png>
-Package pdftex.def Info: 01_mobile_deployed.png  used on input line 687.
+Package pdftex.def Info: 01_mobile_deployed.png  used on input line 689.
 (pdftex.def)             Requested size: 203.83417pt x 158.7408pt.
-<02_desktop_deployed.png, id=149, 420.28447pt x 326.07536pt>
+<02_desktop_deployed.png, id=142, 420.28447pt x 326.07536pt>
 File: 02_desktop_deployed.png Graphic file (type png)
 <use 02_desktop_deployed.png>
-Package pdftex.def Info: 02_desktop_deployed.png  used on input line 694.
+Package pdftex.def Info: 02_desktop_deployed.png  used on input line 696.
 (pdftex.def)             Requested size: 203.83417pt x 158.14137pt.
-<02_mobile_deployed.png, id=150, 728.7225pt x 563.10374pt>
+<02_mobile_deployed.png, id=143, 728.7225pt x 563.10374pt>
 File: 02_mobile_deployed.png Graphic file (type png)
 <use 02_mobile_deployed.png>
-Package pdftex.def Info: 02_mobile_deployed.png  used on input line 695.
+Package pdftex.def Info: 02_mobile_deployed.png  used on input line 697.
 (pdftex.def)             Requested size: 203.83417pt x 157.50471pt.
-<01_desktop_lighthouse.png, id=151, 519.44063pt x 512.66531pt>
+[26 <./01_desktop.png> <./01_mobile.png>] [27 <./02_desktop.png> <./02_mobile.png> <./01_desktop_deployed.png> <./01_mobile_deployed.png> <./02_desktop_deployed.png> <./02_mobile_deployed.png>]
+<01_desktop_lighthouse.png, id=158, 519.44063pt x 512.66531pt>
 File: 01_desktop_lighthouse.png Graphic file (type png)
 <use 01_desktop_lighthouse.png>
-Package pdftex.def Info: 01_desktop_lighthouse.png  used on input line 709.
+Package pdftex.def Info: 01_desktop_lighthouse.png  used on input line 711.
 (pdftex.def)             Requested size: 203.83417pt x 201.17464pt.
-<01_mobile_lighthouse.png, id=152, 518.6878pt x 511.9125pt>
+<01_mobile_lighthouse.png, id=159, 518.6878pt x 511.9125pt>
 File: 01_mobile_lighthouse.png Graphic file (type png)
 <use 01_mobile_lighthouse.png>
-Package pdftex.def Info: 01_mobile_lighthouse.png  used on input line 710.
+Package pdftex.def Info: 01_mobile_lighthouse.png  used on input line 712.
 (pdftex.def)             Requested size: 203.83417pt x 201.17606pt.
- [27 <./01_desktop_deployed.png> <./01_mobile_deployed.png> <./02_desktop_deployed.png> <./02_mobile_deployed.png>]
 <02_desktop_lighthouse.png, id=160, 516.42938pt x 512.66531pt>
 File: 02_desktop_lighthouse.png Graphic file (type png)
 <use 02_desktop_lighthouse.png>
-Package pdftex.def Info: 02_desktop_lighthouse.png  used on input line 717.
+Package pdftex.def Info: 02_desktop_lighthouse.png  used on input line 719.
 (pdftex.def)             Requested size: 203.83417pt x 202.34802pt.
 <02_mobile_lighthouse.png, id=161, 523.20468pt x 504.38437pt>
 File: 02_mobile_lighthouse.png Graphic file (type png)
 <use 02_mobile_lighthouse.png>
-Package pdftex.def Info: 02_mobile_lighthouse.png  used on input line 718.
+Package pdftex.def Info: 02_mobile_lighthouse.png  used on input line 720.
 (pdftex.def)             Requested size: 203.83417pt x 196.50131pt.
 <01_desktop_deployed_lighthouse.png, id=162, 508.14844pt x 511.9125pt>
 File: 01_desktop_deployed_lighthouse.png Graphic file (type png)
 <use 01_desktop_deployed_lighthouse.png>
-Package pdftex.def Info: 01_desktop_deployed_lighthouse.png  used on input line 727.
+Package pdftex.def Info: 01_desktop_deployed_lighthouse.png  used on input line 729.
 (pdftex.def)             Requested size: 203.83417pt x 205.3394pt.
 <01_mobile_deployed_lighthouse.png, id=163, 526.96875pt x 511.9125pt>
 File: 01_mobile_deployed_lighthouse.png Graphic file (type png)
 <use 01_mobile_deployed_lighthouse.png>
-Package pdftex.def Info: 01_mobile_deployed_lighthouse.png  used on input line 728.
+Package pdftex.def Info: 01_mobile_deployed_lighthouse.png  used on input line 730.
 (pdftex.def)             Requested size: 203.83417pt x 198.01254pt.
 <02_desktop_deployed_lighthouse.png, id=164, 504.38437pt x 511.9125pt>
 File: 02_desktop_deployed_lighthouse.png Graphic file (type png)
 <use 02_desktop_deployed_lighthouse.png>
-Package pdftex.def Info: 02_desktop_deployed_lighthouse.png  used on input line 735.
+Package pdftex.def Info: 02_desktop_deployed_lighthouse.png  used on input line 737.
 (pdftex.def)             Requested size: 203.83417pt x 206.87819pt.
 <02_mobile_deployed_lighthouse.png, id=165, 504.38437pt x 511.9125pt>
 File: 02_mobile_deployed_lighthouse.png Graphic file (type png)
 <use 02_mobile_deployed_lighthouse.png>
-Package pdftex.def Info: 02_mobile_deployed_lighthouse.png  used on input line 736.
+Package pdftex.def Info: 02_mobile_deployed_lighthouse.png  used on input line 738.
 (pdftex.def)             Requested size: 203.83417pt x 206.87819pt.
- [28 <./01_desktop_lighthouse.png> <./01_mobile_lighthouse.png> <./02_desktop_lighthouse.png> <./02_mobile_lighthouse.png>] [29 <./01_desktop_deployed_lighthouse.png> <./01_mobile_deployed_lighthouse.png> <./02_desktop_deployed_lighthouse.png> <./02_mobile_deployed_lighthouse.png>]
-<01_desktop_pagespeed.png, id=181, 711.4078pt x 583.42969pt>
+<01_desktop_pagespeed.png, id=166, 711.4078pt x 583.42969pt>
 File: 01_desktop_pagespeed.png Graphic file (type png)
 <use 01_desktop_pagespeed.png>
-Package pdftex.def Info: 01_desktop_pagespeed.png  used on input line 749.
+Package pdftex.def Info: 01_desktop_pagespeed.png  used on input line 751.
 (pdftex.def)             Requested size: 203.83417pt x 167.16052pt.
-<01_mobile_pagespeed.png, id=182, 718.93594pt x 579.66562pt>
+<01_mobile_pagespeed.png, id=167, 718.93594pt x 579.66562pt>
 File: 01_mobile_pagespeed.png Graphic file (type png)
 <use 01_mobile_pagespeed.png>
-Package pdftex.def Info: 01_mobile_pagespeed.png  used on input line 750.
+Package pdftex.def Info: 01_mobile_pagespeed.png  used on input line 752.
 (pdftex.def)             Requested size: 203.83417pt x 164.34845pt.
-<02_desktop_pagespeed.png, id=183, 707.64375pt x 583.42969pt>
+<02_desktop_pagespeed.png, id=168, 707.64375pt x 583.42969pt>
 File: 02_desktop_pagespeed.png Graphic file (type png)
 <use 02_desktop_pagespeed.png>
-Package pdftex.def Info: 02_desktop_pagespeed.png  used on input line 757.
+Package pdftex.def Info: 02_desktop_pagespeed.png  used on input line 759.
 (pdftex.def)             Requested size: 203.83417pt x 168.05077pt.
-<02_mobile_pagespeed.png, id=184, 707.64375pt x 583.42969pt>
+<02_mobile_pagespeed.png, id=169, 707.64375pt x 583.42969pt>
 File: 02_mobile_pagespeed.png Graphic file (type png)
 <use 02_mobile_pagespeed.png>
-Package pdftex.def Info: 02_mobile_pagespeed.png  used on input line 758.
+Package pdftex.def Info: 02_mobile_pagespeed.png  used on input line 760.
 (pdftex.def)             Requested size: 203.83417pt x 168.05077pt.
- [30 <./01_desktop_pagespeed.png> <./01_mobile_pagespeed.png> <./02_desktop_pagespeed.png> <./02_mobile_pagespeed.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 793--794
+ [28 <./01_desktop_lighthouse.png> <./01_mobile_lighthouse.png>] [29 <./02_desktop_lighthouse.png> <./02_mobile_lighthouse.png> <./01_desktop_deployed_lighthouse.png> <./01_mobile_deployed_lighthouse.png>] [30 <./02_desktop_deployed_lighthouse.png> <./02_mobile_deployed_lighthouse.png> <./01_desktop_pagespeed.png> <./01_mobile_pagespeed.png> <./02_desktop_pagespeed.png> <./02_mobile_pagespeed.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 795--796
 []\OT1/cmr/m/n/12 Benjamin Ja-ko-bus. Vu-eJS vs An-gu-lar vs Re-ac-tJS with De-mos -
  []
 
 [31
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 804--805
+Underfull \hbox (badness 10000) in paragraph at lines 806--807
 []\OT1/cmr/m/n/12 Google/SOASTA Re-search - https://www.thinkwithgoogle.com/marketing-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 804--805
+Underfull \hbox (badness 10000) in paragraph at lines 806--807
 \OT1/cmr/m/n/12 strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks-load-time-
  []
 
@@ -1028,13 +1024,13 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  6747 strings out of 476025
  106574 string characters out of 5790017
- 1875388 words of memory out of 5000000
+ 1876388 words of memory out of 5000000
  27069 multiletter control sequences out of 15000+600000
  526287 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,10n,62p,1170b,1682s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on "sablon_licenta_tex (1).pdf" (41 pages, 2583685 bytes).
+Output written on "sablon_licenta_tex (1).pdf" (41 pages, 2584089 bytes).
 PDF statistics:
  260 PDF objects out of 1000 (max. 8388607)
  134 compressed objects within 2 object streams

@@ -23,7 +23,7 @@
 \contentsline {section}{\numberline {3.4}Analiza performanței}{26}{}%
 \contentsline {subsection}{\numberline {3.4.1}Web Vitals}{26}{}%
 \contentsline {subsection}{\numberline {3.4.2}Lighthouse}{28}{}%
-\contentsline {subsection}{\numberline {3.4.3}PageSpeed Insights}{30}{}%
-\contentsline {chapter}{Bibliography}{30}{}%
+\contentsline {subsection}{\numberline {3.4.3}PageSpeed Insights}{28}{}%
+\contentsline {chapter}{Bibliography}{28}{}%
 \contentsline {chapter}{\numberline {A}Glosar}{33}{}%
 \contentsline {section}{\numberline {A.1}Acronime}{33}{}%
