@@ -374,7 +374,11 @@ Pe lângă framework-urile front-end, au evoluat și tehnologiile back-end, în 
 
 Evoluția tehnologiilor web a fost determinată de necesitatea de a crea aplicații mai complexe, cu funcționalități avansate. De la HTML "curat" la framework-uri pentru front-end și back-end, tehnologiile web continuă să evolueze într-un ritm rapid, fapt ce impune dezvoltatorii să fie la curent cu ultimele tehnologii și constant să-și actualizeze metodele de dezvoltare utilizate, pentru a deveni mai efectivi în dezvoltarea aplicațiilor moderne, care răspund nevoilor sporite ale utilizatorilor.
 
-\subsection{Consecințele evoluției web}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{web-evolution.png} \label{fig:web-evolution}
+	\caption{Evolu\c tia web-ului}
+\end{figure}
 
 Evolutia web a avut un impact semnificativ asupra dezvoltării aplicațiilor web moderne. Creșterea vitezei de conectare la internet și a performanței dispozitivelor a permis dezvoltarea aplicațiilor web complexe, cu funcții avansate și user experience sporit. Utilizarea extinsa a standardelor web deschise, cum ar fi HTML, CSS și JavaScript, a dus la o mai mare interoperabilitate între diferite platforme și la o mai mare eficiență în dezvoltarea aplicațiilor.
 
@@ -390,14 +394,6 @@ Pe masură ce aplicațiile web devin mai complexe, devin mai dificil de dezvolta
 
 Pentru a face față acestei complexități, dezvoltatorii utilizează framework-uri și biblioteci care simplifică procesul de dezvoltare și permite o gestionare mai bună a complexității aplicațiilor.
 
-
-\section{De ce compar\u am server side rendering cu client side rendering?}
-
-Alegerea unei paradigme \^ in detrimentul alteia are numeroase consecin\c te. De exemplu, preferin\c ta unei paradigme poate avea implica\c tii asupra timpului de \^ inc\u arcare a paginii, a costurilor de dezvoltare \c si \^ intre\c tinere. Timpii crescu\c ti de \^ inc\u arcare a paginii pot duce la abandonul clien\c tilor. De asemenea, optimizarea pentru motoarele de c\u autare \c si compatibilitatea cu browserul sunt, de asemenea, afectate de alegerea f\u acut\u a.
-
-Literatura despre aceste consecin\c te se g\u ase\c ste \^ in principal \^ in post\u ari pe bloguri, \^ in care se propune experien\c ta personal\u a \c si opinia unui developer sau a unei echipe. De\c si exist\u a literatur\u a despre tehnologiile moderne, inclusiv aplica\c tiile cu o singur\u a pagin\u a \c si randarea pe partea client, c\u autarea pentru literatur\u a academic\u a pe acest subiect nu d\u a rezultate.
-
-Pe de alt\u a parte, organiza\c tiile se confrunt\u a cu dificult\u a\c ti pentru a decide care strategie de randare s\u a aleag\u a pentru aplica\c tiile lor specifice. De exemplu, Twitter a folosit ini\c tial randarea pe partea server \c si apoi a trecut la randarea pe partea client \^ in 2010. Apoi, au trecut din nou la randarea pe partea server \^ in 2012. Acest lucru sugereaz\u a c\u a ar fi util\u a o compara\c tie pentru a ajuta la luarea unei decizii obiective privind alegerea uneia dintre cele dou\u a paradigme.
 
 \chapter{Paradigmele actuale de randare}
 Rendering-ul este procesul de conversie a datelor într-o reprezentare vizuală și joacă un rol esențial în aplicațiile web, permițând furnizarea de conținut dinamic și interactiv către utilizatori.În stadiile incipiente ale dezvoltării web-ului, randarea a fost realizată în principal pe server. Site-urile web erau construite folosind tehnologii precum PHP sau Java, unde serverul genera conținutul HTML în mod dinamic, pe baza solicitărilor utilizatorilor. Această abordare are Time to first byte (TTFB) rapid, deoarece serverul poate genera HTML ce poate fi livrat rapid clientului. Dezavantajul acestei paradigme este c\u a nu este la fel de efectivă pentru site-urile web \^ in care datele se schimb\u a des, ci doar pentru site-urile care nu necesit\u a interactivitate complexă sau date dinamice. \cite{benefitsserverrendering}
@@ -492,60 +488,21 @@ O aplicație ce utilizează SSR este caracterizat\u a prin următoarele aspecte:
 
 Cu toate acestea are și câteva limitări. SSG nu este potrivit pentru aplicații ce necesită actualizări în timp real sau conținut dinamic, deoarece fișierele statice pre-randate nu se modifică până la următorul proces de build. Acest lucru poate introduce întârzieri în disponibilitatea conținutului și creșterea complexității gestionării actualizărilor de conținut.
 Unul dintre cele mai mari dezavantaje ale acestui abordări este timpul de build. Dacă site-ul cons\u a dintr-un num\u ar mare de pagini, procesul de build al acestora va dura mult timp.
-% \section{Analiza performan\c tei tehnologiilor de randare} 
 
 
-% \subsection{Static rendering}
-% Randarea statică are loc în timpul build-ului aplicației. Această abordare oferă un FCP rapid și, de asemenea, un TBT și un INP mai scăzut - presupunând că cantitatea de JS la nivelul clientului este limitată. Spre deosebire de randarea pe server, reușește, de asemenea, să obțină un TTFB constant rapid, deoarece HTML pentru o pagină nu trebuie să fie generat dinamic pe server. În general, randarea statică înseamnă producerea unui fișier HTML separat pentru fiecare adresă URL în avans. Cu răspunsurile HTML generate în avans, randările statice pot fi implementate în mai multe CDN-uri pentru a profita de edge caching.
+\section{Alegerea paradigmei corespunzătoare}
 
-% Unul dintre dezavantajele randării statice este că fișiere HTML individuale trebuie generate pentru fiecare URL posibil. Acest lucru poate fi dificil sau chiar imposibil atunci când nu puteți prezice din timp care vor fi acele adrese URL sau pentru site-uri cu un număr mare de pagini unice.
+Alegerea între CSR, SSR și SSG este importantă în dezvoltarea unei aplicații web, deoarece are un impact direct asupra experienței utilizatorului, performanței și funcționalit\u a\c tii generale a aplicației. Fiecare abordare are propriile sale puncte forte și considerații, iar alegerea depinde de mai mul\c ti factori, cum ar fi cerințele proiectului, scalabilitatea, complexitatea și obiectivele de performanță. Principalele aspecte de luat în considerare sunt:
 
-% \begin{figure}[htbp]
-% 	\centering
-% 	\includegraphics[width=0.6\textwidth]{static-rendering.png}
-% 	\caption{Static rendering}
-% 	\label{fig:sr}
-% \end{figure}
+\begin{enumerate}
+	\item \textbf{Experiența utilizatorului} - Abordarea de randare afectează în mod semnificativ modul în care conținutul aplicației este livrat în browserul utilizatorului. CSR pune accent pe interactivitate, prin încărcarea inițială a unei structuri HTML minimale și apoi preluarea și randarea datelor pe partea clientului, ceea ce duce la o încărcare inițială mai rapidă a paginii. SSR, pe de altă parte, furnizează o pagină HTML complet redată de pe server, fapt ce reduce timpul de încărcare inițial și asigur\u a ca conținutul să fie imediat vizibil utilizatorilor. SSG generează fișiere HTML statice în timpul procesului de construcție, permitând încărcări de pagini ultra-rapide, deoarece nu este necesară prelucrarea în server.
+	\item \textbf{Optimizarea pentru motoarele de căutare} - Motoarele de căutare întâmpină adesea dificultăți în indexarea conținutului JavaScript dinamic. SSR și SSG, care livrează conținut HTML pre-randat în browser, sunt mai efective cu SEO în comparație cu CSR. Acest lucru se datorează faptului că motoarele de căutare pot parcurge și indexa ușor conținutul HTML static, ceea ce ajută la îmbunătățirea vizibilității și descoperirii.
+	\item \textbf{Performanța} - Abordarea de randare afectează performanța generală a aplicației. CSR poate duce la timp de încărcare mai lung, în special în cazul conexiunilor de rețea mai lente sau al unor cantități mari de date de preluat. SSR reduce timpul de randare inițial prin furnizarea unei pagini pre-randate de pe server, \^ins\u a navigarea ulterioară poate necesita apeluri suplimentare către server. SSG oferă cea mai bună performanță, deoarece generează fișiere HTML statice care pot fi livrate direct utilizatorului, minimizând necesitatea de prelucrare pe server.
+	\item \textbf{Complexitatea și fluxul de dezvoltare} - Framework-urile CSR, cum ar fi React, Angular sau Vue.js, necesită ca dezvoltatorii să gestioneze logica de randare și stăriile componentelor, ceea ce poate introduce complexitate. SSR și SSG reduc, într-o anumită măsură, această complexitate prin transferul logicii de randare la server sau la procesul de build al aplicației. SSR necesită configurare pe partea de server și cunoștințe despre tehnologiile backend, în timp ce SSG simplifică fluxul de lucru în dezvoltare prin generarea de active statice care pot fi ușor implementate pe orice server web.
+	\item \textbf{Conținutul dinamic și actualizări în timp real} - CSR se evidențiază în aplicațiile extrem de interactive care se bazează pe actualizări frecvente ale datelor sau pe funcționalități în timp real. Cu CSR, datele pot fi actualizate fără necesitatea unei re\^inc\u arc\u ari complete a paginii. SSR și SSG sunt mai potrivite pentru aplicațiile axate pe conținut mai puțin dinamic, deoarece necesită o solicitare către server pentru a actualiza datele.
+\end{enumerate}
 
-% \subsection{Client-side rendering}
-% CSR reprezintă randarea paginilor direct în browser cu ajutorul la JavaScript. Toată logica, preluarea datelor, șablonarea și rutarea sunt gestionate preponderent de client.
-
-% Client-side rendering poate fi dificil de obținut și păstrat rapid pentru dispozitivele mobile. Randarea pe partea de client se poate apropia de performanța randării pe partea de serverului, păstrând un bundle JavaScript restrâns și oferind valoare în cât mai puține călătorii dus-întors. Scripturile și datele esențiale pot fi livrate mai devreme folosind \emph{<link rel=preload>}, ceea ce face ca analizatorul să funcționeze mai repede pentru dvs. Modele precum PRPL merită, de asemenea, evaluate pentru a se asigura că navigațiile inițiale și ulterioare sunt instantanee.
-
-% \begin{figure}[htbp]
-% 	\centering
-% 	\includegraphics[width=0.8\textwidth]{csr.png}
-% 	\caption{Client-side rendering}
-% 	\label{fig:csr}
-% \end{figure}
-
-% Principalul dezavantaj al CSR este că, cantitatea de JavaScript necesară tinde să crească pe măsură ce o aplicație crește, ceea ce poate avea efecte negative asupra INP-ului unei pagini. Acest lucru devine deosebit de dificil odată cu adăugarea de noi biblioteci JavaScript, polyfill-uri și cod third-party, care concurează pentru puterea de procesare și trebuie adesea procesate înainte ca conținutul unei pagini să poată fi randat.
-
-% \subsection{Rehydratation}
-
-% Această abordare încearcă să negocieze compromisurile dintre randarea pe partea client și redarea pe partea serverului, făcând ambele. Solicitările de navigare, cum ar fi încărcările întregii pagini sau reîncărcările, sunt gestionate de un server care randrează pagina HTML, apoi JavaScript și datele utilizate pentru randare sunt încorporate în documentul rezultat. Acest lucru rezultă într-un FCP rapid la fel ca randarea pe partea serverului, apoi urmează rerandarea pe client, folosind o tehnică numită \emph{(re)hidratare}. Aceasta este o soluție eficientă, dar poate veni cu dezavantaje considerabile de performanță.
-
-% \begin{figure}[htbp]
-% 	\centering
-% 	\includegraphics[width=0.8\textwidth]{hydratation.png}
-% 	\caption{Tehnologia de hidratare}
-% 	\label{fig:hydratation}
-% \end{figure}
-
-% Principalul dezavantaj rehidratării este că poate avea un impact negativ semnificativ asupra TBT și INP, chiar dacă îmbunătățește FCP. Paginile randate de pe server pot părea înșelător a fi încărcate și interactive, dar nu pot fi utilizate efectiv până când scripturile de pe partea clientului pentru componente nu sunt executate și manipulatorii de evenimente au fost atașați. Acest lucru poate dura secunde sau chiar minute pe dispozitive mobile.
-
-% Problemele de rehidratare pot fi adesea mai grave decât interactivitatea întârziată din cauza JavaScript. Pentru ca client-side JavaScript să poată „relua” cu acuratețe de unde a rămas serverul, fără a fi nevoie să solicite din nou toate datele pe care serverul le-a folosit pentru a randa HTML-ul, soluțiile actuale de SSR serializează în general răspunsul de la dependințele de date ale unei interfețe de utilizator în document ca etichete de script. Documentul HTML rezultat conține un nivel ridicat de duplicare:
-
-% \begin{figure}[htbp]
-% 	\centering
-% 	\includegraphics[width=0.9\textwidth]{hydratation-duplication.png}
-% 	\caption{Redundanța la hidratare}
-% 	\label{fig:hydratation-dublication}
-% \end{figure}
-
-% Totuși există o modaliate de a optimiza randarea pe server cu rehidratare. Utilizarea randării pe partea de server pentru conținut cu un grad ridicat de stocare în cache poate reduce TTFB, producând rezultate similare cu randarea preliminară. Rehidratarea progresivă sau parțială poate fi cheia pentru a face această tehnică mai viabilă în viitor.
-
-
+Alegerea paradigmei potrivite este crucială pentru a furniza o aplicație web rapidă, interactivă și optimizat\u a pentru motoarele de c\u autare
 
 \chapter{Aplicația practică}
 
@@ -554,7 +511,7 @@ Obiectivul acestui capitol este de a oferi experiență practică cu tehnologiil
 Se va implementa aceeași aplicație cu ajutorul la mai multe framework-uri JavaScript, cât și în vanilla (\emph{plain}) JavaScript, pentru a obține rezultate ce se vor putea compara, pentru a identifica cele mai optime abordari posibile.
 
 
-\section{Metricile de performanță}
+\section{Metrici de performanță}
 
 Pentru compararea efectivă a metodelor de implementare, este nevoie de a compara rezultatele după anumite criterii care reprezintă performanța generală a aplicației.
 
@@ -626,7 +583,7 @@ Structura aplicație constă din trei fișiere:
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{01_desktop_preview.png}
-	\caption{Aplicația practica - vanilla JavaScript}
+	\caption{Aplicația practic\u a - vanilla JavaScript}
 	\label{fig:preview-vanillajs}
 \end{figure}
 

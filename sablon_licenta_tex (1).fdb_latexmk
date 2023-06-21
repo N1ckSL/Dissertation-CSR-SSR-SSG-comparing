@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1687193708 "/Users/nicu/Desktop/disertatie/Disertatie_v2/sablon_licenta_tex (1).tex" "sablon_licenta_tex (1).pdf" "sablon_licenta_tex (1)" 1687193711 0
-  "/Users/nicu/Desktop/disertatie/Disertatie_v2/sablon_licenta_tex (1).tex" 1687193706 71744 41da44a7b684707a6b7d71d68d3c2165 ""
+["pdflatex"] 1687367976 "/Users/nicu/Desktop/disertatie/Disertatie_v2/sablon_licenta_tex (1).tex" "sablon_licenta_tex (1).pdf" "sablon_licenta_tex (1)" 1687367978 0
+  "/Users/nicu/Desktop/disertatie/Disertatie_v2/sablon_licenta_tex (1).tex" 1687367975 68946 c1c5ef357298872c7b84a6b32808dc3a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -10,7 +10,6 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm" 1136768653 1344 8a0be4fe4d376203000810ad4dc81558 ""
-  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1136768653 1336 3125ccb448c1a09074e3aa4a9832f130 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm" 1136768653 1532 9162035f4e7176612125649e348e2195 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm" 1136768653 1300 63a6111ee6274895728663cf4b4e7e81 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
@@ -31,7 +30,6 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb" 1248133631 32378 2b20eba6bb36c716382b6d96240eaa69 ""
-  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb" 1248133631 32007 e8fa0078355f39467039935974716569 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb" 1248133631 36554 b67dc2cfa451409e100b3fcf5f506509 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb" 1248133631 32001 6aeea3afe875097b1eb0da29acd61e28 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
@@ -119,12 +117,13 @@
   "csr-diagram.png" 1687091887 80768 558e489e6e532852199f7cdacd550136 ""
   "layered_architecture.png" 1687091028 102141 2296b9d2dd59637aa4e9d7f4597fca3e ""
   "react_file_structure.png" 1687091028 7029 3b478e8b43ee875f64dde733db10004a ""
-  "sablon_licenta_tex (1).aux" 1687193710 7366 0c77ef79175e8ec38b932ff10c3364be "pdflatex"
-  "sablon_licenta_tex (1).lof" 1687193710 1759 81d7586fa865d184d9cf0d65fe2d25ee "pdflatex"
-  "sablon_licenta_tex (1).tex" 1687193706 71744 41da44a7b684707a6b7d71d68d3c2165 ""
-  "sablon_licenta_tex (1).toc" 1687193710 2042 8b0159f371958ae95dd3470d50929211 "pdflatex"
+  "sablon_licenta_tex (1).aux" 1687367978 7380 600ffb2a96210df25d6829eb44abacf1 "pdflatex"
+  "sablon_licenta_tex (1).lof" 1687367978 1846 c70630c51e8255ec0c414fca05484b84 "pdflatex"
+  "sablon_licenta_tex (1).tex" 1687367975 68946 c1c5ef357298872c7b84a6b32808dc3a ""
+  "sablon_licenta_tex (1).toc" 1687367978 1930 b0e1c6fc111b28a5b054e3d72da2dbbf "pdflatex"
   "ssg-diagram.png" 1687091887 79357 4ac666e15a7826597aa141a6eb03edcd ""
   "ssr-diagram.png" 1687091887 79512 25a2c291876db07c1657c31d5bdfa5f6 ""
+  "web-evolution.png" 1687365051 22794 6012ac4194a5ae3a3398c08a896afbc1 ""
   (generated)
   "sablon_licenta_tex (1).aux"
   "sablon_licenta_tex (1).lof"
