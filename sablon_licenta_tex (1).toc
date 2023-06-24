@@ -1,6 +1,5 @@
 \babel@toc {romanian}{}\relax 
 \contentsline {chapter}{Listă de figuri}{ii}{}%
-\contentsline {chapter}{Starea de art\u a}{iv}{}%
 \contentsline {chapter}{\numberline {1}Introducere}{1}{}%
 \contentsline {section}{\numberline {1.1}Motivație și scop}{1}{}%
 \contentsline {section}{\numberline {1.2}Contextul lucrării}{2}{}%
@@ -9,21 +8,29 @@
 \contentsline {subsection}{\numberline {1.2.3}Web 3.0}{5}{}%
 \contentsline {section}{\numberline {1.3}Evolu\c tia tehnologiilor}{7}{}%
 \contentsline {chapter}{\numberline {2}Paradigmele actuale de randare}{10}{}%
-\contentsline {section}{\numberline {2.1}Client side rendering}{10}{}%
-\contentsline {section}{\numberline {2.2}Server side rendering}{12}{}%
-\contentsline {section}{\numberline {2.3}Static server generation}{14}{}%
-\contentsline {section}{\numberline {2.4}Alegerea paradigmei corespunzătoare}{16}{}%
-\contentsline {chapter}{\numberline {3}Aplicația practică}{18}{}%
-\contentsline {section}{\numberline {3.1}Metrici de performanță}{18}{}%
-\contentsline {section}{\numberline {3.2}Plugin-uri, extensii și aplicații pentru măsurarea performanței}{21}{}%
-\contentsline {section}{\numberline {3.3}Aplicația practică}{22}{}%
-\contentsline {subsection}{\numberline {3.3.1}Metodologie}{22}{}%
-\contentsline {subsection}{\numberline {3.3.2}Vanilla JavaScript}{23}{}%
-\contentsline {subsection}{\numberline {3.3.3}React framework}{24}{}%
-\contentsline {section}{\numberline {3.4}Analiza performanței}{26}{}%
-\contentsline {subsection}{\numberline {3.4.1}Web Vitals}{26}{}%
-\contentsline {subsection}{\numberline {3.4.2}Lighthouse}{28}{}%
-\contentsline {subsection}{\numberline {3.4.3}PageSpeed Insights}{28}{}%
-\contentsline {chapter}{Bibliography}{28}{}%
-\contentsline {chapter}{\numberline {A}Glosar}{33}{}%
-\contentsline {section}{\numberline {A.1}Acronime}{33}{}%
+\contentsline {section}{\numberline {2.1}Starea de art\u a}{10}{}%
+\contentsline {section}{\numberline {2.2}Client side rendering}{12}{}%
+\contentsline {section}{\numberline {2.3}Server side rendering}{14}{}%
+\contentsline {section}{\numberline {2.4}Static server generation}{16}{}%
+\contentsline {section}{\numberline {2.5}Alegerea paradigmei corespunzătoare}{18}{}%
+\contentsline {chapter}{\numberline {3}Aplicația practică}{20}{}%
+\contentsline {section}{\numberline {3.1}Metrici de performanță}{20}{}%
+\contentsline {section}{\numberline {3.2}Metode de evaluare a performanței}{23}{}%
+\contentsline {section}{\numberline {3.3}Compara\c tia \c si analiza practică a aplica\c tiilor}{24}{}%
+\contentsline {subsection}{\numberline {3.3.1}Metodologie}{24}{}%
+\contentsline {subsection}{\numberline {3.3.2}Vanilla JavaScript}{25}{}%
+\contentsline {subsection}{\numberline {3.3.3}React framework}{26}{}%
+\contentsline {section}{\numberline {3.4}Analiza performanței}{28}{}%
+\contentsline {subsection}{\numberline {3.4.1}Web Vitals}{28}{}%
+\contentsline {subsection}{\numberline {3.4.2}Lighthouse}{30}{}%
+\contentsline {subsection}{\numberline {3.4.3}PageSpeed Insights}{31}{}%
+\contentsline {section}{\numberline {3.5}Analiza rezultatelor}{32}{}%
+\contentsline {subsection}{\numberline {3.5.1}U\c surin\c ta implement\u arii}{33}{}%
+\contentsline {subsection}{\numberline {3.5.2}Performanța}{34}{}%
+\contentsline {subsection}{\numberline {3.5.3}SEO}{35}{}%
+\contentsline {chapter}{\numberline {4}Concluzii}{36}{}%
+\contentsline {section}{\numberline {4.1}Rezultatele obținute}{37}{}%
+\contentsline {section}{\numberline {4.2}Direcții viitoare de cercetare}{37}{}%
+\contentsline {chapter}{Bibliography}{38}{}%
+\contentsline {chapter}{\numberline {A}Glosar}{41}{}%
+\contentsline {section}{\numberline {A.1}Acronime}{41}{}%
