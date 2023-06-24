@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.18)  24 JUN 2023 23:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.18)  24 JUN 2023 23:43
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -599,26 +599,130 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/preprint/fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip53
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count281
+)
+\@linkdim=\dimen161
+\Hy@linkcounter=\count282
+\Hy@pagecounter=\count283
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count284
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count285
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen162
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count286
+\Field@Width=\dimen163
+\Fld@charsize=\dimen164
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count287
+\c@Item=\count288
+\c@Hfootnote=\count289
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count290
+\c@bookmark@seq@number=\count291
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip54
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count281
+\lst@mode=\count292
 \lst@gtempboxa=\box55
 \lst@token=\toks27
-\lst@length=\count282
-\lst@currlwidth=\dimen161
-\lst@column=\count283
-\lst@pos=\count284
-\lst@lostspace=\dimen162
-\lst@width=\dimen163
-\lst@newlines=\count285
-\lst@lineno=\count286
-\lst@maxwidth=\dimen164
+\lst@length=\count293
+\lst@currlwidth=\dimen165
+\lst@column=\count294
+\lst@pos=\count295
+\lst@lostspace=\dimen166
+\lst@width=\dimen167
+\lst@newlines=\count296
+\lst@lineno=\count297
+\lst@maxwidth=\dimen168
  (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count287
-\lst@skipnumbers=\count288
+\c@lstnumber=\count298
+\lst@skipnumbers=\count299
 \lst@framebox=\box56
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
@@ -656,22 +760,22 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip54
-\multirow@cntb=\count289
-\multirow@dima=\skip55
-\bigstrutjot=\dimen165
+\multirow@colwidth=\skip55
+\multirow@cntb=\count300
+\multirow@dima=\skip56
+\bigstrutjot=\dimen169
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty
 Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen166
+\col@sep=\dimen170
 \ar@mcellbox=\box57
-\extrarowheight=\dimen167
+\extrarowheight=\dimen171
 \NC@list=\toks30
-\extratabsurround=\skip56
-\backup@length=\skip57
+\extratabsurround=\skip57
+\backup@length=\skip58
 \ar@cellbox=\box58
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count290
+\l__color_backend_stack_int=\count301
 \l__pdf_internal_box=\box59
 ) (./sablon_licenta_tex (1).aux)
 \openout1 = `"sablon_licenta_tex (1).aux"'.
@@ -689,6 +793,10 @@ LaTeX Font Info:    ... okay on input line 46.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
 LaTeX Font Info:    ... okay on input line 46.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
 LaTeX Font Info:    ... okay on input line 46.
 
 *geometry* driver: auto-detecting
@@ -727,16 +835,16 @@ LaTeX Font Info:    ... okay on input line 46.
 
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
-\scratchdimen=\dimen168
+\scratchcounter=\count302
+\scratchdimen=\dimen172
 \scratchbox=\box60
-\nofMPsegments=\count292
-\nofMParguments=\count293
+\nofMPsegments=\count303
+\nofMParguments=\count304
 \everyMPshowfont=\toks31
-\MPscratchCnt=\count294
-\MPscratchDim=\dimen169
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
+\MPscratchCnt=\count305
+\MPscratchDim=\dimen173
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
 \everyMPtoPDFconversion=\toks32
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -744,8 +852,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@lstlisting=\count297
-<FMI-03.png, id=1, 597.432pt x 597.432pt>
+Package hyperref Info: Link coloring OFF on input line 46.
+ (./sablon_licenta_tex (1).out) (./sablon_licenta_tex (1).out)
+\@outlinefile=\write3
+\openout3 = `"sablon_licenta_tex (1).out"'.
+
+\c@lstlisting=\count308
+<FMI-03.png, id=143, 597.432pt x 597.432pt>
 File: FMI-03.png Graphic file (type png)
 <use FMI-03.png>
 Package pdftex.def Info: FMI-03.png  used on input line 61.
@@ -755,15 +868,30 @@ Package pdftex.def Info: FMI-03.png  used on input line 61.
 
 Non-PDF special ignored!
 <special> papersize=210mm, 297mm
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./FMI-03.png>] [1] [1] (./sablon_licenta_tex (1).toc [1
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./FMI-03.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.173 \end{titlepage}
+                      [1]
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.191 \end{abstract}
+                     [1] (./sablon_licenta_tex (1).toc
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.26 ...}PageSpeed Insights}{31}{subsection.3.4.3}
+                                                  % [1
 
 ])
-\tf@toc=\write3
-\openout3 = `"sablon_licenta_tex (1).toc"'.
+\tf@toc=\write4
+\openout4 = `"sablon_licenta_tex (1).toc"'.
 
  [2] (./sablon_licenta_tex (1).lof)
-\tf@lof=\write4
-\openout4 = `"sablon_licenta_tex (1).lof"'.
+\tf@lof=\write5
+\openout5 = `"sablon_licenta_tex (1).lof"'.
 
  [3
 
@@ -775,13 +903,13 @@ LaTeX Warning: Citation `theoreticalfundationsoftheweb' on page 1 undefined on i
 [1
 
 ] [2] [3] [4{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [5]
-<layered_architecture.png, id=50, 572.1375pt x 392.46625pt>
+<layered_architecture.png, id=290, 572.1375pt x 392.46625pt>
 File: layered_architecture.png Graphic file (type png)
 <use layered_architecture.png>
 Package pdftex.def Info: layered_architecture.png  used on input line 311.
 (pdftex.def)             Requested size: 285.37198pt x 195.75354pt.
  [6 <./layered_architecture.png (PNG copy)>] [7]
-<web-evolution.png, id=59, 803.0pt x 457.71pt>
+<web-evolution.png, id=302, 803.0pt x 457.71pt>
 File: web-evolution.png Graphic file (type png)
 <use web-evolution.png>
 Package pdftex.def Info: web-evolution.png  used on input line 348.
@@ -800,13 +928,13 @@ Overfull \hbox (17.96109pt too wide) in paragraph at lines 407--408
 [][]\OT1/cmr/bx/n/12 Inc^^Uarcarea fi[]ierelor Ja-vaS-cript \OT1/cmr/m/n/12 - brow-se-rul des-carc^^Ua fi[]ierele Ja-vaS-cript referen[]iate
  []
 
-<csr-diagram.png, id=76, 2509.375pt x 1411.2725pt>
+<csr-diagram.png, id=334, 2509.375pt x 1411.2725pt>
 File: csr-diagram.png Graphic file (type png)
 <use csr-diagram.png>
 Package pdftex.def Info: csr-diagram.png  used on input line 415.
 (pdftex.def)             Requested size: 407.66833pt x 229.2537pt.
 [13]
-<ssr-diagram.png, id=81, 2509.375pt x 1411.2725pt>
+<ssr-diagram.png, id=349, 2509.375pt x 1411.2725pt>
 File: ssr-diagram.png Graphic file (type png)
 <use ssr-diagram.png>
 Package pdftex.def Info: ssr-diagram.png  used on input line 432.
@@ -816,7 +944,7 @@ Overfull \hbox (0.58922pt too wide) in paragraph at lines 452--453
 []\OT1/cmr/bx/n/12 Hidratarea \OT1/cmr/m/n/12 - cli-en-tul des-carc^^Ua fi[]ierul sau fi[]ierele Ja-vaS-cript ^^^Pncorporate ^^^Pn HTML,
  []
 
-<ssg-diagram.png, id=90, 2509.375pt x 1411.2725pt>
+<ssg-diagram.png, id=363, 2509.375pt x 1411.2725pt>
 File: ssg-diagram.png Graphic file (type png)
 <use ssg-diagram.png>
 Package pdftex.def Info: ssg-diagram.png  used on input line 461.
@@ -856,14 +984,14 @@ Overfull \hbox (12.01617pt too wide) in paragraph at lines 555--556
  []
 
 [24]
-<01_desktop_preview.png, id=121, 1378.39969pt x 624.83438pt>
+<01_desktop_preview.png, id=424, 1378.39969pt x 624.83438pt>
 File: 01_desktop_preview.png Graphic file (type png)
 <use 01_desktop_preview.png>
 Package pdftex.def Info: 01_desktop_preview.png  used on input line 580.
 (pdftex.def)             Requested size: 407.66833pt x 184.79172pt.
  [25 <./01_desktop_preview.png>]
 Overfull \hbox (3.47769pt too wide) in paragraph at lines 600--602
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 604.
@@ -874,19 +1002,19 @@ Overfull \hbox (8.67175pt too wide) in paragraph at lines 614--615
 \OT1/cmr/m/n/12 act, in-clu-siv struc-tura de baz^^Ua a pro-iec-tu-lui, fi[]ierele de con-fi-gu-rare im-pli-cite []i dependen[]ele
  []
 
-<react_file_structure.png, id=127, 198.7425pt x 182.93344pt>
+<react_file_structure.png, id=439, 198.7425pt x 182.93344pt>
 File: react_file_structure.png Graphic file (type png)
 <use react_file_structure.png>
 Package pdftex.def Info: react_file_structure.png  used on input line 618.
 (pdftex.def)             Requested size: 181.18439pt x 166.77672pt.
 [26 <./react_file_structure.png>]
 Overfull \hbox (9.22638pt too wide) in paragraph at lines 638--639
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
 Overfull \hbox (9.22638pt too wide) in paragraph at lines 639--641
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [27]
@@ -894,105 +1022,105 @@ Overfull \hbox (5.26486pt too wide) in paragraph at lines 655--656
 \OT1/cmr/m/n/12 Am dezvol-tat aceea[]i aplica[]ie fo-lo-sind Va-ni-lla Ja-vaS-cript []i Re-act []i am tes-tat performan[]a
  []
 
-<01_desktop.png, id=136, 421.575pt x 326.72063pt>
+<01_desktop.png, id=482, 421.575pt x 326.72063pt>
 File: 01_desktop.png Graphic file (type png)
 <use 01_desktop.png>
 Package pdftex.def Info: 01_desktop.png  used on input line 663.
 (pdftex.def)             Requested size: 203.83417pt x 157.97572pt.
-<01_mobile.png, id=137, 421.575pt x 327.47343pt>
+<01_mobile.png, id=483, 421.575pt x 327.47343pt>
 File: 01_mobile.png Graphic file (type png)
 <use 01_mobile.png>
 Package pdftex.def Info: 01_mobile.png  used on input line 664.
 (pdftex.def)             Requested size: 203.83417pt x 158.33974pt.
-<02_desktop.png, id=138, 421.14482pt x 325.215pt>
+<02_desktop.png, id=484, 421.14482pt x 325.215pt>
 File: 02_desktop.png Graphic file (type png)
 <use 02_desktop.png>
 Package pdftex.def Info: 02_desktop.png  used on input line 671.
 (pdftex.def)             Requested size: 203.83417pt x 157.40157pt.
-<02_mobile.png, id=139, 733.23938pt x 569.87906pt>
+<02_mobile.png, id=485, 733.23938pt x 569.87906pt>
 File: 02_mobile.png Graphic file (type png)
 <use 02_mobile.png>
 Package pdftex.def Info: 02_mobile.png  used on input line 672.
 (pdftex.def)             Requested size: 203.83417pt x 158.41722pt.
-<01_desktop_deployed.png, id=140, 420.82219pt x 328.22626pt>
+<01_desktop_deployed.png, id=486, 420.82219pt x 328.22626pt>
 File: 01_desktop_deployed.png Graphic file (type png)
 <use 01_desktop_deployed.png>
 Package pdftex.def Info: 01_desktop_deployed.png  used on input line 681.
 (pdftex.def)             Requested size: 203.83417pt x 158.98419pt.
-<01_mobile_deployed.png, id=141, 418.56375pt x 325.96782pt>
+<01_mobile_deployed.png, id=487, 418.56375pt x 325.96782pt>
 File: 01_mobile_deployed.png Graphic file (type png)
 <use 01_mobile_deployed.png>
 Package pdftex.def Info: 01_mobile_deployed.png  used on input line 682.
 (pdftex.def)             Requested size: 203.83417pt x 158.7408pt.
-<02_desktop_deployed.png, id=142, 420.28447pt x 326.07536pt>
+<02_desktop_deployed.png, id=488, 420.28447pt x 326.07536pt>
 File: 02_desktop_deployed.png Graphic file (type png)
 <use 02_desktop_deployed.png>
 Package pdftex.def Info: 02_desktop_deployed.png  used on input line 689.
 (pdftex.def)             Requested size: 203.83417pt x 158.14137pt.
-<02_mobile_deployed.png, id=143, 728.7225pt x 563.10374pt>
+<02_mobile_deployed.png, id=489, 728.7225pt x 563.10374pt>
 File: 02_mobile_deployed.png Graphic file (type png)
 <use 02_mobile_deployed.png>
 Package pdftex.def Info: 02_mobile_deployed.png  used on input line 690.
 (pdftex.def)             Requested size: 203.83417pt x 157.50471pt.
 [28 <./01_desktop.png> <./01_mobile.png>] [29 <./02_desktop.png> <./02_mobile.png> <./01_desktop_deployed.png> <./01_mobile_deployed.png> <./02_desktop_deployed.png> <./02_mobile_deployed.png>]
-<01_desktop_lighthouse.png, id=158, 519.44063pt x 512.66531pt>
+<01_desktop_lighthouse.png, id=507, 519.44063pt x 512.66531pt>
 File: 01_desktop_lighthouse.png Graphic file (type png)
 <use 01_desktop_lighthouse.png>
 Package pdftex.def Info: 01_desktop_lighthouse.png  used on input line 704.
 (pdftex.def)             Requested size: 203.83417pt x 201.17464pt.
-<01_mobile_lighthouse.png, id=159, 518.6878pt x 511.9125pt>
+<01_mobile_lighthouse.png, id=508, 518.6878pt x 511.9125pt>
 File: 01_mobile_lighthouse.png Graphic file (type png)
 <use 01_mobile_lighthouse.png>
 Package pdftex.def Info: 01_mobile_lighthouse.png  used on input line 705.
 (pdftex.def)             Requested size: 203.83417pt x 201.17606pt.
-<02_desktop_lighthouse.png, id=160, 516.42938pt x 512.66531pt>
+<02_desktop_lighthouse.png, id=509, 516.42938pt x 512.66531pt>
 File: 02_desktop_lighthouse.png Graphic file (type png)
 <use 02_desktop_lighthouse.png>
 Package pdftex.def Info: 02_desktop_lighthouse.png  used on input line 712.
 (pdftex.def)             Requested size: 203.83417pt x 202.34802pt.
-<02_mobile_lighthouse.png, id=161, 523.20468pt x 504.38437pt>
+<02_mobile_lighthouse.png, id=510, 523.20468pt x 504.38437pt>
 File: 02_mobile_lighthouse.png Graphic file (type png)
 <use 02_mobile_lighthouse.png>
 Package pdftex.def Info: 02_mobile_lighthouse.png  used on input line 713.
 (pdftex.def)             Requested size: 203.83417pt x 196.50131pt.
  [30 <./01_desktop_lighthouse.png> <./01_mobile_lighthouse.png> <./02_desktop_lighthouse.png> <./02_mobile_lighthouse.png>]
-<01_desktop_deployed_lighthouse.png, id=169, 508.14844pt x 511.9125pt>
+<01_desktop_deployed_lighthouse.png, id=519, 508.14844pt x 511.9125pt>
 File: 01_desktop_deployed_lighthouse.png Graphic file (type png)
 <use 01_desktop_deployed_lighthouse.png>
 Package pdftex.def Info: 01_desktop_deployed_lighthouse.png  used on input line 723.
 (pdftex.def)             Requested size: 203.83417pt x 205.3394pt.
-<01_mobile_deployed_lighthouse.png, id=170, 526.96875pt x 511.9125pt>
+<01_mobile_deployed_lighthouse.png, id=520, 526.96875pt x 511.9125pt>
 File: 01_mobile_deployed_lighthouse.png Graphic file (type png)
 <use 01_mobile_deployed_lighthouse.png>
 Package pdftex.def Info: 01_mobile_deployed_lighthouse.png  used on input line 724.
 (pdftex.def)             Requested size: 203.83417pt x 198.01254pt.
-<02_desktop_deployed_lighthouse.png, id=171, 504.38437pt x 511.9125pt>
+<02_desktop_deployed_lighthouse.png, id=521, 504.38437pt x 511.9125pt>
 File: 02_desktop_deployed_lighthouse.png Graphic file (type png)
 <use 02_desktop_deployed_lighthouse.png>
 Package pdftex.def Info: 02_desktop_deployed_lighthouse.png  used on input line 731.
 (pdftex.def)             Requested size: 203.83417pt x 206.87819pt.
-<02_mobile_deployed_lighthouse.png, id=172, 504.38437pt x 511.9125pt>
+<02_mobile_deployed_lighthouse.png, id=522, 504.38437pt x 511.9125pt>
 File: 02_mobile_deployed_lighthouse.png Graphic file (type png)
 <use 02_mobile_deployed_lighthouse.png>
 Package pdftex.def Info: 02_mobile_deployed_lighthouse.png  used on input line 732.
 (pdftex.def)             Requested size: 203.83417pt x 206.87819pt.
  [31 <./01_desktop_deployed_lighthouse.png> <./01_mobile_deployed_lighthouse.png> <./02_desktop_deployed_lighthouse.png> <./02_mobile_deployed_lighthouse.png>]
-<01_desktop_pagespeed.png, id=181, 711.4078pt x 583.42969pt>
+<01_desktop_pagespeed.png, id=532, 711.4078pt x 583.42969pt>
 File: 01_desktop_pagespeed.png Graphic file (type png)
 <use 01_desktop_pagespeed.png>
 Package pdftex.def Info: 01_desktop_pagespeed.png  used on input line 745.
 (pdftex.def)             Requested size: 203.83417pt x 167.16052pt.
-<01_mobile_pagespeed.png, id=182, 718.93594pt x 579.66562pt>
+<01_mobile_pagespeed.png, id=533, 718.93594pt x 579.66562pt>
 File: 01_mobile_pagespeed.png Graphic file (type png)
 <use 01_mobile_pagespeed.png>
 Package pdftex.def Info: 01_mobile_pagespeed.png  used on input line 746.
 (pdftex.def)             Requested size: 203.83417pt x 164.34845pt.
-<02_desktop_pagespeed.png, id=183, 707.64375pt x 583.42969pt>
+<02_desktop_pagespeed.png, id=534, 707.64375pt x 583.42969pt>
 File: 02_desktop_pagespeed.png Graphic file (type png)
 <use 02_desktop_pagespeed.png>
 Package pdftex.def Info: 02_desktop_pagespeed.png  used on input line 753.
 (pdftex.def)             Requested size: 203.83417pt x 168.05077pt.
-<02_mobile_pagespeed.png, id=184, 707.64375pt x 583.42969pt>
+<02_mobile_pagespeed.png, id=535, 707.64375pt x 583.42969pt>
 File: 02_mobile_pagespeed.png Graphic file (type png)
 <use 02_mobile_pagespeed.png>
 Package pdftex.def Info: 02_mobile_pagespeed.png  used on input line 754.
@@ -1004,6 +1132,7 @@ File: omlcmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 765.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 766.
  [33] [34] [35]
 Capitolul 4.
 [36
@@ -1033,20 +1162,22 @@ Anexa A.
 
 LaTeX Warning: There were undefined references.
 
+Package rerunfilecheck Info: File `"sablon_licenta_tex (1)".out' has not changed.
+(rerunfilecheck)             Checksum: C9F4A171CC493C00B52F0DA2C3FE90F5;5182.
  ) 
 Here is how much of TeX's memory you used:
- 6787 strings out of 476025
- 107120 string characters out of 5790017
- 1873388 words of memory out of 5000000
- 27104 multiletter control sequences out of 15000+600000
+ 13610 strings out of 476025
+ 214666 string characters out of 5790017
+ 1874388 words of memory out of 5000000
+ 33599 multiletter control sequences out of 15000+600000
  526766 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,62p,1170b,1693s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,76p,1170b,2030s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on "sablon_licenta_tex (1).pdf" (47 pages, 2615696 bytes).
+Output written on "sablon_licenta_tex (1).pdf" (47 pages, 2626547 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 153 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 738 PDF objects out of 1000 (max. 8388607)
+ 598 compressed objects within 6 object streams
+ 229 named destinations out of 1000 (max. 500000)
+ 421 words of extra memory for PDF output out of 10000 (max. 10000000)
 
