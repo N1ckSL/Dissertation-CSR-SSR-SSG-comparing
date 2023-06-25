@@ -1,178 +1,201 @@
-import * as React from "react";
+import * as React from 'react';
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-const headingAccentStyles = {
-  color: "#663399",
-};
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-};
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-};
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-};
+const Home = () => {
+  const allUsers = React.useRef([]);
+  const allPosts = React.useRef([]);
+  const allComments = React.useRef([]);
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-};
+  const [input, setInput] = React.useState('');
+  const [currentUser, setCurrentUser] = React.useState('');
+  const [selectedPostId, setSelectedPostId] = React.useState(null);
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-};
+  const [data, setData] = React.useState({
+    users: [],
+    posts: [],
+    comments: [],
+    postComments: [],
+  });
 
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-};
+  React.useEffect(() => {
+    async function fetchData() {
+      const [usersRes, postsRes, commentsRes] = await Promise.all([
+        fetch('https://jsonplaceholder.typicode.com/users'),
+        fetch('https://jsonplaceholder.typicode.com/posts'),
+        fetch('https://jsonplaceholder.typicode.com/comments'),
+      ]);
 
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-};
+      const usersData = await usersRes.json();
+      const postsData = await postsRes.json();
+      const commentsData = await commentsRes.json();
 
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-};
+      allUsers.current = usersData;
+      allPosts.current = postsData;
+      allComments.current = commentsData;
 
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-];
+      setData({
+        users: usersData,
+        posts: postsData,
+        comments: commentsData,
+        postComments: data.postComments,
+      });
+    }
 
-const IndexPage = () => {
+    fetchData();
+  }, [data.postComments]);
+
+  React.useEffect(() => {
+    function filterUsers() {
+      const filteredUsers = allUsers.current.filter((user) =>
+        user.name.toLowerCase().includes(input.toLowerCase())
+      );
+
+      setData((prevData) => ({
+        ...prevData,
+        users: filteredUsers,
+      }));
+    }
+
+    const debounceTimer = setTimeout(filterUsers, 300);
+
+    return () => clearTimeout(debounceTimer);
+  }, [input]);
+
+  const handleUserClick = (userId) => {
+    setCurrentUser(userId);
+    setSelectedPostId(null);
+
+    setData((prevData) => ({
+      ...prevData,
+      postComments: [],
+    }));
+  };
+
+  const handlePostClick = async (postId) => {
+    setSelectedPostId(postId);
+
+    const commentsRes = await fetch(
+      `https://jsonplaceholder.typicode.com/comments?postId=${postId}`
+    );
+    const commentsData = await commentsRes.json();
+
+    setData((prevData) => ({
+      ...prevData,
+      postComments: commentsData,
+    }));
+  };
+
+  const { users, posts, postComments } = data;
+
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>
-          — you just made a Gatsby site! 🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map((link) => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+    <div className="m-0 p-0 bg-[url('https://picsum.photos/1920/1080?grayscale')] bg-cover">
+      <div className="p-10 flex justify-between">
+        <div className="p-2 lg:p-16 m-16 w-[480px] h-full min-h-[500px] bg-[rgba(216, 216, 216, 0.36)] rounded-xl border border-solid border-[#d8d8d84d] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 bg-gray-50">
+          <input
+            className="py-0.5 px-2 mb-4 w-full border border-white rounded font-lg focus-visible:outline-0 animate-rainbow bg-white"
+            value={input}
+            type="search"
+            placeholder="Search by name"
+            onChange={(e) => setInput(e.target.value)}
+          />
+
+          <ul>
+            {users.map((user) => (
+              <li
+                className="mb-4 flex items-center justify-between"
+                key={user.id}
               >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
+                {user.name}
+                <div className="flex gap-2 items-center">
+                  <button
+                    className="relative text-[#0092E4] border border-solid rounded-md border-[#0092E4] px-5 text-sm py-2.5 uppercase font-medium leading-4 transition-all hover:text-white hover:bg-[#0092E4]"
+                    onClick={() => handleUserClick(user.id)}
+                  >
+                    View all data
+                  </button>
+
+                  <button
+                    className="absolute translate-x-[9.5rem] bg-plus w-10 h-10 bg-[#2B2B2B] rounded-md"
+                    onClick={() => setCurrentUser(user.id)}
+                  />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="px-6 py-4 m-16 w-[480px] h-full  min-h-[500px] bg-[rgba(216, 216, 216, 0.36)] rounded-xl border border-solid border-[#d8d8d84d] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 bg-gray-50">
+          {currentUser ? (
+            <p className="text-center mb-2">
+              Posts for user with ID: {currentUser}
+            </p>
+          ) : (
+            <p className="text-center">
+              Select a user to view their posts (plus icon)
+            </p>
+          )}
+
+          <ul>
+            {posts
+              .filter((post) => currentUser === post.userId)
+              .map((post) => (
+                <li className="mb-4" key={post.id}>
+                  <div className="flex justify-between items-center animate-rainbow-bottom pb-2">
+                    <h2 className="font-bold text-lg w-full uppercase">
+                      {post.title}
+                    </h2>
+                    <button
+                      className="w-12 h-12 p-2 bg-[#2c2c2c] rounded-md"
+                      onClick={() => handlePostClick(post.id)}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        id="plus"
+                      >
+                        <path
+                          fill="#0092E4"
+                          d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <p className="mt-2">{post.body}</p>
+                </li>
+              ))}
+          </ul>
+        </div>
+
+        <div className="px-6 py-4 m-16 w-[480px] h-full  min-h-[500px] bg-[rgba(216, 216, 216, 0.36)] rounded-xl border border-solid border-[#d8d8d84d] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 bg-gray-50">
+          {selectedPostId ? (
+            <p className="text-center mb-2">
+              Comments for post with ID: {selectedPostId}
+            </p>
+          ) : (
+            <p className="text-center">
+              Select a POST to view their comments (plus icon)
+            </p>
+          )}
+
+          {selectedPostId && (
+            <ul>
+              {postComments.map((comment) => (
+                <li
+                  className="mb-4 animate-rainbow-thin border rounded-md p-2"
+                  key={comment.id}
+                >
+                  <p className="font-bold text-xl mb-2">{comment.email}</p>
+                  <p className="font-medium text-lg leading-none	uppercase mb-4">
+                    {comment.name}
+                  </p>
+                  <p>{comment.body}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default IndexPage;
-
-export const Head = () => <title>Home Page</title>;
+export default Home;
