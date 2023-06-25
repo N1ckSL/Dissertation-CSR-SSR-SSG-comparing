@@ -756,10 +756,24 @@ Rezultatele obținute pentru ambele aplicații sunt:
 	\label{fig:02-deployed-pagespeed}
 \end{figure}
 
+\subsection{Dimensiunea aplica\c tiei}
+
+Dimensiunea aplica\c tiei este un alt factor important care influen\c teaz\u a performan\c ta. Cu c\^ at mai mare este dimensiunea aplica\c tiei, cu at\^ at mai multe resurse trebuie desc\u arcate de c\u atre browser, ceea ce duce la un timp de \^ inc\u arcare mai mare. Dimensiunea aplica\c tiei este influen\c tat\u a de framework-ul folosit, bibliotecile suplimentare, dependen\c tele aplica\c tiei \c si de modul de implementare.
+
+Din acest punct de vedere, aplica\c tia construita cu vanilla JS este mai performant\u a, \^ in compara\c tie cu restul, care sunt construite cu ajutorul unor framework-uri, care necesit\u a un set de biblioteci suplimentare pentru a func\c tiona.
+
+\^In urma analizei fi\c sierelor desc\u arcate de c\u atre browser, \^in tab-ul de Network din DevTools, am ob\c tinut urm\u atoarele rezultate:
+\begin{itemize}
+	\item Vanilla JavaScript \(\sim \) 198.1 KB
+	\item React \(\sim \) 255.5 KB
+	\item Next.js \(\sim \) 412.2 KB
+	\item Gatsby \(\sim \) 124.7 KB (\textit{cu optimizarea imaginilor}) \c si 205.3 KB (\textit{f\u ar\u a optimizarea imaginilor}) 
+\end{itemize}
+
+
 \section {Analiza rezultatelor}
 
-Fiecare dintre metodele abordate are avantajele \c si dezavantajele sale. Vanilla JS este cel mai simplu de implementat, deoarece nu necesit\u a dependen\c te sau biblioteci suplimentare. React este un framework popular, care ofer\u a o abordare mai structurat\u a a dezvolt\u arii aplica\c tiilor web, dar necesit\u a un timp mai mare de implementare \c si configurare. Next.js \c si Gatsby sunt framework-uri construit pe React, care ofer\u a un set de func\c tionalit\u a\c ti suplimentare, care pot fi utile \^ in dezvoltarea unei aplica\c tii web, dar necesit\u a cuno\c stin\c te mai avansate de React \c si a specifica\c tiilor interne ale acestor framework-uri.
-
+Fiecare dintre metodele abordate are avantajele \c si dezavantajele sale. Vanilla JS este cel mai simplu de implementat, deoarece nu necesit\u a dependen\c te sau biblioteci suplimentare. React este un framework popular, care ofer\u a o abordare mai structurat\u a a dezvolt\u arii aplica\c tiilor web, dar necesit\u a un timp mai mare de implementare \c si configurare. Next.js \c si Gatsby sunt framework-uri construite pe React, care ofer\u a un set de func\c tionalit\u a\c ti suplimentare, ce pot fi utile \^ in dezvoltarea unei aplica\c tii web, dar necesit\u a cuno\c stin\c te mai avansate de React \c si a specifica\c tiilor interne ale acestor framework-uri.
 
 \subsection{U\c surin\c ta implement\u arii}
 Din punct de vedere al utiliz\u arii, vanilla JS este cel mai proeminent, deoarece nu necesit\u a dependențe sau framework-uri suplimentare. Pentru a executa un cod JavaScript este destul\u a ad\u augarea unui tag \textit{\textless script\textgreater }   \^ in pagina HTML:
@@ -807,7 +821,38 @@ Promovează o abordare modulară și bazată pe componente, care poate fi reutil
 	}
 \end{lstlisting}
 
-Next.js \c si Gatsby sunt framework-uri care se bazeaz\u a pe React, oferind un mediu de dezvoltare mai u\c sor, cu un set de funcționalități predefinite, cum ar fi server-side rendering, generarea de pagini statice, optimizarea imaginilor \c si altele. Acestea sunt utile pentru crearea de aplicații web complexe, care necesită o structură bine definită și o arhitectură scalabilă, \^ins\u a necesit\u a o perioad\u a de timp mai mare pentru a fi \^inv\u ațate \c si implementate.
+Next.js \c si Gatsby sunt framework-uri care se bazeaz\u a pe React, oferind un mediu de dezvoltare mai u\c sor, cu un set de funcționalități predefinite, cum ar fi server-side rendering, generarea de pagini statice, optimizarea imaginilor:
+
+\begin{lstlisting}[caption={Exemplu de utilizare a unei imagini optimizate automat \^in Next.js \c si Gatsby},captionpos=b]
+	--- Next.js
+	import Image from 'next/image'
+	function HomeImage() {
+		return (
+				<Image
+					src="https://picsum.photos/1920/1080?grayscale"
+					alt="Background picture"
+				/>
+		)
+	}
+	export default HomeImage
+
+	
+	--- Gatsby
+	import React from "react"
+	import { StaticImage } from "gatsby-plugin-image"
+	const HomeImage = () => {
+		return (
+				<StaticImage
+					alt="Background picture"
+					src="https://picsum.photos/1920/1080?grayscale"
+				/>
+		)
+	}
+\end{lstlisting}
+
+Acestea sunt utile pentru crearea de aplicații web complexe, care necesită o structură bine definită și o arhitectură scalabilă, \^ins\u a necesit\u a o perioad\u a de timp mai mare pentru a fi \^inv\u ațate \c si implementate.
+
+
 
 \subsection{Performanța}
 
