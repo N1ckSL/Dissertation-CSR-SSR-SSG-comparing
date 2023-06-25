@@ -546,15 +546,15 @@ Există mai multe metode disponibile pentru măsurarea performanței unei aplica
 În evaluarea aplicației curente au fost folosite următoarele metode de evaluare a performanței:
 
 \begin{itemize}
-	\item  \textbf{Web Vitals} (extensie pentru browser) - inițiativă de la Google care oferă ghidare unitară pentru semnalele de calitate care sunt esențiale pentru a oferi o experiență excelentă utilizatorilor pe web.
+	\item  \textbf{Web Vitals} (extensie pentru browser) - inițiativă de la Google, care oferă ghidare unitară pentru semnalele de calitate care sunt esențiale pentru a oferi o experiență excelentă utilizatorilor pe web.
 
-	      Google a furnizat de-a lungul anilor o serie de instrumente pentru a măsura și raporta performanța. Unii dezvoltatori sunt experți în utilizarea acestor instrumente, în timp ce alții au considerat că abundanța atât a instrumentelor, cât și a metricilor este dificilă de urmărit.  Inițiativa Web Vitals își propune să simplifice peisajul și să ajute site-urile să se concentreze pe metricile care contează cel mai mult, Core Web Vitals. Fiecare dintre Core Web Vitals reprezintă o componentă distinctă a experienței utilizatorului, este măsurabilă în teren și reflectă experiența reală a unui rezultat critic centrat pe utilizator.
+	      Google a furnizat o serie de instrumente pentru a măsura și raporta performanța. Inițiativa Web Vitals se concentreaz\u a pe metricile Core Web Vitals. Fiecare metric\u a reprezintă o componentă distinctă a experienței utilizatorului, este măsurabilă în teren și reflectă experiența reală a unui rezultat critic centrat pe utilizator.
 
-	      Setul actual se concentrează pe trei aspecte ale experienței utilizatorului - încărcare, interactivitate și stabilitate vizuală - și include următoarele metrici: Largest Contentful Paint (LCP), First Input Delay (FID), Cumulative Layout Shift (CLS).
+	      Setul actual se concentrează pe trei aspecte ale experienței utilizatorului - încărcare, interactivitate și stabilitate vizuală și include următoarele metrici: Largest Contentful Paint (LCP), First Input Delay (FID), Cumulative Layout Shift (CLS).
 
-	\item \textbf{Lighthouse} chrome developer tool - unealtă de testare automată open-source dezvoltată de Google, care ajută la măsurarea și îmbunătățirea calității și performanței paginilor web. Aceasta oferă o analiză cuprinzătoare a diferitelor aspecte ale unei pagini web precum performanța, accesibilitatea, optimizare pentru motoarele de căutare (SEO) și altele. Lighthouse este folosit în mod frecvent de dezvoltatori pentru optimizarea site-urilor și aplicațiilor web în vederea obținerii unei experiențe mai bune pentru utilizatori.
+	\item \textbf{Lighthouse} - unealtă de testare automată, open-source, dezvoltată de Google, care ajută la măsurarea și îmbunătățirea calității și performanței paginilor web. Aceasta oferă o analiză cuprinzătoare a diferitelor aspecte ale unei pagini web precum performanța, accesibilitatea, optimizarea pentru motoarele de căutare (SEO). Lighthouse este folosit în mod frecvent de dezvoltatori pentru optimizarea site-urilor și aplicațiilor web în vederea obținerii unei experiențe mai bune pentru utilizatori, iar datorită rapoartelor generate, poate oferi informa\c tii despre punctele slabe ale unei aplica\c tii web \c si recomand\u ari necesare pentru a le remedia.
 
-	\item \textbf{PageSpeed Insights} website - unealtă de analiză a performanței web dezvoltată de Google. Aceasta oferă informații și recomandări pentru optimizarea vitezei și performanței unei pagini web. Prin analizarea conținutului unei adrese URL, PageSpeed Insights generează un raport care identifică probleme legate de performanță și sugerează îmbunătățiri.
+	\item \textbf{PageSpeed Insights} - unealtă de analiză a performanței web dezvoltată de Google. Oferă informații și recomandări pentru optimizarea vitezei și performanței unei pagini web. Prin analizarea conținutului unei adrese URL, PageSpeed Insights generează un raport \^in care sunt identificate problemele legate de performanță și sugerează op\c tiuni pentru a le remedia. Fiecare sugestie de optimizare este clasificată ca fiind ușor de implementat, medie sau dificilă, iar utilizatorii pot alege să filtreze rezultatele după complexitate.
 \end{itemize}
 
 \section{Compara\c tia \c si analiza practică a aplica\c tiilor}
@@ -588,7 +588,7 @@ Pentru a obține datele de la API, am utilizat funcția  \emph{fetch}:
 	const postsRes = await fetch("https://jsonplaceholder.typicode.com/posts");
 \end{lstlisting}
 
-Pentru a implementa funcționalitatea de afișare a posturilor asociate unui utilizator, am utilizat localstorage pentru a stoca Id-ul și numele utilizatorului curent, pentru a folosi aceste date în funția de filtrare a posturilor
+Pentru a implementa funcționalitatea de afișare a post\u arilor asociate unui utilizator, am utilizat localstorage pentru a stoca Id-ul și numele utilizatorului curent, pentru a folosi aceste date în funcția de filtrare a post\u arilor:
 \begin{lstlisting}
 	function handleSaveButtonClick(event) {
 		localStorage.setItem("selectedUser", JSON.stringify(selectedUser));
@@ -609,25 +609,31 @@ Pentru a implementa funcționalitatea de afișare a posturilor asociate unui uti
 	}
 
 \end{lstlisting}
-\subsection{React framework}
+\subsection{React}
 
 Cu ajutorul comenzii \emph{npx create-react-app 02-react} se generează un proiect React, cu numele 02-react, care va conține fișierele configurate și folderele necesare pentru aplicația React, inclusiv structura de bază a proiectului, fișierele de configurare implicite și dependențele inițiale.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.4\textwidth]{react_file_structure.png}
-	\caption{Strctura unei aplicații React}
+	\caption{Structura unei aplicații React}
 	\label{fig:react-structure}
 \end{figure}
 
 Directorul "src" dintr-un proiect conține fișierele de cod sursă pentru aplicația React. Aici sunt scrise și organizate componentele, stilurile și alte fișiere relevante ale aplicației.
 
-Aplicația construită cu React are câteva avantaje față de o aplicație construită cu plain JavaScript:
+Aplicația construită cu React are câteva avantaje față de o aplicație construită cu vanilla JavaScript:
 
 \begin{enumerate}
-	\item \textbf{Eficiență și Performanță}: utilizarea Virtual DOM și a algoritmi eficienți de reconciliere pentru a actualiza și afișa doar componentele care s-au schimbat în loc de rerandarea întregului DOM. Acest lucru duce la o performanță mai bună și la o aplicație mai eficientă, în special în cazul aplicațiilor cu interfețe complexe și cu multe date.
-	\item \textbf{Abordare declarativă}: React utilizează o abordare în care se definește starea dorită a interfeței utilizator și React se ocupă de actualizarea și afișarea acesteia în mod automat. Aceasta face codul mai ușor de înțeles și de gestionat, și reduce riscul de erori.
-	\item \textbf{React hooks}:  funcții speciale furnizate de React, care permit componentelor funcționale să acceseze funcționalități specifice și să gestioneze logica acestora.
+	\item \textbf{Eficiență și performanță}: Virtual DOM permite re-randarea selectivă a componentelor. Virtual DOM-ul este o copie a DOM-ului real, stocată în memorie. Atunci când apar modificări în starea sau proprietățile unei componente, React declanșează un proces de re-randare - se compara Virtual DOM-ul anterior cu cel nou generat pentru componenta afectate \c si descenden\c tii acesteia, folosind procesul de reconciliere. Prin calcularea diferențelor (diffing) între cele două Virtual DOM-uri, React identifică părțile specifice care necesită actualizare, apoi aplică doar actualizările necesare componentelor afectate în DOM-ul real, minimizând rand\u arile excesive ale componentelor nemodificate. Capacitatea Virtual DOM-ului de a efectua actualizări selective contribuie la viteza și eficiența React, în special în gestionarea structurilor complexe de interfață de utilizator și a modificărilor frecvente ale stării sau proprietăților.
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.6\textwidth]{virtual-dom.jpeg}
+		\caption{Ilustrarea procesului de reconciliere}
+		\label{fig:virtual-dom}
+	\end{figure}
+	\item \textbf{Sintaxă declarativă}: React urmează o paradigma de programare declarativă, ce permite dezvoltatorilor să descrie cum ar trebui să arate interfața utilizator pe baza stării curente a componentelor, în loc să manipuleze manual DOM-ul. Aceasta simplifică dezvoltarea, îmbunătățește lizibilitatea codului și reduce probabilitatea apariției erorilor.
+	\item \textbf{React hooks}: oferă o modalitate mai concisă și intuitivă de a gestiona starea și efectele secundare. Cu ajutorul hooks-urilor, componentele funcționale pot avea starea locală (\textit{hook-ul useState}), pot efectua efecte secundare(\textit{hook-ul useEffect}), pot accesa valorile contextului (\textit{hook-ul useContext}), pot crea referințe mutable folosind hook-ul useRef, pot memoiza calculele folosind hook-ul useMemo și pot memoiza funcțiile de callback folosind hook-ul useCallback. Hooks-urile promovează reutilizabilitatea codului, îmbunătățesc lizibilitatea și experiența de dezvoltare, permițând dezvoltatorilor să scrie componente mai modulare și funcționale fără a fi nevoie de componente de tip clasă. Acestea au devenit o parte esențială a React-ului, facilitând gestionarea logicii și a efectelor secundare în cadrul componentelor funcționale.
 \end{enumerate}
 
 Pentru a reține anumite date, precum utilizatorul curent, masivul de postări sau valoarea curentă a input-ului putem utiliza hook-ul \emph{useState}, ce permite gestionarea și actualizarea stării interne a unei componente, iar pentru a obține listele de utilizatori și postrări într-un mod efectiv, utilizăm hook-ul \emph{useEffect} pentru a ne asigura că acestea sunt executate la momentele potrivite în timpul ciclului de viață al componentei.
@@ -650,12 +656,41 @@ Pentru a reține anumite date, precum utilizatorul curent, masivul de postări s
   }, []);
 \end{lstlisting}
 
+\subsection{Next.js}
+Este un framework pentru backend, bazat pe React. Tot ce se poate realiza \^in React se poate realiza \c si \^in Next.js, \^ins\u a acesta vine cu o serie de caracteristici suplimentare, precum rutarea, apeluri API, autentificare, pre-rendering, SEO, etc. Aceste func\c tionalit\u a\c ti nu sunt disponibile în React în mod implicit \c si trebuie instalate biblioteci și dependințe externe, precum React Router pentru a ob\c tine func\c tionait\u a\c ti similare.
+
+Cu ajutorul comenzii \textit{npx create-next-app@latest 03-next} putem crea o aplica\c tie Next.js. Structura ini\c tial\u a a unei aplica\c tii este similar\u a cu cea a unei aplica\c tii React, cu excep\c tia unor fi\c siere suplimentare:
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.45\textwidth]{next_file_structure.png}
+	\caption{Structura unei aplicații Next.js}
+	\label{fig:next-structure}
+\end{figure}
+
+
+\subsection{Gatsby}
+De asemenea este bazat pe React, dar spre deosebire de Next.js este un framework pentru frontend. Gatsby este un generator de site-uri statice, ce permite dezvoltatorilor să creeze site-uri web performante, ce pot fi scalate \c si cu optimizate pentru motoarele de c\u autare. În ceea ce privește capacitatea de gestionare a datelor, Gatsby impune un mod exact în care datele trebuie preluate \c si gestionate, cu ajutorul la GraphQL, în timp ce Next.js este mai flexibil din acest punct de vedere.
+
+Pentru a crea o aplica\c tie Gatsby, este nevoie de comanda \textit{npm init gatsby}. Structura ini\c tial\u a a unei aplica\c tii:
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.47\textwidth]{gatsby_file_structure.png}
+	\caption{Structura unei aplicații Gatsby}
+	\label{fig:gatsby-structure}
+\end{figure}
+
+Folderul \textit{src} este compus din \textit{images}, unde sunt stocate imaginile utilizate, \textit{pages}, unde sunt definite paginile aplica\c tiei \c si folderul \textit{styles}, unde se afl\u a fi\c sierele de stil. Denumirea unui fi\c sier din folderul \textit{pages} reprezint\u a ruta paginii respective. De exemplu, fi\c sierul \textit{index.js} reprezint\u a ruta \textit{/}, iar fi\c sierul \textit{about.js} reprezint\u a ruta \textit{/about}.
+
+Gatsby optimizează aplicațiile prin utilizarea de plugin-uri, care sunt pachete sau module ce extind funcționalitatea Gatsby și oferă optimizări suplimentare. Aceste plugin-uri pot fi folosite pentru îmbunătățirea diverselor aspecte ale aplicației, inclusiv performanța, optimizarea imaginilor \ref{fig:image-optimization}, împărțirea codului (\textit{code splitting}), optimizarea SEO.
+
 \section{Analiza performanței}
 
-Am dezvoltat aceeași aplicație folosind Vanilla JavaScript și React și am testat performanța ambelor versiuni utilizând extensia Web Vitals, Lighthouse Chrome tool și PageSpeed Insights. Rezultatele obținute oferă informații detaliate despre performanța aplicațiilor, inclusiv timpul de încărcare a paginii, interactivitatea și stabilitatea vizuală. Aceste metrici permit să evaluăm și să comparăm performanța aplicațiilor într-un mod obiectiv. Aplicațiile au fost testate atât în mediul local (\emph{localhost}), cât și după ce au fost încărcate pe același web hosting.
+Performanța aplicațiilor a fost testat\u a cu ajutorul Web Vitals, Lighthouse, PageSpeed Insights, at\^at pe mediul local, c\^at \c si dup\u a ce aplica\c tiile au fost \^inc\u arcate pe un web hosting, pentru a ob\c tine o imagine complet\u a \c si obiectiv\u a asupra performan\c tei acestora. 
+Rezultatele obținute oferă informații detaliate despre performanța aplicațiilor, inclusiv timpul de încărcare a paginii, interactivitatea, stabilitatea vizuală, metode de îmbunătățire a acestora \c si o compara\c tie subiectiv\u a a procesului de configurare pentru deploy-ul aplica\c tiilor pe hosting. 
 
 \subsection{Web Vitals}
-{}
+
 În urma măsurărilor repetate am obținut următoarele rezultate, pe mediul local:
 
 \begin{figure}[htbp]
@@ -756,21 +791,6 @@ Rezultatele obținute pentru ambele aplicații sunt:
 	\label{fig:02-deployed-pagespeed}
 \end{figure}
 
-\subsection{Dimensiunea aplica\c tiei}
-
-Dimensiunea aplica\c tiei este un alt factor important care influen\c teaz\u a performan\c ta. Cu c\^ at mai mare este dimensiunea aplica\c tiei, cu at\^ at mai multe resurse trebuie desc\u arcate de c\u atre browser, ceea ce duce la un timp de \^ inc\u arcare mai mare. Dimensiunea aplica\c tiei este influen\c tat\u a de framework-ul folosit, bibliotecile suplimentare, dependen\c tele aplica\c tiei \c si de modul de implementare.
-
-Din acest punct de vedere, aplica\c tia construita cu vanilla JS este mai performant\u a, \^ in compara\c tie cu restul, care sunt construite cu ajutorul unor framework-uri, care necesit\u a un set de biblioteci suplimentare pentru a func\c tiona.
-
-\^In urma analizei fi\c sierelor desc\u arcate de c\u atre browser, \^in tab-ul de Network din DevTools, am ob\c tinut urm\u atoarele rezultate:
-\begin{itemize}
-	\item Vanilla JavaScript \(\sim \) 198.1 KB
-	\item React \(\sim \) 255.5 KB
-	\item Next.js \(\sim \) 412.2 KB
-	\item Gatsby \(\sim \) 124.7 KB (\textit{cu optimizarea imaginilor}) \c si 205.3 KB (\textit{f\u ar\u a optimizarea imaginilor}) 
-\end{itemize}
-
-
 \section {Analiza rezultatelor}
 
 Fiecare dintre metodele abordate are avantajele \c si dezavantajele sale. Vanilla JS este cel mai simplu de implementat, deoarece nu necesit\u a dependen\c te sau biblioteci suplimentare. React este un framework popular, care ofer\u a o abordare mai structurat\u a a dezvolt\u arii aplica\c tiilor web, dar necesit\u a un timp mai mare de implementare \c si configurare. Next.js \c si Gatsby sunt framework-uri construite pe React, care ofer\u a un set de func\c tionalit\u a\c ti suplimentare, ce pot fi utile \^ in dezvoltarea unei aplica\c tii web, dar necesit\u a cuno\c stin\c te mai avansate de React \c si a specifica\c tiilor interne ale acestor framework-uri.
@@ -848,15 +868,28 @@ Next.js \c si Gatsby sunt framework-uri care se bazeaz\u a pe React, oferind un 
 				/>
 		)
 	}
-\end{lstlisting}
+\end{lstlisting} \label{fig:image-optimization}
 
 Acestea sunt utile pentru crearea de aplicații web complexe, care necesită o structură bine definită și o arhitectură scalabilă, \^ins\u a necesit\u a o perioad\u a de timp mai mare pentru a fi \^inv\u ațate \c si implementate.
-
 
 
 \subsection{Performanța}
 
 \^In urma analizei rezultatelor ob\c tinute cu ajutorul Web Vitals, rapoartelor generate de Lighthouse \c si PageSpeed Insights se poate obesrva faptul c\u a aplica\c tia construit\u a vanilla JavaScript este mai performant\u a, deoarece \^in intermediul unei aplica\c tii simple, modific\u arile directe asupra DOM sunt mai eficiente dec\^at utilizarea Virtual DOM-ului. De asemenea, aplica\c tiile ce pe baz\u a de React necesit\u a mai multe resurse pentru a rula, deoarece este nevoie de biblioteci suplimentare pentru a utiliza func\c tionalit\u a\c ti suplimentare precum server-side rendering, dynamic routing, optimizarea imaginilor, etc.
+
+\subsection{Dimensiunea aplica\c tiei}
+
+Dimensiunea aplica\c tiei este un alt factor important care influen\c teaz\u a performan\c ta. Cu c\^ at mai mare este dimensiunea aplica\c tiei, cu at\^ at mai multe resurse trebuie desc\u arcate de c\u atre browser, ceea ce duce la un timp de \^ inc\u arcare mai mare. Dimensiunea aplica\c tiei este influen\c tat\u a de framework-ul folosit, bibliotecile suplimentare, dependen\c tele aplica\c tiei \c si de modul de implementare.
+\^In urma analizei fi\c sierelor desc\u arcate de c\u atre browser, \^in tab-ul de Network din DevTools, am ob\c tinut urm\u atoarele rezultate:
+
+\begin{itemize}
+	\item Vanilla JavaScript \(\sim \) 198.1 KB
+	\item React \(\sim \) 255.5 KB
+	\item Next.js \(\sim \) 202.2 KB (\textit{f\u ar\u a optimizarea imaginilor}) \c si 138.9 KB (\textit{cu optimizarea imaginilor})
+	\item Gatsby \(\sim \) 205.3 KB (\textit{f\u ar\u a optimizarea imaginilor}) \c si 124.7 KB (\textit{cu optimizarea imaginilor}) 
+\end{itemize}
+
+Framework-urile Next.js și Gatsby au adus o îmbunătățire semnificativă în ceea ce privește optimizarea imaginilor, ceea ce a dus la o dimensiune mai mică a aplicațiilor în comparație cu utilizarea doar a Vanilla JS și React. Deși framework-urile includ mai multe librării suplimentare, care pot crește dimensiunea generală a aplicației, funcționalitățile pe care le oferă acestea sunt optimizate pentru a reduce dimensiunea finală a aplicației.
 
 \subsection{SEO}
 

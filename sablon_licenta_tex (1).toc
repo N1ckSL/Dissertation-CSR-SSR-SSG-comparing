@@ -19,19 +19,21 @@
 \contentsline {section}{\numberline {3.3}Compara\c tia \c si analiza practică a aplica\c tiilor}{24}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Metodologie}{24}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Vanilla JavaScript}{25}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}React framework}{26}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Analiza performanței}{28}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Web Vitals}{28}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Lighthouse}{30}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}PageSpeed Insights}{31}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Dimensiunea aplica\c tiei}{32}{subsection.3.4.4}%
-\contentsline {section}{\numberline {3.5}Analiza rezultatelor}{33}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}U\c surin\c ta implement\u arii}{33}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Performanța}{36}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}SEO}{36}{subsection.3.5.3}%
-\contentsline {chapter}{\numberline {4}Concluzii}{38}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Rezultatele obținute}{39}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Direcții viitoare de cercetare}{39}{section.4.2}%
-\contentsline {chapter}{Bibliography}{40}{section.4.2}%
-\contentsline {chapter}{\numberline {A}Glosar}{43}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Acronime}{43}{section.A.1}%
+\contentsline {subsection}{\numberline {3.3.3}React}{26}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Next.js}{29}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Gatsby}{30}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}Analiza performanței}{31}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Web Vitals}{31}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Lighthouse}{33}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}PageSpeed Insights}{34}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Analiza rezultatelor}{35}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}U\c surin\c ta implement\u arii}{36}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Performanța}{39}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Dimensiunea aplica\c tiei}{39}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}SEO}{40}{subsection.3.5.4}%
+\contentsline {chapter}{\numberline {4}Concluzii}{41}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Rezultatele obținute}{42}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Direcții viitoare de cercetare}{42}{section.4.2}%
+\contentsline {chapter}{Bibliography}{43}{section.4.2}%
+\contentsline {chapter}{\numberline {A}Glosar}{46}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Acronime}{46}{section.A.1}%
