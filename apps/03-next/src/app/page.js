@@ -1,13 +1,14 @@
-"use client";
-import * as React from "react";
+'use client';
+import * as React from 'react';
+import Image from 'next/image';
 
 function App() {
   const allUsers = React.useRef([]);
   const allPosts = React.useRef([]);
   const allComments = React.useRef([]);
 
-  const [input, setInput] = React.useState("");
-  const [currentUser, setCurrentUser] = React.useState("");
+  const [input, setInput] = React.useState('');
+  const [currentUser, setCurrentUser] = React.useState('');
   const [selectedPostId, setSelectedPostId] = React.useState(null);
 
   const [data, setData] = React.useState({
@@ -20,9 +21,9 @@ function App() {
   React.useEffect(() => {
     async function fetchData() {
       const [usersRes, postsRes, commentsRes] = await Promise.all([
-        fetch("https://jsonplaceholder.typicode.com/users"),
-        fetch("https://jsonplaceholder.typicode.com/posts"),
-        fetch("https://jsonplaceholder.typicode.com/comments"),
+        fetch('https://jsonplaceholder.typicode.com/users'),
+        fetch('https://jsonplaceholder.typicode.com/posts'),
+        fetch('https://jsonplaceholder.typicode.com/comments'),
       ]);
 
       const usersData = await usersRes.json();
@@ -88,7 +89,12 @@ function App() {
   const { users, posts, postComments } = data;
 
   return (
-    <div className="m-0 p-0 bg-[url('https://picsum.photos/1920/1080?grayscale')] bg-cover">
+    <div className="m-0 p-0">
+      <Image
+        src={'https://picsum.photos/1920/1080?grayscale'}
+        alt="background image"
+        fill
+      />
       <div className="p-10 flex justify-between">
         <div className="p-2 lg:p-16 m-16 w-[480px] h-full min-h-[500px] bg-[rgba(216, 216, 216, 0.36)] rounded-xl border border-solid border-[#d8d8d84d] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 bg-gray-50">
           <input
