@@ -12,7 +12,7 @@
 \graphicspath{{images/} {diagrams/}}
 
 \usepackage{fullpage}
-
+\usepackage{hyperref}
 \usepackage{url}
 \usepackage{listings}
 \usepackage{verbatim}
@@ -30,6 +30,7 @@
 	keywordstyle=\color{blue},
 	commentstyle=\color{dkgreen},
 	stringstyle=\color{codegreen},
+	morecomment=[f][\color{green}][0]{/},
 	breakatwhitespace=true,
 	tabsize=3
 }
@@ -195,38 +196,6 @@
 
 \newpage{}
 
-
-
-\addcontentsline{toc}{chapter}{Starea de art\u a}
-
-Rendering-ul informa\c tiilor a evoluat semnificativ pe parcursul timpului, \^ in conformitate cu evolu\c tia tehnologiilor web \c si a cerin\c telor utilizatorilor.
-
-La \^ inceput, majoritatea con\c tinutului era generat pe server \c si returnat c\u atre browser \^ in form\u a de pagini HTML statice. Cu trecerea timpului, tehnologiile web au evoluat, ceea ce a permis procesarea dinamic\u a a datelor în browser prin intermediul script-urilor. Acest lucru a permis dezvoltarea de aplica\c tii web cu interac\c tiuni complexe \c si randare dinamic\u a a con\c tinutului. Cu toate acestea, performan\c ta aplica\c tiilor web bazate exclusiv pe randare client-side a putut fi limitat\u a \^ in condi\c tii de conexiune lent\u a la internet. Din acest motiv, tehnologiile de randare hibrid\u a au devenit din ce \^ in ce mai populare, combin\^ and avantajele rand\u arii server-side \c si client-side. \cite{html}
-
-\^ In prezent, tehnologiile de randare se bazeaz\u a pe framework-uri \c si biblioteci moderne, cum ar fi React, Angular \c si Vue, care ofer\u a unelte puternice pentru a construi aplica\c tii web performante \c si cu o experien\c t\u a utilizator remarcabil\u a. \^ In plus, tehnologiile de randare moderne permit integrarea cu alte tehnologii precum WebAssembly \c si Web Workers, care au ca scop \^ imbun\u at\u a\c tirea performan\c tei aplica\c tiilor web. De asemenea, tehnologiile de randare permit utilizarea de anima\c tii \c si interac\c tiuni complexe, care rezultă într-un user experience sporit al aplicației.
-
-Evolu\c tia tehnologiei web \c si a cerin\c telor utilizatorilor continu\u a, iar randarea informa\c tiilor este un domeniu \^ in continu\u a schimbare \c si dezvoltare. \^ In etapa curent\u a de dezvoltare a aplica\c tiilor web, predomin\u a utilizarea larg\u a a JavaScript \c si bibliotecilor JavaScript, cum ar fi React \c si Vue.js.
-
-React, dezvoltat de Facebook, a devenit una dintre tehnologiile cele mai populare pentru construirea de aplica\c tii web, datorit\u a abilit\u a\c tii sale de a oferi o experien\c t\u a de randare eficient\u a \c si de \^ inalt\u a performan\c t\u a. Vue.js, dezvoltat de comunitate, se concentreaz\u a pe simplitate \c si u\c surin\c t\u a de utilizare, fiind o alegere popular\u a pentru proiecte mai mici sau pentru dezvoltatorii care \^ incearc\u a s\u a \^ inve\c te tehnologii moderne de randare a informa\c tiilor.
-
-Exist\u a mai multe tipuri de randare a con\c tinutului, cele mai populare fiind randarea \emph{server-side}, \emph{client-side} \c si  \emph{static server generation}: \cite{clientsidevssercerside}
-\begin{enumerate}
-	\item \textbf{Server-side rendering:} Procesarea datelor \c si generarea HTML se realizeaz\u a pe server. Server-ul returneaz\u a apoi HTML-ul generat c\u atre browser, care \^il afi\c seaz\u a utilizatorului. Aceast\u a metod\u a de randare este utilizat\u a \^in mod traditional \^in aplica\c tiile web vechi. Avantajul acestei metode este c\u a se poate efectua o procesare a datelor pe server \c si se poate oferi o experien\c t\u a utilizator consistent\u a chiar \c si \^in condi\c tii de conexiune lent\u a la internet. Afișarea inițială a paginii poate fi rapidă deoarece clientul nu trebuie să aștepte încărcarea sau executarea JavaScript-ului înainte de afișarea conținutului.
-	\item \textbf{Client-side rendering:} Browser-ul prime\c ste date brute \c si le proceseaz\u a prin intermediul unui script (cum ar fi JavaScript) pentru a genera HTML. Aceast\u a metod\u a de randare permite o flexibilitate mai mare \^in prezentarea con\c tinutului \c si ofer\u a posibilitatea de a construi interac\c tiuni complexe cu utilizatorul, cum ar fi formulare dinamice \c si componente grafice interactive. Dezavantajul acestei metode este c\u a necesit\u a mai mult\u a putere de procesare a clientului \c si poate fi mai pu\c tin performant\u a \^in condi\c tii de conexiune lent\u a la internet, deoarece clientul trebuie să aștepte descărcarea scripturilor și a datelor necesare înainte de a randa pagina.
-	\item \textbf{Static server generation:} Paginile web sunt pregenerate și randate în timpul procesului de build al aplicației, rezultând în fișiere HTML statice care pot fi furnizate către client fără a fi necesară procesarea la nivelul serverului. Cu SSG, conținutul rămâne static până la următorul build al aplicației.
-\end{enumerate}
-
-% \begin{figure}[htbp]
-% 	\centering
-% 	\includegraphics[width=0.78\textwidth]{rendering.png}
-% 	% \includegraphics[width=0.48\textwidth]{admin.jpg}
-% 	\caption{Compararea \^intre mai multe tipuri de randare a informa\c tiilor. \cite{webdev}}
-% \end{figure}
-
-\^ In ceea ce prive\c ste performan\c ta, tehnologiile moderne de randare a informa\c tiilor au avansat mult \^ in optimizarea vitezei de randare \c si a eficien\c tei resurselor. Una dintre abord\u arile moderne de optimizare a performan\c tei este utilizarea \emph{"virtual DOM"} (Document Object Model), care se caracterizează printr-o rerandare eficientă doar a componentelor ce au suferit modificări.
-\^ In plus, tehnologiile de randare moderne pot delimita componentele dinamice, care necesită rerandare constantă, de cele statice, care nu necesit\u a recalculare, cresc\^ and astfel performan\c ta aplica\c tiei. De asemenea, tehnologiile de randare permit utilizarea de tehnici de lazy loading, care \^ incarc\u a con\c tinutul doar atunci c\^ and este necesar, \^ imbun\u at\u a\c tind astfel performan\c ta aplica\c tiei \c si experiența utilizatorului.
-Alegerea metodei potrivite de randare depinde de cerin\c tele specifice ale proiectului \c si poate include considera\c tii legate de performan\c ta, flexibilitatea \c si compatibilitatea cu echipamentele utilizatorilor. Este important s\u a se \^ in\c teleag\u a avantajele \c si dezavantajele fiec\u arei metode \c si s\u a se fac\u a o evaluare corespunz\u atoare a acestora \^ inainte de a lua o decizie.
-
 \chapter{Introducere}
 
 \pagenumbering{arabic}
@@ -308,7 +277,7 @@ Web 2.0 facilitează proprietăți majore cum ar fi practicile participative, co
 \^ Impreun\u a cu primele site-uri web dinamice a venit nevoia pentru primele tehnologii de programare pe partea de server. La \^ inceput, programarea pe partea de server se f\u acea direct \^ in serverul web. Mai t\^ arziu, standardul CGI (Common Gateway Interface) a fost dezvoltat, ceea ce a f\u acut posibil\u a interac\c tiunea serverului web cu orice proces local.
 Mai t\^ arziu, limbi precum Perl, Java, PHP \c si ASP (\c si altele) au devenit populare pentru programare pe partea de server.
 
-Site-urile web care devin mai bogate \^ in func\c tii au nevoie de mai mult\u a flexibilitate \c si de o utilizare mai bun\u a. Acesta este momentul \^ in care programarea client-side intr\u a \^ in joc. F\u ar\u a a fi nevoie de o \^ inc\u arcare complet\u a a paginii, con\c tinutul poate fi schimbat de c\u atre utilizatorii finali. Tehnologia cel mai utilizat\u a pentru acest scop este Javascript.
+Site-urile web care devin mai bogate \^ in func\c tii au nevoie de mai mult\u a flexibilitate \c si de o utilizare mai bun\u a. Acesta este momentul \^ in care programarea client-side intr\u a \^ in joc. F\u ar\u a a fi nevoie de o \^ inc\u arcare complet\u a a paginii, con\c tinutul poate fi schimbat de c\u atre utilizatorii finali. Tehnologia cel mai utilizat\u a pentru acest scop este JavaScript.
 C\^ and func\c tiile client-side au devenit \c si mai importante, au fost concepute framework-uri pentru renderizarea (\c si controlarea) paginilor client-side. Cele mai cunoscute framework-uri sunt: Ember, Angular \c si React.
 
 \textbf{Caracteristici:}
@@ -374,7 +343,11 @@ Pe lângă framework-urile front-end, au evoluat și tehnologiile back-end, în 
 
 Evoluția tehnologiilor web a fost determinată de necesitatea de a crea aplicații mai complexe, cu funcționalități avansate. De la HTML "curat" la framework-uri pentru front-end și back-end, tehnologiile web continuă să evolueze într-un ritm rapid, fapt ce impune dezvoltatorii să fie la curent cu ultimele tehnologii și constant să-și actualizeze metodele de dezvoltare utilizate, pentru a deveni mai efectivi în dezvoltarea aplicațiilor moderne, care răspund nevoilor sporite ale utilizatorilor.
 
-\subsection{Consecințele evoluției web}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{web-evolution.png} \label{fig:web-evolution}
+	\caption{Evolu\c tia web-ului}
+\end{figure}
 
 Evolutia web a avut un impact semnificativ asupra dezvoltării aplicațiilor web moderne. Creșterea vitezei de conectare la internet și a performanței dispozitivelor a permis dezvoltarea aplicațiilor web complexe, cu funcții avansate și user experience sporit. Utilizarea extinsa a standardelor web deschise, cum ar fi HTML, CSS și JavaScript, a dus la o mai mare interoperabilitate între diferite platforme și la o mai mare eficiență în dezvoltarea aplicațiilor.
 
@@ -391,18 +364,34 @@ Pe masură ce aplicațiile web devin mai complexe, devin mai dificil de dezvolta
 Pentru a face față acestei complexități, dezvoltatorii utilizează framework-uri și biblioteci care simplifică procesul de dezvoltare și permite o gestionare mai bună a complexității aplicațiilor.
 
 
-\section{De ce compar\u am server side rendering cu client side rendering?}
-
-Alegerea unei paradigme \^ in detrimentul alteia are numeroase consecin\c te. De exemplu, preferin\c ta unei paradigme poate avea implica\c tii asupra timpului de \^ inc\u arcare a paginii, a costurilor de dezvoltare \c si \^ intre\c tinere. Timpii crescu\c ti de \^ inc\u arcare a paginii pot duce la abandonul clien\c tilor. De asemenea, optimizarea pentru motoarele de c\u autare \c si compatibilitatea cu browserul sunt, de asemenea, afectate de alegerea f\u acut\u a.
-
-Literatura despre aceste consecin\c te se g\u ase\c ste \^ in principal \^ in post\u ari pe bloguri, \^ in care se propune experien\c ta personal\u a \c si opinia unui developer sau a unei echipe. De\c si exist\u a literatur\u a despre tehnologiile moderne, inclusiv aplica\c tiile cu o singur\u a pagin\u a \c si randarea pe partea client, c\u autarea pentru literatur\u a academic\u a pe acest subiect nu d\u a rezultate.
-
-Pe de alt\u a parte, organiza\c tiile se confrunt\u a cu dificult\u a\c ti pentru a decide care strategie de randare s\u a aleag\u a pentru aplica\c tiile lor specifice. De exemplu, Twitter a folosit ini\c tial randarea pe partea server \c si apoi a trecut la randarea pe partea client \^ in 2010. Apoi, au trecut din nou la randarea pe partea server \^ in 2012. Acest lucru sugereaz\u a c\u a ar fi util\u a o compara\c tie pentru a ajuta la luarea unei decizii obiective privind alegerea uneia dintre cele dou\u a paradigme.
-
 \chapter{Paradigmele actuale de randare}
 Rendering-ul este procesul de conversie a datelor într-o reprezentare vizuală și joacă un rol esențial în aplicațiile web, permițând furnizarea de conținut dinamic și interactiv către utilizatori.În stadiile incipiente ale dezvoltării web-ului, randarea a fost realizată în principal pe server. Site-urile web erau construite folosind tehnologii precum PHP sau Java, unde serverul genera conținutul HTML în mod dinamic, pe baza solicitărilor utilizatorilor. Această abordare are Time to first byte (TTFB) rapid, deoarece serverul poate genera HTML ce poate fi livrat rapid clientului. Dezavantajul acestei paradigme este c\u a nu este la fel de efectivă pentru site-urile web \^ in care datele se schimb\u a des, ci doar pentru site-urile care nu necesit\u a interactivitate complexă sau date dinamice. \cite{benefitsserverrendering}
 
 Multe dintre cele mai mari aplica\c tii web din ziua de azi \^ inc\u a folosesc aceast\u a abordare, cum ar fi, de exemplu, amazon.com: de fiecare dat\u a c\^ and face\c ti click pe un link, ob\c tine\c ti o nou\u a pagin\u a generat\u a dinamic de pe serverele lor. \^ In plus, exist\u a multe framework-uri pentru crearea  aplica\c tiilor multi-page, cum ar fi Ruby on Rails, Django \c si Laravel, precum \c si sisteme de gestionare a con\c tinutului, cum ar fi WordPress. 
+
+\section{Starea de art\u a}
+
+Rendering-ul informa\c tiilor a evoluat semnificativ pe parcursul timpului, \^ in conformitate cu evolu\c tia tehnologiilor web \c si a cerin\c telor utilizatorilor.
+
+La \^ inceput, majoritatea con\c tinutului era generat pe server \c si returnat c\u atre browser \^ in form\u a de pagini HTML statice. Cu trecerea timpului, tehnologiile web au evoluat, ceea ce a permis procesarea dinamic\u a a datelor în browser prin intermediul script-urilor. Acest lucru a permis dezvoltarea de aplica\c tii web cu interac\c tiuni complexe \c si randare dinamic\u a a con\c tinutului. Cu toate acestea, performan\c ta aplica\c tiilor web bazate exclusiv pe randare client-side a putut fi limitat\u a \^ in condi\c tii de conexiune lent\u a la internet. Din acest motiv, tehnologiile de randare hibrid\u a au devenit din ce \^ in ce mai populare, combin\^ and avantajele rand\u arii server-side \c si client-side. \cite{html}
+
+\^ In prezent, tehnologiile de randare se bazeaz\u a pe framework-uri \c si biblioteci moderne, cum ar fi React, Angular \c si Vue, care ofer\u a unelte puternice pentru a construi aplica\c tii web performante \c si cu o experien\c t\u a utilizator remarcabil\u a. \^ In plus, tehnologiile de randare moderne permit integrarea cu alte tehnologii precum WebAssembly \c si Web Workers, care au ca scop \^ imbun\u at\u a\c tirea performan\c tei aplica\c tiilor web. De asemenea, tehnologiile de randare permit utilizarea de anima\c tii \c si interac\c tiuni complexe, care rezultă într-un user experience sporit al aplicației.
+
+Evolu\c tia tehnologiei web \c si a cerin\c telor utilizatorilor continu\u a, iar randarea informa\c tiilor este un domeniu \^ in continu\u a schimbare \c si dezvoltare. \^ In etapa curent\u a de dezvoltare a aplica\c tiilor web, predomin\u a utilizarea larg\u a a JavaScript \c si bibliotecilor JavaScript, cum ar fi React \c si Vue.js.
+
+React, dezvoltat de Facebook, a devenit una dintre tehnologiile cele mai populare pentru construirea de aplica\c tii web, datorit\u a abilit\u a\c tii sale de a oferi o experien\c t\u a de randare eficient\u a \c si de \^ inalt\u a performan\c t\u a. Vue.js, dezvoltat de comunitate, se concentreaz\u a pe simplitate \c si u\c surin\c t\u a de utilizare, fiind o alegere popular\u a pentru proiecte mai mici sau pentru dezvoltatorii care \^ incearc\u a s\u a \^ inve\c te tehnologii moderne de randare a informa\c tiilor.
+
+Exist\u a mai multe tipuri de randare a con\c tinutului, cele mai populare fiind randarea \emph{server-side}, \emph{client-side} \c si  \emph{static server generation}: \cite{clientsidevssercerside}
+\begin{enumerate}
+	\item \textbf{Server-side rendering:} Procesarea datelor \c si generarea HTML se realizeaz\u a pe server. Server-ul returneaz\u a apoi HTML-ul generat c\u atre browser, care \^il afi\c seaz\u a utilizatorului. Aceast\u a metod\u a de randare este utilizat\u a \^in mod traditional \^in aplica\c tiile web vechi. Avantajul acestei metode este c\u a se poate efectua o procesare a datelor pe server \c si se poate oferi o experien\c t\u a utilizator consistent\u a chiar \c si \^in condi\c tii de conexiune lent\u a la internet. Afișarea inițială a paginii poate fi rapidă deoarece clientul nu trebuie să aștepte încărcarea sau executarea JavaScript-ului înainte de afișarea conținutului.
+	\item \textbf{Client-side rendering:} Browser-ul prime\c ste date brute \c si le proceseaz\u a prin intermediul unui script (cum ar fi JavaScript) pentru a genera HTML. Aceast\u a metod\u a de randare permite o flexibilitate mai mare \^in prezentarea con\c tinutului \c si ofer\u a posibilitatea de a construi interac\c tiuni complexe cu utilizatorul, cum ar fi formulare dinamice \c si componente grafice interactive. Dezavantajul acestei metode este c\u a necesit\u a mai mult\u a putere de procesare a clientului \c si poate fi mai pu\c tin performant\u a \^in condi\c tii de conexiune lent\u a la internet, deoarece clientul trebuie să aștepte descărcarea scripturilor și a datelor necesare înainte de a randa pagina.
+	\item \textbf{Static server generation:} Paginile web sunt pregenerate și randate în timpul procesului de build al aplicației, rezultând în fișiere HTML statice care pot fi furnizate către client fără a fi necesară procesarea la nivelul serverului. Cu SSG, conținutul rămâne static până la următorul build al aplicației.
+\end{enumerate}
+
+\^ In ceea ce prive\c ste performan\c ta, tehnologiile moderne de randare a informa\c tiilor au avansat mult \^ in optimizarea vitezei de randare \c si a eficien\c tei resurselor. Una dintre abord\u arile moderne de optimizare a performan\c tei este utilizarea \emph{"virtual DOM"} (Document Object Model), care se caracterizează printr-o rerandare eficientă doar a componentelor ce au suferit modificări.
+\^ In plus, tehnologiile de randare moderne pot delimita componentele dinamice, care necesită rerandare constantă, de cele statice, care nu necesit\u a recalculare, cresc\^ and astfel performan\c ta aplica\c tiei. De asemenea, tehnologiile de randare permit utilizarea de tehnici de lazy loading, care \^ incarc\u a con\c tinutul doar atunci c\^ and este necesar, \^ imbun\u at\u a\c tind astfel performan\c ta aplica\c tiei \c si experiența utilizatorului.
+Alegerea metodei potrivite de randare depinde de cerin\c tele specifice ale proiectului \c si poate include considera\c tii legate de performan\c ta, flexibilitatea \c si compatibilitatea cu echipamentele utilizatorilor. Este important s\u a se \^ in\c teleag\u a avantajele \c si dezavantajele fiec\u arei metode \c si s\u a se fac\u a o evaluare corespunz\u atoare a acestora \^ inainte de a lua o decizie.
+
 
 \section{Client side rendering}
 
@@ -430,7 +419,7 @@ O aplica\c tie ce utilizeaz\u a CSR este caracterizat\u a prin urm\u atoarele as
 
 Deoarece browserul trebuie să descarce și să ruleze întregul cod al aplicației înainte ca conținutul să apară pe ecran, încărcarea inițială a paginii este de obicei lentă. Ca rezultat, utilizatorii văd o pagină goală sau un indicator de încărcare pentru o perioadă relativ lungă de timp. Aceasta duce la o experiență mai puțin plăcută pentru utilizatori și la o rată mai mare de abandon\u ari a paginii (\textit{bounce rate}). \cite{google-bouncing-rate}
 
-Cu toate acestea, pot exista provocări în ceea ce privește optimizarea pentru motoarele de căutare (SEO), deoarece toate resursele aplicației sunt \^inc\u arcate la prima accesare, crawler-ii web tradiționali pot întâmpina dificultăți în parcurgerea și indexarea conținutului, iar volumul mare de scripturi ce sunt descărcate, bibliotecile externe \c si dependințele pot rezulta \^intr-un timp de încărcare inițial mai mare.
+Cu toate acestea, pot exista provocări în ceea ce privește optimizarea pentru motoarele de căutare (SEO), deoarece toate resursele aplicației sunt \^inc\u arcate la prima accesare, crawler-ii web tradiționali pot întâmpina dificultăți în parcurgerea și indexarea conținutului, iar volumul mare de scripturi ce sunt descărcate, bibliotecile externe \c si dependențele pot rezulta \^intr-un timp de încărcare inițial mai mare.
 
 \section{Server side rendering}
 
@@ -492,69 +481,32 @@ O aplicație ce utilizează SSR este caracterizat\u a prin următoarele aspecte:
 
 Cu toate acestea are și câteva limitări. SSG nu este potrivit pentru aplicații ce necesită actualizări în timp real sau conținut dinamic, deoarece fișierele statice pre-randate nu se modifică până la următorul proces de build. Acest lucru poate introduce întârzieri în disponibilitatea conținutului și creșterea complexității gestionării actualizărilor de conținut.
 Unul dintre cele mai mari dezavantaje ale acestui abordări este timpul de build. Dacă site-ul cons\u a dintr-un num\u ar mare de pagini, procesul de build al acestora va dura mult timp.
-% \section{Analiza performan\c tei tehnologiilor de randare} 
 
 
-% \subsection{Static rendering}
-% Randarea statică are loc în timpul build-ului aplicației. Această abordare oferă un FCP rapid și, de asemenea, un TBT și un INP mai scăzut - presupunând că cantitatea de JS la nivelul clientului este limitată. Spre deosebire de randarea pe server, reușește, de asemenea, să obțină un TTFB constant rapid, deoarece HTML pentru o pagină nu trebuie să fie generat dinamic pe server. În general, randarea statică înseamnă producerea unui fișier HTML separat pentru fiecare adresă URL în avans. Cu răspunsurile HTML generate în avans, randările statice pot fi implementate în mai multe CDN-uri pentru a profita de edge caching.
+\section{Alegerea paradigmei corespunzătoare}
 
-% Unul dintre dezavantajele randării statice este că fișiere HTML individuale trebuie generate pentru fiecare URL posibil. Acest lucru poate fi dificil sau chiar imposibil atunci când nu puteți prezice din timp care vor fi acele adrese URL sau pentru site-uri cu un număr mare de pagini unice.
+Alegerea între CSR, SSR și SSG este importantă în dezvoltarea unei aplicații web, deoarece are un impact direct asupra experienței utilizatorului, performanței și funcționalit\u a\c tii generale a aplicației. Fiecare abordare are propriile sale puncte forte și considerații, iar alegerea depinde de mai mul\c ti factori, cum ar fi cerințele proiectului, scalabilitatea, complexitatea și obiectivele de performanță. Principalele aspecte de luat în considerare sunt:
 
-% \begin{figure}[htbp]
-% 	\centering
-% 	\includegraphics[width=0.6\textwidth]{static-rendering.png}
-% 	\caption{Static rendering}
-% 	\label{fig:sr}
-% \end{figure}
+\begin{enumerate}
+	\item \textbf{Experiența utilizatorului} - Abordarea de randare afectează în mod semnificativ modul în care conținutul aplicației este livrat în browserul utilizatorului. CSR pune accent pe interactivitate, prin încărcarea inițială a unei structuri HTML minimale și apoi preluarea și randarea datelor pe partea clientului, ceea ce duce la o încărcare inițială mai rapidă a paginii. SSR, pe de altă parte, furnizează o pagină HTML complet redată de pe server, fapt ce reduce timpul de încărcare inițial și asigur\u a ca conținutul să fie imediat vizibil utilizatorilor. SSG generează fișiere HTML statice în timpul procesului de construcție, permitând încărcări de pagini ultra-rapide, deoarece nu este necesară prelucrarea în server.
+	\item \textbf{Optimizarea pentru motoarele de căutare} - Motoarele de căutare întâmpină adesea dificultăți în indexarea conținutului JavaScript dinamic. SSR și SSG, care livrează conținut HTML pre-randat în browser, sunt mai efective cu SEO în comparație cu CSR. Acest lucru se datorează faptului că motoarele de căutare pot parcurge și indexa ușor conținutul HTML static, ceea ce ajută la îmbunătățirea vizibilității și descoperirii.
+	\item \textbf{Performanța} - Abordarea de randare afectează performanța generală a aplicației. CSR poate duce la timp de încărcare mai lung, în special în cazul conexiunilor de rețea mai lente sau al unor cantități mari de date de preluat. SSR reduce timpul de randare inițial prin furnizarea unei pagini pre-randate de pe server, \^ins\u a navigarea ulterioară poate necesita apeluri suplimentare către server. SSG oferă cea mai bună performanță, deoarece generează fișiere HTML statice care pot fi livrate direct utilizatorului, minimizând necesitatea de prelucrare pe server.
+	\item \textbf{Complexitatea și fluxul de dezvoltare} - Framework-urile CSR, cum ar fi React, Angular sau Vue.js, necesită ca dezvoltatorii să gestioneze logica de randare și stăriile componentelor, ceea ce poate introduce complexitate. SSR și SSG reduc, într-o anumită măsură, această complexitate prin transferul logicii de randare la server sau la procesul de build al aplicației. SSR necesită configurare pe partea de server și cunoștințe despre tehnologiile backend, în timp ce SSG simplifică fluxul de lucru în dezvoltare prin generarea de active statice care pot fi ușor implementate pe orice server web.
+	\item \textbf{Conținutul dinamic și actualizări în timp real} - CSR se evidențiază în aplicațiile extrem de interactive care se bazează pe actualizări frecvente ale datelor sau pe funcționalități în timp real. Cu CSR, datele pot fi actualizate fără necesitatea unei re\^inc\u arc\u ari complete a paginii. SSR și SSG sunt mai potrivite pentru aplicațiile axate pe conținut mai puțin dinamic, deoarece necesită o solicitare către server pentru a actualiza datele.
+\end{enumerate}
 
-% \subsection{Client-side rendering}
-% CSR reprezintă randarea paginilor direct în browser cu ajutorul la JavaScript. Toată logica, preluarea datelor, șablonarea și rutarea sunt gestionate preponderent de client.
-
-% Client-side rendering poate fi dificil de obținut și păstrat rapid pentru dispozitivele mobile. Randarea pe partea de client se poate apropia de performanța randării pe partea de serverului, păstrând un bundle JavaScript restrâns și oferind valoare în cât mai puține călătorii dus-întors. Scripturile și datele esențiale pot fi livrate mai devreme folosind \emph{<link rel=preload>}, ceea ce face ca analizatorul să funcționeze mai repede pentru dvs. Modele precum PRPL merită, de asemenea, evaluate pentru a se asigura că navigațiile inițiale și ulterioare sunt instantanee.
-
-% \begin{figure}[htbp]
-% 	\centering
-% 	\includegraphics[width=0.8\textwidth]{csr.png}
-% 	\caption{Client-side rendering}
-% 	\label{fig:csr}
-% \end{figure}
-
-% Principalul dezavantaj al CSR este că, cantitatea de JavaScript necesară tinde să crească pe măsură ce o aplicație crește, ceea ce poate avea efecte negative asupra INP-ului unei pagini. Acest lucru devine deosebit de dificil odată cu adăugarea de noi biblioteci JavaScript, polyfill-uri și cod third-party, care concurează pentru puterea de procesare și trebuie adesea procesate înainte ca conținutul unei pagini să poată fi randat.
-
-% \subsection{Rehydratation}
-
-% Această abordare încearcă să negocieze compromisurile dintre randarea pe partea client și redarea pe partea serverului, făcând ambele. Solicitările de navigare, cum ar fi încărcările întregii pagini sau reîncărcările, sunt gestionate de un server care randrează pagina HTML, apoi JavaScript și datele utilizate pentru randare sunt încorporate în documentul rezultat. Acest lucru rezultă într-un FCP rapid la fel ca randarea pe partea serverului, apoi urmează rerandarea pe client, folosind o tehnică numită \emph{(re)hidratare}. Aceasta este o soluție eficientă, dar poate veni cu dezavantaje considerabile de performanță.
-
-% \begin{figure}[htbp]
-% 	\centering
-% 	\includegraphics[width=0.8\textwidth]{hydratation.png}
-% 	\caption{Tehnologia de hidratare}
-% 	\label{fig:hydratation}
-% \end{figure}
-
-% Principalul dezavantaj rehidratării este că poate avea un impact negativ semnificativ asupra TBT și INP, chiar dacă îmbunătățește FCP. Paginile randate de pe server pot părea înșelător a fi încărcate și interactive, dar nu pot fi utilizate efectiv până când scripturile de pe partea clientului pentru componente nu sunt executate și manipulatorii de evenimente au fost atașați. Acest lucru poate dura secunde sau chiar minute pe dispozitive mobile.
-
-% Problemele de rehidratare pot fi adesea mai grave decât interactivitatea întârziată din cauza JavaScript. Pentru ca client-side JavaScript să poată „relua” cu acuratețe de unde a rămas serverul, fără a fi nevoie să solicite din nou toate datele pe care serverul le-a folosit pentru a randa HTML-ul, soluțiile actuale de SSR serializează în general răspunsul de la dependințele de date ale unei interfețe de utilizator în document ca etichete de script. Documentul HTML rezultat conține un nivel ridicat de duplicare:
-
-% \begin{figure}[htbp]
-% 	\centering
-% 	\includegraphics[width=0.9\textwidth]{hydratation-duplication.png}
-% 	\caption{Redundanța la hidratare}
-% 	\label{fig:hydratation-dublication}
-% \end{figure}
-
-% Totuși există o modaliate de a optimiza randarea pe server cu rehidratare. Utilizarea randării pe partea de server pentru conținut cu un grad ridicat de stocare în cache poate reduce TTFB, producând rezultate similare cu randarea preliminară. Rehidratarea progresivă sau parțială poate fi cheia pentru a face această tehnică mai viabilă în viitor.
-
-
+Alegerea paradigmei potrivite este esențială pentru a furniza o aplicație web rapidă, interactivă și optimizat\u a pentru motoarele de c\u autare. De asemenea, este important să se ia în considerare cerințele proiectului, complexitatea și obiectivele de performanță pentru a determina cea mai bună abordare de randare. Aceasta este una dintre primele decizii importante ce trebuie luat\u a în dezvoltarea unei aplicații web, deoarece este dificil de schimbat ulterior.
 
 \chapter{Aplicația practică}
 
-Obiectivul acestui capitol este de a oferi experiență practică cu tehnologiile de randare și de a evalua performanța și eficiența acestora. Rezultatele obținute vor fi valoroase pentru dezvoltatori și arhitecți care doresc să optimizeze procesele de randare și să îmbunătățească experiența utilizatorului.
+Obiectivul acestui capitol este de a oferi o experiență practică cu tehnologiile de randare și de a evalua performanța și eficiența acestora. Rezultatele obținute vor fi valoroase pentru dezvoltatori și arhitecți care doresc să optimizeze procesele de randare și să îmbunătățească experiența utilizatorului.
 
-Se va implementa aceeași aplicație cu ajutorul la mai multe framework-uri JavaScript, cât și în vanilla (\emph{plain}) JavaScript, pentru a obține rezultate ce se vor putea compara, pentru a identifica cele mai optime abordari posibile.
+% Pentru obiectivitatea experimentului, a fost implementa aceeași aplicație cu ajutorul la mai multe framework-uri JavaScript, cât și în vanilla (\emph{plain}) JavaScript, pentru a obține rezultate ce se vor putea compara, pentru a identifica cele mai optime abordari posibile.
+
+Pentru o obiectivitate sporită a fost implementată aceea\c si aplica\c tie, cu ajutorul mai multor framework-uri JavaScript, fiecare dintre ele reprezent\^and o abordare diferit\u a de randare (CSR, SSR, SSG). De asemenea, aplicația a fost implementat\u a \c si cu ajutorul vanilla JavaScript, pentru a compara aplicațiile dup\u a un anumit set de criterii cu scopul de a identifica care sunt aspectele cheie care diferă între aplicațiile construite cu ajutorul framework-urilor JavaScript și cea construită folosind vanilla JavaScript. Rezultatul acestui studiu comparativ ofer\u a o imagine de ansamblu asupra avantajelor și dezavantajelor fiecărei tehnici de randare, precum și a celor mai optime abordări posibile.
 
 
-\section{Metricile de performanță}
+\section{Metrici de performanță}
 
 Pentru compararea efectivă a metodelor de implementare, este nevoie de a compara rezultatele după anumite criterii care reprezintă performanța generală a aplicației.
 
@@ -566,11 +518,11 @@ Metricile care vor fi utilizate în evaluarea performanței pentru toate impleme
 	      LCP este una dintre principalele metrici luate în considerare de motoarele de căutare, inclusiv Google, pentru a evalua experiența utilizatorului pe un site web. Site-urile cu scoruri bune ale LCP sunt mai susceptibile de a obține un rang mai înalt în rezultatele căutării și de a oferi o experiență de navigare mai bună utilizatorilor.
 	\item \textbf{Cumulative Layout Shift (\emph{CLS})} - este utilizată pentru a măsura stabilitatea vizuală a unei pagini web. Aceasta cuantifică cantitatea de schimbări de aspect neașteptate care apar în timpul încărcării paginii. Schimbarea de aspect se referă la mișcarea elementelor paginii, cum ar fi imagini, butoane sau text, într-un mod care perturbă experiența de citire sau de interacțiune a utilizatorului. Aceste schimbări pot fi frustrante pentru utilizatori, în special atunci când cauzează click-uri accidentale sau fac conținutul dificil de citit.
 
-	      CLS este calculat prin măsurarea fractiunii de impact și fractiunii de distanță a fiecărui eveniment de schimbare de aspect și apoi însumându-le pe întreaga încărcare a paginii. Fractiunea de impact reprezintă proporția vizualizării afectată de schimbare, în timp ce fractiunea de distanță reprezintă distanța maximă pe care elementul o parcurge în raport cu vizualizarea.
+	      CLS este calculat prin măsurarea frac\c tiunii de impact și frac\c tiunii de distanță a fiecărui eveniment de schimbare de aspect și apoi însumându-le pe întreaga încărcare a paginii. Frac\c tiunea de impact reprezintă proporția vizualizării afectată de schimbare, în timp ce frac\c tiunea de distanță reprezintă distanța maximă pe care elementul o parcurge în raport cu ecranul utilizatorului.
 
 	      Pentru a oferi o bună experiență utilizatorului, o pagină web ar trebui să aibă un scor CLS scăzut. Un scor CLS sub 0.1 este considerat excelent, între 0.1 și 0.25 este considerat bun, în timp ce scorurile peste 0.25 sunt considerate slabe.
 
-	      Pentru a reduce CLS, dezvoltatorii web pot urma bune practici, cum ar fi stabilirea dimensiunilor explicite pentru elementele media, rezervarea spațiului pentru reclame sau conținut dinamic și evitarea injectării dinamice a conținutului deasupra elementelor existente. Prin minimizarea schimbărilor de aspect neașteptate, dezvoltatorii pot îmbunătăți stabilitatea vizuală a paginilor web și experiența utilizatorilor.
+	      Pentru a reduce CLS, dezvoltatorii web pot urma practici, cum ar fi stabilirea dimensiunilor explicite pentru elementele media, rezervarea spațiului pentru reclame sau conținut dinamic și evitarea injectării dinamice a conținutului deasupra elementelor existente. Prin minimizarea schimbărilor de aspect neașteptate, dezvoltatorii pot îmbunătăți stabilitatea vizuală a paginilor web și experiența utilizatorilor.
 	\item \textbf{First Input Delay (\emph{FID})} - măsoară reactivitatea și interactivitatea unei pagini web. Ea cuantifică timpul necesar ca o pagină web să răspundă la prima interacțiune a utilizatorului, cum ar fi apăsarea unui buton sau selectarea unui meniu derulant.
 
 	      FID se concentrează în mod specific pe întârzierea dintre prima interacțiune a utilizatorului și capacitatea browserului de a răspunde la acea interacțiune. Este importantă deoarece reflectă reactivitatea percepută a unui site web și are un impact direct asupra experienței utilizatorului. Un FID redus indică un site web mai interactiv și mai receptiv, în timp ce un FID ridicat poate face un site web să pară lent și neinteractiv.
@@ -587,14 +539,14 @@ Metricile care vor fi utilizate în evaluarea performanței pentru toate impleme
 	      Scopul INP este de a asigura ca timpul de la inițierea unei interacțiuni de către utilizator până la următoarea cadru desenat să fie cât mai scurt posibil, pentru toate sau majoritatea interacțiunilor realizate de utilizator.
 \end{itemize}
 
-\section{Plugin-uri, extensii și aplicații pentru măsurarea performanței}
+\section{Metode de evaluare a performanței}
 
-Există mai multe metode disponibile pentru măsurarea performanței unui aplicații web. Aceste instrumente pot ajuta dezvoltatorii să monitorizeze și să îmbunătățească performanța și experiența utilizatorilor.
+Există mai multe metode disponibile pentru măsurarea performanței unei aplicații web. Aceste instrumente pot ajuta dezvoltatorii să monitorizeze și să îmbunătățească performanța și experiența utilizatorilor.
 
 În evaluarea aplicației curente au fost folosite următoarele metode de evaluare a performanței:
 
 \begin{itemize}
-	\item  \textbf{Web Vitals} chrome extension - inițiativă de la Google care oferă ghidare unitară pentru semnalele de calitate care sunt esențiale pentru a oferi o experiență excelentă utilizatorilor pe web.
+	\item  \textbf{Web Vitals} (extensie pentru browser) - inițiativă de la Google care oferă ghidare unitară pentru semnalele de calitate care sunt esențiale pentru a oferi o experiență excelentă utilizatorilor pe web.
 
 	      Google a furnizat de-a lungul anilor o serie de instrumente pentru a măsura și raporta performanța. Unii dezvoltatori sunt experți în utilizarea acestor instrumente, în timp ce alții au considerat că abundanța atât a instrumentelor, cât și a metricilor este dificilă de urmărit.  Inițiativa Web Vitals își propune să simplifice peisajul și să ajute site-urile să se concentreze pe metricile care contează cel mai mult, Core Web Vitals. Fiecare dintre Core Web Vitals reprezintă o componentă distinctă a experienței utilizatorului, este măsurabilă în teren și reflectă experiența reală a unui rezultat critic centrat pe utilizator.
 
@@ -605,7 +557,7 @@ Există mai multe metode disponibile pentru măsurarea performanței unui aplica
 	\item \textbf{PageSpeed Insights} website - unealtă de analiză a performanței web dezvoltată de Google. Aceasta oferă informații și recomandări pentru optimizarea vitezei și performanței unei pagini web. Prin analizarea conținutului unei adrese URL, PageSpeed Insights generează un raport care identifică probleme legate de performanță și sugerează îmbunătățiri.
 \end{itemize}
 
-\section{Aplicația practică}
+\section{Compara\c tia \c si analiza practică a aplica\c tiilor}
 
 Pentru a compara performanța dintre mai multe framework-uri JavaScript, este nevoie de o aplicație care va fi implementată în toate framework-urile, cu cât mai puține elemente distincte, pentru o evaluare cât mai obiectivă. Scopul acestei analize este de a determina care abordare oferă cea mai bună performanță în ceea ce privește timpul de încărcare al paginii, viteza de randare și experiența generală a utilizatorului. Totodată se vor lua în considerare ușurința implementării, documentația disponibilă și scalabilitatea efectivă a aplicației.
 
@@ -626,7 +578,7 @@ Structura aplicație constă din trei fișiere:
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{01_desktop_preview.png}
-	\caption{Aplicația practica - vanilla JavaScript}
+	\caption{Aplicația practic\u a - vanilla JavaScript}
 	\label{fig:preview-vanillajs}
 \end{figure}
 
@@ -659,7 +611,7 @@ Pentru a implementa funcționalitatea de afișare a posturilor asociate unui uti
 \end{lstlisting}
 \subsection{React framework}
 
-Cu ajutorul comenzii \emph{npx create-react-app 02-react} se generează un proiect React, cu numele 02-react, care va conține fișierele configurate și folderele necesare pentru aplicația React, inclusiv structura de bază a proiectului, fișierele de configurare implicite și dependințele inițiale.
+Cu ajutorul comenzii \emph{npx create-react-app 02-react} se generează un proiect React, cu numele 02-react, care va conține fișierele configurate și folderele necesare pentru aplicația React, inclusiv structura de bază a proiectului, fișierele de configurare implicite și dependențele inițiale.
 
 \begin{figure}[htbp]
 	\centering
@@ -673,7 +625,7 @@ Directorul "src" dintr-un proiect conține fișierele de cod sursă pentru aplic
 Aplicația construită cu React are câteva avantaje față de o aplicație construită cu plain JavaScript:
 
 \begin{enumerate}
-	\item \textbf{Eficiență și Performanță}: utilizarea Virtual DOM și a algoritmi eficienți de reconciliere pentru a actualiza și afișa doar componentele care s-au schimbat în loc de rerandarea întregullui DOM. Acest lucru duce la o performanță mai bună și la o aplicație mai eficientă, în special în cazul aplicațiilor cu interfețe complexe și cu multe date.
+	\item \textbf{Eficiență și Performanță}: utilizarea Virtual DOM și a algoritmi eficienți de reconciliere pentru a actualiza și afișa doar componentele care s-au schimbat în loc de rerandarea întregului DOM. Acest lucru duce la o performanță mai bună și la o aplicație mai eficientă, în special în cazul aplicațiilor cu interfețe complexe și cu multe date.
 	\item \textbf{Abordare declarativă}: React utilizează o abordare în care se definește starea dorită a interfeței utilizator și React se ocupă de actualizarea și afișarea acesteia în mod automat. Aceasta face codul mai ușor de înțeles și de gestionat, și reduce riscul de erori.
 	\item \textbf{React hooks}:  funcții speciale furnizate de React, care permit componentelor funcționale să acceseze funcționalități specifice și să gestioneze logica acestora.
 \end{enumerate}
@@ -703,7 +655,7 @@ Pentru a reține anumite date, precum utilizatorul curent, masivul de postări s
 Am dezvoltat aceeași aplicație folosind Vanilla JavaScript și React și am testat performanța ambelor versiuni utilizând extensia Web Vitals, Lighthouse Chrome tool și PageSpeed Insights. Rezultatele obținute oferă informații detaliate despre performanța aplicațiilor, inclusiv timpul de încărcare a paginii, interactivitatea și stabilitatea vizuală. Aceste metrici permit să evaluăm și să comparăm performanța aplicațiilor într-un mod obiectiv. Aplicațiile au fost testate atât în mediul local (\emph{localhost}), cât și după ce au fost încărcate pe același web hosting.
 
 \subsection{Web Vitals}
-
+{}
 În urma măsurărilor repetate am obținut următoarele rezultate, pe mediul local:
 
 \begin{figure}[htbp]
@@ -745,7 +697,7 @@ Procesul optimizat de randare al React-ului, arhitectura bazată pe componente �
 Gestionarea eficientă a stărilor în React contribuie, de asemenea, la îmbunătățirea performanței. React folosește un flux unidirecțional al datelor și un concept numit "reconciliere" pentru a actualiza eficient interfața în funcție de modificările în starea aplicației.
 \subsection{Lighthouse}
 
-Cu ajutorul acestui tool, care este prezent în browserul Google Chrome, am generat rapoartele pentru ambele aplicații, atât în mediul local
+Cu ajutorul acestui tool, care este prezent în browserul Google Chrome, am generat rapoartele pentru ambele aplicații, atât în mediul local:
 
 \begin{figure}[htbp]
 	\centering
@@ -763,7 +715,8 @@ Cu ajutorul acestui tool, care este prezent în browserul Google Chrome, am gene
 	\label{fig:02-local-lighthouse}
 \end{figure}
 
-cât și după deploy-ul pe hosting
+\newpage
+cât și după deploy-ul pe hosting:
 
 \begin{figure}[htbp]
 	\centering
@@ -803,13 +756,107 @@ Rezultatele obținute pentru ambele aplicații sunt:
 	\label{fig:02-deployed-pagespeed}
 \end{figure}
 
+\section {Analiza rezultatelor}
+
+Fiecare dintre metodele abordate are avantajele \c si dezavantajele sale. Vanilla JS este cel mai simplu de implementat, deoarece nu necesit\u a dependen\c te sau biblioteci suplimentare. React este un framework popular, care ofer\u a o abordare mai structurat\u a a dezvolt\u arii aplica\c tiilor web, dar necesit\u a un timp mai mare de implementare \c si configurare. Next.js \c si Gatsby sunt framework-uri construit pe React, care ofer\u a un set de func\c tionalit\u a\c ti suplimentare, care pot fi utile \^ in dezvoltarea unei aplica\c tii web, dar necesit\u a cuno\c stin\c te mai avansate de React \c si a specifica\c tiilor interne ale acestor framework-uri.
 
 
+\subsection{U\c surin\c ta implement\u arii}
+Din punct de vedere al utiliz\u arii, vanilla JS este cel mai proeminent, deoarece nu necesit\u a dependențe sau framework-uri suplimentare. Pentru a executa un cod JavaScript este destul\u a ad\u augarea unui tag \textit{\textless script\textgreater }   \^ in pagina HTML:
+\begin{lstlisting}[caption={Exemplu de ad\u augare a unui script \^ in pagina HTML},captionpos=b]
+	<script>
+		const exemplu = "Hello World!";
+	</script>
+	\end{lstlisting}
 
+sau adaugarea unui fi\c sier JavaScript separat, care poate fi inclus \^ in pagina HTML cu ajutorul aceluia\c si tag, dar cu specificarea loca\c tiei fi\c sierului:
 
+\begin{lstlisting}[caption={Exemplu de ad\u augare a unui script dintr-un fi\c sier extern},captionpos=b]
+	<script src="path/to/file.js"></script>
+\end{lstlisting}
 
+Aplica\c tiile create cu ajutorul framework-urilor React, necesit\u a pa\c si suplimentari pentru configurarea inițială a proiectului folosind \textit{create-react-app} sau configurarea manuală a unui mediu de dezvoltare. De asemenea, este necesar\u a instalarea dependențelor proiectului, care pot fi gestionate cu ajutorul unui package manager, cum ar fi \textit{npm} sau \textit{yarn}. React utilizează JSX - o sintaxă care combină JavaScript cu HTML, care necesită un preprocesor pentru a fi transformat în JavaScript valid.
 
+\begin{lstlisting} [caption={Comparare sintax\u a JSX \c si JavaScript},captionpos=b]
+	--- cod JSX
+	const numbers = [1, 2, 3, 4, 5];
+	const list = (
+		<ul>
+			{numbers.map((number) => (
+			<li key={number}>{number}</li>
+			))}
+		</ul>
+	);
+	--- cod JavaScript
+	const numbers = [1, 2, 3, 4, 5];
+	const list = React.createElement("ul",null,
+		numbers.map((number) =>
+			React.createElement("li", { key: number }, number)
+		)
+	);
 
+\end{lstlisting}
+
+JSX îmbunătățește lizibilitatea codului prin utilizarea de cod similar HTML în cadrul JavaScript. Reprezentarea vizuală a structurii codului sporește ușurința de întreținere și debugging-ul.
+
+Promovează o abordare modulară și bazată pe componente, care poate fi reutilizate, facilit\^and crearea și gestionarea elementelor de interfață. Componentele pot fi scrise direct în cadrul codului JavaScript, permițând o organizare eficientă a codului și reutilizabilitate.
+
+\begin{lstlisting}[caption={Exemplu de component\u a React},captionpos=b]
+	function Welcome(props) {
+		return <h1>Hello, {props.name}</h1>;
+	}
+\end{lstlisting}
+
+Next.js \c si Gatsby sunt framework-uri care se bazeaz\u a pe React, oferind un mediu de dezvoltare mai u\c sor, cu un set de funcționalități predefinite, cum ar fi server-side rendering, generarea de pagini statice, optimizarea imaginilor \c si altele. Acestea sunt utile pentru crearea de aplicații web complexe, care necesită o structură bine definită și o arhitectură scalabilă, \^ins\u a necesit\u a o perioad\u a de timp mai mare pentru a fi \^inv\u ațate \c si implementate.
+
+\subsection{Performanța}
+
+\^In urma analizei rezultatelor ob\c tinute cu ajutorul Web Vitals, rapoartelor generate de Lighthouse \c si PageSpeed Insights se poate obesrva faptul c\u a aplica\c tia construit\u a vanilla JavaScript este mai performant\u a, deoarece \^in intermediul unei aplica\c tii simple, modific\u arile directe asupra DOM sunt mai eficiente dec\^at utilizarea Virtual DOM-ului. De asemenea, aplica\c tiile ce pe baz\u a de React necesit\u a mai multe resurse pentru a rula, deoarece este nevoie de biblioteci suplimentare pentru a utiliza func\c tionalit\u a\c ti suplimentare precum server-side rendering, dynamic routing, optimizarea imaginilor, etc.
+
+\subsection{SEO}
+
+Vanilla JS nu oferă suport direct pentru optimizarea pentru motoarele de căutare. Implementarea SEO trebuie făcută manual, inclusiv gestionarea meta tag-urilor, structurarea conținutului și gestionarea URL-urilor.
+
+React oferă suport pentru optimizarea pentru motoarele de căutare, prin intermediul unor biblioteci dedicate \c si necesită atenție suplimentară și cunoștințe SEO pentru a implementa aceste optimizări. Prin utilizarea React Helmet sau a altor biblioteci similare, este posibi\u a adăugarea meta tag-urilor relevante.
+
+Next.js are abilități de optimizare pentru SEO încorporate. Oferă suport nativ pentru server-side rendering (SSR) - paginile vor fi pregătite și livrate către motoarele de căutare cu conținutul complet generat, facilitând astfel indexarea și clasificarea mai bună în rezultatele căutării. Next.js gestionează automat meta tag-urile dinamice pentru fiecare pagină și, de asemenea, facilitează generarea paginilor statice, care pot fi extrem de benefice pentru SEO.
+
+Gatsby este un framework care pune accent pe performanță și optimizare pentru SEO. Prin generarea paginilor statice în avans, Gatsby oferă un avantaj semnificativ în ceea ce privește viteza de încărcare a paginilor și indexarea lor de către motoarele de căutare. Gatsby are, de asemenea, suport nativ pentru gestionarea meta tag-urilor și structurarea conținutului pentru a obține rezultate optime în SEO. De asemenea, Gatsby beneficiază de integrarea cu GraphQL, permițând încărcarea eficientă a datelor și gestionarea optimă a conținutului pentru SEO.
+
+\chapter{Concluzii}
+
+Această lucrare ofer\u a o perspectivă asupra tehnologiilor de randare și a impactului lor asupra aplicațiilor web din punct de vedere al performanței, optimizării \c si experienței utilizatorilor.
+Este important de menționat faptul că performanța unei aplicații web nu se rezumă doar la tehnologia de randare utilizată, ci și la practicile de optimizare și îmbunătățire continuă. Utilizarea instrumentelor precum Lighthouse și PageSpeed Insights poate oferi informa\c tii valoroase pentru identificarea punctelor slabe și îmbunătățirea performanței unei aplicații web.
+
+Alegerea tehnologiei de randare depinde de cerințele specifice ale aplicației proiectate. SSR oferă avantaje din punct de vedere al SEO, datorită faptului c\u a con\c tinutul HTML este generat direct pe server \c si este furnizat c\u atre motoarele de c\u autare, îmbunătățirea performanței încărcării inițiale a paginii, dar are dezavantaje în ceea ce privește interactivitatea, deoarece întreaga pagină trebuie reîncărcată pentru a actualiza conținutul. 
+
+CSR, pe de altă parte, oferă o experiență mai interactivă, deoarece conținutul este generat în browser, dar are dezavantaje în ceea ce privește performanța încărcării inițiale a paginii, deoarece întregul JavaScript trebuie descărcat și executat înainte ca pagina să poată fi afișată.
+
+SSG este o alternativă la SSR, care oferă avantajele SEO și performanța încărcării inițiale a paginii, dar nu oferă interactivitatea oferită de CSR. 
+
+În ceea ce privește tehnologiile de randare, React oferă o experiență de dezvoltare mai bună, datorită faptului că este mai ușor de învățat și de utilizat, oferind unelte \textit{precum create-react-app}, care oferă un mediu de dezvoltare preconfigurat \c si sintax\u a cunoscut\u a, deoarece este bazat pe JavaScript. Beneficiile care le ofer\u a React sunt cel mai eviden\c tiate în aplicațiile complexe cu interfețe de utilizator dinamice și actualizări frecvente, unde virtual DOM și mecanismele eficiente de randare oferă un UX mai bun.
+
+Vanilla JS, pe de altă parte, oferă o performanță mai bună, deoarece nu necesită biblioteci suplimentare, dar are o curba de învățare mai mare și necesită mai mult cod pentru a realiza aceleași funcționalități.
+
+Cu toate acestea, este important de menționat că în aplicațiile mai simple sau în cazurile în care interactivitatea nu este un aspect major, JavaScript simplu poate fi mai performant datorită naturii sale. Vanilla JavaScript evită costurile suplimentare ale unui framework precum React și poate fi optimizat pentru cazuri de utilizare specifice, rezultând \^intr-o  execuție mai rapidă.
+
+\section{Rezultatele obținute}
+
+\^In urma analizei perfoman\c tei aplica\c tiilor construite, s-a constatat c\u a aplica\c tia ce utilizează vanilla JavaScript este mai performant\u a, deoarece nu necesit\u a rerand\u ari frecvente, iar aspectele dinamice ale aplica\c tiei sunt u\c sor de calculat \c si de actualizat. Aplica\c tiile ce au fost construite cu ajutorul React au o dimensiune mai mare, deoarece necesit\u a biblioteci suplimentare pentru a func\c tiona \c si trebuie configurate pentru a putea fi hostate pe web.
+
+\^In aplicația ce utilizeaza vanilla JS, manipul\u arile DOM sunt realizate direct, iar \^in cazul unei aplica\c tii simple aceast\u a abordare direct\u a este mai eficient\u a dec\^at utilizarea React \c si virtual DOM, ce necesit\u a pa\c si suplimentari pentru actualizarea con\c tinutului.
+
+Odată cu scalarea aplica\c tiei, React devine mai performant, iar codul mai u\c sor de men\c tinut, datorit\u a arhitecturii sale bazate pe componente reutilizabile \c si alte unelte de dezvoltare predefinite precum hook-urile, ce simplifică implementarea, actualizarea \c si scalarea optim\u a a func\c tionalit\u a\c tilor necesare.
+
+\section {Direcții viitoare de cercetare}
+
+În timp ce studiul actual s-a concentrat pe compararea performanței JavaScript-ului simplu (Vanilla), React, Next.js și Gatsby într-o aplicație web relativ simplă, există mai multe direcții pentru cercet\u ari ulterioare, care pot extinde înțelegerea asupra acestor tehnologii de randare în scenarii mai complexe. Prin investigarea acestor direcții, putem obține o perspectivă mai profundă asupra punctelor forte și limitărilor fiecărei tehnologii și a performanței acestora în aplicații web complexe, cu conținut dinamic \c si actualiz\u ari frecvente ale componentelor.
+
+Prin creșterea complexității și a dimensiunii aplicației, inclusiv ad\u augarea mai multor pagini, va fi posibi\u a evaluarea modului în care fiecare tehnologie gestionează sarcina de lucru suplimentară. Această analiză ar ajuta la determinarea dacă anumite tehnologii sunt mai potrivite pentru aplicații de mari dimensiuni și ar dezvălui eventuale restricții de performanță care pot apărea.
+
+Acest studiu sa axat pe utilizarea vanilla JS, React, Next.js și Gatsby, \^ins\u a există numeroase framework-uri \c si tehnologii de randare. Cercet\u arile ulterioare ar putea extinde comparația pentru a include alte framework-uri sau biblioteci, cum ar fi Angular, Vue.js sau Svelte \c si tehnologii de randare precum ISR (\textit{Incremental Static Regeneration}), care este o variant\u a \^imbun\u at\u a\c tit\u a a SSG, \^in care paginile statice se pot regenera pe server la cerere, f\u ar\u a necesitatea de rebuild a \^intregii aplica\c tii. 
+
+Prin includerea unui spectru mai larg de tehnologii de randare, putem obține o perspectivă mai largă asupra performanței acestora și a modului în care se compară cu cele evaluate în acest studiu.
 
 
 
@@ -863,9 +910,13 @@ Rezultatele obținute pentru ambele aplicații sunt:
 		\hline
 		CSR & Client side rendering      \\ [0.2ex]
 		\hline
+		SSG & Static server generation   \\ [0.2ex]
+		\hline
 		UX  & User experience            \\ [0.2ex]
 		\hline
-		LCP & Largest contentful paint   \\  [0.2ex]
+		UI  & User interface             \\ [0.2ex]
+		\hline
+		LCP & Largest contentful paint   \\ [0.2ex]
 		\hline
 		FID & First input delay          \\ [0.2ex]
 		\hline
