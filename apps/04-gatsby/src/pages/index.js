@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Home = () => {
   const allUsers = React.useRef([]);
@@ -87,8 +88,23 @@ const Home = () => {
   const { users, posts, postComments } = data;
 
   return (
-    <div className="m-0 p-0 bg-[url('https://picsum.photos/1920/1080?grayscale')] bg-cover">
-      <div className="p-10 flex justify-between">
+    <div className="m-0 p-0 grid">
+      <StaticImage
+        className="bg-cover w-full h-screen -z-10"
+        src="https://picsum.photos/1920/1080?grayscale"
+        style={{ gridArea: '1/1' }}
+        layout="fullWidth"
+        alt="A random image from Unsplash"
+      />
+      <div
+        className="p-10 flex justify-between z-50"
+        style={{
+          gridArea: '1/1',
+          position: 'relative',
+          placeItems: 'center',
+          display: 'flex',
+        }}
+      >
         <div className="p-2 lg:p-16 m-16 w-[480px] h-full min-h-[500px] bg-[rgba(216, 216, 216, 0.36)] rounded-xl border border-solid border-[#d8d8d84d] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 bg-gray-50">
           <input
             className="py-0.5 px-2 mb-4 w-full border border-white rounded font-lg focus-visible:outline-0 animate-rainbow bg-white"
