@@ -18,6 +18,7 @@
 \usepackage{verbatim}
 \usepackage{color}
 \usepackage{listings}
+\usepackage{booktabs}
 \usepackage{xcolor}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -559,7 +560,7 @@ Există mai multe metode disponibile pentru măsurarea performanței unei aplica
 
 \section{Compara\c tia \c si analiza practică a aplica\c tiilor}
 
-Pentru a compara performanța dintre mai multe framework-uri JavaScript, este nevoie de o aplicație care va fi implementată în toate framework-urile, cu cât mai puține elemente distincte, pentru o evaluare cât mai obiectivă. Scopul acestei analize este de a determina care abordare oferă cea mai bună performanță în ceea ce privește timpul de încărcare al paginii, viteza de randare și experiența generală a utilizatorului. Totodată se vor lua în considerare ușurința implementării, documentația disponibilă și scalabilitatea efectivă a aplicației.
+Pentru a compara performanța dintre mai multe framework-uri JavaScript, este nevoie de o aplicație care va fi implementată în toate framework-urile, fiind identice din punct de vedere al interfec\ tei cu utilizatorul, pentru o evaluare cât mai obiectivă. Scopul acestei analize este de a determina care abordare oferă cea mai bună performanță în ceea ce privește timpul de încărcare al paginii, viteza de randare și experiența generală a utilizatorului. Totodată se vor lua în considerare ușurința implementării, documentația disponibilă și scalabilitatea efectivă a aplicației.
 
 \subsection{Metodologie}
 
@@ -686,114 +687,193 @@ Gatsby optimizează aplicațiile prin utilizarea de plugin-uri, care sunt pachet
 
 \section{Analiza performanței}
 
-Performanța aplicațiilor a fost testat\u a cu ajutorul Web Vitals, Lighthouse, PageSpeed Insights, at\^at pe mediul local, c\^at \c si dup\u a ce aplica\c tiile au fost \^inc\u arcate pe un web hosting, pentru a ob\c tine o imagine complet\u a \c si obiectiv\u a asupra performan\c tei acestora. 
+Performanța aplicațiilor a fost testat\u a cu ajutorul Web Vitals, Lighthouse, PageSpeed Insights, dup\u a ce aplica\c tiile au fost \^inc\u arcate pe un web hosting, pentru a ob\c tine o imagine complet\u a \c si obiectiv\u a asupra performan\c tei acestora. 
 Rezultatele obținute oferă informații detaliate despre performanța aplicațiilor, inclusiv timpul de încărcare a paginii, interactivitatea, stabilitatea vizuală, metode de îmbunătățire a acestora \c si o compara\c tie subiectiv\u a a procesului de configurare pentru deploy-ul aplica\c tiilor pe hosting. 
 
 \subsection{Web Vitals}
 
-În urma măsurărilor repetate am obținut următoarele rezultate, pe mediul local:
+Toate aplica\c tiile au fost testate dup\u a ce au fost configurate pe acela\c si web hosting - Netlify, \^in condi\c tii de conexiune stabil\u a la internet \c si cu simularea unei conexiuni lente (slow 3G). 
 
-\begin{figure}[htbp]
+Rezultatele medii ob\c tinute sunt prezentate \^in tabelul urm\u ator:
+
+% \begin{table}[htbp]
+% 	\centering
+% 	\begin{tabular}{lllll}
+% 		\toprule
+% 		\textbf{01-JavaScript} & \textbf{LCP} & \textbf{CLS} & \textbf{FID} & \textbf{INP} \\
+% 		\midrule
+% 		Fast Internet & 0.241s & 0.006 & 0.500ms & 32.000ms \\
+% 		Slow 3G & 7.286s & 0.006 & 0.800ms & 16.000ms \\
+% 		\bottomrule
+% 	\end{tabular}
+% 	\caption{Rezultatele pentru aplica\c tia vanilla JavaScript}
+% 	\label{tab:web-vitals-js}
+% \end{table}
+
+% \begin{table}[htbp]
+% 	\centering
+% 	\begin{tabular}{lllll}
+% 		\toprule
+% 		\textbf{02-React} & \textbf{LCP} & \textbf{CLS} & \textbf{FID} & \textbf{INP} \\
+% 		\midrule
+% 		Fast Internet & 0.787s & 0.002 & 0.900ms & 32.000ms \\
+% 		Slow 3G & 8.394s & 0.002 & 1.000ms & 16.000ms \\
+% 		\bottomrule
+% 	\end{tabular}
+% 	\caption{Rezultatele pentru aplica\c tia React}
+% 	\label{tab:web-vitals-react}
+% \end{table}
+
+% \begin{table}[htbp]
+% 	\centering
+% 	\begin{tabular}{lllll}
+% 		\toprule
+% 		\textbf{03-Next} & \textbf{LCP} & \textbf{CLS} & \textbf{FID} & \textbf{INP} \\
+% 		\midrule
+% 		Fast Internet & 0.448s & 0.002 & 1.100ms & 32.000ms \\
+% 		Slow 3G & 10.849s & 0.002 & 1.300ms & 40.000ms \\
+% 		\bottomrule
+% 	\end{tabular}
+% 	\caption{Results for the Next.js application}
+% 	\label{tab:web-vitals-next}
+% \end{table}
+
+% \begin{table}[htbp]
+% 	\centering
+% 	\begin{tabular}{lllll}
+% 		\toprule
+% 		\textbf{04-Gatsby} & \textbf{LCP} & \textbf{CLS} & \textbf{FID} & \textbf{INP} \\
+% 		\midrule
+% 		Fast Internet & 0.084s & 0.002 & 0.900ms & 16.000ms \\
+% 		Slow 3G & 2.127s & 0.002 & 0.900ms & 40.000ms \\
+% 		\bottomrule
+% 	\end{tabular}
+% 	\caption{Results for the Gatsby application}
+% 	\label{tab:web-vitals-gatsby}
+% \end{table}
+
+
+\begin{table}[htbp]
 	\centering
-	\includegraphics[width=0.45\textwidth]{01_desktop.png}
-	\includegraphics[width=0.45\textwidth]{01_mobile.png}
-	\caption{Aplicația vanilla JavaScript, desktop și mobile}
-	\label{fig:01-local}
-\end{figure}
+	\begin{tabular}{lcccccccc}
+		\toprule
+		\multirow{2}{*}{\textbf{Aplica\c tie}} & \multicolumn{4}{c}{\textbf{Conexiune normal\u a}} & \multicolumn{4}{c}{\textbf{3G lent}} \\
+		\cmidrule(lr){2-5} \cmidrule(l){6-9}
+		& \textbf{LCP} & \textbf{CLS} & \textbf{FID} & \textbf{INP} & \textbf{LCP} & \textbf{CLS} & \textbf{FID} & \textbf{INP} \\
+		\midrule
+		JavaScript & 0.241s & 0.006 & 0.500ms & 32.000ms & 7.286s & 0.006 & 0.800ms & 16.000ms \\
+		React & 0.787s & 0.002 & 0.900ms & 32.000ms & 8.394s & 0.002 & 1.000ms & 16.000ms \\
+		Next & 0.448s & 0.002 & 1.100ms & 32.000ms & 10.849s & 0.002 & 1.300ms & 40.000ms \\
+		Gatsby & 0.084s & 0.002 & 0.900ms & 16.000ms & 2.127s & 0.002 & 0.900ms & 40.000ms \\
+		\bottomrule
+	\end{tabular}
+	\caption{Rezultatele generate de Web Vitals}
+	\label{tab:metrics-web-vitals}
+\end{table}
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.45\textwidth]{02_desktop.png}
-	\includegraphics[width=0.45\textwidth]{02_mobile.png}
-	\caption{Aplicația React, desktop și mobile}
-	\label{fig:02-local}
-\end{figure}
+Conform rezultatelor ob\c tinute, aplica\c tia construit\u a cu Gatsby este cea mai eficient\u a din punct de vedere al rand\u arii, urmat\u a de aplica\c tia vanilla JavaScript. Aplica\c tiile construite cu React \c si Next.js au rezultate similare, dar performan\c tele acestora sunt mai slabe. Datorit\u a optimiz\u arilor aduse, \^in special prin utilizarea Gatsby \textit{StaticImage} \c si a \textit{prefetch}-ului, aplica\c tia Gatsby este cea mai rapid\u a din punct de vedere al timpului de randare, at\^at pe conexiunea normal\u a, c\^at \c si pe cea lent\u a.
+  
+% După deploy-ul aplicațiilor pe web hosting, am efectuat repetat procesul de evaluare a performanței cu ajutorul extensiei și am obținut următoarele rezultate:
 
-După deploy-ul aplicațiilor pe web hosting, am efectuat repetat procesul de evaluare a performanței cu ajutorul extensiei și am obținut următoarele rezultate:
+% \begin{figure}[htbp]
+% 	\centering
+% 	\includegraphics[width=0.45\textwidth]{01_desktop_deployed.png}
+% 	\includegraphics[width=0.45\textwidth]{01_mobile_deployed.png}
+% 	\caption{Aplicația vanilla JavaScript, desktop și mobile}
+% 	\label{fig:01-deployed}
+% \end{figure}
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.45\textwidth]{01_desktop_deployed.png}
-	\includegraphics[width=0.45\textwidth]{01_mobile_deployed.png}
-	\caption{Aplicația vanilla JavaScript, desktop și mobile}
-	\label{fig:01-deployed}
-\end{figure}
+% \begin{figure}[htbp]
+% 	\centering
+% 	\includegraphics[width=0.45\textwidth]{02_desktop_deployed.png}
+% 	\includegraphics[width=0.45\textwidth]{02_mobile_deployed.png}
+% 	\caption{Aplicația React, desktop și mobile}
+% 	\label{fig:02-deployed}
+% \end{figure}
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.45\textwidth]{02_desktop_deployed.png}
-	\includegraphics[width=0.45\textwidth]{02_mobile_deployed.png}
-	\caption{Aplicația React, desktop și mobile}
-	\label{fig:02-deployed}
-\end{figure}
+% Procesul optimizat de randare al React-ului, arhitectura bazată pe componente și gestionarea eficientă a stărilor contribuie la îmbunătățirea metricilor de performanță. React utilizează un DOM virtual, care este o reprezentare în memorie a DOM-ului real. Acest lucru permite React-ului să actualizeze și să randeze eficient doar componentele necesare atunci când există modificări în starea aplicației.
 
-Procesul optimizat de randare al React-ului, arhitectura bazată pe componente și gestionarea eficientă a stărilor contribuie la îmbunătățirea metricilor de performanță. React utilizează un DOM virtual, care este o reprezentare în memorie a DOM-ului real. Acest lucru permite React-ului să actualizeze și să randeze eficient doar componentele necesare atunci când există modificări în starea aplicației.
-
-Gestionarea eficientă a stărilor în React contribuie, de asemenea, la îmbunătățirea performanței. React folosește un flux unidirecțional al datelor și un concept numit "reconciliere" pentru a actualiza eficient interfața în funcție de modificările în starea aplicației.
+% Gestionarea eficientă a stărilor în React contribuie, de asemenea, la îmbunătățirea performanței. React folosește un flux unidirecțional al datelor și un concept numit "reconciliere" pentru a actualiza eficient interfața în funcție de modificările în starea aplicației.
 \subsection{Lighthouse}
 
-Cu ajutorul acestui tool, care este prezent în browserul Google Chrome, am generat rapoartele pentru ambele aplicații, atât în mediul local:
+Cu ajutorul acestui tool, care este prezent în browserele Google Chrome \c si Mozilla Firefox, au fost generate rapoartele de performan\c t\u a pentru aplicațiile dezvoltate. Un raport Lighthouse este compus din mai multe secțiuni, fiecare dintre acestea av\^and un scor \c si o descriere a metricilor evaluate. Scorul este calculat pe baza unor ponderi, care sunt diferite pentru fiecare secțiune. Ponderile sunt calculate pe baza unor studii de utilizare, care au fost efectuate de Google.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.45\textwidth]{01_desktop_lighthouse.png}
-	\includegraphics[width=0.45\textwidth]{01_mobile_lighthouse.png}
-	\caption{Aplicația vanilla JavaScript, desktop și mobile}
-	\label{fig:01-local-lighthouse}
+	\includegraphics[width=0.75\textwidth]{01_mobile_lighthouse.png}
+	\caption{Exemplu raport generat Lighthouse}
+	\label{fig:lighthouse-example}
 \end{figure}
 
-\begin{figure}[htbp]
+Pentru fiecare dintre aplica\c tiile dezvoltate au fost generate rapoarte Lighthouse, din case s-au extras cele mai importante metrici, relevante pentru performan\c ta aplica\c tiei \textit{(\textbf{FCP} - First Contentful Paint, \textbf{LCP} - Largest Contentful Paint, \textbf{TBT} - Total Blocking Time, \textbf{CLS} - Cumulative Layout Shift, \textbf{SI} - Speed Index)}, experienței utilizatorului (\textbf{Accessibillity, Best practices}) \c si optimizarea pentru motoarele de căutare (\textbf{SEO}). Rezultatele sunt prezentate \^in tabelul urm\u ator:
+
+\begin{table}[htbp]
 	\centering
-	\includegraphics[width=0.45\textwidth]{02_desktop_lighthouse.png}
-	\includegraphics[width=0.45\textwidth]{02_mobile_lighthouse.png}
-	\caption{Aplicația React, desktop și mobile}
-	\label{fig:02-local-lighthouse}
-\end{figure}
+	\begin{tabular}{lccccccccc}
+		\toprule
+		\multirow{2}{*}{\textbf{Aplica\c tie}} & \multicolumn{4}{c}{\textbf{Performan\c t\u a}} & \multicolumn{4}{c}{\textbf{Alte metrici}} \\
+		\cmidrule(lr){2-6} \cmidrule(l){7-9}
+		& \textbf{FCP} & \textbf{LCP} & \textbf{TBT} & \textbf{CLS} & \textbf{SI} & \textbf{Accessib.} & \textbf{Best Practices} & \textbf{SEO}\\
+		\midrule
+		JavaScript & 0.3s & 0.6s & 0 & 0 & 0.9s & 65 & 100 & 89 \\
+		React & 0.4s & 0.5s & 0 & 0 & 0.8s & 83 & 100 & 100 \\
+		Next & 0.3s & 0.4s & 0 & 0 & 0.4s & 92 & 92 & 100 \\
+		Gatsby & 0.2s & 0.2s & 0 & 0 & 0.3s & 82 & 92 & 80 \\
+		\bottomrule
+	\end{tabular}
+	\caption{Rezultatele rapoartelor Lighthouse}
+	\label{tab:metrics-lighthouse}
+\end{table}
 
-\newpage
-cât și după deploy-ul pe hosting:
+Conform rezultatelor ob\c tinute \^in urma test\u arii, aplica\c tiile dezvoltate cu Next.js \c si Gatsby.js au ob\c tinut cele mai bune rezultate. Aceste scoruri sunt influen\c tate at\^at de optimiz\u arile prezente \^in aceste framework-uri, c\^at \c si de hosting-ul ales, care ofer\u a un mediu de rulare optimizat pentru aplica\c tiile dezvoltate cu Next.js \c si Gatsby. 
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.45\textwidth]{01_desktop_deployed_lighthouse.png}
-	\includegraphics[width=0.45\textwidth]{01_mobile_deployed_lighthouse.png}
-	\caption{Aplicația vanilla JavaScript, desktop și mobile}
-	\label{fig:01-deployed-lighthouse}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.45\textwidth]{02_desktop_deployed_lighthouse.png}
-	\includegraphics[width=0.45\textwidth]{02_mobile_deployed_lighthouse.png}
-	\caption{Aplicația React, desktop și mobile}
-	\label{fig:02-deployed-lighthouse}
-\end{figure}
+Pe baza metricilor analizate, aplicația "Gatsby" demonstrează o performanță mai bună în comparație cu celelalte aplicații. Aceasta obține constant valori mai mici pentru FCP și LCP, ce rezult\u a \^intr-o randare mai rapidă a conținutului. 
 
 \subsection{PageSpeed Insights}
 
-PageSpeed evaluează pagina atât pe dispozitive mobile, cât și pe desktop, atribuie un scor în funcție de performanța paginii și se oferă recomandări pentru îmbunătățire. Acest tool ia în considerare mai mulți factori care pot afecta performanța unei pagini, cum ar fi timpul de răspuns al serverului, cache-ul resurselor, optimizarea imaginilor, minificarea JavaScript și CSS și altele. De asemenea, acesta ia în considerare utilizarea celor mai bune practici și a ghidurilor de performanță web, cum ar fi reducerea resurselor care blochează randarea, optimizarea căii critice de randare și folosirea cache-ului browserului.
+Evaluează pagina atât pe dispozitive mobile, cât și pe desktop, atribuie un scor în funcție de performanța paginii și se oferă recomandări pentru îmbunătățire. Acest tool ia în considerare mai mulți factori care pot afecta performanța unei pagini, cum ar fi timpul de răspuns al serverului, cache-ul resurselor, optimizarea imaginilor, minificarea JavaScript și CSS. De asemenea, acesta ia în considerare utilizarea celor mai bune practici și a ghidurilor de performanță web, cum ar fi reducerea resurselor care blochează randarea, optimizarea căii critice de randare și folosirea cache-ului browserului.
 
-Rezultatele obținute pentru ambele aplicații sunt:
+\^In urma test\u arii aplica\c tiilor dezvoltate, au fost ob\c tinute urm\u atoarele rezultate:
 
-\begin{figure}[htbp]
+\begin{table}[htbp]
 	\centering
-	\includegraphics[width=0.45\textwidth]{01_desktop_pagespeed.png}
-	\includegraphics[width=0.45\textwidth]{01_mobile_pagespeed.png}
-	\caption{Aplicația vanilla JavaScript, desktop și mobile}
-	\label{fig:01-deployed-pagespeed}
-\end{figure}
+	\begin{tabular}{lccccccccc}
+		\toprule
+		\multirow{2}{*}{\textbf{Desktop}} & \multicolumn{4}{c}{\textbf{Performan\c t\u a}} & \multicolumn{4}{c}{\textbf{Alte metrici}} \\
+		\cmidrule(lr){2-6} \cmidrule(l){7-9}
+		& \textbf{FCP} & \textbf{LCP} & \textbf{TBT} & \textbf{CLS} & \textbf{SI} & \textbf{Accessib.} & \textbf{Best Practices} & \textbf{SEO}\\
+		\midrule
+		JavaScript & 0.3s & 0.6s & 0 & 0 & 0.9s & 65 & 100 & 89 \\
+		React & 0.2s & 0.3s & 0 & 0 & 1.1s & 83 & 100 & 100 \\
+		Next & 0.2s & 0.3s & 0 & 0 & 0.7s & 92 & 92 & 100 \\
+		Gatsby & 0.2s & 0.2s & 0 & 0 & 0.6s & 85 & 92 & 80 \\
+		\bottomrule
+	\end{tabular}
+	\caption{Rezultatele raport PageSpeed Insights - Desktop}
+	\label{tab:metrics-pagespeed-desktop}
+\end{table}
 
-\begin{figure}[htbp]
+
+\begin{table}[htbp]
 	\centering
-	\includegraphics[width=0.45\textwidth]{02_desktop_pagespeed.png}
-	\includegraphics[width=0.45\textwidth]{02_mobile_pagespeed.png}
-	\caption{Aplicația React, desktop și mobile}
-	\label{fig:02-deployed-pagespeed}
-\end{figure}
+	\begin{tabular}{lccccccccc}
+		\toprule
+		\multirow{2}{*}{\textbf{Mobile}} & \multicolumn{4}{c}{\textbf{Performan\c t\u a}} & \multicolumn{4}{c}{\textbf{Alte metrici}} \\
+		\cmidrule(lr){2-6} \cmidrule(l){7-9}
+		& \textbf{FCP} & \textbf{LCP} & \textbf{TBT} & \textbf{CLS} & \textbf{SI} & \textbf{Accessib.} & \textbf{Best Practices} & \textbf{SEO}\\
+		\midrule
+		JavaScript & 0.8s & 2.0s & 80ms & 0.102 & 2.2s & 65 & 100 & 91 \\
+		React & 0.9s & 1.3s & 250ms & 0 & 2.3s & 83 & 100 & 100 \\
+		Next & 0.9s & 0.9s & 190ms & 0 & 1.5s & 92 & 92 & 100 \\
+		Gatsby & 0.8s & 0.8s & 50ms & 0 & 1.7s & 85 & 92 & 83 \\
+		\bottomrule
+	\end{tabular}
+	\caption{Rezultatele raport PageSpeed Insights - Mobile}
+	\label{tab:metrics-pagespeed-mobile}
+\end{table}
+
 
 \section {Analiza rezultatelor}
-
-Fiecare dintre metodele abordate are avantajele \c si dezavantajele sale. Vanilla JS este cel mai simplu de implementat, deoarece nu necesit\u a dependen\c te sau biblioteci suplimentare. React este un framework popular, care ofer\u a o abordare mai structurat\u a a dezvolt\u arii aplica\c tiilor web, dar necesit\u a un timp mai mare de implementare \c si configurare. Next.js \c si Gatsby sunt framework-uri construite pe React, care ofer\u a un set de func\c tionalit\u a\c ti suplimentare, ce pot fi utile \^ in dezvoltarea unei aplica\c tii web, dar necesit\u a cuno\c stin\c te mai avansate de React \c si a specifica\c tiilor interne ale acestor framework-uri.
 
 \subsection{U\c surin\c ta implement\u arii}
 Din punct de vedere al utiliz\u arii, vanilla JS este cel mai proeminent, deoarece nu necesit\u a dependențe sau framework-uri suplimentare. Pentru a executa un cod JavaScript este destul\u a ad\u augarea unui tag \textit{\textless script\textgreater }   \^ in pagina HTML:
@@ -872,10 +952,13 @@ Next.js \c si Gatsby sunt framework-uri care se bazeaz\u a pe React, oferind un 
 
 Acestea sunt utile pentru crearea de aplicații web complexe, care necesită o structură bine definită și o arhitectură scalabilă, \^ins\u a necesit\u a o perioad\u a de timp mai mare pentru a fi \^inv\u ațate \c si implementate.
 
-
 \subsection{Performanța}
 
-\^In urma analizei rezultatelor ob\c tinute cu ajutorul Web Vitals, rapoartelor generate de Lighthouse \c si PageSpeed Insights se poate obesrva faptul c\u a aplica\c tia construit\u a vanilla JavaScript este mai performant\u a, deoarece \^in intermediul unei aplica\c tii simple, modific\u arile directe asupra DOM sunt mai eficiente dec\^at utilizarea Virtual DOM-ului. De asemenea, aplica\c tiile ce pe baz\u a de React necesit\u a mai multe resurse pentru a rula, deoarece este nevoie de biblioteci suplimentare pentru a utiliza func\c tionalit\u a\c ti suplimentare precum server-side rendering, dynamic routing, optimizarea imaginilor, etc.
+\^In urma analizei rezultatelor ob\c tinute cu ajutorul Web Vitals, rapoartelor generate de Lighthouse \c si PageSpeed Insights se poate observa faptul c\u a aplica\c tia construit\u a cu Gatsby este cea mai performant\u a, datorit\u a optimiz\u arii automate a imaginilor \c si a gener\u arii de pagini statice. \^In cazul aplica\c tiei construite cu Next.js, performan\c ta este influen\c tat\u a de modul de implementare, deoarece nu exist\u a o optimizare automat\u a a imaginilor, iar paginile sunt generate dinamic. Aplica\c tia construit\u a cu vanilla JS este cea mai pu\c tin performant\u a, deoarece nu exist\u a o optimizare a imaginilor, iar codul este scris \^intr-un singur fi\c sier, ceea ce duce la un timp de \^inc\u arcare mai mare.
+
+Pe desktop, Gatsby a reușit să ofere o performanță deosebită, cu valori mici pentru FCP (0.2s), LCP (0.2s) și o lipsă totală a timpului de blocare semnificativ (TBT = 0). Aceste rezultate indică o experiență rapidă și fluidă pentru utilizatorii care accesează aplicația Gatsby pe desktop.
+
+În ceea ce privește dispozitivele mobile, Gatsby continuă să ofere o performanță excelentă, obținând valori competitive pentru FCP (0.8s) și LCP (0.8s). Deși valorile sunt ușor mai ridicate decât în cazul desktopului, Gatsby încă se menține în fruntea clasamentului, asigurând o încărcare rapidă și o experiență plăcută pe dispozitivele mobile.
 
 \subsection{Dimensiunea aplica\c tiei}
 
@@ -906,11 +989,11 @@ Gatsby este un framework care pune accent pe performanță și optimizare pentru
 Această lucrare ofer\u a o perspectivă asupra tehnologiilor de randare și a impactului lor asupra aplicațiilor web din punct de vedere al performanței, optimizării \c si experienței utilizatorilor.
 Este important de menționat faptul că performanța unei aplicații web nu se rezumă doar la tehnologia de randare utilizată, ci și la practicile de optimizare și îmbunătățire continuă. Utilizarea instrumentelor precum Lighthouse și PageSpeed Insights poate oferi informa\c tii valoroase pentru identificarea punctelor slabe și îmbunătățirea performanței unei aplicații web.
 
-Alegerea tehnologiei de randare depinde de cerințele specifice ale aplicației proiectate. SSR oferă avantaje din punct de vedere al SEO, datorită faptului c\u a con\c tinutul HTML este generat direct pe server \c si este furnizat c\u atre motoarele de c\u autare, îmbunătățirea performanței încărcării inițiale a paginii, dar are dezavantaje în ceea ce privește interactivitatea, deoarece întreaga pagină trebuie reîncărcată pentru a actualiza conținutul. 
+Alegerea tehnologiei de randare depinde de cerințele specifice ale aplicației proiectate. SSR \textit{(Server Side Rendering)} oferă avantaje din punct de vedere al SEO, datorită faptului c\u a con\c tinutul HTML este generat direct pe server \c si este furnizat c\u atre motoarele de c\u autare, îmbunătățirea performanței încărcării inițiale a paginii, dar are dezavantaje în ceea ce privește interactivitatea, deoarece întreaga pagină trebuie reîncărcată pentru a actualiza conținutul. 
 
-CSR, pe de altă parte, oferă o experiență mai interactivă, deoarece conținutul este generat în browser, dar are dezavantaje în ceea ce privește performanța încărcării inițiale a paginii, deoarece întregul JavaScript trebuie descărcat și executat înainte ca pagina să poată fi afișată.
+CSR \textit{(Client Side Rendering)}, pe de altă parte, oferă o experiență mai interactivă, deoarece conținutul este generat în browser, dar are dezavantaje în ceea ce privește performanța încărcării inițiale a paginii, deoarece întregul JavaScript trebuie descărcat și executat înainte ca pagina să poată fi afișată.
 
-SSG este o alternativă la SSR, care oferă avantajele SEO și performanța încărcării inițiale a paginii, dar nu oferă interactivitatea oferită de CSR. 
+SSG \textit{(Static Server Generation)} este o alternativă la SSR, care oferă avantajele SEO și performanța încărcării inițiale a paginii, dar nu oferă interactivitatea oferită de CSR. 
 
 În ceea ce privește tehnologiile de randare, React oferă o experiență de dezvoltare mai bună, datorită faptului că este mai ușor de învățat și de utilizat, oferind unelte \textit{precum create-react-app}, care oferă un mediu de dezvoltare preconfigurat \c si sintax\u a cunoscut\u a, deoarece este bazat pe JavaScript. Beneficiile care le ofer\u a React sunt cel mai eviden\c tiate în aplicațiile complexe cu interfețe de utilizator dinamice și actualizări frecvente, unde virtual DOM și mecanismele eficiente de randare oferă un UX mai bun.
 
@@ -918,13 +1001,17 @@ Vanilla JS, pe de altă parte, oferă o performanță mai bună, deoarece nu nec
 
 Cu toate acestea, este important de menționat că în aplicațiile mai simple sau în cazurile în care interactivitatea nu este un aspect major, JavaScript simplu poate fi mai performant datorită naturii sale. Vanilla JavaScript evită costurile suplimentare ale unui framework precum React și poate fi optimizat pentru cazuri de utilizare specifice, rezultând \^intr-o  execuție mai rapidă.
 
+Fiecare dintre metodele abordate are avantajele \c si dezavantajele sale. Vanilla JS este cel mai simplu de implementat, deoarece nu necesit\u a dependen\c te sau biblioteci suplimentare. React este un framework popular, care ofer\u a o abordare mai structurat\u a a dezvolt\u arii aplica\c tiilor web, dar necesit\u a un timp mai mare de implementare \c si configurare. Next.js \c si Gatsby sunt framework-uri construite pe React, care ofer\u a un set de func\c tionalit\u a\c ti suplimentare, ce pot fi utile \^ in dezvoltarea unei aplica\c tii web, dar necesit\u a cuno\c stin\c te mai avansate de React \c si a specifica\c tiilor interne ale acestor framework-uri.
+
 \section{Rezultatele obținute}
 
-\^In urma analizei perfoman\c tei aplica\c tiilor construite, s-a constatat c\u a aplica\c tia ce utilizează vanilla JavaScript este mai performant\u a, deoarece nu necesit\u a rerand\u ari frecvente, iar aspectele dinamice ale aplica\c tiei sunt u\c sor de calculat \c si de actualizat. Aplica\c tiile ce au fost construite cu ajutorul React au o dimensiune mai mare, deoarece necesit\u a biblioteci suplimentare pentru a func\c tiona \c si trebuie configurate pentru a putea fi hostate pe web.
+\^In urma analizei perfoman\c tei aplica\c tiilor construite, aplica\c tia dezvoltată cu ajutorul framework-ului Gatsby este cea mai performant\u a, deoarece utilizeaz\u a paradigma SSG (Static Server Generation), care este caracterizat\u a prin generarea con\c tinutului HTML pe server, \^inainte de a fi livrat c\u atre utilizatori. Aceast\u a abordare ofer\u a o performan\c t\u a sporită \^in ceea ce prive\c ste timpul de \^inc\u arcare a paginii, deoarece nu necesit\u a randarea con\c tinutului \^in browser, ci doar livrarea acestuia c\u atre utilizator. De asemenea, datorit\u a optimiz\u arilor oferite de Gatsby, imaginile sunt comprimate \c si redimensionate, iar codul este minificat, ceea ce duce la o performan\c t\u a sporit\u a a aplica\c tiei.
+
+Aplica\c tiile ce au fost construite cu ajutorul React, Next.js \c si Gatsby au o dimensiune mai mare, deoarece necesit\u a biblioteci suplimentare pentru a func\c tiona \c si trebuie configurate pentru a putea fi hostate pe web, fapt ce poate rezulta \^intr-o experien\c t\u a de dezvoltare mai complex\u a, \^ins\u a aceasta este compensat\u a de beneficiile oferite de aceste framework-uri.
 
 \^In aplicația ce utilizeaza vanilla JS, manipul\u arile DOM sunt realizate direct, iar \^in cazul unei aplica\c tii simple aceast\u a abordare direct\u a este mai eficient\u a dec\^at utilizarea React \c si virtual DOM, ce necesit\u a pa\c si suplimentari pentru actualizarea con\c tinutului.
 
-Odată cu scalarea aplica\c tiei, React devine mai performant, iar codul mai u\c sor de men\c tinut, datorit\u a arhitecturii sale bazate pe componente reutilizabile \c si alte unelte de dezvoltare predefinite precum hook-urile, ce simplifică implementarea, actualizarea \c si scalarea optim\u a a func\c tionalit\u a\c tilor necesare.
+Odată cu scalarea aplica\c tiei, framework-urile devin mai performante, iar codul mai u\c sor de men\c tinut, datorit\u a arhitecturii predefinite, bazate pe componente reutilizabile \c si alte unelte de dezvoltare precum hook-urile, ce simplifică implementarea, actualizarea \c si scalarea optim\u a a func\c tionalit\u a\c tilor necesare.
 
 \section {Direcții viitoare de cercetare}
 
@@ -932,7 +1019,7 @@ Odată cu scalarea aplica\c tiei, React devine mai performant, iar codul mai u\c
 
 Prin creșterea complexității și a dimensiunii aplicației, inclusiv ad\u augarea mai multor pagini, va fi posibi\u a evaluarea modului în care fiecare tehnologie gestionează sarcina de lucru suplimentară. Această analiză ar ajuta la determinarea dacă anumite tehnologii sunt mai potrivite pentru aplicații de mari dimensiuni și ar dezvălui eventuale restricții de performanță care pot apărea.
 
-Acest studiu sa axat pe utilizarea vanilla JS, React, Next.js și Gatsby, \^ins\u a există numeroase framework-uri \c si tehnologii de randare. Cercet\u arile ulterioare ar putea extinde comparația pentru a include alte framework-uri sau biblioteci, cum ar fi Angular, Vue.js sau Svelte \c si tehnologii de randare precum ISR (\textit{Incremental Static Regeneration}), care este o variant\u a \^imbun\u at\u a\c tit\u a a SSG, \^in care paginile statice se pot regenera pe server la cerere, f\u ar\u a necesitatea de rebuild a \^intregii aplica\c tii. 
+Acest studiu s-a axat pe utilizarea vanilla JS, React, Next.js și Gatsby, \^ins\u a există numeroase framework-uri \c si tehnologii de randare. Cercet\u arile ulterioare ar putea extinde comparația pentru a include alte framework-uri sau biblioteci, cum ar fi Angular, Vue.js sau Svelte \c si tehnologii de randare precum ISR (\textit{Incremental Static Regeneration}), care este o variant\u a \^imbun\u at\u a\c tit\u a a SSG, \^in care paginile statice se pot regenera pe server la cerere, f\u ar\u a necesitatea de rebuild a \^intregii aplica\c tii. 
 
 Prin includerea unui spectru mai larg de tehnologii de randare, putem obține o perspectivă mai largă asupra performanței acestora și a modului în care se compară cu cele evaluate în acest studiu.
 
