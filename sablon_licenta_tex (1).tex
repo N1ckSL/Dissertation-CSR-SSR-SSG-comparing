@@ -215,7 +215,7 @@ Motivația alegerii acestei teme de disertație derivă din mai mulți factori. 
 \section{Contextul lucrării}
 
 
-World Wide Web nu este un sinonim al internetului, dar este cea mai proeminentă parte a acestuia, care poate fi definită ca un sistem tehno-social cu care interacționează oamenii prin intermediul rețelelor tehnologice. Noțiunea de sistem tehno-social se referă la un sistem care îmbunătățește percepția umană, comunicarea și cooperarea. Percepția este condiția prealabilă necesară pentru a comunica și coopera. \cite{theoreticalfundationsoftheweb}
+World Wide Web nu este un sinonim al internetului, dar este cea mai proeminentă parte a acestuia, care poate fi definită ca un sistem tehno-social cu care interacționează oamenii prin intermediul rețelelor tehnologice. Noțiunea de sistem tehno-social se referă la un sistem care îmbunătățește percepția umană, comunicarea și cooperarea. Percepția este condiția prealabilă necesară pentru a comunica și coopera.
 
 Pe 12 Martie 1989, Tim Berners-Lee, informatician de origine britanică și un fost angajat CERN au scris o propunere pentru ceea ce va deveni ulterior World Wide Web. Acea propunere avea drept scop crearea unui sistem de comunicații mai eficient în cadrul CERN, însă Berners-Lee a realizat în cele din urmă că conceptul ar putea fi implementat la scară globală. Împreună cu informaticianul belgian Robert Cailliau au propus în 1990 să folosesacă hypertext pentru a lega și accesa diverse tipuri de informații dintr-o rețea de noduri în care utilizatorul poate naviga către rezultatele dorite.
 
@@ -225,10 +225,10 @@ Prima versiune a web-ului global de la CERN a fost construit\u a pe primele vers
 
 A fost creat în 1989 și utilizat până în 2005. Potrivit lui Tim Berners-Lee Web 1.0 a fost \emph{read-only}, deoarece oferea foarte puțină interacțiune pentru utilizatori. Rolul web-ului a fost de natură pasaivă.
 
-Web 1.0 a fost prima generație de World Wide Web și conținea doar pagini statice ce aveau doar un singur scop - de livrare a conținutului. Deoarece era monodirectional, \^ insemna c\u a organiza\c tiile \^ imp\u art\u a\c seau informa\c tii precum bro\c suri, cataloage \^ doar pentru citire. Aceste date erau prezentate pe pagini HTML statice care se modificau manual. Utilizatorii nu puteau contribui la paginile web existente. Tehnologiile Web 1.0 includ protocoale web de bază, HTML, HTTP și URI.
+Web 1.0 a fost prima generație de World Wide Web și conținea doar pagini statice ce aveau doar un singur scop - de livrare a conținutului. Deoarece era monodirectional, \^ insemna c\u a organiza\c tiile \^ imp\u art\u a\c seau informa\c tii precum bro\c suri, cataloage \^ doar pentru citire. Aceste date erau prezentate pe pagini HTML statice care se modificau manual. Utilizatorii nu puteau contribui la paginile web existente. Tehnologiile Web 1.0 includ protocoale web de bază, HTML, HTTP și URI. \cite{web-1}
 
-Browserele erau foarte rudimentare \c si site-urile web erau mici. De aceea era destul s\u a se creeze un fi\c sier HTML static care ar con\c tine toate datele necesare \c si designul, care nu ar fi fost niciodat\u a actualizate automat. A\c sa arat\u a un fi\c sier HTML:
-\begin{lstlisting}
+Browserele erau foarte rudimentare \c si site-urile web erau mici. De aceea era destul s\u a se creeze un fi\c sier HTML static care ar con\c tine toate datele necesare \c si designul, care nu ar fi fost niciodat\u a actualizate automat.
+\begin{lstlisting}[caption={Exemplu fi\c sier HTML},captionpos=b]
 	!DOCTYPE html>
 	<html>
 		<head>
@@ -239,27 +239,28 @@ Browserele erau foarte rudimentare \c si site-urile web erau mici. De aceea era 
 			<p>My first paragraph.</p>
 		</body>
 	</html>
+	
 \end{lstlisting}
 
-Mai t\^ arziu, c\^ and browser-ele au dezvoltat capacit\u a\c ti vizuale, a aparut necesitatea de stilizare. Håkon W Lie a propus o prima versiune a CSS (Cascading Style Sheet), care este folosit \c si \^ in prezent. Un style sheet arat\u a astfel:
-\begin{lstlisting}
+Mai t\^ arziu, c\^ and browser-ele au dezvoltat capacit\u a\c ti vizuale, a aparut necesitatea de stilizare. Håkon W Lie a propus o prima versiune a CSS (Cascading Style Sheet), care este folosit \c si \^ in prezent. Acesta este un limbaj de stilizare folosit pentru a descrie modul \^ in care un document HTML ar trebui să fie prezentat. CSS a fost creat pentru a permite separarea conținutului și a prezentării. Acest lucru a permis paginilor web să fie mai accesibile, mai ușor de întreținut și mai flexibile.
+\begin{lstlisting}[caption={Exemplu fi\c sier CSS},captionpos=b]
 	body {
 		background-color: black;
+		margin: 10px 5px;
 	}
 
 	p {
 		font-size: 12px;
+		color: red;
 	}
 \end{lstlisting}
 
-\newpage
 \textbf{Caracteristici:}
 \begin{itemize}
 	\item Conținut read-only
 	\item Informațiile erau la dispoziția oricui și oricând
 	\item Include pagini web statice și utilizează HTML
 \end{itemize}
-
 
 \textbf{Limitări:}
 \begin{itemize}
@@ -270,8 +271,7 @@ Mai t\^ arziu, c\^ and browser-ele au dezvoltat capacit\u a\c ti vizuale, a apar
 
 \subsection{Web 2.0}
 
-A fost definit de Dale Dougherty în 2004. Tim O'Reilly a definit ulterior Web 2.0 astfel [66]:
-"Web 2.0 este revolu\c tia afacerilor \^ in industria calculatorului, cauzat\u a de mutarea c\u atre internet ca platform\u a \c si \^ incercarea de a \^ in\c telege regulile pentru succes pe aceast\u a nou\u a platform\u a. Printre aceste reguli se num\u ar\u a urm\u atoarea: construirea de aplica\c tii care s\u a valorifice efectele de re\c tea pentru a deveni mai bune pe m\u asur\u a ce mai mul\c ti oameni le folosesc."
+Tim O'Reilly a definit Web 2.0 drept fiind revolu\c tia afacerilor \^ in industria calculatorului, cauzat\u a de mutarea c\u atre internet ca platform\u a \c si \^ incercarea de a \^ in\c telege regulile pentru succes pe aceast\u a nou\u a platform\u a. Printre aceste reguli se num\u ar\u a urm\u atoarea: construirea de aplica\c tii care s\u a valorifice efectele de re\c tea pentru a deveni mai bune pe m\u asur\u a ce mai mul\c ti oameni le folosesc. \cite{oreilly}
 
 Web 2.0 facilitează proprietăți majore cum ar fi practicile participative, colaborative și distribuite, care permit desfășurarea activităților zilnice formale și în sfere formale pe web. Web 2.0 este web-as-a-platform. Utilizatorii au mai multe unelte pentru interacțiune, însă cu mai puțin control. Versiunea 2.0 implică și un design web flexibil, reutilizare creativă, actualizări și creare de conținut colaborativ, care este considerată una dintre cele mai remarcabile caracteristici ale web 2.0.
 
@@ -279,7 +279,7 @@ Web 2.0 facilitează proprietăți majore cum ar fi practicile participative, co
 Mai t\^ arziu, limbi precum Perl, Java, PHP \c si ASP (\c si altele) au devenit populare pentru programare pe partea de server.
 
 Site-urile web care devin mai bogate \^ in func\c tii au nevoie de mai mult\u a flexibilitate \c si de o utilizare mai bun\u a. Acesta este momentul \^ in care programarea client-side intr\u a \^ in joc. F\u ar\u a a fi nevoie de o \^ inc\u arcare complet\u a a paginii, con\c tinutul poate fi schimbat de c\u atre utilizatorii finali. Tehnologia cel mai utilizat\u a pentru acest scop este JavaScript.
-C\^ and func\c tiile client-side au devenit \c si mai importante, au fost concepute framework-uri pentru renderizarea (\c si controlarea) paginilor client-side. Cele mai cunoscute framework-uri sunt: Ember, Angular \c si React.
+C\^ and func\c tiile client-side au devenit \c si mai importante, au fost concepute framework-uri pentru randarea (\c si controlarea) paginilor client-side. Cele mai cunoscute framework-uri sunt: Ember, Angular \c si React.
 
 \textbf{Caracteristici:}
 \begin{itemize}
@@ -300,20 +300,20 @@ C\^ and func\c tiile client-side au devenit \c si mai importante, au fost concep
 
 Cunoscut și sub numele de web semantic sau Web decentralizat, este următoarea generație a World Wide Web, care își propune să ofere o experiență mai inteligentă, interconectată și decentralizată. Reprezintă o viziune pentru viitorul web în care datele, aplicațiile și serviciile sunt interconectate în mod fluid, permițând mașinilor și oamenilor să înțeleagă și să interacționeze mai eficient cu informațiile.
 
-Ideea ce se află la bază este de a defini structurile de date și de a le lega pentru o automatizare, intregare și reutilizare mai eficientă în diverse aplicații. Web 3.0 este capabil să îmbunătățească gestionarea datelor, să susțină accesibilitatea internetului mobil, să stimuleze creativitatea și inovația, să încurajeze fenomenul de globalizare, să sporească experiența utilizatorilor și să ajute la organizarea colaborării în rețelele sociale.
+Ideea ce se află la bază este de a defini structurile de date și de a le lega pentru o automatizare, intregare și reutilizare mai eficientă în diverse aplicații. Web 3.0 este capabil să îmbunătățească gestionarea datelor, să susțină accesibilitatea internetului mobil, să stimuleze creativitatea și inovația, să încurajeze fenomenul de globalizare, să sporească experiența utilizatorilor și să ajute la organizarea colaborării în rețelele sociale. \cite{semantic-web}
 
 În 3.0 conceptul de site web și pagină web dispare, datele nu sunt deținute, ci partajate, iar serviciile afișează diferite vederi, pe baza datelor. Aceste servicii pot fi aplicații și trebuie să se concentreze pe context și personalizare, ce vor fi atinse prin utilizarea căutarilor verticale. Web 3.0 facilitează dezvoltarea de aplicații care utilizează inteligența artificială, învățarea automată și procesarea limbajului natural. Aceste tehnologii permit analiza avansată a datelor, automatizarea și capacitatea de luare a deciziilor, rezultând în servicii mai inteligente și personalizate pentru utilizatori.
 
-Urm\u atorul pas \^ in dezvoltarea web-ului este crearea aplica\c tiilor web autonome, care pot fi, de asemenea, utilizate f\u ar\u a conexiune la internet. Acestea sunt numite Aplica\c tii Web Progressive (PWA). Crearea acestor aplica\c tii nu este posibil\u a f\u ar\u a a avea control complet la nivelul clientului. Renderizarea pe partea de server nu este posibil\u a \c si se folosesc framework-uri complete pentru front-end pentru a construi acest fel de aplica\c tii. Comunicarea se gestioneaz\u a prin intermediul API-urilor.\cite{pwa}
+Urm\u atorul pas \^ in dezvoltarea web-ului este crearea aplica\c tiilor web autonome, care pot fi, de asemenea, utilizate f\u ar\u a conexiune la internet. Acestea sunt numite Aplica\c tii Web Progressive (PWA). Crearea acestor aplica\c tii nu este posibil\u a f\u ar\u a a avea control complet la nivelul clientului. Randarea pe partea de server nu este posibil\u a \c si se folosesc framework-uri complete pentru front-end pentru a construi acest fel de aplica\c tii. Comunicarea se gestioneaz\u a prin intermediul API-urilor.\cite{pwa}
 
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.63\textwidth]{layered_architecture.png} \label{fig:layered}
-	\caption{Arhitectura stratificată pentru semantic web}
+	\includegraphics[width=0.7\textwidth]{layered_architecture.png} \label{fig:layered}
+	\caption{Arhitectura stratificată pentru semantic web \protect\footnotemark}
 \end{figure}
 
-
+\footnotetext{\url{https://benchpartner.com/explain-semantic-web-layer-approach-stack-tower-with-example}}
 
 \textbf{Caracteristici:}
 \begin{itemize}
@@ -336,7 +336,7 @@ Urm\u atorul pas \^ in dezvoltarea web-ului este crearea aplica\c tiilor web aut
 % \newpage
 \section{Evolu\c tia tehnologiilor}
 
-Pe măsură ce dezvoltarea aplicațiilor evolua, la fel au evoluat și tehnologiile utilizate în crearea aplicațiilor. De-a lungul anilor au apărut multe tehnologii care au revoluționat modul în care sunt dezvoltate aplicațiile. Pe măsură ce acestea deveneau mai complexe, necesitatea în tehnologii mai performante a devenit evidentă. La mijlocul anilor 2000 a fost introdus AJAX (\emph{Asynchronus JavaScript and XML}), care a permis aplicațiilor web să comunice cu serverele, fără a reîncărca întreaga pagină. Acest lucru a rezultat în aplicații web mai rapide și receptive.
+Pe măsură ce dezvoltarea aplicațiilor evolua, la fel au evoluat și tehnologiile utilizate în crearea aplicațiilor. De-a lungul anilor au apărut multe tehnologii care au revoluționat modul în care sunt dezvoltate aplicațiile. Pe măsură ce acestea deveneau mai complexe, necesitatea în tehnologii mai performante a devenit evidentă. La mijlocul anilor 2000 a fost introdus AJAX (\emph{Asynchronus JavaScript and XML}), care a permis aplicațiilor web să comunice cu serverele, fără a reîncărca întreaga pagină. Acest lucru a rezultat în aplicații web mai rapide și receptive. \cite{ajax}
 
 În ultimii ani, au apărut mai multe framework-uri front-end, care au facilitat crearea aplicațiilor web cu o complexitate sporită. React, Vue, Next, Angular au devenit extrem de populare datorită ușurinței de utilizare și capacității lor de a gestiona cantități mari de date. Aceste framework-uri au făcut posibilă crearea unor aplicații cu un user experience și funcționalități ce nu au fost posibile anterior.
 
@@ -347,8 +347,10 @@ Evoluția tehnologiilor web a fost determinată de necesitatea de a crea aplica�
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{web-evolution.png} \label{fig:web-evolution}
-	\caption{Evolu\c tia web-ului}
+	\caption{Evolu\c tia web-ului \protect\footnotemark}
 \end{figure}
+
+\footnotetext{\url{https://dev.to/pragativerma18/evolution-of-web-42eh}}
 
 Evolutia web a avut un impact semnificativ asupra dezvoltării aplicațiilor web moderne. Creșterea vitezei de conectare la internet și a performanței dispozitivelor a permis dezvoltarea aplicațiilor web complexe, cu funcții avansate și user experience sporit. Utilizarea extinsa a standardelor web deschise, cum ar fi HTML, CSS și JavaScript, a dus la o mai mare interoperabilitate între diferite platforme și la o mai mare eficiență în dezvoltarea aplicațiilor.
 
@@ -366,7 +368,7 @@ Pentru a face față acestei complexități, dezvoltatorii utilizează framework
 
 
 \chapter{Paradigmele actuale de randare}
-Rendering-ul este procesul de conversie a datelor într-o reprezentare vizuală și joacă un rol esențial în aplicațiile web, permițând furnizarea de conținut dinamic și interactiv către utilizatori.În stadiile incipiente ale dezvoltării web-ului, randarea a fost realizată în principal pe server. Site-urile web erau construite folosind tehnologii precum PHP sau Java, unde serverul genera conținutul HTML în mod dinamic, pe baza solicitărilor utilizatorilor. Această abordare are Time to first byte (TTFB) rapid, deoarece serverul poate genera HTML ce poate fi livrat rapid clientului. Dezavantajul acestei paradigme este c\u a nu este la fel de efectivă pentru site-urile web \^ in care datele se schimb\u a des, ci doar pentru site-urile care nu necesit\u a interactivitate complexă sau date dinamice. \cite{benefitsserverrendering}
+Rendering-ul este procesul de conversie a datelor într-o reprezentare vizuală și joacă un rol esențial în aplicațiile web, permițând furnizarea de conținut dinamic și interactiv către utilizatori.În stadiile incipiente ale dezvoltării web-ului, randarea a fost realizată în principal pe server. Site-urile web erau construite folosind tehnologii precum PHP sau Java, unde serverul genera conținutul HTML în mod dinamic, pe baza solicitărilor utilizatorilor. Această abordare are un TTFB (Time to first byte) rapid, deoarece serverul poate genera HTML ce poate fi livrat rapid clientului. Dezavantajul acestei paradigme este c\u a nu este la fel de efectivă pentru site-urile web \^ in care datele se schimb\u a des, ci doar pentru site-urile care nu necesit\u a interactivitate complexă sau date dinamice. \cite{benefitsserverrendering}
 
 Multe dintre cele mai mari aplica\c tii web din ziua de azi \^ inc\u a folosesc aceast\u a abordare, cum ar fi, de exemplu, amazon.com: de fiecare dat\u a c\^ and face\c ti click pe un link, ob\c tine\c ti o nou\u a pagin\u a generat\u a dinamic de pe serverele lor. \^ In plus, exist\u a multe framework-uri pentru crearea  aplica\c tiilor multi-page, cum ar fi Ruby on Rails, Django \c si Laravel, precum \c si sisteme de gestionare a con\c tinutului, cum ar fi WordPress. 
 
@@ -390,7 +392,7 @@ Exist\u a mai multe tipuri de randare a con\c tinutului, cele mai populare fiind
 \end{enumerate}
 
 \^ In ceea ce prive\c ste performan\c ta, tehnologiile moderne de randare a informa\c tiilor au avansat mult \^ in optimizarea vitezei de randare \c si a eficien\c tei resurselor. Una dintre abord\u arile moderne de optimizare a performan\c tei este utilizarea \emph{"virtual DOM"} (Document Object Model), care se caracterizează printr-o rerandare eficientă doar a componentelor ce au suferit modificări.
-\^ In plus, tehnologiile de randare moderne pot delimita componentele dinamice, care necesită rerandare constantă, de cele statice, care nu necesit\u a recalculare, cresc\^ and astfel performan\c ta aplica\c tiei. De asemenea, tehnologiile de randare permit utilizarea de tehnici de lazy loading, care \^ incarc\u a con\c tinutul doar atunci c\^ and este necesar, \^ imbun\u at\u a\c tind astfel performan\c ta aplica\c tiei \c si experiența utilizatorului.
+\^ In plus, tehnologiile de randare moderne pot delimita componentele dinamice, care necesită rerandare constantă, de cele statice, care nu necesit\u a recalculare, cresc\^ and astfel performan\c ta aplica\c tiei. De asemenea, tehnologiile de randare permit utilizarea de tehnici de lazy loading, care \^ incarc\u a con\c tinutul doar atunci c\^ and este necesar, \^ imbun\u at\u a\c tind astfel performan\c ta aplica\c tiei \c si experiența utilizatorului. \cite{virtual-dom}
 Alegerea metodei potrivite de randare depinde de cerin\c tele specifice ale proiectului \c si poate include considera\c tii legate de performan\c ta, flexibilitatea \c si compatibilitatea cu echipamentele utilizatorilor. Este important s\u a se \^ in\c teleag\u a avantajele \c si dezavantajele fiec\u arei metode \c si s\u a se fac\u a o evaluare corespunz\u atoare a acestora \^ inainte de a lua o decizie.
 
 
@@ -410,13 +412,15 @@ O aplica\c tie ce utilizeaz\u a CSR este caracterizat\u a prin urm\u atoarele as
 	\item \textbf{Randarea \c si actualizarea} - odată ce datele sunt preluate, codul JavaScript procesează datele și generează dinamic structura HTML necesară. Browserul actualizează pagina randat\u a cu conținutul HTML generat dinamic, care poate include liste, tabele, formulare sau alte componente
 	\item \textbf{Interactivitatea} - ascultătorii de evenimente și interacțiunile utilizatorului, cum ar fi click-urile sau introducerile de date, declanșează execuția de cod JavaScript ulterioară, care poate actualiza conținutul randat, fără a necesita o reîncărcare completă a paginii.
 \end{enumerate}
-
+\newpage
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{csr-diagram.png}
-	\caption{Client side rendering}
+	\caption{Client side rendering \protect\footnotemark}
 	\label{fig:csr-diagram}
 \end{figure}
+
+\footnotetext{\url{https://www.ionos.ca/digitalguide/websites/web-development/server-side-and-client-side-scripting-the-differences/}}
 
 Deoarece browserul trebuie să descarce și să ruleze întregul cod al aplicației înainte ca conținutul să apară pe ecran, încărcarea inițială a paginii este de obicei lentă. Ca rezultat, utilizatorii văd o pagină goală sau un indicator de încărcare pentru o perioadă relativ lungă de timp. Aceasta duce la o experiență mai puțin plăcută pentru utilizatori și la o rată mai mare de abandon\u ari a paginii (\textit{bounce rate}). \cite{google-bouncing-rate}
 
@@ -431,9 +435,11 @@ SSR este o tehnică în dezvoltarea aplicațiilor web care implică generarea de
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{ssr-diagram.png}
-	\caption{Server side rendering}
+	\caption{Server side rendering \protect\footnotemark}
 	\label{fig:ssr-diagram}
 \end{figure}
+
+\footnotetext{\url{https://www.ionos.ca/digitalguide/websites/web-development/server-side-and-client-side-scripting-the-differences/}}
 
 Un alt avantaj al SSR este îmbunătățirea optimizării pentru motoarele de căutare (SEO). Deoarece crawler-ii motoarelor de căutare se bazează în mod tipic pe conținutul HTML, serve-side rendering furnizează pagini complet randate motoarelor de căutare, care pot fi indexate ușor. Aceasta îmbunătățește vizibilitatea și accesibilitatea site-ului în rezultatele motoarelor de căutare.
 
@@ -457,14 +463,16 @@ O aplicație ce utilizează SSR este caracterizat\u a prin următoarele aspecte:
 
 SSG este o paradigma alternativă în dezvoltarea web care îmbină beneficiile SSR și CSR. Spre deosebire de server-side rendering, unde HTML-ul este generat dinamic la fiecare cerere, SSG generează fișiere HTML statice în timpul procesului de build, care sunt apoi servite către client.
 
+Unul dintre avantajele majore ale SSG este performanța îmbunătățită și scalabilitatea. Deoarece HTML-ul este pre-randat, serverul poate servi fișiere statice direct, fără a necesita prelucrări suplimentare. Aceasta duce la încărcarea mai rapidă a paginilor și reducerea încărcării serverului, făcându-l potrivit pentru site-urile cu trafic intens. 
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{ssg-diagram.png}
-	\caption{Static server generation}
+	\caption{Static server generation \protect\footnotemark}
 	\label{fig:ssg}
 \end{figure}
+\footnotetext{\url{https://www.ionos.ca/digitalguide/websites/web-development/server-side-and-client-side-scripting-the-differences/}}
 
-Unul dintre avantajele majore ale SSG este performanța îmbunătățită și scalabilitatea. Deoarece HTML-ul este pre-randat, serverul poate servi fișiere statice direct, fără a necesita prelucrări suplimentare. Aceasta duce la încărcarea mai rapidă a paginilor și reducerea încărcării serverului, făcându-l potrivit pentru site-urile cu trafic intens. 
 
 O aplicație ce utilizează SSR este caracterizat\u a prin următoarele aspecte:
 \begin{enumerate}
@@ -480,13 +488,13 @@ O aplicație ce utilizează SSR este caracterizat\u a prin următoarele aspecte:
 	\item \textbf{Interactivitatea} - Dacă există elemente interactive sau funcționalități dinamice pe pagină, codul JavaScript poate fi utilizat pentru a îmbunătăți experiența utilizatorului, de obicei prin preluarea de date suplimentare din API-uri sau prin gestionarea interacțiunilor utilizatorului.
 \end{enumerate}
 
-Cu toate acestea are și câteva limitări. SSG nu este potrivit pentru aplicații ce necesită actualizări în timp real sau conținut dinamic, deoarece fișierele statice pre-randate nu se modifică până la următorul proces de build. Acest lucru poate introduce întârzieri în disponibilitatea conținutului și creșterea complexității gestionării actualizărilor de conținut.
+Cu toate acestea are și câteva limitări. SSG nu este potrivit pentru aplicații ce necesită actualizări în timp real sau conținut dinamic, deoarece fișierele statice pre-randate nu se modifică până la următorul proces de build. Acest lucru poate introduce întârzieri în disponibilitatea conținutului și creșterea complexității gestionării actualizărilor de conținut. \cite{rendering-patterns}
 Unul dintre cele mai mari dezavantaje ale acestui abordări este timpul de build. Dacă site-ul cons\u a dintr-un num\u ar mare de pagini, procesul de build al acestora va dura mult timp.
 
 
 \section{Alegerea paradigmei corespunzătoare}
 
-Alegerea între CSR, SSR și SSG este importantă în dezvoltarea unei aplicații web, deoarece are un impact direct asupra experienței utilizatorului, performanței și funcționalit\u a\c tii generale a aplicației. Fiecare abordare are propriile sale puncte forte și considerații, iar alegerea depinde de mai mul\c ti factori, cum ar fi cerințele proiectului, scalabilitatea, complexitatea și obiectivele de performanță. Principalele aspecte de luat în considerare sunt:
+Alegerea între CSR, SSR și SSG este importantă în dezvoltarea unei aplicații web, deoarece are un impact direct asupra experienței utilizatorului, performanței și funcționalit\u a\c tii generale a aplicației. Fiecare abordare are propriile sale puncte forte și considerații, iar alegerea depinde de mai mul\c ti factori, cum ar fi cerințele proiectului, scalabilitatea, complexitatea și obiectivele de performanță. Principalele aspecte de luat în considerare sunt:\cite{choose-rendering}
 
 \begin{enumerate}
 	\item \textbf{Experiența utilizatorului} - Abordarea de randare afectează în mod semnificativ modul în care conținutul aplicației este livrat în browserul utilizatorului. CSR pune accent pe interactivitate, prin încărcarea inițială a unei structuri HTML minimale și apoi preluarea și randarea datelor pe partea clientului, ceea ce duce la o încărcare inițială mai rapidă a paginii. SSR, pe de altă parte, furnizează o pagină HTML complet redată de pe server, fapt ce reduce timpul de încărcare inițial și asigur\u a ca conținutul să fie imediat vizibil utilizatorilor. SSG generează fișiere HTML statice în timpul procesului de construcție, permitând încărcări de pagini ultra-rapide, deoarece nu este necesară prelucrarea în server.
@@ -510,23 +518,22 @@ Pentru o obiectivitate sporită a fost implementată aceea\c si aplica\c tie, cu
 \section{Metrici de performanță}
 
 Pentru compararea efectivă a metodelor de implementare, este nevoie de a compara rezultatele după anumite criterii care reprezintă performanța generală a aplicației.
-
 Metricile care vor fi utilizate în evaluarea performanței pentru toate implementările sunt:
 
 \begin{itemize}
 	\item \textbf{Largest Contentful Paint (\emph{LCP})} - metrică de performanță utilizată pentru a măsura viteza de încărcare și stabilitatea vizuală percepută a unei pagini web, introdusă de Google. LCP măsoară timpul necesar ca cel mai mare element vizibil de pe o pagină web să fie afișat în zona de vizualizare a utilizatorului. Acest element poate fi o imagine, un videoclip sau un element de tip block, cum ar fi un paragraf sau un antet. Cu cât LCP este mai rapid, cu atât este mai bună experiența utilizatorului, deoarece indică faptul că conținutul principal al paginii este afișat rapid. Un scor bun al LCP este considerat în general sub 2,5 secunde. Dacă LCP depășește acest prag, poate duce la o rată mai mare de respingere și poate afecta negativ angajamentul utilizatorului. Pentru a îmbunătăți LCP, dezvoltatorii web pot optimiza performanța site-ului prin minimizarea resurselor care blochează afișarea, optimizarea imaginilor și videoclipurilor și implementarea tehnicilor precum lazy-load și code splitting.
 
-	      LCP este una dintre principalele metrici luate în considerare de motoarele de căutare, inclusiv Google, pentru a evalua experiența utilizatorului pe un site web. Site-urile cu scoruri bune ale LCP sunt mai susceptibile de a obține un rang mai înalt în rezultatele căutării și de a oferi o experiență de navigare mai bună utilizatorilor.
+	      LCP este una dintre principalele metrici luate în considerare de motoarele de căutare, inclusiv Google, pentru a evalua experiența utilizatorului pe un site web. Site-urile cu scoruri bune ale LCP sunt mai susceptibile de a obține un rang mai înalt în rezultatele căutării și de a oferi o experiență de navigare mai bună utilizatorilor. \cite{lcp}
 	\item \textbf{Cumulative Layout Shift (\emph{CLS})} - este utilizată pentru a măsura stabilitatea vizuală a unei pagini web. Aceasta cuantifică cantitatea de schimbări de aspect neașteptate care apar în timpul încărcării paginii. Schimbarea de aspect se referă la mișcarea elementelor paginii, cum ar fi imagini, butoane sau text, într-un mod care perturbă experiența de citire sau de interacțiune a utilizatorului. Aceste schimbări pot fi frustrante pentru utilizatori, în special atunci când cauzează click-uri accidentale sau fac conținutul dificil de citit.
 
-	      CLS este calculat prin măsurarea frac\c tiunii de impact și frac\c tiunii de distanță a fiecărui eveniment de schimbare de aspect și apoi însumându-le pe întreaga încărcare a paginii. Frac\c tiunea de impact reprezintă proporția vizualizării afectată de schimbare, în timp ce frac\c tiunea de distanță reprezintă distanța maximă pe care elementul o parcurge în raport cu ecranul utilizatorului.
+	      CLS este calculat prin măsurarea frac\c tiunii de impact și frac\c tiunii de distanță a fiecărui eveniment de schimbare de aspect și apoi însumându-le pe întreaga încărcare a paginii. Frac\c tiunea de impact reprezintă proporția vizualizării afectată de schimbare, în timp ce frac\c tiunea de distanță reprezintă distanța maximă pe care elementul o parcurge în raport cu ecranul utilizatorului. \cite{cls}
 
 	      Pentru a oferi o bună experiență utilizatorului, o pagină web ar trebui să aibă un scor CLS scăzut. Un scor CLS sub 0.1 este considerat excelent, între 0.1 și 0.25 este considerat bun, în timp ce scorurile peste 0.25 sunt considerate slabe.
 
 	      Pentru a reduce CLS, dezvoltatorii web pot urma practici, cum ar fi stabilirea dimensiunilor explicite pentru elementele media, rezervarea spațiului pentru reclame sau conținut dinamic și evitarea injectării dinamice a conținutului deasupra elementelor existente. Prin minimizarea schimbărilor de aspect neașteptate, dezvoltatorii pot îmbunătăți stabilitatea vizuală a paginilor web și experiența utilizatorilor.
 	\item \textbf{First Input Delay (\emph{FID})} - măsoară reactivitatea și interactivitatea unei pagini web. Ea cuantifică timpul necesar ca o pagină web să răspundă la prima interacțiune a utilizatorului, cum ar fi apăsarea unui buton sau selectarea unui meniu derulant.
 
-	      FID se concentrează în mod specific pe întârzierea dintre prima interacțiune a utilizatorului și capacitatea browserului de a răspunde la acea interacțiune. Este importantă deoarece reflectă reactivitatea percepută a unui site web și are un impact direct asupra experienței utilizatorului. Un FID redus indică un site web mai interactiv și mai receptiv, în timp ce un FID ridicat poate face un site web să pară lent și neinteractiv.
+	      FID se concentrează în mod specific pe întârzierea dintre prima interacțiune a utilizatorului și capacitatea browserului de a răspunde la acea interacțiune. Este importantă deoarece reflectă reactivitatea percepută a unui site web și are un impact direct asupra experienței utilizatorului. Un FID redus indică un site web mai interactiv și mai receptiv, în timp ce un FID ridicat poate face un site web să pară lent și neinteractiv. \cite{fid}
 
 	      FID-ul este măsurat în milisecunde (ms), iar un scor bun este considerat a fi mai mic de 100 de milisecunde. Un scor peste 300 de milisecunde este considerat slab și poate rezulta într-o experiență frustrantă pentru utilizatori.
 
@@ -535,7 +542,7 @@ Metricile care vor fi utilizate în evaluarea performanței pentru toate impleme
 	      FID-ul este una dintre metricile centrale ale aspectelor vitale ale webului utilizate de motoarele de căutare, inclusiv Google, pentru a evalua experiența utilizatorului pe un site web. Site-urile cu scoruri bune de FID au mai multe șanse să obțină un rang mai înalt în rezultatele căutării și să ofere o experiență de navigare mai fluidă și mai captivantă utilizatorilor.
 	\item \textbf{Interaction to Next Paint (\emph{INP})} -  metrică a Core Web Vitals, care va înlocui First Input Delay (FID) din martie 2024. INP evaluează reactivitatea folosind date din Event Timing API. Atunci când o interacțiune determină ca o pagină să devină neproductivă, aceasta reprezintă o experiență utilizator slabă. INP observă latența tuturor interacțiunilor pe care le-a realizat utilizatorul cu pagina și raportează o valoare unică sub care au fost toate (sau aproape toate) interacțiunile. Un INP scăzut înseamnă că pagina a putut răspunde în mod constant și rapid tuturor sau unei mari majorități a interacțiunilor utilizatorului.
 
-	      Unele interacțiuni vor dura mai mult decât altele, dar în special pentru interacțiunile complexe, este important să prezentați un feedback vizual inițial ca indiciu pentru utilizator că se întâmplă ceva în background. Timpul până la următoarea desenare (\emph{paint}) este cea mai timpurie oportunitate pentru a face acest lucru. Prin urmare, intenția INP nu este de a măsura toate efectele ulterioare ale interacțiunii (cum ar fi fetch-urile și actualizările UI din alte operații asincrone), ci timpul în care următoarea desenare este blocată. Prin întârzierea feedbackului vizual, puteți da utilizatorilor impresia că pagina nu răspunde acțiunilor lor.
+	      Unele interacțiuni vor dura mai mult decât altele, dar în special pentru interacțiunile complexe, este important să prezentați un feedback vizual inițial ca indiciu pentru utilizator că se întâmplă ceva în background. Timpul până la următoarea desenare (\emph{paint}) este cea mai timpurie oportunitate pentru a face acest lucru. Prin urmare, intenția INP nu este de a măsura toate efectele ulterioare ale interacțiunii (cum ar fi fetch-urile și actualizările UI din alte operații asincrone), ci timpul în care următoarea desenare este blocată. Prin întârzierea feedbackului vizual, puteți da utilizatorilor impresia că pagina nu răspunde acțiunilor lor. \cite{inp}
 
 	      Scopul INP este de a asigura ca timpul de la inițierea unei interacțiuni de către utilizator până la următoarea cadru desenat să fie cât mai scurt posibil, pentru toate sau majoritatea interacțiunilor realizate de utilizator.
 \end{itemize}
@@ -549,7 +556,7 @@ Există mai multe metode disponibile pentru măsurarea performanței unei aplica
 \begin{itemize}
 	\item  \textbf{Web Vitals} (extensie pentru browser) - inițiativă de la Google, care oferă ghidare unitară pentru semnalele de calitate care sunt esențiale pentru a oferi o experiență excelentă utilizatorilor pe web.
 
-	      Google a furnizat o serie de instrumente pentru a măsura și raporta performanța. Inițiativa Web Vitals se concentreaz\u a pe metricile Core Web Vitals. Fiecare metric\u a reprezintă o componentă distinctă a experienței utilizatorului, este măsurabilă în teren și reflectă experiența reală a unui rezultat critic centrat pe utilizator.
+	      Google a furnizat o serie de instrumente pentru a măsura și raporta performanța. Inițiativa Web Vitals se concentreaz\u a pe metricile Core Web Vitals. Fiecare metric\u a reprezintă o componentă distinctă a experienței utilizatorului, este măsurabilă în teren și reflectă experiența reală a unui rezultat critic centrat pe utilizator. \cite{web-vitals}
 
 	      Setul actual se concentrează pe trei aspecte ale experienței utilizatorului - încărcare, interactivitate și stabilitate vizuală și include următoarele metrici: Largest Contentful Paint (LCP), First Input Delay (FID), Cumulative Layout Shift (CLS).
 
@@ -630,11 +637,13 @@ Aplicația construită cu React are câteva avantaje față de o aplicație cons
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=0.6\textwidth]{virtual-dom.jpeg}
-		\caption{Ilustrarea procesului de reconciliere}
+		\caption{Ilustrarea procesului de reconciliere}\protect\footnotemark
 		\label{fig:virtual-dom}
 	\end{figure}
+
+	\footnotetext{ \url{https://dev.to/adityasharan01/react-virtual-dom-explained-in-simple-english-10j6}}
 	\item \textbf{Sintaxă declarativă}: React urmează o paradigma de programare declarativă, ce permite dezvoltatorilor să descrie cum ar trebui să arate interfața utilizator pe baza stării curente a componentelor, în loc să manipuleze manual DOM-ul. Aceasta simplifică dezvoltarea, îmbunătățește lizibilitatea codului și reduce probabilitatea apariției erorilor.
-	\item \textbf{React hooks}: oferă o modalitate mai concisă și intuitivă de a gestiona starea și efectele secundare. Cu ajutorul hooks-urilor, componentele funcționale pot avea starea locală (\textit{hook-ul useState}), pot efectua efecte secundare(\textit{hook-ul useEffect}), pot accesa valorile contextului (\textit{hook-ul useContext}), pot crea referințe mutable folosind hook-ul useRef, pot memoiza calculele folosind hook-ul useMemo și pot memoiza funcțiile de callback folosind hook-ul useCallback. Hooks-urile promovează reutilizabilitatea codului, îmbunătățesc lizibilitatea și experiența de dezvoltare, permițând dezvoltatorilor să scrie componente mai modulare și funcționale fără a fi nevoie de componente de tip clasă. Acestea au devenit o parte esențială a React-ului, facilitând gestionarea logicii și a efectelor secundare în cadrul componentelor funcționale.
+	\item \textbf{React hooks}: oferă o modalitate mai concisă și intuitivă de a gestiona starea și efectele secundare. Cu ajutorul hooks-urilor, componentele funcționale pot avea starea locală (\textit{hook-ul useState}), pot efectua efecte secundare(\textit{hook-ul useEffect}), pot accesa valorile contextului (\textit{hook-ul useContext}), pot crea referințe mutable folosind hook-ul useRef, pot memoiza calculele folosind hook-ul useMemo și pot memoiza funcțiile de callback folosind hook-ul useCallback. Hooks-urile promovează reutilizabilitatea codului, îmbunătățesc lizibilitatea și experiența de dezvoltare, permițând dezvoltatorilor să scrie componente mai modulare și funcționale fără a fi nevoie de componente de tip clasă. Acestea au devenit o parte esențială a React-ului, facilitând gestionarea logicii și a efectelor secundare în cadrul componentelor funcționale. \cite{react-hooks}
 \end{enumerate}
 
 Pentru a reține anumite date, precum utilizatorul curent, masivul de postări sau valoarea curentă a input-ului putem utiliza hook-ul \emph{useState}, ce permite gestionarea și actualizarea stării interne a unei componente, iar pentru a obține listele de utilizatori și postrări într-un mod efectiv, utilizăm hook-ul \emph{useEffect} pentru a ne asigura că acestea sunt executate la momentele potrivite în timpul ciclului de viață al componentei.
@@ -656,7 +665,7 @@ Pentru a reține anumite date, precum utilizatorul curent, masivul de postări s
     fetchData();
   }, []);
 \end{lstlisting}
-
+\newpage
 \subsection{Next.js}
 Este un framework pentru backend, bazat pe React. Tot ce se poate realiza \^in React se poate realiza \c si \^in Next.js, \^ins\u a acesta vine cu o serie de caracteristici suplimentare, precum rutarea, apeluri API, autentificare, pre-rendering, SEO, etc. Aceste func\c tionalit\u a\c ti nu sunt disponibile în React în mod implicit \c si trebuie instalate biblioteci și dependințe externe, precum React Router pentru a ob\c tine func\c tionait\u a\c ti similare.
 
@@ -1031,32 +1040,48 @@ Prin includerea unui spectru mai larg de tehnologii de randare, putem obține o 
 \addcontentsline{toc}{chapter}{Bibliography}
 
 \begin{thebibliography} {12}
-	\bibitem{serversiderendering} John H. Conway. Server-side rendering versus client-side rendering: A performance comparison. ACM, 2015
+	\bibitem{web-1} Mike Evans. \textbf{\textit{“The Evolution of the Web - From Web 1.0 to Web 4.0”}} (2008)
+	
+	\bibitem{oreilly}Tim O'Reilly. \textbf{\textit{“What Is Web 2.0”}} - \url{https://www.oreilly.com/pub/a/web2/archive/what-is-web-20.html} (2005)
+	
+	\bibitem{semantic-web}Sean B. Palmer. \textbf{\textit{“The Semantic Web: An Introduction”}} (2001)
+	
+	\bibitem{pwa}Dennis Sheppard. \textbf{\textit{“Introduction to Progressive Web Apps”}} (2017)
 
-	\bibitem {pwa} Maximiliano Firtman. Progressive Web Apps: The Future of Web Development. O'Reilly Media, 2017
+	\bibitem{ajax}Jesse James Garrett. \textbf{\textit{“Ajax: A New Approach to Web Applications”}} (2007)
 
-	\bibitem{serversiderenderingreactredux} Jason W. Bock. Server-Side Rendering with React and Redux. Packt Publishing, 2018
+	\bibitem{virtual-dom}A. Javeed. \textbf{\textit{“Performance Optimization Techniques for ReactJS”}} (2019)
 
-	\bibitem{bernslee90} Tim Berners-Lee. The WorldWideWeb browser. W3C, 1990
+	\bibitem{rendering-patterns}German Cocca. \textbf{\textit{“Rendering Patterns for Web Apps - Server-Side, Client-Side, and SSG Explained”}} - \url{https://www.freecodecamp.org/news/rendering-patterns/} (2023)
+	
+	\bibitem{choose-rendering}\textbf{\textit{“Choose the Rendering Method (SPA vs SSR vs SSG)”}} - \url{https://dev.to/crunchstack/choose-the-rendering-method-spa-vs-ssr-vs-ssg-121f} (2021)
+	
+	\bibitem{lcp}Philip Walton, Barry Pollard. \textbf{\textit{“Largest Contentful Paint (LCP)”}} - \url{https://web.dev/lcp/} (2019)
+	
+	\bibitem{cls}Philip Walton, Milica Mihajlija. \textbf{\textit{“Cumulative Layout Shift (CLS)”}} - \url{https://web.dev/cls/} (2019)
+	
+	\bibitem{fid}Philip Walton. \textbf{\textit{“First Input Delay (FID)”}} - \url{https://web.dev/fid/} (2019)
 
-	\bibitem{html} Tim Berners-Lee, Daniel Connolly. Hypertext markup language (html). CERN, Geneva, Switzerland, 1993
+	\bibitem{inp}Jeremy Wagner. \textbf{\textit{“Interaction to Next Paint (INP)”}} - \url{https://web.dev/inp/} (2019)
 
-	\bibitem{metrics} Serge Demeyer. Software Metrics - ansymore.uantwerpen.be, 2017
+	\bibitem{web-vitals}Barry Pollard, Michal Mocny, Rick Viscomi, Brendan Kenny. \textbf{\textit{“Using the Web Vitals extension to debug Core Web Vitals issues”}} - \url{https://web.dev/debug-cwvs-with-web-vitals-extension/}(2023)
+	
+	\bibitem{lighthouse}Tushar Pol. \textbf{\textit{“Google Lighthouse: What It Is \& How to Use It”}} - \url{https://www.semrush.com/blog/google-lighthouse/}(2023)
+	
+	\bibitem{pagespeed-insights}Google documentation. \textbf{\textit{“About PageSpeed Insights”}} - \url{https://developers.google.com/speed/docs/insights/v5/about}
+	
+	\bibitem{react-hooks}John Larsen. \textbf{\textit{“React Hooks in Action: With Suspense and Concurrent Mode”}}, p.[54,96,121] (2021)
 
-	\bibitem{benefitsserverrendering} Alex Grigoryan. The Benefits of Server Side Rendering Over Client Side Rendering - https://medium.com/walmartlabs/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8, 2017
+	\bibitem{benefitsserverrendering} Alex Grigoryan. \textbf{\textit{“The Benefits of Server Side Rendering Over Client Side Rendering”}} - \url{https://medium.com/walmartlabs/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8} (2017)
 
-	\bibitem{vuewangularreact} Benjamin Jakobus. VueJS vs Angular vs ReactJS with Demos - http://www.dotnetcurry.com/vuejs/1372/vuejs-vs-angular-reactjs-compare, 2017
+	\bibitem{html} Tim Berners-Lee, Daniel Connolly. \textbf{\textit{“Hypertext markup language (html)”}} (1993)
 
-	\bibitem{fireship} Jeff Delaney. 10 Rendering Patterns for Web Apps, 2023
+	\bibitem{clientsidevssercerside} Sergey Laptick. \textbf{\textit{“Client Side vs Server Side UI Rendering. Advantages and Disadvantages”}} -  \url{https://blog.webix.com/client-side-vs-server-side-ui-rendering/} (2017)
 
-	\bibitem{clientsidevssercerside} Sergey Laptick. Client Side vs Server Side UI Rendering. Advantages and Disadvantages - https://blog.webix.com/client-side-vs-server-side-ui-rendering/, 2017
+	\bibitem{improve-ssr-speed} Anna Monus. \textbf{\textit{“What Is Server-side Rendering And How Does It Improve Site Speed?”}} -  \url{https://www.debugbear.com/blog/server-side-rendering} (2019)
 
-	\bibitem{webdev} Jason Miller, Addy Osmani. Rendering on the Web - https://web.dev/rendering-on-the-web/, 2019
+	\bibitem{google-bouncing-rate} Google Research - \url{https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks-load-time-vs-bounce/} (2017)
 
-	\bibitem{improve-ssr-speed} Anna Monus. What Is Server-side Rendering And How Does It Improve Site Speed?
-	- https://www.debugbear.com/blog/server-side-rendering, 2019
-
-	\bibitem{google-bouncing-rate} Google/SOASTA Research - https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks-load-time-vs-bounce/, 2017
 
 \end{thebibliography}
 

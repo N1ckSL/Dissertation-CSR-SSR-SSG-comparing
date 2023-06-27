@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.18)  27 JUN 2023 00:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.18)  27 JUN 2023 20:50
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -901,7 +901,7 @@ l.192 \end{abstract}
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.26 ...e {3.4.1}Web Vitals}{31}{subsection.3.4.1}
+l.26 ...e {3.4.1}Web Vitals}{32}{subsection.3.4.1}
                                                   % [1
 
 ])
@@ -916,19 +916,23 @@ l.26 ...e {3.4.1}Web Vitals}{31}{subsection.3.4.1}
 
 ]
 Capitolul 1.
-
-LaTeX Warning: Citation `theoreticalfundationsoftheweb' on page 1 undefined on input line 218.
-
 [1
 
-] [2] [3] [4{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [5]
-<layered_architecture.png, id=293, 572.1375pt x 392.46625pt>
+]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 231.
+ [2] [3{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [4] [5]
+<layered_architecture.png, id=312, 572.1375pt x 392.46625pt>
 File: layered_architecture.png Graphic file (type png)
 <use layered_architecture.png>
 Package pdftex.def Info: layered_architecture.png  used on input line 312.
-(pdftex.def)             Requested size: 285.37198pt x 195.75354pt.
- [6 <./layered_architecture.png (PNG copy)>] [7]
-<web-evolution.png, id=305, 803.0pt x 457.71pt>
+(pdftex.def)             Requested size: 317.07614pt x 217.50394pt.
+
+Overfull \hbox (15.27826pt too wide) in paragraph at lines 316--316
+[][][][]$\OT1/cmtt/m/n/10 https : / / benchpartner . com / explain-[]semantic-[]web-[]layer-[]approach-[]stack-[]tower-[]with-[]example$[]| 
+ []
+
+[6 <./layered_architecture.png (PNG copy)>] [7]
+<web-evolution.png, id=330, 803.0pt x 457.71pt>
 File: web-evolution.png Graphic file (type png)
 <use web-evolution.png>
 Package pdftex.def Info: web-evolution.png  used on input line 349.
@@ -938,201 +942,252 @@ Capitolul 2.
 [10
 
 ]
-Overfull \hbox (5.76485pt too wide) in paragraph at lines 381--382
+Overfull \hbox (5.76485pt too wide) in paragraph at lines 383--384
 []\OT1/cmr/m/n/12 Evolu[]ia teh-no-lo-giei web ^^Xsi a cerin[]elor uti-li-za-to-ri-lor con-tinu^^Ua, iar ran-da-rea informa[]iilor
  []
 
 [11] [12]
-Overfull \hbox (17.96109pt too wide) in paragraph at lines 408--409
+Overfull \hbox (17.96109pt too wide) in paragraph at lines 410--411
 [][]\OT1/cmr/bx/n/12 Inc^^Uarcarea fi[]ierelor Ja-vaS-cript \OT1/cmr/m/n/12 - brow-se-rul des-carc^^Ua fi[]ierele Ja-vaS-cript referen[]iate
  []
 
-<csr-diagram.png, id=337, 618.31pt x 351.3125pt>
+[13]
+<csr-diagram.png, id=378, 618.31pt x 351.3125pt>
 File: csr-diagram.png Graphic file (type png)
 <use csr-diagram.png>
-Package pdftex.def Info: csr-diagram.png  used on input line 416.
+Package pdftex.def Info: csr-diagram.png  used on input line 418.
 (pdftex.def)             Requested size: 407.66833pt x 231.63644pt.
-[13]
-<ssr-diagram.png, id=352, 612.2875pt x 351.3125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--423
+[][][][]$\OT1/cmtt/m/n/10 https : / / www . ionos . ca / digitalguide / websites / web-[]development /
+ []
+
+[14 <./csr-diagram.png (PNG copy)>]
+<ssr-diagram.png, id=390, 612.2875pt x 351.3125pt>
 File: ssr-diagram.png Graphic file (type png)
 <use ssr-diagram.png>
-Package pdftex.def Info: ssr-diagram.png  used on input line 433.
+Package pdftex.def Info: ssr-diagram.png  used on input line 437.
 (pdftex.def)             Requested size: 407.66833pt x 233.90933pt.
- [14 <./csr-diagram.png (PNG copy)>] [15 <./ssr-diagram.png (PNG copy)>]
-Overfull \hbox (0.58922pt too wide) in paragraph at lines 453--454
+
+Underfull \hbox (badness 10000) in paragraph at lines 442--442
+[][][][]$\OT1/cmtt/m/n/10 https : / / www . ionos . ca / digitalguide / websites / web-[]development /
+ []
+
+[15 <./ssr-diagram.png (PNG copy)>]
+Overfull \hbox (0.58922pt too wide) in paragraph at lines 459--460
 []\OT1/cmr/bx/n/12 Hidratarea \OT1/cmr/m/n/12 - cli-en-tul des-carc^^Ua fi[]ierul sau fi[]ierele Ja-vaS-cript ^^^Pncorporate ^^^Pn HTML,
  []
 
-<ssg-diagram.png, id=364, 634.37pt x 351.3125pt>
+<ssg-diagram.png, id=400, 634.37pt x 351.3125pt>
 File: ssg-diagram.png Graphic file (type png)
 <use ssg-diagram.png>
-Package pdftex.def Info: ssg-diagram.png  used on input line 462.
+Package pdftex.def Info: ssg-diagram.png  used on input line 470.
 (pdftex.def)             Requested size: 362.37569pt x 200.68976pt.
-[16 <./ssg-diagram.png (PNG copy)>]
-Overfull \hbox (4.21254pt too wide) in paragraph at lines 475--476
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--474
+[][][][]$\OT1/cmtt/m/n/10 https : / / www . ionos . ca / digitalguide / websites / web-[]development /
+ []
+
+[16]
+Overfull \hbox (4.21254pt too wide) in paragraph at lines 483--484
 []\OT1/cmr/bx/n/12 Generarea HTML-ului sta-tic \OT1/cmr/m/n/12 - fi^^Xsierele HTML sunt ge-ne-rate pe baza con[]inutului
  []
 
 
-Overfull \hbox (1.94821pt too wide) in paragraph at lines 476--477
+Overfull \hbox (1.94821pt too wide) in paragraph at lines 484--485
 \OT1/cmr/m/n/12 vaS-cript []i ima-gi-nile se op-ti-mi-zeaz^^Ua, re-duc^and di-men-siu-nile fi[]ierelor []i ^^^Pmbun^^Uat^^Ua[]ind
  []
 
-[17]
-Overfull \hbox (6.95947pt too wide) in paragraph at lines 493--494
+[17 <./ssg-diagram.png (PNG copy)>] [18]
+Overfull \hbox (6.95947pt too wide) in paragraph at lines 501--502
 \OT1/cmr/m/n/12 vreaz^^Ua con[]inut HTML pre-randat ^^^Pn brow-ser, sunt mai efec-tive cu SEO ^^^Pn compara[]ie
  []
 
-[18]
-Overfull \hbox (6.37877pt too wide) in paragraph at lines 496--497
+
+Overfull \hbox (6.37877pt too wide) in paragraph at lines 504--505
 []\OT1/cmr/bx/n/12 Con[]inutul di-na-mic []i ac-tu-a-liz^^Uari ^^^Pn timp real \OT1/cmr/m/n/12 - CSR se eviden[]iaz^^Ua ^^^Pn aplica[]iile
  []
 
-[19]
+[19] [20]
 Capitolul 3.
-[20
+[21
 
-] [21] [22]
-Overfull \hbox (13.1717pt too wide) in paragraph at lines 545--546
+] [22] [23]
+Overfull \hbox (13.1717pt too wide) in paragraph at lines 552--553
 \OT1/cmr/m/n/12 Aceste in-stru-mente pot ajuta dezvol-ta-to-rii s^^Ua mo-ni-to-ri-zeze []i s^^Ua ^^^Pmbun^^Uat^^Ua[]easc^^Ua performan[]a
  []
 
-[23] [24]
-<01_desktop_preview.png, id=424, 1378.39969pt x 624.83438pt>
+[24] [25]
+<01_desktop_preview.png, id=485, 1865.97125pt x 1067.99pt>
 File: 01_desktop_preview.png Graphic file (type png)
 <use 01_desktop_preview.png>
-Package pdftex.def Info: 01_desktop_preview.png  used on input line 581.
-(pdftex.def)             Requested size: 407.66833pt x 184.79172pt.
- [25 <./01_desktop_preview.png>]
-Overfull \hbox (3.47769pt too wide) in paragraph at lines 601--603
+Package pdftex.def Info: 01_desktop_preview.png  used on input line 588.
+(pdftex.def)             Requested size: 407.66833pt x 233.3289pt.
+ [26 <./01_desktop_preview.png>]
+Overfull \hbox (3.47769pt too wide) in paragraph at lines 608--610
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 605.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 612.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-Overfull \hbox (8.67175pt too wide) in paragraph at lines 615--616
+Overfull \hbox (8.67175pt too wide) in paragraph at lines 622--623
 \OT1/cmr/m/n/12 act, in-clu-siv struc-tura de baz^^Ua a pro-iec-tu-lui, fi[]ierele de con-fi-gu-rare im-pli-cite []i dependen[]ele
  []
 
-<react_file_structure.png, id=439, 198.7425pt x 182.93344pt>
+<react_file_structure.png, id=499, 198.7425pt x 182.93344pt>
 File: react_file_structure.png Graphic file (type png)
 <use react_file_structure.png>
-Package pdftex.def Info: react_file_structure.png  used on input line 619.
+Package pdftex.def Info: react_file_structure.png  used on input line 626.
 (pdftex.def)             Requested size: 181.18439pt x 166.77672pt.
-[26 <./react_file_structure.png>]
-<virtual-dom.jpeg, id=460, 764.8575pt x 572.1375pt>
+[27 <./react_file_structure.png>]
+<virtual-dom.jpeg, id=519, 764.8575pt x 572.1375pt>
 File: virtual-dom.jpeg Graphic file (type jpg)
 <use virtual-dom.jpeg>
-Package pdftex.def Info: virtual-dom.jpeg  used on input line 632.
+Package pdftex.def Info: virtual-dom.jpeg  used on input line 639.
 (pdftex.def)             Requested size: 271.7835pt x 203.29793pt.
- [27 <./virtual-dom.jpeg>]
-Overfull \hbox (9.22638pt too wide) in paragraph at lines 645--646
+ [28 <./virtual-dom.jpeg>]
+Overfull \hbox (9.22638pt too wide) in paragraph at lines 654--655
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (9.22638pt too wide) in paragraph at lines 646--648
+Overfull \hbox (9.22638pt too wide) in paragraph at lines 655--657
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[28]
-<next_file_structure.png, id=488, 273.02pt x 562.1pt>
+[29]
+<next_file_structure.png, id=552, 273.02pt x 562.1pt>
 File: next_file_structure.png Graphic file (type png)
 <use next_file_structure.png>
-Package pdftex.def Info: next_file_structure.png  used on input line 666.
+Package pdftex.def Info: next_file_structure.png  used on input line 675.
 (pdftex.def)             Requested size: 203.83417pt x 419.66132pt.
 
-Overfull \hbox (4.63078pt too wide) in paragraph at lines 663--670
+Overfull \hbox (4.63078pt too wide) in paragraph at lines 672--679
 []\OT1/cmr/m/n/12 Cu aju-to-rul co-men-zii \OT1/cmr/m/it/12 npx create-next-app@latest 03-next \OT1/cmr/m/n/12 pu-tem crea o aplica[]ie Next.js.
  []
 
-[29 <./next_file_structure.png>]
-<gatsby_file_structure.png, id=494, 265.99374pt x 528.97626pt>
+[30 <./next_file_structure.png>]
+<gatsby_file_structure.png, id=559, 265.99374pt x 528.97626pt>
 File: gatsby_file_structure.png Graphic file (type png)
 <use gatsby_file_structure.png>
-Package pdftex.def Info: gatsby_file_structure.png  used on input line 679.
+Package pdftex.def Info: gatsby_file_structure.png  used on input line 688.
 (pdftex.def)             Requested size: 212.89546pt x 423.39143pt.
- [30 <./gatsby_file_structure.png>]
-Overfull \hbox (7.42859pt too wide) in paragraph at lines 758--770
+ [31 <./gatsby_file_structure.png>]
+Overfull \hbox (7.42859pt too wide) in paragraph at lines 767--779
  [][] 
  []
 
-[31]
-<01_mobile_lighthouse.png, id=508, 518.6878pt x 511.9125pt>
+[32]
+<01_mobile_lighthouse.png, id=573, 518.6878pt x 511.9125pt>
 File: 01_mobile_lighthouse.png Graphic file (type png)
 <use 01_mobile_lighthouse.png>
-Package pdftex.def Info: 01_mobile_lighthouse.png  used on input line 803.
+Package pdftex.def Info: 01_mobile_lighthouse.png  used on input line 812.
 (pdftex.def)             Requested size: 339.72592pt x 335.30124pt.
- [32 <./01_mobile_lighthouse.png>]
-Overfull \hbox (1.39124pt too wide) in paragraph at lines 812--824
+ [33 <./01_mobile_lighthouse.png>]
+Overfull \hbox (1.39124pt too wide) in paragraph at lines 821--833
  [][] 
  []
 
 
-Overfull \hbox (1.39124pt too wide) in paragraph at lines 840--852
+Overfull \hbox (1.39124pt too wide) in paragraph at lines 849--861
  [][] 
  []
 
 
-Overfull \hbox (6.46982pt too wide) in paragraph at lines 859--871
+Overfull \hbox (6.46982pt too wide) in paragraph at lines 868--880
  [][] 
  []
 
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 879.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 888.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 879.
- [33]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 880.
- [34] [35] [36] [37] [38]
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 888.
+ [34] [35] [36] [37] [38] [39]
 Capitolul 4.
-[39
+[40
 
-] [40] [41]
-Underfull \hbox (badness 10000) in paragraph at lines 1048--1049
-[]\OT1/cmr/m/n/12 Benjamin Ja-ko-bus. Vu-eJS vs An-gu-lar vs Re-ac-tJS with De-mos -
+] [41] [42]
+Underfull \hbox (badness 1478) in paragraph at lines 1055--1056
+[]\OT1/cmr/m/n/12 German Cocca. \OT1/cmr/bx/it/12 \Ren-de-ring Pat-terns for Web Apps - Server-Side,
  []
 
-[42
+[43
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1059--1060
-[]\OT1/cmr/m/n/12 Google/SOASTA Re-search - https://www.thinkwithgoogle.com/marketing-
+Underfull \hbox (badness 6252) in paragraph at lines 1075--1076
+[]\OT1/cmr/m/n/12 Alex Gri-goryan. \OT1/cmr/bx/it/12 \The Be-ne-fits of Ser-ver Side Ren-de-ring Over
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1059--1060
-\OT1/cmr/m/n/12 strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks-load-time-
+Underfull \hbox (badness 10000) in paragraph at lines 1075--1076
+\OT1/cmr/bx/it/12 Cli-ent Side Ren-de-ring" \OT1/cmr/m/n/12 - []$\OT1/cmtt/m/n/12 https : / / medium . com / walmartlabs /
  []
 
-[43]
+
+Overfull \hbox (51.65987pt too wide) in paragraph at lines 1075--1076
+\OT1/cmtt/m/n/12 the-[]benefits-[]of-[]server-[]side-[]rendering-[]over-[]client-[]side-[]rendering-[]5d07ff2cefe8$[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1079--1080
+[]\OT1/cmr/m/n/12 Sergey Lap-tick. \OT1/cmr/bx/it/12 \Cli-ent Side vs Ser-ver Side UI Ren-de-ring.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1079--1080
+\OT1/cmr/bx/it/12 Ad-van-ta-ges and Di-sa-d-van-ta-ges" \OT1/cmr/m/n/12 - []$\OT1/cmtt/m/n/12 https : / / blog . webix . com /
+ []
+
+
+Underfull \hbox (badness 3009) in paragraph at lines 1081--1082
+\OT1/cmr/bx/it/12 Site Speed?" \OT1/cmr/m/n/12 - []$\OT1/cmtt/m/n/12 https : / / www . debugbear . com / blog / server-[]side-[]rendering$[]
+ []
+
+
+Overfull \hbox (52.15987pt too wide) in paragraph at lines 1083--1084
+\OT1/cmtt/m/n/12 app-[]and-[]mobile / mobile-[]page-[]speed-[]new-[]industry-[]benchmarks-[]load-[]time-[]vs-[]bounce/$[]
+ []
+
+[44]
 Anexa A.
-[44
+[45
 
 ] (./sablon_licenta_tex (1).aux)
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `"sablon_licenta_tex (1)".out' has not changed.
 (rerunfilecheck)             Checksum: FF2D38D54609C870A7950F4D1356699A;5496.
  ) 
 Here is how much of TeX's memory you used:
- 13612 strings out of 476025
- 213365 string characters out of 5790017
+ 13646 strings out of 476025
+ 213722 string characters out of 5790017
  1875388 words of memory out of 5000000
- 33583 multiletter control sequences out of 15000+600000
- 526766 words of font info for 82 fonts, out of 8000000 for 9000
+ 33595 multiletter control sequences out of 15000+600000
+ 527161 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,14n,76p,1170b,2030s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on "sablon_licenta_tex (1).pdf" (50 pages, 1851866 bytes).
+ 75i,14n,76p,1170b,2060s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on "sablon_licenta_tex (1).pdf" (51 pages, 1684235 bytes).
 PDF statistics:
- 759 PDF objects out of 1000 (max. 8388607)
- 649 compressed objects within 7 object streams
- 258 named destinations out of 1000 (max. 500000)
+ 857 PDF objects out of 1000 (max. 8388607)
+ 741 compressed objects within 8 object streams
+ 280 named destinations out of 1000 (max. 500000)
  365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
