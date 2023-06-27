@@ -705,62 +705,6 @@ Toate aplica\c tiile au fost testate dup\u a ce au fost configurate pe acela\c s
 
 Rezultatele medii ob\c tinute sunt prezentate \^in tabelul urm\u ator:
 
-% \begin{table}[htbp]
-% 	\centering
-% 	\begin{tabular}{lllll}
-% 		\toprule
-% 		\textbf{01-JavaScript} & \textbf{LCP} & \textbf{CLS} & \textbf{FID} & \textbf{INP} \\
-% 		\midrule
-% 		Fast Internet & 0.241s & 0.006 & 0.500ms & 32.000ms \\
-% 		Slow 3G & 7.286s & 0.006 & 0.800ms & 16.000ms \\
-% 		\bottomrule
-% 	\end{tabular}
-% 	\caption{Rezultatele pentru aplica\c tia vanilla JavaScript}
-% 	\label{tab:web-vitals-js}
-% \end{table}
-
-% \begin{table}[htbp]
-% 	\centering
-% 	\begin{tabular}{lllll}
-% 		\toprule
-% 		\textbf{02-React} & \textbf{LCP} & \textbf{CLS} & \textbf{FID} & \textbf{INP} \\
-% 		\midrule
-% 		Fast Internet & 0.787s & 0.002 & 0.900ms & 32.000ms \\
-% 		Slow 3G & 8.394s & 0.002 & 1.000ms & 16.000ms \\
-% 		\bottomrule
-% 	\end{tabular}
-% 	\caption{Rezultatele pentru aplica\c tia React}
-% 	\label{tab:web-vitals-react}
-% \end{table}
-
-% \begin{table}[htbp]
-% 	\centering
-% 	\begin{tabular}{lllll}
-% 		\toprule
-% 		\textbf{03-Next} & \textbf{LCP} & \textbf{CLS} & \textbf{FID} & \textbf{INP} \\
-% 		\midrule
-% 		Fast Internet & 0.448s & 0.002 & 1.100ms & 32.000ms \\
-% 		Slow 3G & 10.849s & 0.002 & 1.300ms & 40.000ms \\
-% 		\bottomrule
-% 	\end{tabular}
-% 	\caption{Results for the Next.js application}
-% 	\label{tab:web-vitals-next}
-% \end{table}
-
-% \begin{table}[htbp]
-% 	\centering
-% 	\begin{tabular}{lllll}
-% 		\toprule
-% 		\textbf{04-Gatsby} & \textbf{LCP} & \textbf{CLS} & \textbf{FID} & \textbf{INP} \\
-% 		\midrule
-% 		Fast Internet & 0.084s & 0.002 & 0.900ms & 16.000ms \\
-% 		Slow 3G & 2.127s & 0.002 & 0.900ms & 40.000ms \\
-% 		\bottomrule
-% 	\end{tabular}
-% 	\caption{Results for the Gatsby application}
-% 	\label{tab:web-vitals-gatsby}
-% \end{table}
-
 
 \begin{table}[htbp]
 	\centering
@@ -781,28 +725,7 @@ Rezultatele medii ob\c tinute sunt prezentate \^in tabelul urm\u ator:
 \end{table}
 
 Conform rezultatelor ob\c tinute, aplica\c tia construit\u a cu Gatsby este cea mai eficient\u a din punct de vedere al rand\u arii, urmat\u a de aplica\c tia vanilla JavaScript. Aplica\c tiile construite cu React \c si Next.js au rezultate similare, dar performan\c tele acestora sunt mai slabe. Datorit\u a optimiz\u arilor aduse, \^in special prin utilizarea Gatsby \textit{StaticImage} \c si a \textit{prefetch}-ului, aplica\c tia Gatsby este cea mai rapid\u a din punct de vedere al timpului de randare, at\^at pe conexiunea normal\u a, c\^at \c si pe cea lent\u a.
-  
-% După deploy-ul aplicațiilor pe web hosting, am efectuat repetat procesul de evaluare a performanței cu ajutorul extensiei și am obținut următoarele rezultate:
 
-% \begin{figure}[htbp]
-% 	\centering
-% 	\includegraphics[width=0.45\textwidth]{01_desktop_deployed.png}
-% 	\includegraphics[width=0.45\textwidth]{01_mobile_deployed.png}
-% 	\caption{Aplicația vanilla JavaScript, desktop și mobile}
-% 	\label{fig:01-deployed}
-% \end{figure}
-
-% \begin{figure}[htbp]
-% 	\centering
-% 	\includegraphics[width=0.45\textwidth]{02_desktop_deployed.png}
-% 	\includegraphics[width=0.45\textwidth]{02_mobile_deployed.png}
-% 	\caption{Aplicația React, desktop și mobile}
-% 	\label{fig:02-deployed}
-% \end{figure}
-
-% Procesul optimizat de randare al React-ului, arhitectura bazată pe componente și gestionarea eficientă a stărilor contribuie la îmbunătățirea metricilor de performanță. React utilizează un DOM virtual, care este o reprezentare în memorie a DOM-ului real. Acest lucru permite React-ului să actualizeze și să randeze eficient doar componentele necesare atunci când există modificări în starea aplicației.
-
-% Gestionarea eficientă a stărilor în React contribuie, de asemenea, la îmbunătățirea performanței. React folosește un flux unidirecțional al datelor și un concept numit "reconciliere" pentru a actualiza eficient interfața în funcție de modificările în starea aplicației.
 \subsection{Lighthouse}
 
 Cu ajutorul acestui tool, care este prezent în browserele Google Chrome \c si Mozilla Firefox, au fost generate rapoartele de performan\c t\u a pentru aplicațiile dezvoltate. Un raport Lighthouse este compus din mai multe secțiuni, fiecare dintre acestea av\^and un scor \c si o descriere a metricilor evaluate. Scorul este calculat pe baza unor ponderi, care sunt diferite pentru fiecare secțiune. Ponderile sunt calculate pe baza unor studii de utilizare, care au fost efectuate de Google.

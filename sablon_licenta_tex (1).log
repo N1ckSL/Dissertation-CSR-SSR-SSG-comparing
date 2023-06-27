@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.18)  27 JUN 2023 20:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.18)  27 JUN 2023 20:51
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1075,7 +1075,7 @@ File: gatsby_file_structure.png Graphic file (type png)
 Package pdftex.def Info: gatsby_file_structure.png  used on input line 688.
 (pdftex.def)             Requested size: 212.89546pt x 423.39143pt.
  [31 <./gatsby_file_structure.png>]
-Overfull \hbox (7.42859pt too wide) in paragraph at lines 767--779
+Overfull \hbox (7.42859pt too wide) in paragraph at lines 711--723
  [][] 
  []
 
@@ -1083,72 +1083,72 @@ Overfull \hbox (7.42859pt too wide) in paragraph at lines 767--779
 <01_mobile_lighthouse.png, id=573, 518.6878pt x 511.9125pt>
 File: 01_mobile_lighthouse.png Graphic file (type png)
 <use 01_mobile_lighthouse.png>
-Package pdftex.def Info: 01_mobile_lighthouse.png  used on input line 812.
+Package pdftex.def Info: 01_mobile_lighthouse.png  used on input line 735.
 (pdftex.def)             Requested size: 339.72592pt x 335.30124pt.
  [33 <./01_mobile_lighthouse.png>]
-Overfull \hbox (1.39124pt too wide) in paragraph at lines 821--833
+Overfull \hbox (1.39124pt too wide) in paragraph at lines 744--756
  [][] 
  []
 
 
-Overfull \hbox (1.39124pt too wide) in paragraph at lines 849--861
+Overfull \hbox (1.39124pt too wide) in paragraph at lines 772--784
  [][] 
  []
 
 
-Overfull \hbox (6.46982pt too wide) in paragraph at lines 868--880
+Overfull \hbox (6.46982pt too wide) in paragraph at lines 791--803
  [][] 
  []
 
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 888.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 811.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 888.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 811.
  [34] [35] [36] [37] [38] [39]
 Capitolul 4.
 [40
 
 ] [41] [42]
-Underfull \hbox (badness 1478) in paragraph at lines 1055--1056
+Underfull \hbox (badness 1478) in paragraph at lines 978--979
 []\OT1/cmr/m/n/12 German Cocca. \OT1/cmr/bx/it/12 \Ren-de-ring Pat-terns for Web Apps - Server-Side,
  []
 
 [43
 
 ]
-Underfull \hbox (badness 6252) in paragraph at lines 1075--1076
+Underfull \hbox (badness 6252) in paragraph at lines 998--999
 []\OT1/cmr/m/n/12 Alex Gri-goryan. \OT1/cmr/bx/it/12 \The Be-ne-fits of Ser-ver Side Ren-de-ring Over
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1075--1076
+Underfull \hbox (badness 10000) in paragraph at lines 998--999
 \OT1/cmr/bx/it/12 Cli-ent Side Ren-de-ring" \OT1/cmr/m/n/12 - []$\OT1/cmtt/m/n/12 https : / / medium . com / walmartlabs /
  []
 
 
-Overfull \hbox (51.65987pt too wide) in paragraph at lines 1075--1076
+Overfull \hbox (51.65987pt too wide) in paragraph at lines 998--999
 \OT1/cmtt/m/n/12 the-[]benefits-[]of-[]server-[]side-[]rendering-[]over-[]client-[]side-[]rendering-[]5d07ff2cefe8$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1079--1080
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1003
 []\OT1/cmr/m/n/12 Sergey Lap-tick. \OT1/cmr/bx/it/12 \Cli-ent Side vs Ser-ver Side UI Ren-de-ring.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1079--1080
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1003
 \OT1/cmr/bx/it/12 Ad-van-ta-ges and Di-sa-d-van-ta-ges" \OT1/cmr/m/n/12 - []$\OT1/cmtt/m/n/12 https : / / blog . webix . com /
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 1081--1082
+Underfull \hbox (badness 3009) in paragraph at lines 1004--1005
 \OT1/cmr/bx/it/12 Site Speed?" \OT1/cmr/m/n/12 - []$\OT1/cmtt/m/n/12 https : / / www . debugbear . com / blog / server-[]side-[]rendering$[]
  []
 
 
-Overfull \hbox (52.15987pt too wide) in paragraph at lines 1083--1084
+Overfull \hbox (52.15987pt too wide) in paragraph at lines 1006--1007
 \OT1/cmtt/m/n/12 app-[]and-[]mobile / mobile-[]page-[]speed-[]new-[]industry-[]benchmarks-[]load-[]time-[]vs-[]bounce/$[]
  []
 
