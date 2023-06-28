@@ -42,10 +42,11 @@
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
+
 \pagenumbering{roman}
 
 \begin{document}
-
+\renewcommand{\abstractname}{Abstract}
 %======================================================================
 
 \begin{titlepage}
@@ -178,7 +179,7 @@
 	\vspace{1.0cm}
 	\par
 	The web is evolving at a rapid pace, and with the emergence of new web technologies, the way web applications are built has changed significantly compared to the structures used in the past. Rendering is a critical aspect of web development, and modern web applications require faster, more efficient rendering techniques to deliver a better user experience. This dissertation aims to explore the rendering technologies used in modern web applications in order to define an optimal yet flexible solution for developing applications of different scales.
-	
+
 	The research begins by introducing the fundamental concepts of web rendering, including two of the most known approaches: server-side rendering and client-side rendering. It then examines the evolution of rendering technologies, from traditional rendering techniques with HTML, CSS, and JavaScript, to modern technologies like React, Gatsby, and Next. The dissertation compares and contrasts these technologies and analyzes their performance and usability by some predefined metrics: LCP (\emph{Largest Contentful Paint}), FID (\emph{First Input Delay}), CLS (\emph{Cumulative Layout Shift}), and other important factors such as development time and scaling ability.
 	
 	The dissertation explores the impact of rendering technologies on development workflows and examines the challenges associated with adopting new technologies, such as the learning curve, compatibility issues, performance bottlenecks, and SEO optimization.
