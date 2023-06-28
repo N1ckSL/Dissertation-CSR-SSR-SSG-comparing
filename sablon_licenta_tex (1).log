@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.18)  28 JUN 2023 20:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.18)  28 JUN 2023 20:25
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -921,7 +921,7 @@ Capitolul 1.
 ]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 230.
  [2] [3{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [4] [5]
-<layered_architecture.png, id=312, 572.1375pt x 392.46625pt>
+<layered_architecture.png, id=308, 572.1375pt x 392.46625pt>
 File: layered_architecture.png Graphic file (type png)
 <use layered_architecture.png>
 Package pdftex.def Info: layered_architecture.png  used on input line 311.
@@ -932,7 +932,7 @@ Overfull \hbox (15.27826pt too wide) in paragraph at lines 315--315
  []
 
 [6 <./layered_architecture.png (PNG copy)>] [7]
-<web-evolution.png, id=330, 803.0pt x 457.71pt>
+<web-evolution.png, id=326, 803.0pt x 457.71pt>
 File: web-evolution.png Graphic file (type png)
 <use web-evolution.png>
 Package pdftex.def Info: web-evolution.png  used on input line 348.
@@ -948,11 +948,11 @@ Overfull \hbox (5.76485pt too wide) in paragraph at lines 382--383
 
 [11] [12]
 Overfull \hbox (17.96109pt too wide) in paragraph at lines 409--410
-[][]\OT1/cmr/bx/n/12 Inc^^Uarcarea fi[]ierelor Ja-vaS-cript \OT1/cmr/m/n/12 - brow-se-rul des-carc^^Ua fi[]ierele Ja-vaS-cript referen[]iate
+[][]\OT1/cmr/bx/n/12 Inc^^Uarcarea fi^^Xsierelor Ja-vaS-cript \OT1/cmr/m/n/12 - brow-se-rul des-carc^^Ua fi^^Xsierele Ja-vaS-cript referen[]iate
  []
 
 [13]
-<csr-diagram.png, id=378, 618.31pt x 351.3125pt>
+<csr-diagram.png, id=374, 618.31pt x 351.3125pt>
 File: csr-diagram.png Graphic file (type png)
 <use csr-diagram.png>
 Package pdftex.def Info: csr-diagram.png  used on input line 417.
@@ -963,7 +963,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 422--422
  []
 
 [14 <./csr-diagram.png (PNG copy)>]
-<ssr-diagram.png, id=390, 612.2875pt x 351.3125pt>
+<ssr-diagram.png, id=386, 612.2875pt x 351.3125pt>
 File: ssr-diagram.png Graphic file (type png)
 <use ssr-diagram.png>
 Package pdftex.def Info: ssr-diagram.png  used on input line 436.
@@ -975,10 +975,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 441--441
 
 [15 <./ssr-diagram.png (PNG copy)>]
 Overfull \hbox (0.58922pt too wide) in paragraph at lines 458--459
-[]\OT1/cmr/bx/n/12 Hidratarea \OT1/cmr/m/n/12 - cli-en-tul des-carc^^Ua fi[]ierul sau fi[]ierele Ja-vaS-cript ^^^Pncorporate ^^^Pn HTML,
+[]\OT1/cmr/bx/n/12 Hidratarea \OT1/cmr/m/n/12 - cli-en-tul des-carc^^Ua fi^^Xsierul sau fi^^Xsierele Ja-vaS-cript ^^^Pncorporate ^^^Pn HTML,
  []
 
-<ssg-diagram.png, id=400, 634.37pt x 351.3125pt>
+<ssg-diagram.png, id=396, 634.37pt x 351.3125pt>
 File: ssg-diagram.png Graphic file (type png)
 <use ssg-diagram.png>
 Package pdftex.def Info: ssg-diagram.png  used on input line 469.
@@ -995,7 +995,7 @@ Overfull \hbox (4.21254pt too wide) in paragraph at lines 482--483
 
 
 Overfull \hbox (1.94821pt too wide) in paragraph at lines 483--484
-\OT1/cmr/m/n/12 vaS-cript []i ima-gi-nile se op-ti-mi-zeaz^^Ua, re-duc^and di-men-siu-nile fi[]ierelor []i ^^^Pmbun^^Uat^^Ua[]ind
+\OT1/cmr/m/n/12 vaS-cript ^^Xsi ima-gi-nile se op-ti-mi-zeaz^^Ua, re-duc^and di-men-siu-nile fi^^Xsierelor ^^Xsi ^^^Pmbun^^Uat^^Ua[]ind
  []
 
 [17 <./ssg-diagram.png (PNG copy)>] [18]
@@ -1005,7 +1005,7 @@ Overfull \hbox (6.95947pt too wide) in paragraph at lines 500--501
 
 
 Overfull \hbox (6.37877pt too wide) in paragraph at lines 503--504
-[]\OT1/cmr/bx/n/12 Con[]inutul di-na-mic []i ac-tu-a-liz^^Uari ^^^Pn timp real \OT1/cmr/m/n/12 - CSR se eviden[]iaz^^Ua ^^^Pn aplica[]iile
+[]\OT1/cmr/bx/n/12 Con[]inutul di-na-mic ^^Xsi ac-tu-a-liz^^Uari ^^^Pn timp real \OT1/cmr/m/n/12 - CSR se eviden[]iaz^^Ua ^^^Pn aplica[]iile
  []
 
 [19] [20]
@@ -1014,11 +1014,11 @@ Capitolul 3.
 
 ] [22] [23]
 Overfull \hbox (13.1717pt too wide) in paragraph at lines 551--552
-\OT1/cmr/m/n/12 Aceste in-stru-mente pot ajuta dezvol-ta-to-rii s^^Ua mo-ni-to-ri-zeze []i s^^Ua ^^^Pmbun^^Uat^^Ua[]easc^^Ua performan[]a
+\OT1/cmr/m/n/12 Aceste in-stru-mente pot ajuta dezvol-ta-to-rii s^^Ua mo-ni-to-ri-zeze ^^Xsi s^^Ua ^^^Pmbun^^Uat^^Ua[]easc^^Ua performan[]a
  []
 
 [24] [25]
-<01_desktop_preview.png, id=485, 1865.97125pt x 1067.99pt>
+<01_desktop_preview.png, id=481, 1865.97125pt x 1067.99pt>
 File: 01_desktop_preview.png Graphic file (type png)
 <use 01_desktop_preview.png>
 Package pdftex.def Info: 01_desktop_preview.png  used on input line 587.
@@ -1033,16 +1033,16 @@ LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 6
 File: ts1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 Overfull \hbox (8.67175pt too wide) in paragraph at lines 621--622
-\OT1/cmr/m/n/12 act, in-clu-siv struc-tura de baz^^Ua a pro-iec-tu-lui, fi[]ierele de con-fi-gu-rare im-pli-cite []i dependen[]ele
+\OT1/cmr/m/n/12 act, in-clu-siv struc-tura de baz^^Ua a pro-iec-tu-lui, fi^^Xsierele de con-fi-gu-rare im-pli-cite ^^Xsi dependen[]ele
  []
 
-<react_file_structure.png, id=499, 198.7425pt x 182.93344pt>
+<react_file_structure.png, id=495, 198.7425pt x 182.93344pt>
 File: react_file_structure.png Graphic file (type png)
 <use react_file_structure.png>
 Package pdftex.def Info: react_file_structure.png  used on input line 625.
 (pdftex.def)             Requested size: 181.18439pt x 166.77672pt.
 [27 <./react_file_structure.png>]
-<virtual-dom.jpeg, id=519, 764.8575pt x 572.1375pt>
+<virtual-dom.jpeg, id=515, 764.8575pt x 572.1375pt>
 File: virtual-dom.jpeg Graphic file (type jpg)
 <use virtual-dom.jpeg>
 Package pdftex.def Info: virtual-dom.jpeg  used on input line 638.
@@ -1058,7 +1058,7 @@ Overfull \hbox (9.22638pt too wide) in paragraph at lines 654--656
  []
 
 [29]
-<next_file_structure.png, id=552, 273.02pt x 562.1pt>
+<next_file_structure.png, id=548, 273.02pt x 562.1pt>
 File: next_file_structure.png Graphic file (type png)
 <use next_file_structure.png>
 Package pdftex.def Info: next_file_structure.png  used on input line 674.
@@ -1069,7 +1069,7 @@ Overfull \hbox (4.63078pt too wide) in paragraph at lines 671--678
  []
 
 [30 <./next_file_structure.png>]
-<gatsby_file_structure.png, id=559, 265.99374pt x 528.97626pt>
+<gatsby_file_structure.png, id=555, 265.99374pt x 528.97626pt>
 File: gatsby_file_structure.png Graphic file (type png)
 <use gatsby_file_structure.png>
 Package pdftex.def Info: gatsby_file_structure.png  used on input line 687.
@@ -1080,7 +1080,7 @@ Overfull \hbox (7.42859pt too wide) in paragraph at lines 710--722
  []
 
 [32]
-<01_mobile_lighthouse.png, id=573, 518.6878pt x 511.9125pt>
+<01_mobile_lighthouse.png, id=569, 518.6878pt x 511.9125pt>
 File: 01_mobile_lighthouse.png Graphic file (type png)
 <use 01_mobile_lighthouse.png>
 Package pdftex.def Info: 01_mobile_lighthouse.png  used on input line 734.
@@ -1163,16 +1163,16 @@ Anexa A.
 
 ] (./sablon_licenta_tex (1).aux)
 Package rerunfilecheck Info: File `"sablon_licenta_tex (1)".out' has not changed.
-(rerunfilecheck)             Checksum: FF2D38D54609C870A7950F4D1356699A;5496.
+(rerunfilecheck)             Checksum: 3B2AD957CCEE231EAE2704A96D13D55F;5496.
  ) 
 Here is how much of TeX's memory you used:
- 13678 strings out of 476025
- 214155 string characters out of 5790017
+ 13655 strings out of 476025
+ 213814 string characters out of 5790017
  1875388 words of memory out of 5000000
- 33604 multiletter control sequences out of 15000+600000
- 527161 words of font info for 84 fonts, out of 8000000 for 9000
+ 33585 multiletter control sequences out of 15000+600000
+ 521926 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,14n,76p,1170b,2060s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,14n,76p,1248b,2060s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist, replaced by a fixed one
 
@@ -1188,11 +1188,11 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on "sablon_licenta_tex (1).pdf" (53 pages, 1687918 bytes).
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on "sablon_licenta_tex (1).pdf" (53 pages, 1637311 bytes).
 PDF statistics:
- 891 PDF objects out of 1000 (max. 8388607)
- 773 compressed objects within 8 object streams
+ 866 PDF objects out of 1000 (max. 8388607)
+ 758 compressed objects within 8 object streams
  303 named destinations out of 1000 (max. 500000)
  365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
