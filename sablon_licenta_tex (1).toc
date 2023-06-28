@@ -27,13 +27,13 @@
 \contentsline {subsection}{\numberline {3.4.2}Lighthouse}{33}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}PageSpeed Insights}{34}{subsection.3.4.3}%
 \contentsline {section}{\numberline {3.5}Analiza rezultatelor}{35}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}U\c surin\c ta implement\u arii}{35}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Performanța}{38}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Dimensiunea aplica\c tiei}{38}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}SEO}{39}{subsection.3.5.4}%
-\contentsline {chapter}{\numberline {4}Concluzii}{40}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Rezultatele obținute}{41}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Direcții viitoare de cercetare}{42}{section.4.2}%
-\contentsline {chapter}{Bibliography}{42}{section.4.2}%
-\contentsline {chapter}{\numberline {A}Glosar}{45}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Acronime}{45}{section.A.1}%
+\contentsline {subsection}{\numberline {3.5.1}U\c surin\c ta implement\u arii}{37}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Performanța}{39}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Dimensiunea aplica\c tiei}{40}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}SEO}{40}{subsection.3.5.4}%
+\contentsline {chapter}{\numberline {4}Concluzii}{42}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Rezultatele obținute}{43}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Direcții viitoare de cercetare}{44}{section.4.2}%
+\contentsline {chapter}{Bibliography}{44}{section.4.2}%
+\contentsline {chapter}{\numberline {A}Glosar}{47}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Acronime}{47}{section.A.1}%

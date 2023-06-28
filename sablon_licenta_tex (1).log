@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.18)  28 JUN 2023 19:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.18)  28 JUN 2023 20:20
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1100,71 +1100,76 @@ Overfull \hbox (6.46982pt too wide) in paragraph at lines 790--802
  [][] 
  []
 
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 810.
+[34] [35]
+Overfull \hbox (4.18474pt too wide) in paragraph at lines 821--822
+[]\OT1/cmr/bx/n/12 Gatsby \OT1/cmr/m/n/12 - ne-ce-sit^^Ua etape su-pli-men-tare de con-fi-gu-rare, pre-cum ^^Xsi plugin-uri adi[]ionale,
+ []
+
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 841.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 810.
- [34] [35] [36] [37] [38] [39]
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 841.
+ [36] [37] [38] [39] [40] [41]
 Capitolul 4.
-[40
+[42
 
-] [41] [42]
-Underfull \hbox (badness 1478) in paragraph at lines 977--978
+] [43] [44]
+Underfull \hbox (badness 1478) in paragraph at lines 1008--1009
 []\OT1/cmr/m/n/12 German Cocca. \OT1/cmr/bx/it/12 \Ren-de-ring Pat-terns for Web Apps - Server-Side,
  []
 
-[43
+[45
 
 ]
-Underfull \hbox (badness 6252) in paragraph at lines 997--998
+Underfull \hbox (badness 6252) in paragraph at lines 1028--1029
 []\OT1/cmr/m/n/12 Alex Gri-goryan. \OT1/cmr/bx/it/12 \The Be-ne-fits of Ser-ver Side Ren-de-ring Over
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 997--998
+Underfull \hbox (badness 10000) in paragraph at lines 1028--1029
 \OT1/cmr/bx/it/12 Cli-ent Side Ren-de-ring" \OT1/cmr/m/n/12 - []$\OT1/cmtt/m/n/12 https : / / medium . com / walmartlabs /
  []
 
 
-Overfull \hbox (51.65987pt too wide) in paragraph at lines 997--998
+Overfull \hbox (51.65987pt too wide) in paragraph at lines 1028--1029
 \OT1/cmtt/m/n/12 the-[]benefits-[]of-[]server-[]side-[]rendering-[]over-[]client-[]side-[]rendering-[]5d07ff2cefe8$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1001--1002
+Underfull \hbox (badness 10000) in paragraph at lines 1032--1033
 []\OT1/cmr/m/n/12 Sergey Lap-tick. \OT1/cmr/bx/it/12 \Cli-ent Side vs Ser-ver Side UI Ren-de-ring.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1001--1002
+Underfull \hbox (badness 10000) in paragraph at lines 1032--1033
 \OT1/cmr/bx/it/12 Ad-van-ta-ges and Di-sa-d-van-ta-ges" \OT1/cmr/m/n/12 - []$\OT1/cmtt/m/n/12 https : / / blog . webix . com /
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 1003--1004
+Underfull \hbox (badness 3009) in paragraph at lines 1034--1035
 \OT1/cmr/bx/it/12 Site Speed?" \OT1/cmr/m/n/12 - []$\OT1/cmtt/m/n/12 https : / / www . debugbear . com / blog / server-[]side-[]rendering$[]
  []
 
 
-Overfull \hbox (52.15987pt too wide) in paragraph at lines 1005--1006
+Overfull \hbox (52.15987pt too wide) in paragraph at lines 1036--1037
 \OT1/cmtt/m/n/12 app-[]and-[]mobile / mobile-[]page-[]speed-[]new-[]industry-[]benchmarks-[]load-[]time-[]vs-[]bounce/$[]
  []
 
-[44]
+[46]
 Anexa A.
-[45
+[47
 
 ] (./sablon_licenta_tex (1).aux)
 Package rerunfilecheck Info: File `"sablon_licenta_tex (1)".out' has not changed.
 (rerunfilecheck)             Checksum: FF2D38D54609C870A7950F4D1356699A;5496.
  ) 
 Here is how much of TeX's memory you used:
- 13646 strings out of 476025
- 213722 string characters out of 5790017
+ 13678 strings out of 476025
+ 214155 string characters out of 5790017
  1875388 words of memory out of 5000000
- 33595 multiletter control sequences out of 15000+600000
+ 33604 multiletter control sequences out of 15000+600000
  527161 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,14n,76p,1170b,2060s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1184,10 +1189,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on "sablon_licenta_tex (1).pdf" (51 pages, 1684231 bytes).
+Output written on "sablon_licenta_tex (1).pdf" (53 pages, 1687918 bytes).
 PDF statistics:
- 857 PDF objects out of 1000 (max. 8388607)
- 741 compressed objects within 8 object streams
- 280 named destinations out of 1000 (max. 500000)
+ 891 PDF objects out of 1000 (max. 8388607)
+ 773 compressed objects within 8 object streams
+ 303 named destinations out of 1000 (max. 500000)
  365 words of extra memory for PDF output out of 10000 (max. 10000000)
 

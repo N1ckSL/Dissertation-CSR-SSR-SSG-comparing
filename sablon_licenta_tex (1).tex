@@ -806,6 +806,37 @@ Evaluează pagina atât pe dispozitive mobile, cât și pe desktop, atribuie un 
 
 \section {Analiza rezultatelor}
 
+Dup\u a ce toate aplica\c tiile au fost construite, acestea au fost \^inc\u arcate pe Netlify - hosting web, ce permite deploy-ul aplica\c tiilor web, scrise \^in diverse limbaje de programare, inclusiv JavaScript \c si framework-uri precum React, Next \c si Gatsby. Pentru ca aplica\c tiile sa ruleze, acestea trebuie configurate, iar complexitatea acestui proces difer\u a de la o aplica\c tie la alta:
+\begin{itemize}
+	\item \textbf{Vanilla JavaScript} - nu necesit\u a configurare suplimentar\u a, deoarece este un limbaj de programare interpretat, ce ruleaz\u a direct \^in browser. Se poate \^inc\u arca direct folderul ce con\c tine aplica\c tia, iar Netlify va detecta automat fi\c sierele ce trebuie servite \c si va crea un URL public, ce poate fi accesat.
+	\item \textbf{React} - este nevoie de pa\c si suplimentari, deoarece este un framework ce necesit\u a un build, pentru a putea fi rulat \^in browser. Pentru a genera build-ul, se folose\c ste comanda "\textit{npm run build}" \^in terminal, ce generează un folder \textit{build}, ce con\c tine toate fi\c sierele necesare rul\u arii aplica\c tiei. Acest folder trebuie \^inc\u arcat pe Netlify.
+	\item \textbf{Next.js} - necesit\u a configurare suplimentar\u a, pentru a putea utiliza func\c tionalit\u a\c ti precum server-side rendering sau static site generation. Pentru a genera build-ul, se folose\c ste comanda "\textit{npm run build}" \^in terminal, ce va genera un folder \textit{.next}, ce con\c tine toate fi\c sierele necesare rul\u arii aplica\c tiei. De asemenea este necesar\u a configurarea utiliz\u arii imaginilor preluatre dinamic dintr-un API, prin ad\u augarea unui fi\c sier \textit{next.config.js}:
+	\begin{lstlisting}[caption={Configurarea Next.js pentru utilizarea imaginilor dintr-un API},captionpos=b]
+		module.exports = {
+			images: {
+				domains: ['images.unsplash.com'],
+			},
+		}
+	\end{lstlisting}
+	\item \textbf{Gatsby} - necesit\u a etape suplimentare de configurare, precum \c si plugin-uri adi\c tionale, ce automatizeaz\u a \c si u\c sureaz\u a procesul de deploy: "\textit{npm install -g gatsby-cli}" \c si "\textit{npm install -D gatsby-plugin-netlify}". De asemenea, este necesar\u a configurarea imaginilor, prin ad\u augarea unui plugin \textit{gatsby-plugin-image} \c si a unui fi\c sier \textit{gatsby-config.js}:
+	\begin{lstlisting}[caption={Configurarea Gatsby pentru utilizarea imaginilor dintr-un API},captionpos=b]
+		module.exports = {
+			plugins: [
+				'gatsby-plugin-image',
+				'gatsby-plugin-netlify',
+				{
+				  resolve: 'gatsby-source-filesystem',
+				  options: {
+					name: 'images',
+					path: './src/images/',
+				  },
+				  __key: 'images',
+				},
+			  ],
+		}
+	\end{lstlisting}
+\end{itemize}
+
 \subsection{U\c surin\c ta implement\u arii}
 Din punct de vedere al utiliz\u arii, vanilla JS este cel mai proeminent, deoarece nu necesit\u a dependențe sau framework-uri suplimentare. Pentru a executa un cod JavaScript este destul\u a ad\u augarea unui tag \textit{\textless script\textgreater }   \^ in pagina HTML:
 \begin{lstlisting}[caption={Exemplu de ad\u augare a unui script \^ in pagina HTML},captionpos=b]

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1687970826 "/Users/nicu/Desktop/disertatie/Disertatie_v2/sablon_licenta_tex (1).tex" "sablon_licenta_tex (1).pdf" "sablon_licenta_tex (1)" 1687970828 0
-  "/Users/nicu/Desktop/disertatie/Disertatie_v2/sablon_licenta_tex (1).tex" 1687970826 94633 14b1a36206c3cbb9c2255647fc97c531 ""
+["pdflatex"] 1687972828 "/Users/nicu/Desktop/disertatie/Disertatie_v2/sablon_licenta_tex (1).tex" "sablon_licenta_tex (1).pdf" "sablon_licenta_tex (1)" 1687972829 0
+  "/Users/nicu/Desktop/disertatie/Disertatie_v2/sablon_licenta_tex (1).tex" 1687972828 97353 911baaaa840fdb6bf0b5ceb8e97a1167 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -136,11 +136,11 @@
   "layered_architecture.png" 1687091028 102141 2296b9d2dd59637aa4e9d7f4597fca3e ""
   "next_file_structure.png" 1687720263 40748 3cf47637d51c5e52b2769862b47b99dd ""
   "react_file_structure.png" 1687091028 7029 3b478e8b43ee875f64dde733db10004a ""
-  "sablon_licenta_tex (1).aux" 1687970828 11742 91ca6b3fe164a5bda775a5c8dd3fc435 "pdflatex"
-  "sablon_licenta_tex (1).lof" 1687970828 1369 b8be245c75537780123d848e081f0391 "pdflatex"
-  "sablon_licenta_tex (1).out" 1687970828 5496 ff2d38d54609c870a7950f4d1356699a "pdflatex"
-  "sablon_licenta_tex (1).tex" 1687970826 94633 14b1a36206c3cbb9c2255647fc97c531 ""
-  "sablon_licenta_tex (1).toc" 1687970828 3115 585796c9be39df6c8aeff823154d9610 "pdflatex"
+  "sablon_licenta_tex (1).aux" 1687972829 12081 a0f4498526b1b24302aa15ee560388af "pdflatex"
+  "sablon_licenta_tex (1).lof" 1687972829 1369 b8be245c75537780123d848e081f0391 "pdflatex"
+  "sablon_licenta_tex (1).out" 1687972829 5496 ff2d38d54609c870a7950f4d1356699a "pdflatex"
+  "sablon_licenta_tex (1).tex" 1687972828 97353 911baaaa840fdb6bf0b5ceb8e97a1167 ""
+  "sablon_licenta_tex (1).toc" 1687972829 3115 602c9ea37432fc316dc97d02dd20046b "pdflatex"
   "ssg-diagram.png" 1687692103 84113 c842168289a2249b7f78b13173a180c8 ""
   "ssr-diagram.png" 1687692103 85051 d4329418dac47b130d4b3167bc2b249c ""
   "virtual-dom.jpeg" 1687717787 34700 517b8f0dc7bc74c222825ffdaddd0e7f ""
